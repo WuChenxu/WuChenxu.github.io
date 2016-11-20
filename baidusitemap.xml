@@ -181,9 +181,9 @@
         
         <tag>encoding</tag>
          
-        <tag>unicode</tag>
-         
         <tag>charset</tag>
+         
+        <tag>unicode</tag>
          
         <tag>GB2312</tag>
          
@@ -947,11 +947,11 @@
         
         <tag>encoding</tag>
          
+        <tag>charset</tag>
+         
         <tag>unicode</tag>
          
         <tag>python</tag>
-         
-        <tag>charset</tag>
          
         <tag>html</tag>
          
