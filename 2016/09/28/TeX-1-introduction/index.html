@@ -1,0 +1,807 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="TeX," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="每天进步一点点" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="本文介绍了在Windows下TeX的安装及使用。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TeX(1):简介">
+<meta property="og:url" content="http://www.wuchenxu.com/2016/09/28/TeX-1-introduction/index.html">
+<meta property="og:site_name" content="每天进步一点点">
+<meta property="og:description" content="本文介绍了在Windows下TeX的安装及使用。">
+<meta property="og:updated_time" content="2016-09-28T12:44:27.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TeX(1):简介">
+<meta name="twitter:description" content="本文介绍了在Windows下TeX的安装及使用。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.wuchenxu.com/2016/09/28/TeX-1-introduction/"/>
+
+
+
+
+
+  <title> TeX(1):简介 | 每天进步一点点 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?a3b3cbdcabc63b90db78f1474d6810b5";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">每天进步一点点</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'PRaBJ8K-sKhwBGZzMgxE','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://www.wuchenxu.com/2016/09/28/TeX-1-introduction/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="WuChenxu">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/uploads/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="每天进步一点点">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="每天进步一点点" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                TeX(1):简介
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-09-28T20:44:27+08:00">
+              2016-09-28
+            </time>
+
+            &nbsp;|&nbsp;
+
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-check-o"></i>
+            </span>
+            <time title="Post modified" itemprop="dateModified" datetime="2016-09-28T20:44:27+08:00">
+              2016-09-28
+            </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/TeX/" itemprop="url" rel="index">
+                    <span itemprop="name">TeX</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/28/TeX-1-introduction/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/28/TeX-1-introduction/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本文介绍了在Windows下TeX的安装及使用。</p>
+<a id="more"></a>
+<h1 id="What"><a href="#What" class="headerlink" title="What"></a>What</h1><p>TeX是一个排版软件，LaTeX从TeX衍生而来，命令较为简单.</p>
+<blockquote>
+<p>TeX provides an unusual macro language; The TeX macro language has been successfully used to extend TeX to, for instance, LaTeX and ConTeXt.<br>When TeX “compiles” a document, it follows (from the user’s point of view) the following processing sequence: Macros → TeX → Driver → Output.</p>
+</blockquote>
+<h1 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h1><p>安装<a href="http://www.ctex.org/" target="_blank" rel="external">CTeX</a>，CTeX打包了MiTeX以及其他一些宏包、字体等。</p>
+<p>直接用原生的latex需要加载宏包才能支持汉字，否则编译会报错：<code>Invalid UTF-8 byte or sequence at line 4 replaced by U+FFFD.</code></p>
+<p>XeTeX就是为了支持多语言而重新设计的新一代TeX系统，这意味着在XeTeX眼里，中文文档和英文文档再没有任何区别，无需额外的外挂包；而且，XeTeX原生支持系统字体，这意味着我们无需再额外编译字体，系统安装了什么字体，我们就能使用什么字体。</p>
+<p>使用xelatex编译，不需要写<code>\begin{CJK*}{UTF8}{song}</code></p>
+<figure class="highlight tex"><figcaption><span>example.tex</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">\<span class="name">documentclass</span><span class="string">[12pt,a4paper]</span><span class="string">&#123;article&#125;</span></span></div><div class="line"><span class="tag">\<span class="name">usepackage</span><span class="string">&#123;fontspec&#125;</span></span></div><div class="line"><span class="tag">\<span class="name">setmainfont</span><span class="string">&#123;Microsoft YaHei&#125;</span></span></div><div class="line"><span class="tag">\<span class="name">begin</span><span class="string">&#123;document&#125;</span></span></div><div class="line">Hello,World！</div><div class="line">这是一个测试的中文文档！</div><div class="line"><span class="tag">\<span class="name">end</span><span class="string">&#123;document&#125;</span></span></div></pre></td></tr></table></figure>
+<p>用notepad输入，<code>保存成utf-8格式</code>, 后用xelatex example.tex编译，生成pdf。</p>
+<h1 id="Usage-amp-Warning"><a href="#Usage-amp-Warning" class="headerlink" title="Usage &amp; Warning"></a>Usage &amp; Warning</h1><ul>
+<li><p><code>\fontsize{字号}{基本行距}</code><br>其中字号和基本行距两个参数是纯数字，单位是 pt。命令也在 \selectfont 后生效。</p>
+</li>
+<li><p><code>Overfull \hbox (76.35919pt too wide) in paragraph at lines 11--15</code>找到对应的提示行，然后将最后几个单词任意截断，然后另起一行即可。</p>
+</li>
+<li><p><code>texdoc fontspec</code>可以查看宏包<code>fontspec</code>的帮助文档。</p>
+</li>
+<li><p><code>fc-list</code>可以查看电脑中安装了哪些字体；<code>fc-list ;lang=zh-cn</code>可以查看安装了哪些中文字体。</p>
+</li>
+</ul>
+<p>附上一个台湾版cwTeX中的示例(台湾的明体应该对应大陆的宋体)<br><figure class="highlight tex"><figcaption><span>TeX</span><a href="/downloads/code/TeX/排版的原则.tex">view raw</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div></pre></td><td class="code"><pre><div class="line"><span class="comment">%!TEX TS-program = xelatex</span></div><div class="line"><span class="comment">%!TEX encoding = UTF-8 Unicode</span></div><div class="line"><span class="tag">\<span class="name">documentclass</span><span class="string">[12pt,a4paper]</span><span class="string">{article}</span></span></div><div class="line"><span class="tag">\<span class="name">XeTeXlinebreaklocale</span></span> "zh"     					<span class="comment">% 针对中文进行断行</span></div><div class="line"><span class="tag">\<span class="name">XeTeXlinebreakskip</span> = <span class="number">0pt</span></span> plus 1pt minus 0.1pt  <span class="comment">% 给予TeX断行一定自由度</span></div><div class="line"><span class="tag">\<span class="name">linespread</span><span class="string">{1.5}</span></span>                                <span class="comment">% 1.5倍行距</span></div><div class="line"><span class="tag">\<span class="name">usepackage</span><span class="string">{fontspec,xunicode,}</span></span></div><div class="line"><span class="comment">%\usepackage{xltxtra}</span></div><div class="line"><span class="tag">\<span class="name">usepackage</span><span class="string">[small, sf]</span><span class="string">{titlesec}</span></span></div><div class="line"></div><div class="line"><span class="tag">\<span class="name">newfontfamily</span></span><span class="tag">\<span class="name">youyuan</span><span class="string">{YouYuan}</span></span> </div><div class="line"><span class="tag">\<span class="name">newfontfamily</span></span><span class="tag">\<span class="name">hwcaiyun</span><span class="string">{STCaiyun}</span></span> </div><div class="line"><span class="tag">\<span class="name">newfontfamily</span></span><span class="tag">\<span class="name">hwhupo</span><span class="string">{STHupo}</span></span> </div><div class="line"><span class="tag">\<span class="name">newfontfamily</span></span><span class="tag">\<span class="name">yaoti</span><span class="string">{FZYaoTi}</span></span> </div><div class="line"><span class="tag">\<span class="name">newfontfamily</span></span><span class="tag">\<span class="name">kaiti</span><span class="string">{KaiTi}</span></span> </div><div class="line"><span class="tag">\<span class="name">newfontfamily</span></span><span class="tag">\<span class="name">xsong</span><span class="string">{NSimSun}</span></span> </div><div class="line"><span class="tag">\<span class="name">newfontfamily</span></span><span class="tag">\<span class="name">hwsong</span><span class="string">{STSong}</span></span> </div><div class="line"><span class="tag">\<span class="name">newfontfamily</span></span><span class="tag">\<span class="name">yahei</span><span class="string">{Microsoft YaHei}</span></span> </div><div class="line"><span class="tag">\<span class="name">newfontfamily</span></span><span class="tag">\<span class="name">fangsong</span><span class="string">{FangSong}</span></span> </div><div class="line"><span class="tag">\<span class="name">newfontfamily</span></span><span class="tag">\<span class="name">song</span><span class="string">{SimSun}</span></span> </div><div class="line"><span class="tag">\<span class="name">newfontfamily</span></span><span class="tag">\<span class="name">hwfangsong</span><span class="string">{STFangsong}</span></span> </div><div class="line"><span class="tag">\<span class="name">newfontfamily</span></span><span class="tag">\<span class="name">weiti</span><span class="string">{STXinwei}</span></span> </div><div class="line"><span class="tag">\<span class="name">newfontfamily</span></span><span class="tag">\<span class="name">heiti</span><span class="string">{SimHei}</span></span> </div><div class="line"><span class="tag">\<span class="name">newfontfamily</span></span><span class="tag">\<span class="name">hwxingkai</span><span class="string">{STXingkai}</span></span> </div><div class="line"><span class="tag">\<span class="name">newfontfamily</span></span><span class="tag">\<span class="name">hwlishu</span><span class="string">{STLiti}</span></span> </div><div class="line"><span class="tag">\<span class="name">newfontfamily</span></span><span class="tag">\<span class="name">zhongsong</span><span class="string">{STZhongsong}</span></span> </div><div class="line"><span class="tag">\<span class="name">newfontfamily</span></span><span class="tag">\<span class="name">shuti</span><span class="string">{FZShuTi}</span></span> </div><div class="line"><span class="tag">\<span class="name">newfontfamily</span></span><span class="tag">\<span class="name">hwhei</span><span class="string">{STXihei}</span></span> </div><div class="line"><span class="tag">\<span class="name">newfontfamily</span></span><span class="tag">\<span class="name">lishu</span><span class="string">{LiSu}</span></span> </div><div class="line"><span class="tag">\<span class="name">newfontfamily</span></span><span class="tag">\<span class="name">hwkai</span><span class="string">{STKaiti}</span></span></div><div class="line"></div><div class="line"><span class="tag">\<span class="name">setmainfont</span><span class="string">[BoldFont={SimHei}]</span><span class="string">{SimSun}</span></span></div><div class="line"><span class="tag">\<span class="name">setsansfont</span><span class="string">[Mapping=tex-text]</span><span class="string">{Microsoft Sans Serif}</span></span> </div><div class="line"><span class="tag">\<span class="name">setmonofont</span><span class="string">{Courier New}</span></span></div><div class="line"></div><div class="line"></div><div class="line"><span class="tag">\<span class="name">titleformat*</span><span class="string">{\section}</span><span class="string">{\youyuan}</span></span></div><div class="line"><span class="tag">\<span class="name">titleformat*</span><span class="string">{\subsection}</span><span class="string">{\youyuan}</span></span></div><div class="line"></div><div class="line"></div><div class="line"><span class="tag">\<span class="name">begin</span><span class="string">{document}</span></span></div><div class="line"><span class="tag">\<span class="name">begin</span><span class="string">{center}</span></span></div><div class="line">{<span class="tag">\<span class="name">Large</span></span> <span class="tag">\<span class="name">textbf</span></span> {排版的原则}}<span class="tag">\<span class="name">\</span><span class="string">[5mm]</span></span> <span class="comment">%指令末端之 \\ 為換行指令 , 指示本行結束 ; 緊接著的 [5mm] 則設定行距加大 0.5 公分。 </span></div><div class="line">吴聪敏<span class="tag">\<span class="name">\</span><span class="string">[2mm]</span></span></div><div class="line">2005.03</div><div class="line"><span class="tag">\<span class="name">end</span><span class="string">{center}</span></span></div><div class="line"></div><div class="line"><span class="tag">\<span class="name">bigskip</span></span> <span class="comment">%定行内距,medskip-half,small-qua</span></div><div class="line"><span class="tag">\<span class="name">fontsize</span><span class="string">{12}</span><span class="string">{20pt}</span></span><span class="tag">\<span class="name">selectfont</span></span> <span class="comment">%字体 12pt,行距20pt</span></div><div class="line">排版的目的是为了有效率地表达你的意见，</div><div class="line">让读者容易阅读或吸收。</div><div class="line"></div><div class="line"><span class="tag">\<span class="name">section</span><span class="string">{常见的排版错误}</span></span></div><div class="line">桌上排版系统普及之后，每个人都能排版，</div><div class="line">但这不表示每个人都能做出好的排版。</div><div class="line">关于字体之使用，常见的错误如下：</div><div class="line"><span class="tag">\<span class="name">begin</span><span class="string">{itemize}</span></span> <span class="comment">%无序，不带标号</span></div><div class="line"><span class="tag">\<span class="name">item</span></span> 楷体与仿宋体等可用于标题,</div><div class="line">  但不宜用于正文；正文请使用明体。</div><div class="line"><span class="tag">\<span class="name">item</span></span> 较长之英文段落应使用纯英文字体编排，</div><div class="line">  如 Times New Roman，Book Antiquarian 等。</div><div class="line">  使用中文之细明体或楷体之英文字体，</div><div class="line">  结果保证惨不忍睹。</div><div class="line"><span class="tag">\<span class="name">item</span></span> 欲强调之字词，请使用粗黑体或圆体，勿加底线。</div><div class="line"><span class="tag">\<span class="name">end</span><span class="string">{itemize}</span></span></div><div class="line">Windows 系统提供明体与楷体两种字体，</div><div class="line">许多人只能使用楷体排版正文或投影片，</div><div class="line">但排版效果奇差无比。</div><div class="line"></div><div class="line">除了字体之外，版面应注意之细节如下：</div><div class="line"><span class="tag">\<span class="name">begin</span><span class="string">{enumerate}</span></span><span class="tag">\<span class="name">itemsep</span>=<span class="number">-2pt</span></span> <span class="comment">%带编号，設定使項目之間距比內定值小 2pt</span></div><div class="line"><span class="tag">\<span class="name">item</span></span> 文章前端请写下题目，作者名字，日期。</div><div class="line"><span class="tag">\<span class="name">item</span></span> 版面之一行勿拉太长，行距不应过小。</div><div class="line"><span class="tag">\<span class="name">item</span></span> 标点符号不应出现在一行前端（避头点）。</div><div class="line"><span class="tag">\<span class="name">item</span></span> 标示注解之号码在句子标点符号之后。</div><div class="line"><span class="tag">\<span class="name">item</span></span> 章节编号使用阿拉伯数字，如1.1节，2.3节；</div><div class="line">避免使用“一、二节”，或“二、三节”。</div><div class="line"><span class="tag">\<span class="name">item</span></span> 阿拉伯数字“1,534”比“一千五百三十四”清楚。</div><div class="line"><span class="tag">\<span class="name">end</span><span class="string">{enumerate}</span></span></div><div class="line"></div><div class="line"><span class="tag">\<span class="name">section</span><span class="string">{图形与表格}</span></span></div><div class="line">图形与表格是表现咨询的有效方法，</div><div class="line">但是图表作的不好，无法达到目标。</div><div class="line">常见的表格排版错误是格线太多，</div><div class="line">但另一个问题是单位不清楚。</div><div class="line">大型图表应移于版面的上方或下方，而非排版于段落中间。</div><div class="line">非万不得已，表格勿拆为两页。</div><div class="line"></div><div class="line"><span class="tag">\<span class="name">par</span></span><span class="tag">\<span class="name">vfill</span></span><span class="tag">\<span class="name">jobname</span></span>.tex <span class="comment">%par新起段落 vfill將段落之間距儘可能拉大</span></div><div class="line"><span class="tag">\<span class="name">end</span><span class="string">{document}</span></span></div></pre></td></tr></table></figure></p>
+<p>效果<br><a href="/2016/09/28/TeX-1-introduction/排版的原则.pdf" title="排版的原则.pdf">排版的原则.pdf</a></p>
+<p>References:</p>
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/TeX" target="_blank" rel="external">TeX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/LaTeX" target="_blank" rel="external">LaTex</a></li>
+<li><a href="http://blog.jqian.net/post/xelatex.html" target="_blank" rel="external">使用xelatex生成中文pdf</a></li>
+<li><a href="https://en.wikibooks.org/wiki/LaTeX/Errors_and_Warnings" target="_blank" rel="external">LaTeX/Errors and Warnings</a></li>
+<li><a href="http://homepage.ntu.edu.tw/~ntut019/cwtex/cxbook3.pdf" target="_blank" rel="external">cwTeX排版系統</a></li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/TeX/" rel="tag"># TeX</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/17/windows-cmd-18-tree/" rel="next" title="windows command(18):打印目录结构tree">
+                <i class="fa fa-chevron-left"></i> windows command(18):打印目录结构tree
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/09/28/TeX-1-introduction/"
+           data-title="TeX(1):简介" data-url="http://www.wuchenxu.com/2016/09/28/TeX-1-introduction/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="WuChenxu" />
+          <p class="site-author-name" itemprop="name">WuChenxu</p>
+          <p class="site-description motion-element" itemprop="description">一切都会成为过去</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">51</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">70</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/WuChenxu" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#What"><span class="nav-number">1.</span> <span class="nav-text">What</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Install"><span class="nav-number">2.</span> <span class="nav-text">Install</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Usage-amp-Warning"><span class="nav-number">3.</span> <span class="nav-text">Usage & Warning</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">WuChenxu</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"wuchenxu"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

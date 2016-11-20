@@ -1,0 +1,915 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Automotive,Battery," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="每天进步一点点" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="曹芳-遇见我
+本文涉及的电池指可重复充、放电的铅酸蓄电池(Lead Acid Battery)。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="汽车电池">
+<meta property="og:url" content="http://www.wuchenxu.com/2016/01/07/Automative-lead-acid-battery-charging-voltage/index.html">
+<meta property="og:site_name" content="每天进步一点点">
+<meta property="og:description" content="曹芳-遇见我
+本文涉及的电池指可重复充、放电的铅酸蓄电池(Lead Acid Battery)。">
+<meta property="og:image" content="http://www.wuchenxu.com/2016/01/07/Automative-lead-acid-battery-charging-voltage/automative_battery.jpg">
+<meta property="og:image" content="http://www.wuchenxu.com/2016/01/07/Automative-lead-acid-battery-charging-voltage/charge_states_of_lead_acid_battery.jpg">
+<meta property="og:image" content="http://www.wuchenxu.com/2016/01/07/Automative-lead-acid-battery-charging-voltage/runbatt.jpg">
+<meta property="og:updated_time" content="2016-01-07T11:52:35.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="汽车电池">
+<meta name="twitter:description" content="曹芳-遇见我
+本文涉及的电池指可重复充、放电的铅酸蓄电池(Lead Acid Battery)。">
+<meta name="twitter:image" content="http://www.wuchenxu.com/2016/01/07/Automative-lead-acid-battery-charging-voltage/automative_battery.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.wuchenxu.com/2016/01/07/Automative-lead-acid-battery-charging-voltage/"/>
+
+
+
+
+
+  <title> 汽车电池 | 每天进步一点点 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?a3b3cbdcabc63b90db78f1474d6810b5";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">每天进步一点点</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'PRaBJ8K-sKhwBGZzMgxE','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://www.wuchenxu.com/2016/01/07/Automative-lead-acid-battery-charging-voltage/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="WuChenxu">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/uploads/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="每天进步一点点">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="每天进步一点点" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                汽车电池
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-01-07T19:52:35+08:00">
+              2016-01-07
+            </time>
+
+            &nbsp;|&nbsp;
+
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-check-o"></i>
+            </span>
+            <time title="Post modified" itemprop="dateModified" datetime="2016-01-07T19:52:35+08:00">
+              2016-01-07
+            </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Automotive/" itemprop="url" rel="index">
+                    <span itemprop="name">Automotive</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Automotive/Battery/" itemprop="url" rel="index">
+                    <span itemprop="name">Battery</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/07/Automative-lead-acid-battery-charging-voltage/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/07/Automative-lead-acid-battery-charging-voltage/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=208951&auto=0&height=66"></iframe><br>曹芳-遇见我<br><img src="/2016/01/07/Automative-lead-acid-battery-charging-voltage/automative_battery.jpg" alt="automative_battery.jpg" title=""></p>
+<p>本文涉及的电池指可重复充、放电的铅酸蓄电池(Lead Acid Battery)。</p>
+<a id="more"></a>
+<h1 id="词源"><a href="#词源" class="headerlink" title="词源"></a>词源</h1><p>The word “battery” comes from the Old French word baterie, meaning “action of beating” relating to a group of cannons in battle. In the endeavor to find an energy storage device, scientists in the 1700s adopted the term battery to represent multiple electrochemical cells.<br>Battery 这个词来自法语<code>Batteries</code>,最初的意思是<code>action of beating</code>，表示战斗中的加农炮。1700年代，科学家借用来表示可以存储能量的电化学装置。</p>
+<h1 id="汽车供电"><a href="#汽车供电" class="headerlink" title="汽车供电"></a>汽车供电</h1><h2 id="发电机"><a href="#发电机" class="headerlink" title="发电机"></a>发电机</h2><p>当用电设备所需电流I<sub>V</sub>小于发电机电流I<sub>G</sub>时，发电机输出电流就会有一部分作为充电电流I<sub>B</sub>给蓄电池充电。整车电气系统的电压随之上升，趋向于发电机调节器设定的电压值。</p>
+<p><code>发电机的额定电流</code>是发电机转速为6000 r/min时发电机能长期提供的电流。</p>
+<p>对电压敏感的对小功率用电设备应靠近蓄电池端布置；对电压不敏感的较大功率用设备应靠近近发电机端布置。</p>
+<h2 id="整车电流要求"><a href="#整车电流要求" class="headerlink" title="整车电流要求"></a>整车电流要求</h2><p>起动车辆时，蓄电池的负载电流很高，可达300~500A。此时的压降会对偶写用电设备造成负面影响，因此应尽可能减小车辆起动时整车电气系统的压降。而车辆行驶时，蓄电池的负载电流较小整车电气系统的电压能够维持在一个较高水平。</p>
+<p>10~50mA 发动机/发电机停机状态下，整车电气系统的用电设备，如时钟、防盗报警装置或无线控制中央闭锁装置等<br>20~70A  发动机怠速工况或车辆低速行驶<br>300A    发动机启动过程要求持续0.3~3s<br>1000A   发动机启动过程峰值电流</p>
+<h1 id="起动蓄电池"><a href="#起动蓄电池" class="headerlink" title="起动蓄电池"></a>起动蓄电池</h1><h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>起动蓄电池是整车电气系统中的电能存储装置。其主要功能是：</p>
+<ol>
+<li>随时为起动机提供电能。</li>
+<li>某些工况下，如怠速工况或发动机停机工况，发电机提供的电能不能满足整车电气系统的用电需求时，应该能补充不足的部分。</li>
+<li>抑制整车电气系统中的电压峰值效应，以保护对电压峰值效应敏感的电子部件和用电设备，如白炽灯、半导体器件等。</li>
+</ol>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>环境温度低时，发动机启动对蓄电池电流大小和持续时间的需求会明显提高，数值约为正常情况下的2倍。<br>12V蓄电池由6个单体电池串联而成；正极板的活性物质是多孔质的二氧化铅(PbO<sub>2</sub>，深棕色)，负极板上是多孔海绵状的纯铅(Pb,灰绿色金属)；外壳是聚丙烯。</p>
+<p>BMS能够借助蓄电池参数(SOC/SOH/SOF等)优化充电电压，并在蓄电池性能退化时采取减少整车电气系统的负载(关闭用电设备) 和/或 增加加发电功率（如提供发动机怠速转速）的措施。</p>
+<h2 id="安全"><a href="#安全" class="headerlink" title="安全"></a>安全</h2><p>蓄电池系统必须设有气体排出装置，保证有害物质不会进入车内空间，而是被导入诸如车身的一根横梁中。此外，每个单电池或每个模块均装有过压阀，且排气口应被导出驾驶室。</p>
+<h2 id="冷却"><a href="#冷却" class="headerlink" title="冷却"></a>冷却</h2><p>蓄电池的冷却有多种形式。其中一种形式是通过空调设备进行冷却；另一种是采用车厢内的空气对蓄电池进行冷却；还可以采用冷却液对蓄电池进行冷却。</p>
+<h2 id="低温"><a href="#低温" class="headerlink" title="低温"></a>低温</h2><p>当温度过低时，蓄电池系统的功率能力同样受到限制，此时需要对电池进行额外的加热。</p>
+<p>一个充满电、电解液浓度为1.28kg/L的蓄电池，其电解液的冷凝点为-68~-60°C；放完电，电解液浓度为1.04kg/L的蓄电池，其电解液的冷凝点为-11~-3°C；环境温度很低时，电解液可能会凝固。<br>蓄电池的电解液为冷凝状态时，只能提供很小的电流，不能用于起动。<br>当蓄电池的电解液冷凝时，不可对其充电，因为充电时凝固电解液溶解而膨胀过快，有可能导致蓄电池壳发生破裂。因此，充电前必须解冻电解液。</p>
+<h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><ol>
+<li><p>额定电压<br>2*6V=12V</p>
+</li>
+<li><p>开路电压(OCV)和静止电压<br>只有等静止电压稳定之后，其值才可以用来估算蓄电池的荷电状态(SOC),而这个稳定过程可能需要若干天。</p>
+</li>
+<li><p>内阻<br>在持续放电、低温(电解液浓度将增加)的情况下，蓄电池内阻将增大。</p>
+</li>
+<li><p>端电压<br>低温或荷电状态差时，待负载的蓄电池的端电压将下降。</p>
+</li>
+<li><p>气化电压<br>气化电压指某一个电压值，当蓄电池的充电电压超过该值时，蓄电池内将有气化现象发生。<br>对完全免维护蓄电池来说，0°C以下时，最高充电电压为16V，而30°C以上时为13.5V。<br>低温将影响电池的可充电性，因此低温时必须提高充电电压。高温和高电压将加剧蓄电池的水损耗和腐蚀（特别是腐蚀），因此高温时要选用较低的充电电压。</p>
+</li>
+<li><p>容量<br>可放电容量与放电电流I<sub>E</sub>有关。在规定的放电终止电压下，放电电流越大，可放电容量越小。</p>
+<ol>
+<li>可用容量K<br>可用容量K是蓄电池在一定条件下可放出的电量，用电流大小与时间的乘积来计量，单位为安时(A*h)。<br>蓄电池的容量主要由选用的活性物质和电解液决定的。</li>
+<li>额定容量K<sub>20</sub><br>规定启动蓄电池以20h连续放电至端电压降到10.5V时输出的电量为额定容量K<sub>20</sub>。<br>按照EN 50342，这些电量以一个固定电流值I<sub>20</sub>,在环境温蒂25°C(+-2°C)下放电20h，放电之放电终止电压10.5.<br>I<sub>20</sub>=K<sub>20</sub>/20<br>举例，一个新的44Ah电池以2.2A的电流放电，至少放电20h，才能到10.5V。</li>
+</ol>
+</li>
+<li><p>低温测试电流I<sub>cc</sub><br>低温测试电流表示蓄电池在低温下的放电能力。按照EN 50342标准，环境温度为-18°C时，蓄电池以I<sub>cc</sub>放电10s后，最低端电压须不小于7.5V（1.25V/cell)。</p>
+</li>
+<li><p>SOH(State Of Health)健康状态<br>按照IEEE1188标准(针对VRLA)，当电池使用一段时间后，电池充满电时的容量低于电池额定容量的80%后，电池就应该被更换。根据这个标准，可以为SOH进行如下定义：在某一条件下电池可放出容量与新电池额定容量的比值<br>SOH=Q<sub>now</sub>/Q<sub>new</sub>*100%<br>Q<sub>now</sub>表示在当前的条件下，电池可以释放出的最大容量，Q<sub>new</sub>表示新电池的额定容量.</p>
+</li>
+<li><p>SOC(State Of Charge)荷电状态<br>SOC用来表征电池的剩余容量。<br>从电量角度：<br>SOC=Q<sub>C</sub>/Q<sub>I</sub>=1-Q/Q<sub>I</sub><br>其中，Q<sub>C</sub>为电池剩余电量<br>Q<sub>I</sub>为电池以恒定电流I放电时所具有的容量<br>Q为电池已经释放的电量。<br>从能量角度<br>SOC=W<sub>Remainder</sub>/W<sub>Initial</sub>=1-W<sub>Discharge</sub>/W<sub>Initial</sub><br>其中，W<sub>Remainder</sub>为电池剩余电能，W<sub>Discharge</sub>为已经释放的电能，W<sub>Initial</sub>为电池的初始电能。<br>SOC估算方法：</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">SOC估算方法</th>
+<th style="text-align:center">优点</th>
+<th style="text-align:center">缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">放电实验法</td>
+<td style="text-align:center">准确可靠</td>
+<td style="text-align:center">时间长，电池需脱机</td>
+</tr>
+<tr>
+<td style="text-align:center">开路电压法</td>
+<td style="text-align:center">计算简单</td>
+<td style="text-align:center">需要长时间静置</td>
+</tr>
+<tr>
+<td style="text-align:center">安时计量法</td>
+<td style="text-align:center">测量简单</td>
+<td style="text-align:center">需要有起始点</td>
+</tr>
+<tr>
+<td style="text-align:center">线性模型法</td>
+<td style="text-align:center">模型简单</td>
+<td style="text-align:center">不够准确</td>
+</tr>
+<tr>
+<td style="text-align:center">内阻法</td>
+<td style="text-align:center">电池放电后期，精度好</td>
+<td style="text-align:center">需要准确的电池模型</td>
+</tr>
+<tr>
+<td style="text-align:center">卡尔曼滤波法</td>
+<td style="text-align:center">非线性模型</td>
+<td style="text-align:center">复杂</td>
+</tr>
+<tr>
+<td style="text-align:center">神经网络法</td>
+<td style="text-align:center">精度高</td>
+<td style="text-align:center">需要大量的训练数据</td>
+</tr>
+<tr>
+<td style="text-align:center">电解液浓度法</td>
+<td style="text-align:center">精度高</td>
+<td style="text-align:center">复杂</td>
+</tr>
+</tbody>
+</table>
+<h2 id="充电"><a href="#充电" class="headerlink" title="充电"></a>充电</h2><img src="/2016/01/07/Automative-lead-acid-battery-charging-voltage/charge_states_of_lead_acid_battery.jpg" alt="charge_states_of_lead_acid_battery.jpg" title="">
+<p>The correct setting of the charge voltage limit is critical and ranges from 2.30V to 2.45V per cell. Setting the voltage threshold is a compromise, and battery experts refer to this as “dancing on the head of a needle.” On one hand, the battery wants to be fully charged to get maximum capacity and avoid sulfation on the negative plate; on the other hand, an over-saturated condition causes grid corrosion on the positive plate and induces gassing.</p>
+<p>The temperature changes the voltage and this makes “dancing on the head of a needle” even more difficult. To get a complete charge and prevent overcharging, warmer temperature requires a slightly lower voltage threshold and colder temperature prefers a higher setting. Chargers exposed to temperature fluctuations should include temperature sensors to adjust the charge voltage for optimum charge efficiency.</p>
+<p>The charge temperature coefficient of a lead acid cell is -3mV/°C. Establishing 25°C (77°F) as the midpoint, the charge voltage should be reduced by 3mV per cell for every degree above 25°C and increased by 3mV per cell for every degree below 25°C. If this is not possible, it is better to choose a lower voltage for safety reasons.</p>
+<img src="/2016/01/07/Automative-lead-acid-battery-charging-voltage/runbatt.jpg" alt="runbatt.jpg" title="">
+<p>To charge the battery, the alternator voltage output has to exceed a minimum charging voltage. This minimum charging voltage is 13.8 volts dc across the battery terminals, or at the output of the alternator. A single lead-acid cell starts to charge at anything over 2.25 volts. Since a 12 volt battery has six cells, any 12 volt lead-acid battery needs at least 13.8 volts to start to charge. This voltage will be enough to fully charge or maintain the battery on a trickle charge, but charging time will be very long at 13.8 volts.</p>
+<p>To fully charge in reasonable times, alternator output  must be 14.2 V to 14.5 V as measured right across the battery posts. Above 14.5 volts charging voltage, batteries have a greatly increased tendency to release excessive acidic vapors, hydrogen gas, and to corrode things around the battery. The battery terminal charging voltage must be less than 14.7 volts to prevent excessive gassing. Charging voltages over 14.7 volts can prematurely dry the battery by boiling out electrolyte, and increase risk of a battery hydrogen gas explosion.</p>
+<h1 id="名词缩写"><a href="#名词缩写" class="headerlink" title="名词缩写"></a>名词缩写</h1><p>Generator 发电机<br>Alternator 交流发电机<br>Starter 起动机/马达<br>BMS(Battery Management System)电池管理系统<br>VRLA(Valve Regulated Lead Acid) 阀控式密封铅酸蓄电池<br>SOC(State Of Charge)电池荷电状态<br>SOH(State Of Heath)电池寿命状态<br>SOF(State Of Function)电池功能状态<br>OCV(Open Circuit Voltage)开路电压<br>electrode 电极<br>electrolyte 电解液<br>ion 离子<br>Lead Acid 铅酸<br>nickel 镍<br>lithium-ion(Li-ion) 锂离子<br>battery pack 电池组<br>battery cell 单体电池</p>
+<p>Reference:</p>
+<ol>
+<li>《BOSCH汽车电气与电子》/(德)Reif,K.主编；孙泽昌译.-2版。北京理工大学出版社，2014.8 (ISBN 978-7-9005-0)</li>
+<li><a href="http://batteryuniversity.com/learn/article/charging_the_lead_acid_battery" target="_blank" rel="external">Charging Lead Acid</a></li>
+<li><a href="http://www.w8ji.com/battery_and_charging_system.htm" target="_blank" rel="external">Test Your Charging and Electrical System</a></li>
+<li><a href="http://www.amazon.com/Batteries-Portable-World-Rechargeable-Non-Engineers/dp/0968211836" target="_blank" rel="external">Batteries in a Portable World: A Handbook on Rechargeable Batteries for Non-engineers</a></li>
+<li><a href="https://www.zhihu.com/question/24778938" target="_blank" rel="external">为什么电动汽车电池不能精确显示剩余电量？</a></li>
+<li><a href="http://www.doc88.com/p-0876893178293.html" target="_blank" rel="external">IEEE-1188:2005</a></li>
+<li><a href="http://wenku.baidu.com/view/706aa9a44afe04a1b071de6a.html" target="_blank" rel="external">电池SOC估算策略研究</a></li>
+<li><a href="http://wenku.baidu.com/view/ce1f2de09b6648d7c0c74656.html" target="_blank" rel="external">动力电池的SOC估算</a></li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Automotive/" rel="tag"># Automotive</a>
+          
+            <a href="/tags/Battery/" rel="tag"># Battery</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/12/30/Markdown-html-compare/" rel="next" title="Markdown语法对应的HTML标签实现">
+                <i class="fa fa-chevron-left"></i> Markdown语法对应的HTML标签实现
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/01/14/charset-of-website/" rel="prev" title="Python获取网页编码">
+                Python获取网页编码 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/01/07/Automative-lead-acid-battery-charging-voltage/"
+           data-title="汽车电池" data-url="http://www.wuchenxu.com/2016/01/07/Automative-lead-acid-battery-charging-voltage/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="WuChenxu" />
+          <p class="site-author-name" itemprop="name">WuChenxu</p>
+          <p class="site-description motion-element" itemprop="description">一切都会成为过去</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">51</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">70</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/WuChenxu" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#词源"><span class="nav-number">1.</span> <span class="nav-text">词源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#汽车供电"><span class="nav-number">2.</span> <span class="nav-text">汽车供电</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#发电机"><span class="nav-number">2.1.</span> <span class="nav-text">发电机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#整车电流要求"><span class="nav-number">2.2.</span> <span class="nav-text">整车电流要求</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#起动蓄电池"><span class="nav-number">3.</span> <span class="nav-text">起动蓄电池</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#功能"><span class="nav-number">3.1.</span> <span class="nav-text">功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">3.2.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安全"><span class="nav-number">3.3.</span> <span class="nav-text">安全</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#冷却"><span class="nav-number">3.4.</span> <span class="nav-text">冷却</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#低温"><span class="nav-number">3.5.</span> <span class="nav-text">低温</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参数"><span class="nav-number">3.6.</span> <span class="nav-text">参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#充电"><span class="nav-number">3.7.</span> <span class="nav-text">充电</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#名词缩写"><span class="nav-number">4.</span> <span class="nav-text">名词缩写</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">WuChenxu</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"wuchenxu"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[12pt,a4paper]{article}
+\XeTeXlinebreaklocale "zh"     					% 针对中文进行断行
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt  % 给予TeX断行一定自由度
+\linespread{1.5}                                % 1.5倍行距
+\usepackage{fontspec,xunicode,}
+%\usepackage{xltxtra}
+\usepackage[small, sf]{titlesec}
+
+\newfontfamily\youyuan{YouYuan} 
+\newfontfamily\hwcaiyun{STCaiyun} 
+\newfontfamily\hwhupo{STHupo} 
+\newfontfamily\yaoti{FZYaoTi} 
+\newfontfamily\kaiti{KaiTi} 
+\newfontfamily\xsong{NSimSun} 
+\newfontfamily\hwsong{STSong} 
+\newfontfamily\yahei{Microsoft YaHei} 
+\newfontfamily\fangsong{FangSong} 
+\newfontfamily\song{SimSun} 
+\newfontfamily\hwfangsong{STFangsong} 
+\newfontfamily\weiti{STXinwei} 
+\newfontfamily\heiti{SimHei} 
+\newfontfamily\hwxingkai{STXingkai} 
+\newfontfamily\hwlishu{STLiti} 
+\newfontfamily\zhongsong{STZhongsong} 
+\newfontfamily\shuti{FZShuTi} 
+\newfontfamily\hwhei{STXihei} 
+\newfontfamily\lishu{LiSu} 
+\newfontfamily\hwkai{STKaiti}
+
+\setmainfont[BoldFont={SimHei}]{SimSun}
+\setsansfont[Mapping=tex-text]{Microsoft Sans Serif} 
+\setmonofont{Courier New}
+
+
+\titleformat*{\section}{\youyuan}
+\titleformat*{\subsection}{\youyuan}
+
+
+\begin{document}
+\begin{center}
+{\Large \textbf {排版的原则}}\\[5mm] %指令末端之 \\ 為換行指令 , 指示本行結束 ; 緊接著的 [5mm] 則設定行距加大 0.5 公分。 
+吴聪敏\\[2mm]
+2005.03
+\end{center}
+
+\bigskip %定行内距,medskip-half,small-qua
+\fontsize{12}{20pt}\selectfont %字体 12pt,行距20pt
+排版的目的是为了有效率地表达你的意见，
+让读者容易阅读或吸收。
+
+\section{常见的排版错误}
+桌上排版系统普及之后，每个人都能排版，
+但这不表示每个人都能做出好的排版。
+关于字体之使用，常见的错误如下：
+\begin{itemize} %无序，不带标号
+\item 楷体与仿宋体等可用于标题,
+  但不宜用于正文；正文请使用明体。
+\item 较长之英文段落应使用纯英文字体编排，
+  如 Times New Roman，Book Antiquarian 等。
+  使用中文之细明体或楷体之英文字体，
+  结果保证惨不忍睹。
+\item 欲强调之字词，请使用粗黑体或圆体，勿加底线。
+\end{itemize}
+Windows 系统提供明体与楷体两种字体，
+许多人只能使用楷体排版正文或投影片，
+但排版效果奇差无比。
+
+除了字体之外，版面应注意之细节如下：
+\begin{enumerate}\itemsep=-2pt %带编号，設定使項目之間距比內定值小 2pt
+\item 文章前端请写下题目，作者名字，日期。
+\item 版面之一行勿拉太长，行距不应过小。
+\item 标点符号不应出现在一行前端（避头点）。
+\item 标示注解之号码在句子标点符号之后。
+\item 章节编号使用阿拉伯数字，如1.1节，2.3节；
+避免使用“一、二节”，或“二、三节”。
+\item 阿拉伯数字“1,534”比“一千五百三十四”清楚。
+\end{enumerate}
+
+\section{图形与表格}
+图形与表格是表现咨询的有效方法，
+但是图表作的不好，无法达到目标。
+常见的表格排版错误是格线太多，
+但另一个问题是单位不清楚。
+大型图表应移于版面的上方或下方，而非排版于段落中间。
+非万不得已，表格勿拆为两页。
+
+\par\vfill\jobname.tex %par新起段落 vfill將段落之間距儘可能拉大
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

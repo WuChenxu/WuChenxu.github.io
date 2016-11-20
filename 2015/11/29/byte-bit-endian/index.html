@@ -1,0 +1,1127 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="encoding,byte order,bit order,software,Motorola,Intel,MSB,LSB," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="每天进步一点点" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="概述我们书写的规则一般是从左往右，如写一个数字一千二百三十四，写成1234.这是日常生活中约定俗称的表示方法，其背后的逻辑是最高有效位在最左边，1表示1千是最高有效位，其在最左；如果我们约定最低有效位在最左，那么同样表示一千二百三十四，我们需要写成4321了。在计算机领域，特别是在存储和通信领域，一般以字节为单位存储或者传输数据，那么对于多字节数据的字节序(Byte Order)表示就有两种方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="字节序与大小端">
+<meta property="og:url" content="http://www.wuchenxu.com/2015/11/29/byte-bit-endian/index.html">
+<meta property="og:site_name" content="每天进步一点点">
+<meta property="og:description" content="概述我们书写的规则一般是从左往右，如写一个数字一千二百三十四，写成1234.这是日常生活中约定俗称的表示方法，其背后的逻辑是最高有效位在最左边，1表示1千是最高有效位，其在最左；如果我们约定最低有效位在最左，那么同样表示一千二百三十四，我们需要写成4321了。在计算机领域，特别是在存储和通信领域，一般以字节为单位存储或者传输数据，那么对于多字节数据的字节序(Byte Order)表示就有两种方法">
+<meta property="og:image" content="http://www.wuchenxu.com/2015/11/29/byte-bit-endian/200px-Egg_spiral_egg_cup.jpg">
+<meta property="og:updated_time" content="2015-12-03T13:08:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="字节序与大小端">
+<meta name="twitter:description" content="概述我们书写的规则一般是从左往右，如写一个数字一千二百三十四，写成1234.这是日常生活中约定俗称的表示方法，其背后的逻辑是最高有效位在最左边，1表示1千是最高有效位，其在最左；如果我们约定最低有效位在最左，那么同样表示一千二百三十四，我们需要写成4321了。在计算机领域，特别是在存储和通信领域，一般以字节为单位存储或者传输数据，那么对于多字节数据的字节序(Byte Order)表示就有两种方法">
+<meta name="twitter:image" content="http://www.wuchenxu.com/2015/11/29/byte-bit-endian/200px-Egg_spiral_egg_cup.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.wuchenxu.com/2015/11/29/byte-bit-endian/"/>
+
+
+
+
+
+  <title> 字节序与大小端 | 每天进步一点点 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?a3b3cbdcabc63b90db78f1474d6810b5";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">每天进步一点点</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'PRaBJ8K-sKhwBGZzMgxE','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://www.wuchenxu.com/2015/11/29/byte-bit-endian/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="WuChenxu">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/uploads/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="每天进步一点点">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="每天进步一点点" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                字节序与大小端
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time title="Post created" itemprop="dateCreated datePublished" datetime="2015-11-29T21:08:43+08:00">
+              2015-11-29
+            </time>
+
+            &nbsp;|&nbsp;
+
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-check-o"></i>
+            </span>
+            <time title="Post modified" itemprop="dateModified" datetime="2015-12-03T21:08:43+08:00">
+              2015-12-03
+            </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/encoding/" itemprop="url" rel="index">
+                    <span itemprop="name">encoding</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/29/byte-bit-endian/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/29/byte-bit-endian/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <img src="/2015/11/29/byte-bit-endian/200px-Egg_spiral_egg_cup.jpg" alt="200px-Egg_spiral_egg_cup.jpg" title="">
+<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>我们书写的规则一般是从左往右，如写一个数字<code>一千二百三十四</code>，写成<code>1234</code>.这是日常生活中约定俗称的表示方法，其背后的逻辑是最高有效位在最左边，1表示<code>1千</code>是最高有效位，其在最左；如果我们约定最低有效位在最左，那么同样表示<code>一千二百三十四</code>，我们需要写成<code>4321</code>了。<br>在计算机领域，特别是在存储和通信领域，一般以字节为单位存储或者传输数据，那么对于多字节数据的<code>字节序</code>(Byte Order)表示就有两种方法：</p>
+<blockquote>
+<p>大端(big endian): 最高有效字节(MSB:Most Significant Byte)存储在最低地址(LBA: Lowest Byte Address)。<br>小端(little endian): 最高有效字节存储在最高地址(HBA:Highest Byte Address)。</p>
+</blockquote>
+<a id="more"></a>
+<p>同样对于一个字节的8个位的<code>位序(Bit Order)</code>也有两种表示方法：</p>
+<blockquote>
+<p>大端(big endian): 最高有效位(msb:Most Significant Bit)存储在最低地址(LBA: Lowest Byte Address)。<br>小端(little endian): 最高有效位存储在最高地址(HBA:Highest Byte Address)。</p>
+<p>对于给定一个计算机系统<code>位序</code>一般与<code>字节序</code>相同。</p>
+</blockquote>
+<p>如果我们认为日常书写数字是从低地址开始写的，那么可以说，我们的书写规则是遵从大端规则的。</p>
+<h1 id="表示方法"><a href="#表示方法" class="headerlink" title="表示方法"></a>表示方法</h1><p>我们用大端和小端两种形式来表示同一个数<code>0x0A0B0C0D</code>.<br>大端系统：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">byte addr</th>
+<th style="text-align:center">0</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">bit offset</td>
+<td style="text-align:center">01234567</td>
+<td style="text-align:center">01234567</td>
+<td style="text-align:center">01234567</td>
+<td style="text-align:center">01234567</td>
+</tr>
+<tr>
+<td style="text-align:center">binary</td>
+<td style="text-align:center">00001010</td>
+<td style="text-align:center">00001011</td>
+<td style="text-align:center">00001100</td>
+<td style="text-align:center">00001101</td>
+</tr>
+<tr>
+<td style="text-align:center">hex</td>
+<td style="text-align:center">0A</td>
+<td style="text-align:center">0B</td>
+<td style="text-align:center">0C</td>
+<td style="text-align:center">0D</td>
+</tr>
+</tbody>
+</table>
+<p>小端系统：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">byte addr</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">bit offset</td>
+<td style="text-align:center">76543210</td>
+<td style="text-align:center">76543210</td>
+<td style="text-align:center">76543210</td>
+<td style="text-align:center">76543210</td>
+</tr>
+<tr>
+<td style="text-align:center">binary</td>
+<td style="text-align:center">00001010</td>
+<td style="text-align:center">00001011</td>
+<td style="text-align:center">00001100</td>
+<td style="text-align:center">00001101</td>
+</tr>
+<tr>
+<td style="text-align:center">hex</td>
+<td style="text-align:center">0A</td>
+<td style="text-align:center">0B</td>
+<td style="text-align:center">0C</td>
+<td style="text-align:center">0D</td>
+</tr>
+</tbody>
+</table>
+<p>以上两种表示方法，我们都可以一目了然看出0x0A0B0C0D。<br>如果我们保持byte address和bit offset不变，小端系统也可以表示成：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">byte addr</th>
+<th style="text-align:center">0</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">bit offset</td>
+<td style="text-align:center">01234567</td>
+<td style="text-align:center">01234567</td>
+<td style="text-align:center">01234567</td>
+<td style="text-align:center">01234567</td>
+</tr>
+<tr>
+<td style="text-align:center">binary</td>
+<td style="text-align:center">10110000</td>
+<td style="text-align:center">00110000</td>
+<td style="text-align:center">11010000</td>
+<td style="text-align:center">01010000</td>
+</tr>
+</tbody>
+</table>
+<p>这样不去计算，不能一眼看出表示的数是0x0A0B0C0D.</p>
+<h1 id="CPU的大小端"><a href="#CPU的大小端" class="headerlink" title="CPU的大小端"></a>CPU的大小端</h1><p>CPU的大小端一般指寄存器，总线，cache及内存等的字节序和位序。<br>小端CPU包括Intel(x86等)和DEC，小端格式也称为<code>Intel格式</code>。<br>大端CPU包括Motorola，Sun Spark以及IBM(PowerPC)，大端格式也称为<code>Motorola格式</code>。<br>MIPS和ARM可以配置成任意一种。<br>CPU的大小端影响到CPU的指令集，不同的字节序CPU需要不一样的GNU工具链编译器。如，mipse-linux-gcc是支持大端mips架构的编译器，mipsl-linux-gcc是支持小端架构的编译器。<br>CPU的大小端会影响到软件访问多字节数据，虽然大多数时候对CPU大小端对软件是透明的。<br>如下代码，在不同字节序的CPU上运行会得到不同的结果。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">union</span> &#123;</div><div class="line">    <span class="keyword">uint32_t</span> my_int;</div><div class="line">    <span class="keyword">uint8_t</span>  my_bytes[<span class="number">4</span>];</div><div class="line">&#125; endian_tester;</div><div class="line">endian_tester et;</div><div class="line">et.my_int = <span class="number">0x0a0b0c0d</span>;</div><div class="line"><span class="keyword">if</span>(et.my_bytes[<span class="number">0</span>] == <span class="number">0x0a</span>)</div><div class="line">&#123;</div><div class="line">    <span class="built_in">printf</span>( <span class="string">"I'm on a big-endian system\n"</span> );</div><div class="line">&#125;</div><div class="line"><span class="keyword">else</span></div><div class="line">&#123;</div><div class="line">    <span class="built_in">printf</span>( <span class="string">"I'm on a little-endian system\n"</span> );</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="总线的大小端"><a href="#总线的大小端" class="headerlink" title="总线的大小端"></a>总线的大小端</h1><p>这里的总线不包括CPU内部的地址总线和数据总线等，专指外部总线，指器件之间的通讯总线。<br>对于并行总线(如PCI)，如果是小端，则在32位的地址/数据总线AD[31:0],MSB连接到AD31，LSB连接到AD0。<br>对于串行总线，只存在协议上的大小端，不存在总线的大小端。</p>
+<h1 id="Device的大小端"><a href="#Device的大小端" class="headerlink" title="Device的大小端"></a>Device的大小端</h1><blockquote>
+<p>Kevin’s Theory #1: When a multi-byte data unit travels across the boundary of two reverse endian systems, the conversion is made such that memory contiguousness to the unit is preserved.</p>
+<p>Kevin’s Theory #2: In a C structure that contains bit fields, if field A is defined in front of field B, then field A always occupies a lower bit address than field B.</p>
+</blockquote>
+<p>以NIC为例，vlan[0:24]有一个0xabcdef的值通过32位的存储边界(memory boundary),大端系统中：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">byte addr</th>
+<th style="text-align:center">0</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">6</th>
+<th style="text-align:center">7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">bit offset</td>
+<td style="text-align:center">01234567</td>
+<td style="text-align:center">01234567</td>
+<td style="text-align:center">01234567</td>
+<td style="text-align:center">01234567</td>
+<td style="text-align:center">01234567</td>
+<td style="text-align:center">01234567</td>
+<td style="text-align:center">01234567</td>
+<td style="text-align:center">01234567</td>
+</tr>
+<tr>
+<td style="text-align:center">binary</td>
+<td style="text-align:center">10101010</td>
+<td style="text-align:center">10 010111</td>
+<td style="text-align:center">10101011</td>
+<td style="text-align:center">11001101</td>
+<td style="text-align:center">11101111</td>
+<td style="text-align:center">00000000</td>
+<td style="text-align:center">00000000</td>
+<td style="text-align:center">00000000</td>
+</tr>
+<tr>
+<td style="text-align:center">hex</td>
+<td style="text-align:center">aa</td>
+<td style="text-align:center">97</td>
+<td style="text-align:center">ab</td>
+<td style="text-align:center">cd</td>
+<td style="text-align:center">ef</td>
+<td style="text-align:center">00</td>
+<td style="text-align:center">00</td>
+<td style="text-align:center">00</td>
+</tr>
+</tbody>
+</table>
+<p>tag[0:9]=bit[0:9]=0x2aa,rx[0:5]=bit[10:15]=0x17,vlan[0:15]=bit[16:23]=0xabcdef.<br>如果按照字长一致原则转换到小端系统中，字长位32bit：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">byte addr</th>
+<th style="text-align:center">7</th>
+<th style="text-align:center">6</th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">bit offset</td>
+<td style="text-align:center">76543210</td>
+<td style="text-align:center">76543210</td>
+<td style="text-align:center">76543210</td>
+<td style="text-align:center">76543210</td>
+<td style="text-align:center">76543210</td>
+<td style="text-align:center">76543210</td>
+<td style="text-align:center">76543210</td>
+<td style="text-align:center">76543210</td>
+</tr>
+<tr>
+<td style="text-align:center">binary</td>
+<td style="text-align:center">11101111</td>
+<td style="text-align:center">00000000</td>
+<td style="text-align:center">00000000</td>
+<td style="text-align:center">00000000</td>
+<td style="text-align:center">10101010</td>
+<td style="text-align:center">10 010111</td>
+<td style="text-align:center">10101011</td>
+<td style="text-align:center">11001101</td>
+</tr>
+<tr>
+<td style="text-align:center">hex</td>
+<td style="text-align:center">ef</td>
+<td style="text-align:center">00</td>
+<td style="text-align:center">00</td>
+<td style="text-align:center">00</td>
+<td style="text-align:center">aa</td>
+<td style="text-align:center">97</td>
+<td style="text-align:center">ab</td>
+<td style="text-align:center">cd</td>
+</tr>
+</tbody>
+</table>
+<p>字长转换造成存储地址不连续问题。<br>按照字节一致原则转换到小端系统中：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">byte addr</th>
+<th style="text-align:center">7</th>
+<th style="text-align:center">6</th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">bit offset</td>
+<td style="text-align:center">76543210</td>
+<td style="text-align:center">76543210</td>
+<td style="text-align:center">76543210</td>
+<td style="text-align:center">76543210</td>
+<td style="text-align:center">76543210</td>
+<td style="text-align:center">76543210</td>
+<td style="text-align:center">76543210</td>
+<td style="text-align:center">76543210</td>
+</tr>
+<tr>
+<td style="text-align:center">binary</td>
+<td style="text-align:center">00000000</td>
+<td style="text-align:center">00000000</td>
+<td style="text-align:center">00000000</td>
+<td style="text-align:center">11101111</td>
+<td style="text-align:center">11001101</td>
+<td style="text-align:center">10101011</td>
+<td style="text-align:center">10010111</td>
+<td style="text-align:center">10 101010</td>
+</tr>
+<tr>
+<td style="text-align:center">hex</td>
+<td style="text-align:center">00</td>
+<td style="text-align:center">00</td>
+<td style="text-align:center">00</td>
+<td style="text-align:center">ef</td>
+<td style="text-align:center">cd</td>
+<td style="text-align:center">ab</td>
+<td style="text-align:center">97</td>
+<td style="text-align:center">aa</td>
+</tr>
+</tbody>
+</table>
+<p>为得到与大端系统中一致的数据位，还需要软件再做一个字节交换(byte swap)：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">byte addr</th>
+<th style="text-align:center">7</th>
+<th style="text-align:center">6</th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">bit offset</td>
+<td style="text-align:center">76543210</td>
+<td style="text-align:center">76543210</td>
+<td style="text-align:center">76543210</td>
+<td style="text-align:center">76543210</td>
+<td style="text-align:center">76543210</td>
+<td style="text-align:center">76543210</td>
+<td style="text-align:center">76543210</td>
+<td style="text-align:center">76543210</td>
+</tr>
+<tr>
+<td style="text-align:center">binary</td>
+<td style="text-align:center">00000000</td>
+<td style="text-align:center">00000000</td>
+<td style="text-align:center">00000000</td>
+<td style="text-align:center">10 101010</td>
+<td style="text-align:center">10010111</td>
+<td style="text-align:center">10101011</td>
+<td style="text-align:center">11001101</td>
+<td style="text-align:center">11101111</td>
+</tr>
+<tr>
+<td style="text-align:center">hex</td>
+<td style="text-align:center">00</td>
+<td style="text-align:center">00</td>
+<td style="text-align:center">00</td>
+<td style="text-align:center">aa</td>
+<td style="text-align:center">97</td>
+<td style="text-align:center">ab</td>
+<td style="text-align:center">cd</td>
+<td style="text-align:center">ef</td>
+</tr>
+</tbody>
+</table>
+<p>根据Kevin’s Theory #2，我们可以定义C结构体来访问小端模式的NIC的标识符：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> nic_tag_reg &#123;</div><div class="line">    <span class="keyword">uint64_t</span> vlan:<span class="number">24</span> __attribute__((packed));</div><div class="line">    <span class="keyword">uint64_t</span> rx  :<span class="number">6</span>  __attribute__((packed));</div><div class="line">    <span class="keyword">uint64_t</span> tag :<span class="number">10</span> __attribute__((packed));</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>大端模式下：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> nic_tag_reg &#123;</div><div class="line">	<span class="keyword">uint64_t</span> tag :<span class="number">10</span> __attribute__((packed));</div><div class="line">	<span class="keyword">uint64_t</span> rx  :<span class="number">6</span>  __attribute__((packed));</div><div class="line">    <span class="keyword">uint64_t</span> vlan:<span class="number">24</span> __attribute__((packed));</div><div class="line">        </div><div class="line">        </div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<h1 id="协议的大小端"><a href="#协议的大小端" class="headerlink" title="协议的大小端"></a>协议的大小端</h1><p>对于硬线上发送接收的位顺序，通常有规范来定义，不一定与上层的协议字节序一致，硬件会做相应的转换工作。<br>我们通常所说的网络字节序值网络传输协议的字节序，如IP协议数据按照大端字节序发送接收。<br>网络(network)字节序与本机(host)字节序不一致时，需要进行转换。如 htons/ntohs/ntohl/htonl等函数。</p>
+<h1 id="词源"><a href="#词源" class="headerlink" title="词源"></a>词源</h1><blockquote>
+<p>据Jargon File记载，endian这个词来源于Jonathan Swift在1726年写的讽刺小说 “Gulliver’s Travels”（《格利佛游记》）。该小说在描述Gulliver畅游小人国时碰到了如下的一个场景。在小人国里的小人因为非常小（身高6英寸）所以总是碰到一些意想不到的问题。有一次因为对水煮蛋该从大的一端（Big-End）剥开还是小的一端（Little-End）剥开的争论而引发了一场战争，并形成了两支截然对立的队伍：支持从大的一端剥开的人Swift就称作Big-Endians，而支持从小的一端剥开的人就称作Little-Endians……（后缀ian表明的就是支持某种观点的人）。<br>1980年，Danny Cohen在其著名的论文”On Holy Wars and a Plea for Peace”中为了平息一场关于在消息中字节该以什么样的顺序进行传送的争论而引用了该词。该文中，Cohen非常形象贴切地把支持从一个消息序列的最高位开始传送的那伙人叫做Big-Endians，支持从最低位开始传送的相对应地叫做Little-Endians。此后Endian这个词便随着这篇论文而被广为采用。</p>
+</blockquote>
+<p>Reference:</p>
+<ol>
+<li><a href="http://www.linuxjournal.com/node/6788/print" target="_blank" rel="external">Byte and Bit Order Dissection</a></li>
+<li><a href="http://baike.baidu.com/view/633653.htm" target="_blank" rel="external">Endian_baiduBaike</a></li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/encoding/" rel="tag"># encoding</a>
+          
+            <a href="/tags/byte-order/" rel="tag"># byte order</a>
+          
+            <a href="/tags/bit-order/" rel="tag"># bit order</a>
+          
+            <a href="/tags/software/" rel="tag"># software</a>
+          
+            <a href="/tags/Motorola/" rel="tag"># Motorola</a>
+          
+            <a href="/tags/Intel/" rel="tag"># Intel</a>
+          
+            <a href="/tags/MSB/" rel="tag"># MSB</a>
+          
+            <a href="/tags/LSB/" rel="tag"># LSB</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/11/23/Static-Blog-hexo-github-5-hexo-usage-trick/" rel="next" title="个人博客搭建hexo+github(5):Hexo写作实用技巧">
+                <i class="fa fa-chevron-left"></i> 个人博客搭建hexo+github(5):Hexo写作实用技巧
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/12/03/CAN-byte-order/" rel="prev" title="CAN总线字节序">
+                CAN总线字节序 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/11/29/byte-bit-endian/"
+           data-title="字节序与大小端" data-url="http://www.wuchenxu.com/2015/11/29/byte-bit-endian/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="WuChenxu" />
+          <p class="site-author-name" itemprop="name">WuChenxu</p>
+          <p class="site-description motion-element" itemprop="description">一切都会成为过去</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">51</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">70</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/WuChenxu" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#表示方法"><span class="nav-number">2.</span> <span class="nav-text">表示方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CPU的大小端"><span class="nav-number">3.</span> <span class="nav-text">CPU的大小端</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总线的大小端"><span class="nav-number">4.</span> <span class="nav-text">总线的大小端</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Device的大小端"><span class="nav-number">5.</span> <span class="nav-text">Device的大小端</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#协议的大小端"><span class="nav-number">6.</span> <span class="nav-text">协议的大小端</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#词源"><span class="nav-number">7.</span> <span class="nav-text">词源</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">WuChenxu</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"wuchenxu"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

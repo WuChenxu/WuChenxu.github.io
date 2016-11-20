@@ -1,0 +1,1011 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="test," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="每天进步一点点" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="徐佳莹-不痛
+What is code coverage代码覆盖率(code coverage,test coverage)是单元测试(unit test)中的一种度量方法，用来评估测试用例(test case)能够覆盖多少的代码，能够从一定程度上反应代码的质量。可以用公式来表示：Code Coverage=(Number of items excuted)/(Total Number of It">
+<meta property="og:type" content="article">
+<meta property="og:title" content="单元测试中的代码覆盖率(Code Coverage in Unit Test)">
+<meta property="og:url" content="http://www.wuchenxu.com/2016/03/01/code-coverage-in-unit-test/index.html">
+<meta property="og:site_name" content="每天进步一点点">
+<meta property="og:description" content="徐佳莹-不痛
+What is code coverage代码覆盖率(code coverage,test coverage)是单元测试(unit test)中的一种度量方法，用来评估测试用例(test case)能够覆盖多少的代码，能够从一定程度上反应代码的质量。可以用公式来表示：Code Coverage=(Number of items excuted)/(Total Number of It">
+<meta property="og:image" content="http://www.wuchenxu.com/2016/03/01/code-coverage-in-unit-test/Tessy_Coverage_viewer.jpg">
+<meta property="og:updated_time" content="2016-03-01T12:33:50.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="单元测试中的代码覆盖率(Code Coverage in Unit Test)">
+<meta name="twitter:description" content="徐佳莹-不痛
+What is code coverage代码覆盖率(code coverage,test coverage)是单元测试(unit test)中的一种度量方法，用来评估测试用例(test case)能够覆盖多少的代码，能够从一定程度上反应代码的质量。可以用公式来表示：Code Coverage=(Number of items excuted)/(Total Number of It">
+<meta name="twitter:image" content="http://www.wuchenxu.com/2016/03/01/code-coverage-in-unit-test/Tessy_Coverage_viewer.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.wuchenxu.com/2016/03/01/code-coverage-in-unit-test/"/>
+
+
+
+
+
+  <title> 单元测试中的代码覆盖率(Code Coverage in Unit Test) | 每天进步一点点 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?a3b3cbdcabc63b90db78f1474d6810b5";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">每天进步一点点</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'PRaBJ8K-sKhwBGZzMgxE','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://www.wuchenxu.com/2016/03/01/code-coverage-in-unit-test/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="WuChenxu">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/uploads/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="每天进步一点点">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="每天进步一点点" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                单元测试中的代码覆盖率(Code Coverage in Unit Test)
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-03-01T20:33:50+08:00">
+              2016-03-01
+            </time>
+
+            &nbsp;|&nbsp;
+
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-check-o"></i>
+            </span>
+            <time title="Post modified" itemprop="dateModified" datetime="2016-03-01T20:33:50+08:00">
+              2016-03-01
+            </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/code-coverage/" itemprop="url" rel="index">
+                    <span itemprop="name">code coverage</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/code-coverage/unit-test/" itemprop="url" rel="index">
+                    <span itemprop="name">unit test</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/01/code-coverage-in-unit-test/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/01/code-coverage-in-unit-test/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=404746058&auto=0&height=66"></iframe><br>徐佳莹-不痛<br><img src="/2016/03/01/code-coverage-in-unit-test/Tessy_Coverage_viewer.jpg" alt="Tessy_Coverage_viewer.jpg" title=""></p>
+<h1 id="What-is-code-coverage"><a href="#What-is-code-coverage" class="headerlink" title="What is code coverage"></a>What is code coverage</h1><p>代码覆盖率(code coverage,test coverage)是单元测试(unit test)中的一种度量方法，用来评估测试用例(test case)能够覆盖多少的代码，能够从一定程度上反应代码的质量。可以用公式来表示：<br>Code Coverage=(Number of items excuted)/(Total Number of Items)*100%</p>
+<a id="more"></a>
+<h1 id="how-many-types-of-code-coverage"><a href="#how-many-types-of-code-coverage" class="headerlink" title="how many types of code coverage"></a>how many types of code coverage</h1><h2 id="Function-Coverage"><a href="#Function-Coverage" class="headerlink" title="Function Coverage"></a>Function Coverage</h2><p>用来指示是否所有的函数都被调用过。</p>
+<h2 id="Statement-Coverage-SC-C0"><a href="#Statement-Coverage-SC-C0" class="headerlink" title="Statement Coverage(SC,C0)"></a>Statement Coverage(SC,C0)</h2><p>语句覆盖率(statement coverage，SC)，也称为行覆盖率(line coverage)，反映了语句（汇编级指令或C语言的语句）的执行率。通常记为：C0。<br><figure class="highlight c"><figcaption><span>Code excerpt to illustrate the weakness of statement coverage</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> a = <span class="number">0</span>;</div><div class="line"><span class="keyword">if</span> (decision)</div><div class="line">&#123;</div><div class="line">	a = <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line">a = <span class="number">1</span> / a;</div></pre></td></tr></table></figure></p>
+<p>test case:decision = 1,则所有语句均会执行一次，覆盖率为100%，但是如果decision是’0’,那么执行这段代码出现<code>除0</code>错误。<br>所以，即使是100%的state coverage，也有可能会有严重的bug存在。<br>100%的SC仅仅意味着：所有语句在测试中至少被执行了一次，仅此而已。<br>SC可以用来指示dead code，这些code根本不能被执行；<br>SC可以说明需要增加test case。</p>
+<h2 id="Branch-Coverage-Decision-Coverage-DC-C1"><a href="#Branch-Coverage-Decision-Coverage-DC-C1" class="headerlink" title="Branch Coverage / Decision Coverage (DC,C1)"></a>Branch Coverage / Decision Coverage (DC,C1)</h2><p>定义：是否每个控制结构（如if，case语句）的所有branch都被执行过。<br>同样上一节的代码，decision为’1’的DC只有50%，因为if隐含的else没有被执行过；如果需要达到100%的DC，至少再增加decision为 ‘0’的测试用例。<br>DC包含SC，如果100%的DC则肯定是100%的SC。<br>但如果是50%的DC并不能说明是50%的SC。因为DC是计算decision的分支，如if语句只可能是0%，50%或100%三种覆盖率，无其他可能；而SC是计算语句执行的百分比。<br>有时候100%的Branch Coverage不可能达到。</p>
+<h2 id="Condition-Coverage-CC"><a href="#Condition-Coverage-CC" class="headerlink" title="Condition Coverage(CC)"></a>Condition Coverage(CC)</h2><p>定义：是否每个布尔<code>子表达式</code>都被估值过true和false。<br><figure class="highlight c"><figcaption><span>A decision can be made up of conditions</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> ((A||B)&amp;&amp;(C||!D))</div></pre></td></tr></table></figure></p>
+<p><code>(A||B)&amp;&amp;(C||!D)</code>是一个decision，但是由A、B、C和D四个condition(atomic decision)组成。</p>
+<h3 id="Simple-CC"><a href="#Simple-CC" class="headerlink" title="Simple CC"></a>Simple CC</h3><figure class="highlight pascal"><figcaption><span>A code snippet in Pascal and the four possible test cases (complete evaluation)</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">IF</span> A <span class="keyword">AND</span> B <span class="keyword">THEN</span></div><div class="line">...</div><div class="line"><span class="keyword">ELSE</span></div><div class="line">...</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:center">A</th>
+<th style="text-align:center">B</th>
+<th style="text-align:center">A and B</th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">x</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">x</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+</tr>
+</tbody>
+</table>
+<p>由于Pascal逻辑运算没有短路，而是complete evaluation，所以只需要执行test case2和3就能达到Simple CC 100%的覆盖率(A和B都执行过true和false)；但此时DC才达到50%。</p>
+<p>再举一例<br><figure class="highlight c"><figcaption><span>A code snippet in C and the three possible test cases (incomplete evaluation)</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (A &amp;&amp; B)</div><div class="line">&#123;</div><div class="line">	...</div><div class="line">&#125;</div><div class="line"><span class="keyword">else</span></div><div class="line">&#123;</div><div class="line">	...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:center">A</th>
+<th style="text-align:center">B</th>
+<th style="text-align:center">A and B</th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">x</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">x</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">x</td>
+</tr>
+</tbody>
+</table>
+<p>C语言有短路运算逻辑表达式的，所以需要3个测试用例才能使A和B都执行过true和false，此时CC和DC都是100%.</p>
+<h3 id="Modified-Condition-Decision-Coverage-MC-DC-MCDC"><a href="#Modified-Condition-Decision-Coverage-MC-DC-MCDC" class="headerlink" title="Modified Condition / Decision Coverage(MC/DC,MCDC)"></a>Modified Condition / Decision Coverage(MC/DC,MCDC)</h3><p>MC/DC=DC+CC+每个condition能独立影响decision的输出结果。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> ((a || b) &amp;&amp; c)</div></pre></td></tr></table></figure></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:center">a</th>
+<th style="text-align:center">b</th>
+<th style="text-align:center">c</th>
+<th style="text-align:center">((a or b) and c)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+</tr>
+<tr>
+<td>5</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+</tr>
+<tr>
+<td>6</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+</tr>
+<tr>
+<td>7</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+</tr>
+<tr>
+<td>8</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+</tr>
+</tbody>
+</table>
+<p>Test case 1和8就能够使得DC+CC达到100%。<br>但是1中的’c’，8中国的’b’不能影响desicion的输出结果不能满足MC/DC的标准。<br>以下test case能够满足MC/DC的要求：<br>|     |  a  |  b  |   c  | ((a or b) and c) |<br>|—–|:—:|:—:|:—-:|:—————:|<br>|  2  | <code>F</code> | <code>F</code> |   T  |        F        |<br>|  3  |  F  |  T  |  <code>F</code> |        F        |<br>|  4  |  F  | <code>T</code> |  <code>T</code> |        T        |<br>|  6  | <code>T</code> |  F  |   T  |        T        |</p>
+<p>2与6由a独立影响；2与4由b独立影响；3与4由c独立影响。</p>
+<h3 id="Multiple-Condition-Coverage-MCC"><a href="#Multiple-Condition-Coverage-MCC" class="headerlink" title="Multiple Condition Coverage(MCC)"></a>Multiple Condition Coverage(MCC)</h3><p>MCC要求一个desicion里的所有condition的组合都要被测试到，也就是说test case由conditon的真值表确定。<br>如上一节的例子，需要1到8所有的case来达到100%的MCC。</p>
+<h2 id="Path-Coverage-C4"><a href="#Path-Coverage-C4" class="headerlink" title="Path Coverage(C4)"></a>Path Coverage(C4)</h2><p>路径覆盖率测量所有可能的执行路径中多少路径被执行了。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (a) x <span class="keyword">else</span> y;</div><div class="line"><span class="keyword">if</span> (b) z;</div></pre></td></tr></table></figure></p>
+<p>需要4(=2<sup>2</sup>)个test case来达到100%的path coverage。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:center">a</th>
+<th style="text-align:center">b</th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">x</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">x</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">x</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">x</td>
+</tr>
+</tbody>
+</table>
+<p>path coverage所需的test case随着branch的增多而成指数级增加，特别是有循环的话，基本达到100%的覆盖率是不现实的。</p>
+<h1 id="用处"><a href="#用处" class="headerlink" title="用处"></a>用处</h1><ul>
+<li>一些标准（如：ISO26262 part6）和客户的要求</li>
+<li>帮助发现一些未测试的代码块</li>
+<li>有助于重构</li>
+</ul>
+<h1 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h1><p>100%的代码覆盖率并不意味着没有bug;<br>代码覆盖率只针对测试的代码，而不是功能规范(functioality specification);<br>不能为了提高测试覆盖率而忽略主要目的是测试代码的行为(代码行为与设计是不是一致)不能因为修改代码的同时需要修改或增加测试用例来满足覆盖率要求，而放弃了对代码的优化。</p>
+<p>Reference:</p>
+<ol>
+<li><a href="http://www.stickyminds.com/sites/default/files/article/file/2013/XUS252268366file1_0.pdf" target="_blank" rel="external">Is 100% Code Coverage Enough?</a></li>
+<li><a href="http://blogs.msdn.com/b/billliu/archive/2012/05/06/code-coverage-what-is-for-after-all.aspx" target="_blank" rel="external">code coverage, what is for after all?</a></li>
+<li><a href="http://grosser.it/2008/04/04/whats-my-coverage-c0-c1-c2-c3-path-coverage/" target="_blank" rel="external">hats my Coverage? (C0 C1 C2 C3 + Path)</a></li>
+<li><a href="https://coding.abel.nu/2015/12/code-coverage-does-matter" target="_blank" rel="external">Code Coverage Does Matter</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Code_coverage" target="_blank" rel="external">Code Coverage</a></li>
+<li><a href="http://www.bullseye.com/coverage.html" target="_blank" rel="external">Code Coverage Analysis</a></li>
+<li><a href="http://martinfowler.com/bliki/TestCoverage.html" target="_blank" rel="external">TestCoverage</a></li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/test/" rel="tag"># test</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/01/27/Markdown-inline-css-compare/" rel="next" title="Markdown语法对应的CSS实现">
+                <i class="fa fa-chevron-left"></i> Markdown语法对应的CSS实现
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/03/02/IP-code-degree-of-protection-by-enclosure/" rel="prev" title="防护等级IP代码">
+                防护等级IP代码 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/03/01/code-coverage-in-unit-test/"
+           data-title="单元测试中的代码覆盖率(Code Coverage in Unit Test)" data-url="http://www.wuchenxu.com/2016/03/01/code-coverage-in-unit-test/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="WuChenxu" />
+          <p class="site-author-name" itemprop="name">WuChenxu</p>
+          <p class="site-description motion-element" itemprop="description">一切都会成为过去</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">51</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">70</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/WuChenxu" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#What-is-code-coverage"><span class="nav-number">1.</span> <span class="nav-text">What is code coverage</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#how-many-types-of-code-coverage"><span class="nav-number">2.</span> <span class="nav-text">how many types of code coverage</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Function-Coverage"><span class="nav-number">2.1.</span> <span class="nav-text">Function Coverage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Statement-Coverage-SC-C0"><span class="nav-number">2.2.</span> <span class="nav-text">Statement Coverage(SC,C0)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Branch-Coverage-Decision-Coverage-DC-C1"><span class="nav-number">2.3.</span> <span class="nav-text">Branch Coverage / Decision Coverage (DC,C1)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Condition-Coverage-CC"><span class="nav-number">2.4.</span> <span class="nav-text">Condition Coverage(CC)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Simple-CC"><span class="nav-number">2.4.1.</span> <span class="nav-text">Simple CC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Modified-Condition-Decision-Coverage-MC-DC-MCDC"><span class="nav-number">2.4.2.</span> <span class="nav-text">Modified Condition / Decision Coverage(MC/DC,MCDC)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Multiple-Condition-Coverage-MCC"><span class="nav-number">2.4.3.</span> <span class="nav-text">Multiple Condition Coverage(MCC)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Path-Coverage-C4"><span class="nav-number">2.5.</span> <span class="nav-text">Path Coverage(C4)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用处"><span class="nav-number">3.</span> <span class="nav-text">用处</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#局限性"><span class="nav-number">4.</span> <span class="nav-text">局限性</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">WuChenxu</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"wuchenxu"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
