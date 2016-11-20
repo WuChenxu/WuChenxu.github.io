@@ -68,13 +68,13 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="encoding,byte order,bit order,software,Motorola,Intel,MSB,LSB," />
+  <meta name="keywords" content="encoding,software,byte order,bit order,Motorola,Intel,MSB,LSB," />
 
 
 
 
 
-  <link rel="alternate" href="/atom.xml" title="每天进步一点点" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="功不唐捐，玉汝于成" type="application/atom+xml" />
 
 
 
@@ -90,7 +90,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="字节序与大小端">
 <meta property="og:url" content="http://www.wuchenxu.com/2015/11/29/byte-bit-endian/index.html">
-<meta property="og:site_name" content="每天进步一点点">
+<meta property="og:site_name" content="功不唐捐，玉汝于成">
 <meta property="og:description" content="概述我们书写的规则一般是从左往右，如写一个数字一千二百三十四，写成1234.这是日常生活中约定俗称的表示方法，其背后的逻辑是最高有效位在最左边，1表示1千是最高有效位，其在最左；如果我们约定最低有效位在最左，那么同样表示一千二百三十四，我们需要写成4321了。在计算机领域，特别是在存储和通信领域，一般以字节为单位存储或者传输数据，那么对于多字节数据的字节序(Byte Order)表示就有两种方法">
 <meta property="og:image" content="http://www.wuchenxu.com/2015/11/29/byte-bit-endian/200px-Egg_spiral_egg_cup.jpg">
 <meta property="og:updated_time" content="2015-12-03T13:08:43.000Z">
@@ -131,7 +131,7 @@
 
 
 
-  <title> 字节序与大小端 | 每天进步一点点 </title>
+  <title> 字节序与大小端 | 功不唐捐，玉汝于成 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -172,7 +172,7 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">每天进步一点点</span>
+      <span class="site-title">功不唐捐，玉汝于成</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -301,9 +301,9 @@
   </span>
 
   <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="每天进步一点点">
+    <meta itemprop="name" content="功不唐捐，玉汝于成">
     <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="每天进步一点点" src="">
+      <img style="display:none;" itemprop="url image" alt="功不唐捐，玉汝于成" src="">
     </span>
   </span>
 
@@ -331,18 +331,21 @@
             <time title="Post created" itemprop="dateCreated datePublished" datetime="2015-11-29T21:08:43+08:00">
               2015-11-29
             </time>
-
-            &nbsp;|&nbsp;
-
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-check-o"></i>
-            </span>
-            <time title="Post modified" itemprop="dateModified" datetime="2015-12-03T21:08:43+08:00">
-              2015-12-03
-            </time>
-            
-          </span>
-
+		  </span>
+		
+			<span class="updated-time">
+				&nbsp; | &nbsp;
+				<span class="post-meta-item-icon">
+					<i class="fa fa-calendar-o"></i>
+				</span>
+			  <span class="post-meta-item-text">更新于</span>
+				<time itemprop="dateUpdated" datetime="2015-12-03T21:08:43+08:00" content="2015-12-03">
+				  2015-12-03
+				</time>
+			  </span>
+			</span>
+		  
+		  
           
             <span class="post-category" >
               &nbsp; | &nbsp;
@@ -752,11 +755,11 @@
           
             <a href="/tags/encoding/" rel="tag"># encoding</a>
           
+            <a href="/tags/software/" rel="tag"># software</a>
+          
             <a href="/tags/byte-order/" rel="tag"># byte order</a>
           
             <a href="/tags/bit-order/" rel="tag"># bit order</a>
-          
-            <a href="/tags/software/" rel="tag"># software</a>
           
             <a href="/tags/Motorola/" rel="tag"># Motorola</a>
           
