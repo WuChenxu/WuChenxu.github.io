@@ -92,12 +92,13 @@
 <meta property="og:url" content="http://www.wuchenxu.com/2015/11/29/byte-bit-endian/index.html">
 <meta property="og:site_name" content="功不唐捐，玉汝于成">
 <meta property="og:description" content="概述我们书写的规则一般是从左往右，如写一个数字一千二百三十四，写成1234.这是日常生活中约定俗称的表示方法，其背后的逻辑是最高有效位在最左边，1表示1千是最高有效位，其在最左；如果我们约定最低有效位在最左，那么同样表示一千二百三十四，我们需要写成4321了。在计算机领域，特别是在存储和通信领域，一般以字节为单位存储或者传输数据，那么对于多字节数据的字节序(Byte Order)表示就有两种方法">
-<meta property="og:image" content="http://www.wuchenxu.com/2015/11/29/byte-bit-endian/200px-Egg_spiral_egg_cup.jpg">
-<meta property="og:updated_time" content="2015-12-03T13:08:43.000Z">
+<meta property="og:image" content="http://www.wuchenxu.com/2015/11/29/byte-bit-endian/endian_of_picture.jpg">
+<meta property="og:image" content="http://www.wuchenxu.com/2015/11/29/byte-bit-endian/endian_in_computer.gif">
+<meta property="og:updated_time" content="2016-11-22T13:08:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="字节序与大小端">
 <meta name="twitter:description" content="概述我们书写的规则一般是从左往右，如写一个数字一千二百三十四，写成1234.这是日常生活中约定俗称的表示方法，其背后的逻辑是最高有效位在最左边，1表示1千是最高有效位，其在最左；如果我们约定最低有效位在最左，那么同样表示一千二百三十四，我们需要写成4321了。在计算机领域，特别是在存储和通信领域，一般以字节为单位存储或者传输数据，那么对于多字节数据的字节序(Byte Order)表示就有两种方法">
-<meta name="twitter:image" content="http://www.wuchenxu.com/2015/11/29/byte-bit-endian/200px-Egg_spiral_egg_cup.jpg">
+<meta name="twitter:image" content="http://www.wuchenxu.com/2015/11/29/byte-bit-endian/endian_of_picture.jpg">
 
 
 
@@ -339,8 +340,8 @@
 					<i class="fa fa-calendar-o"></i>
 				</span>
 			  <span class="post-meta-item-text">更新于</span>
-				<time itemprop="dateUpdated" datetime="2015-12-03T21:08:43+08:00" content="2015-12-03">
-				  2015-12-03
+				<time itemprop="dateUpdated" datetime="2016-11-22T21:08:43+08:00" content="2016-11-22">
+				  2016-11-22
 				</time>
 			  </span>
 			</span>
@@ -398,7 +399,7 @@
       
 
       
-        <img src="/2015/11/29/byte-bit-endian/200px-Egg_spiral_egg_cup.jpg" alt="200px-Egg_spiral_egg_cup.jpg" title="">
+        <img src="/2015/11/29/byte-bit-endian/endian_of_picture.jpg" alt="endian_of_picture.jpg" title="">
 <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>我们书写的规则一般是从左往右，如写一个数字<code>一千二百三十四</code>，写成<code>1234</code>.这是日常生活中约定俗称的表示方法，其背后的逻辑是最高有效位在最左边，1表示<code>1千</code>是最高有效位，其在最左；如果我们约定最低有效位在最左，那么同样表示<code>一千二百三十四</code>，我们需要写成<code>4321</code>了。<br>在计算机领域，特别是在存储和通信领域，一般以字节为单位存储或者传输数据，那么对于多字节数据的<code>字节序</code>(Byte Order)表示就有两种方法：</p>
 <blockquote>
 <p>大端(big endian): 最高有效字节(MSB:Most Significant Byte)存储在最低地址(LBA: Lowest Byte Address)。<br>小端(little endian): 最高有效字节存储在最高地址(HBA:Highest Byte Address)。</p>
@@ -410,7 +411,8 @@
 <p>对于给定一个计算机系统<code>位序</code>一般与<code>字节序</code>相同。</p>
 </blockquote>
 <p>如果我们认为日常书写数字是从低地址开始写的，那么可以说，我们的书写规则是遵从大端规则的。</p>
-<h1 id="表示方法"><a href="#表示方法" class="headerlink" title="表示方法"></a>表示方法</h1><p>我们用大端和小端两种形式来表示同一个数<code>0x0A0B0C0D</code>.<br>大端系统：</p>
+<h1 id="表示方法"><a href="#表示方法" class="headerlink" title="表示方法"></a>表示方法</h1><img src="/2015/11/29/byte-bit-endian/endian_in_computer.gif" alt="endian_in_computer.gif" title="">
+<p>我们用大端和小端两种形式来表示同一个数<code>0x0A0B0C0D</code>.<br>大端系统：</p>
 <table>
 <thead>
 <tr>
@@ -729,6 +731,7 @@
 <ol>
 <li><a href="http://www.linuxjournal.com/node/6788/print" target="_blank" rel="external">Byte and Bit Order Dissection</a></li>
 <li><a href="http://baike.baidu.com/view/633653.htm" target="_blank" rel="external">Endian_baiduBaike</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2016/11/byte-order.html" target="_blank" rel="external">byte oreder</a></li>
 </ol>
 
       
@@ -860,7 +863,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">51</span>
+              <span class="site-state-item-count">52</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -868,7 +871,7 @@
           
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-count">34</span>
                 <span class="site-state-item-name">分类</span>
               
             </div>
@@ -877,7 +880,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">70</span>
+                <span class="site-state-item-count">72</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

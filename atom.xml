@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.wuchenxu.com/"/>
-  <updated>2016-09-28T12:44:27.000Z</updated>
+  <updated>2016-11-20T14:37:54.000Z</updated>
   <id>http://www.wuchenxu.com/</id>
   
   <author>
@@ -14,6 +14,59 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>康威定律（Conway&#39;s law）</title>
+    <link href="http://www.wuchenxu.com/2016/11/20/Conways-law/"/>
+    <id>http://www.wuchenxu.com/2016/11/20/Conways-law/</id>
+    <published>2016-11-20T14:37:54.000Z</published>
+    <updated>2016-11-20T14:37:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/2016/11/20/Conways-law/tech_organization_structure.png" alt="tech_organization_structure.png" title="">
+<p>系统是设计该系统的组织结构的映射。<br><a id="more"></a></p>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><p>Conway’s law 最初是Conway在1967年发表的论文《<a href="http://www.melconway.com/Home/Committees_Paper.html" target="_blank" rel="external">How Do Committees Invent?</a>》，然后 Fred Brooks 在《人月神话》（The Mythical Man-Month）这本书中引用了这篇论文的结论，并命名为康威定律（Conway’s law）。</p>
+<h1 id="观点"><a href="#观点" class="headerlink" title="观点"></a>观点</h1><h2 id="康威定律的结论"><a href="#康威定律的结论" class="headerlink" title="康威定律的结论"></a>康威定律的结论</h2><blockquote>
+<p><strong>Organizations which design systems (in the broad sense used here) are constrained to produce designs which are copies of the communication structures of these organizations.</strong> We have seen that this fact has important implications for the management of system design. Primarily, we have found a criterion for the structuring of design organizations: a design effort should be organized according to the need for communication.<br>This criterion creates problems because the need to communicate at any time depends on the system concept in effect at that time. Because the design which occurs first is almost never the best possible, the prevailing system concept may need to change. Therefore, flexibility of organization is important to effective design.<br>Ways must be found to reward design managers for keeping their organizations <strong>lean and flexible</strong>. There is need for a philosophy of system design management which is not based on the assumption that adding manpower simply adds to productivity. The development of such a philosophy promises to unearth basic questions about value of resources and techniques of communication which will need to be answered before our system-building technology can proceed with confidence. </p>
+</blockquote>
+<p>论文主要的观点：系统的结构受限于设计这个系统的组织的沟通结构。由于系统的结构可能会随着设计的深入而变化，所以必须保持设计组织结构的精简与灵活。<br>原论文是基于一种社会学的观察得出来的结论，所以这里的<code>系统</code>可以指代广义的系统，一个政府，一架飞机，一个芯片都可以认为是一个系统。</p>
+<h2 id="变体"><a href="#变体" class="headerlink" title="变体"></a>变体</h2><blockquote>
+<p>The organization of the software and the organization of the software team will be congruent.</p>
+</blockquote>
+<p>软件本身的组织结构与软件团队的组织结构式一致的。</p>
+<blockquote>
+<p>If the parts of an organization (e.g. teams, departments, or subdivisions) do not closely reflect the essential parts of the product, or if the relationship between organizations do not reflect the relationships between product parts, then the project will be in trouble… Therefore: Make sure the organization is compatible with the product architecture”.</p>
+</blockquote>
+<p>如果组织（团队，部门，或者分支部门）的组成部分不能正确地与产品的必要组成部门相对应，或者组织之间的关系不能反映产品组成部分之间的关系，那么这个项目就会有麻烦。。。所以：必须保证组织与产品架构的相互兼容。</p>
+<blockquote>
+<p>The structure of a problem reflects the structure of the organization that created it.</p>
+</blockquote>
+<p>问题的结构反应了产生问题的组织的结构。</p>
+<h1 id="论据"><a href="#论据" class="headerlink" title="论据"></a>论据</h1><h2 id="compiler"><a href="#compiler" class="headerlink" title="compiler"></a>compiler</h2><p>Conway博士在一个研究组织中作了如下实验：分别给COBOL编译器开发团队安排5个人，给ALGOL编译器开发团队安排3个人，最后COBOL编译器和ALGOL编译器分别是5个步骤和3个步骤的。</p>
+<h2 id="interface"><a href="#interface" class="headerlink" title="interface"></a>interface</h2><p>只有模块A的开发者和模块B的开发者有沟通，模块A和模块B才能有良好的接口（interface）。所以系统的接口结构会反应开发这个系统的组织的结构。</p>
+<h1 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h1><p>“康威定律” 没有提供相应的诊断工具，帮助执行团队判断自己的组织框架是否合理，以及公司在什么时候进行重组比较合适。它只引发了一个问题：公司的组织架构能否为用户提供最好的产品？</p>
+<p>Reference：</p>
+<ol>
+<li><a href="http://www.melconway.com/Home/Conways_Law.html" target="_blank" rel="external">CONWAY’S LAW</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Conway%27s_law" target="_blank" rel="external">Conway’s law in wiki</a></li>
+<li><a href="https://dzone.com/articles/how-to-design-with-conways-law-in-mind" target="_blank" rel="external">How to Design With Conway’s Law in Mind</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;img src=&quot;/2016/11/20/Conways-law/tech_organization_structure.png&quot; alt=&quot;tech_organization_structure.png&quot; title=&quot;&quot;&gt;
+&lt;p&gt;系统是设计该系统的组织结构的映射。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="software" scheme="http://www.wuchenxu.com/categories/software/"/>
+    
+    
+      <category term="architecture" scheme="http://www.wuchenxu.com/tags/architecture/"/>
+    
+      <category term="programmer" scheme="http://www.wuchenxu.com/tags/programmer/"/>
+    
+  </entry>
   
   <entry>
     <title>TeX(1):简介</title>
@@ -906,40 +959,6 @@
       <category term="cmd" scheme="http://www.wuchenxu.com/tags/cmd/"/>
     
       <category term="if" scheme="http://www.wuchenxu.com/tags/if/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>windows command(10):SORT</title>
-    <link href="http://www.wuchenxu.com/2016/04/01/windows-cmd-10-sort/"/>
-    <id>http://www.wuchenxu.com/2016/04/01/windows-cmd-10-sort/</id>
-    <published>2016-04-01T06:10:59.000Z</published>
-    <updated>2016-04-12T06:10:59.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>SORT 排序命令。</p>
-<a id="more"></a>
-<h1 id="对文件内容排序"><a href="#对文件内容排序" class="headerlink" title="对文件内容排序"></a>对文件内容排序</h1><p><code>sort filename</code><br>排序顺序为0-9,A-Z,字母为小写在前。</p>
-<h1 id="逆向排序"><a href="#逆向排序" class="headerlink" title="逆向排序"></a>逆向排序</h1><p><code>sort /r filename</code><br>排序顺序为Z-A，9-0,字母也是小写在前。</p>
-<h1 id="命令结果排序"><a href="#命令结果排序" class="headerlink" title="命令结果排序"></a>命令结果排序</h1><p><code>findstr /s /i hello *.*|sort</code></p>
-<h1 id="键盘输入排序"><a href="#键盘输入排序" class="headerlink" title="键盘输入排序"></a>键盘输入排序</h1><ol>
-<li><code>sort</code>不带参数</li>
-<li>输入字符串</li>
-<li>Ctrl+Z结束输入</li>
-</ol>
-<figure class="highlight plain"><figcaption><span>help SORT</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">SORT [/R] [/+n] [/M kilobytes] [/L locale] [/REC recordbytes]</div><div class="line">  [[drive1:][path1]filename1] [/T [drive2:][path2]]</div><div class="line">  [/O [drive3:][path3]filename3]</div><div class="line">  /+n                         指定开始每个比较的字符号码 n。/+3 说明每个</div><div class="line">                              比较应从每行的第三个字符开始。少于 n 个字符</div><div class="line">                              的行排在其他行之前。按默认值，从每行的第一</div><div class="line">                              个字符开始比较。</div><div class="line">  /L[OCALE] locale            用指定的区域设置替代系统默认区域设置。</div><div class="line">                              &quot;&quot;C&quot;&quot; 区域设置产生最快的排序顺序并且是当前</div><div class="line">                              的唯一其他选择。排序总是不分大小写的。</div><div class="line">  /M[EMORY] kilobytes         指定用于排序的主内存量，单位为 KB。</div><div class="line">                              最小内存量总是 160 KB。如果指定内存大小，</div><div class="line">                              无论主内存的可用量是多少，指定的内存量会</div><div class="line">                              全部用于排序。</div><div class="line"></div><div class="line">                              要取得最佳性能，通常不指定内存大小。按默认</div><div class="line">                              值，如果达到默认最大内存值，排序会一次完成</div><div class="line">                              (非临时文件)；否则，排序会分两次完成(没有</div><div class="line">                              完全排序的数据存储在临时文件中)；用于排序</div><div class="line">                              和合并的内存量相等。如果输入和输出都是文</div><div class="line">                              件，默认最大内存量为可用主内存的 90%;</div><div class="line">                              否则，为主内存的 45%。</div><div class="line">  /REC[ORD_MAXIMUM] characters 指定记录中的最大字符数量</div><div class="line">                              (默认值为 4096，最大值为 65535)。</div><div class="line">  /R[EVERSE]                  颠倒排列顺序，即，从 Z 到 A，再从 9 到 0。</div><div class="line">  [drive1:][path1]filename1   指定要排序的文件。如果没有指定，则排序标准</div><div class="line">                              输入。指定输入文件比将同一个文件重定向为标</div><div class="line">                              准输入快。</div><div class="line">  /T[EMPORARY]</div><div class="line">    [drive2:][path2]          指定保留排序工作存储的目录路径，以防主内</div><div class="line">                              存无法容纳数据。默认值是使用系统临时目录。</div><div class="line">  /O[UTPUT]</div><div class="line">    [drive3:][path3]filename3 指定在哪个文件中储存经过排序的输入。</div><div class="line">                              如果没有指定，数据会被写入标准输出。指定</div><div class="line">                              输出文件比将标准输出重定向到同一个文件快。</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;SORT 排序命令。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="windows cmd" scheme="http://www.wuchenxu.com/categories/windows-cmd/"/>
-    
-    
-      <category term="cmd" scheme="http://www.wuchenxu.com/tags/cmd/"/>
-    
-      <category term="sort" scheme="http://www.wuchenxu.com/tags/sort/"/>
     
   </entry>
   

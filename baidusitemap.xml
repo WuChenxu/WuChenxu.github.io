@@ -4,6 +4,62 @@
 
     
   <url>
+    <loc>http://www.wuchenxu.com/2015/11/29/byte-bit-endian/</loc>
+    <lastmod>2016-11-22T13:08:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>字节序与大小端</title>
+        <pubTime>2015-11-29T13:08:43.000Z</pubTime>
+        
+        <tag>encoding</tag>
+         
+        <tag>software</tag>
+         
+        <tag>byte order</tag>
+         
+        <tag>bit order</tag>
+         
+        <tag>Motorola</tag>
+         
+        <tag>Intel</tag>
+         
+        <tag>MSB</tag>
+         
+        <tag>LSB</tag>
+         
+         
+           
+             
+              <breadCrumb title="encoding" url="http://www.wuchenxu.com/categories/encoding/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wuchenxu.com/2016/11/20/Conways-law/</loc>
+    <lastmod>2016-11-20T14:37:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>康威定律（Conway's law）</title>
+        <pubTime>2016-11-20T14:37:54.000Z</pubTime>
+        
+        <tag>architecture</tag>
+         
+        <tag>programmer</tag>
+         
+         
+           
+             
+              <breadCrumb title="software" url="http://www.wuchenxu.com/categories/software/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.wuchenxu.com/2016/09/28/TeX-1-introduction/</loc>
     <lastmod>2016-09-28T12:44:27.000Z</lastmod>
     <data>
@@ -920,9 +976,9 @@
         <title>Markdown语法对应的CSS实现</title>
         <pubTime>2016-01-27T15:00:05.000Z</pubTime>
         
-        <tag>Markdown</tag>
-         
         <tag>CSS</tag>
+         
+        <tag>Markdown</tag>
          
          
            
@@ -1058,40 +1114,6 @@
           
              
               <breadCrumb title="CRC" url="http://www.wuchenxu.com/categories/checksum/CRC/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2015/11/29/byte-bit-endian/</loc>
-    <lastmod>2015-12-03T13:08:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>字节序与大小端</title>
-        <pubTime>2015-11-29T13:08:43.000Z</pubTime>
-        
-        <tag>encoding</tag>
-         
-        <tag>software</tag>
-         
-        <tag>byte order</tag>
-         
-        <tag>bit order</tag>
-         
-        <tag>Motorola</tag>
-         
-        <tag>Intel</tag>
-         
-        <tag>MSB</tag>
-         
-        <tag>LSB</tag>
-         
-         
-           
-             
-              <breadCrumb title="encoding" url="http://www.wuchenxu.com/categories/encoding/"/>
           
         </display>
     </data>

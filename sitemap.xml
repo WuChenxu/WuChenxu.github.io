@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.wuchenxu.com/2015/11/29/byte-bit-endian/</loc>
+    
+    <lastmod>2016-11-22T13:08:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wuchenxu.com/2016/11/20/Conways-law/</loc>
+    
+    <lastmod>2016-11-20T14:37:54.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wuchenxu.com/2016/09/28/TeX-1-introduction/</loc>
     
     <lastmod>2016-09-28T12:44:27.000Z</lastmod>
@@ -320,13 +334,6 @@
     <loc>http://www.wuchenxu.com/2015/12/07/CRC8-calculate/</loc>
     
     <lastmod>2015-12-11T15:13:08.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wuchenxu.com/2015/11/29/byte-bit-endian/</loc>
-    
-    <lastmod>2015-12-03T13:08:43.000Z</lastmod>
     
   </url>
   
