@@ -4,6 +4,72 @@
 
     
   <url>
+    <loc>http://www.wuchenxu.com/2015/11/19/markdown-usage/</loc>
+    <lastmod>2016-12-26T13:20:05.000Z</lastmod>
+    <data>
+        <display>
+        <title>标记语言Markdown使用说明</title>
+        <pubTime>2015-11-19T15:23:00.000Z</pubTime>
+        
+        <tag>Markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="Markdown" url="http://www.wuchenxu.com/categories/Markdown/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wuchenxu.com/2016/12/18/windows-cmd-20-date-time/</loc>
+    <lastmod>2016-12-25T16:00:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>windows command(20):date time</title>
+        <pubTime>2016-12-18T12:32:28.000Z</pubTime>
+        
+        <tag>cmd</tag>
+         
+        <tag>date</tag>
+         
+        <tag>time</tag>
+         
+         
+           
+             
+              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wuchenxu.com/2016/12/07/windows-cmd-19-color/</loc>
+    <lastmod>2016-12-25T16:00:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>windows command(19):console颜色 color</title>
+        <pubTime>2016-12-07T12:32:28.000Z</pubTime>
+        
+        <tag>cmd</tag>
+         
+        <tag>color</tag>
+         
+         
+           
+             
+              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.wuchenxu.com/2015/11/29/byte-bit-endian/</loc>
     <lastmod>2016-11-22T13:08:43.000Z</lastmod>
     <data>
@@ -949,26 +1015,6 @@
 
     
   <url>
-    <loc>http://www.wuchenxu.com/2015/11/19/markdown-usage/</loc>
-    <lastmod>2016-01-28T13:20:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>标记语言Markdown使用说明</title>
-        <pubTime>2015-11-19T15:23:00.000Z</pubTime>
-        
-        <tag>Markdown</tag>
-         
-         
-           
-             
-              <breadCrumb title="Markdown" url="http://www.wuchenxu.com/categories/Markdown/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.wuchenxu.com/2016/01/27/Markdown-inline-css-compare/</loc>
     <lastmod>2016-01-27T15:00:05.000Z</lastmod>
     <data>
@@ -976,9 +1022,9 @@
         <title>Markdown语法对应的CSS实现</title>
         <pubTime>2016-01-27T15:00:05.000Z</pubTime>
         
-        <tag>CSS</tag>
-         
         <tag>Markdown</tag>
+         
+        <tag>CSS</tag>
          
          
            
