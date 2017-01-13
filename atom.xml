@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.wuchenxu.com/"/>
-  <updated>2016-12-25T16:00:00.000Z</updated>
+  <updated>2017-01-11T14:02:34.000Z</updated>
   <id>http://www.wuchenxu.com/</id>
   
   <author>
@@ -14,6 +14,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>怎样开发一个产品</title>
+    <link href="http://www.wuchenxu.com/2017/01/11/how-to-develop-a-product/"/>
+    <id>http://www.wuchenxu.com/2017/01/11/how-to-develop-a-product/</id>
+    <published>2017-01-11T14:02:34.000Z</published>
+    <updated>2017-01-11T14:02:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>个人的一点看法，欢迎讨论。谢绝转载。</p>
+<a id="more"></a>
+<h1 id="逆向开发"><a href="#逆向开发" class="headerlink" title="逆向开发"></a>逆向开发</h1><p>如果是一个成熟产品，市面上有很多现成的产品，那么一个快速开发的捷径是”抄”。硬件可以模仿甚至抄板，软件可以通过学习市场上其他产品的功能，算法可以参考一些公开的论文，结合对其他产品的反向分析。<br>曾经有过极端的案例是，硬件抄板成一模一样，软件读出来，直接烧录进去就可以出货了。当然了这种极端的做法是侵犯了别人的知识产权，我是不支持的。</p>
+<h1 id="正向开发"><a href="#正向开发" class="headerlink" title="正向开发"></a>正向开发</h1><p>按照顺序：</p>
+<ol>
+<li>定义问题</li>
+<li>寻找解决方案</li>
+<li>系统架构设计</li>
+<li>硬件设计设计</li>
+<li>软件架构设计</li>
+<li>软件开发</li>
+<li>软件测试</li>
+<li>系统测试</li>
+</ol>
+<p>核心竞争力：建立开发（development）和系统性能调优（system preformance tuning）的能力（know-how，toolchain…）。<br>系统设计可以划分子系统，子系统下面可以划分子模块，每个模块可独立演进，每个模块的算法可以优化迭代。<br>软件模块开发可以考虑用基于模型的设计（Model-Based design），如Matlab，既可以做SIL（Software In the Loop）或者HIL（Hardware In the Loop），也可以生成代码在嵌入式设备中运行。<br>有前瞻性的预研团队，可以与高校或者研究所合作，确保技术上不断更新。<br>当然对汽车行业还要考虑更多：A-SPICE、ISO26262（functional safety），AUTOSAR。</p>
+<h1 id="混合模式"><a href="#混合模式" class="headerlink" title="混合模式"></a>混合模式</h1><p>就算是已正向开发为主的大公司，也会进行所谓”竞争对手分析”，对比市场上的产品与一家产品的功能及性能差距，优点可以在向客户的推介材料里展示，缺点可以称为改进的方向，以确保产品在市场上有竞争力。<br>如果一家刚起步的公司两种方法：</p>
+<ol>
+<li>集中精力开发核心模块，其他模块都外包，如Mobieye专攻图像处理器和算法，可以集成到Tier1或者OEM的video里。</li>
+<li>先逆向开发出产品，杀入市场，占领一部分市场，然后慢慢建立自己的正向研发能力，如国内主机厂，华为手机原来是白牌。</li>
+</ol>
+<p>reference：</p>
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Mobileye" target="_blank" rel="external">Mobieye</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;个人的一点看法，欢迎讨论。谢绝转载。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="product" scheme="http://www.wuchenxu.com/categories/product/"/>
+    
+    
+      <category term="idea" scheme="http://www.wuchenxu.com/tags/idea/"/>
+    
+  </entry>
   
   <entry>
     <title>windows command(20):date time</title>
@@ -919,46 +965,6 @@
       <category term="cmd" scheme="http://www.wuchenxu.com/tags/cmd/"/>
     
       <category term="set" scheme="http://www.wuchenxu.com/tags/set/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>windows command(13):GOTO :label</title>
-    <link href="http://www.wuchenxu.com/2016/04/01/windows-cmd-13-goto/"/>
-    <id>http://www.wuchenxu.com/2016/04/01/windows-cmd-13-goto/</id>
-    <published>2016-04-01T06:20:22.000Z</published>
-    <updated>2016-04-12T06:20:22.000Z</updated>
-    
-    <content type="html"><![CDATA[<img src="/2016/04/01/windows-cmd-13-goto/goto.png" alt="goto.png" title="">
-<p>goto命令，跳转命令。</p>
-<a id="more"></a>
-<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><figure class="highlight bat"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function">goto label</span></div><div class="line"><span class="title">rem</span> <span class="title">some</span> <span class="title">cmd</span></div><div class="line"></div><div class="line">:<span class="title">label</span></div><div class="line"><span class="title">rem</span> <span class="title">cmd</span> <span class="title">of</span> <span class="title">lable</span></div></pre></td></tr></table></figure>
-<p>跳转到标签行，并继续执行之后的语句。标签必须以<code>:</code>开头作为标签的指示。<br>标签名只可以使用常量，而不能使用变量。</p>
-<h1 id="条件-if或switch-case"><a href="#条件-if或switch-case" class="headerlink" title="条件 if或switch/case"></a>条件 if或switch/case</h1><figure class="highlight bat"><figcaption><span>condition using goto</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">set</span> /p a=choose:</div><div class="line"></div><div class="line"><span class="keyword">if</span> "<span class="variable">%a%</span>" == "A" <span class="keyword">goto</span> CaseA</div><div class="line"><span class="keyword">if</span> "<span class="variable">%a%</span>" == "B" <span class="keyword">goto</span> CaseB</div><div class="line"><span class="keyword">if</span> "<span class="variable">%a%</span>" == "C" <span class="keyword">goto</span> CaseC</div><div class="line"><span class="keyword">goto</span> default</div><div class="line"></div><div class="line"></div><div class="line">:CaseA</div><div class="line"><span class="built_in">echo</span> "execute A"</div><div class="line"><span class="built_in">echo</span> a=<span class="variable">%a%</span></div><div class="line"><span class="keyword">goto</span> end</div><div class="line"></div><div class="line">:CaseB</div><div class="line"><span class="built_in">echo</span> "execute B"</div><div class="line"><span class="keyword">goto</span> end</div><div class="line"></div><div class="line">:CaseC</div><div class="line"><span class="built_in">echo</span> "execute C"</div><div class="line"><span class="keyword">goto</span> end</div><div class="line"></div><div class="line">:default</div><div class="line"><span class="built_in">echo</span> "nothing execute"</div><div class="line">:end</div></pre></td></tr></table></figure>
-<p>注意<code>:CaseA</code>之后，如果不加<code>goto end</code>则会继续执行<code>:CaseB</code>之后的语句。</p>
-<h1 id="循环-Loop"><a href="#循环-Loop" class="headerlink" title="循环 Loop"></a>循环 Loop</h1><figure class="highlight bat"><figcaption><span>loop using goto cmd</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">@<span class="built_in">echo</span> off</div><div class="line"><span class="built_in">set</span> index=<span class="number">0</span></div><div class="line"><span class="built_in">set</span> max=<span class="number">5</span></div><div class="line">:loop</div><div class="line"><span class="built_in">set</span> /a index+=<span class="number">1</span></div><div class="line"><span class="built_in">echo</span> <span class="variable">%index%</span></div><div class="line"><span class="keyword">if</span> <span class="variable">%index%</span> <span class="keyword">neq</span> <span class="variable">%max%</span> <span class="keyword">goto</span> loop</div></pre></td></tr></table></figure>
-<p>相当于<br><figure class="highlight bat"><figcaption><span>loop using for</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">set</span> init=<span class="number">0</span></div><div class="line"><span class="built_in">set</span> step=<span class="number">1</span></div><div class="line"><span class="built_in">set</span> max=<span class="number">5</span></div><div class="line"><span class="keyword">for</span> /L <span class="variable">%%i</span> <span class="keyword">in</span> (<span class="variable">%init%</span>,<span class="variable">%step%</span>,<span class="variable">%max%</span>) <span class="keyword">do</span> <span class="built_in">echo</span> <span class="variable">%%i</span></div></pre></td></tr></table></figure></p>
-<p>不过使用goto更加灵活，理论上for能实现的循环goto都能实现。</p>
-<figure class="highlight bat"><figcaption><span>dead loop</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">:loop</div><div class="line"><span class="built_in">dir</span></div><div class="line"><span class="keyword">goto</span> loop</div></pre></td></tr></table></figure>
-<h1 id="goto-EOF"><a href="#goto-EOF" class="headerlink" title="goto :EOF"></a>goto :EOF</h1><p>直接跳转到文件结尾。</p>
-<p>Reference:<br><figure class="highlight plain"><figcaption><span>help goto</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">将 cmd.exe 定向到批处理程序中带标签的行。</div><div class="line"></div><div class="line">GOTO label</div><div class="line"></div><div class="line">  label   指定批处理程序中用作标签的文字字符串。</div><div class="line"></div><div class="line">标签必须单独一行，并且以冒号打头。</div><div class="line"></div><div class="line">如果命令扩展被启用，GOTO 会如下改变:</div><div class="line"></div><div class="line">GOTO 命令现在接受目标标签 :EOF，这个标签将控制转移到当前</div><div class="line">批脚本文件的结尾。不定义就退出批脚本文件，这是一个容易的</div><div class="line">办法。有关能使该功能有用的 CALL 命令的扩展描述，请键入</div><div class="line">CALL /?。</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;img src=&quot;/2016/04/01/windows-cmd-13-goto/goto.png&quot; alt=&quot;goto.png&quot; title=&quot;&quot;&gt;
-&lt;p&gt;goto命令，跳转命令。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="windows cmd" scheme="http://www.wuchenxu.com/categories/windows-cmd/"/>
-    
-    
-      <category term="cmd" scheme="http://www.wuchenxu.com/tags/cmd/"/>
-    
-      <category term="goto" scheme="http://www.wuchenxu.com/tags/goto/"/>
-    
-      <category term="label" scheme="http://www.wuchenxu.com/tags/label/"/>
     
   </entry>
   

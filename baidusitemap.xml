@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://www.wuchenxu.com/2017/01/11/how-to-develop-a-product/</loc>
+    <lastmod>2017-01-11T14:02:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>怎样开发一个产品</title>
+        <pubTime>2017-01-11T14:02:34.000Z</pubTime>
+        
+        <tag>idea</tag>
+         
+         
+           
+             
+              <breadCrumb title="product" url="http://www.wuchenxu.com/categories/product/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.wuchenxu.com/2015/11/19/markdown-usage/</loc>
     <lastmod>2016-12-26T13:20:05.000Z</lastmod>
     <data>
@@ -24,18 +44,16 @@
 
     
   <url>
-    <loc>http://www.wuchenxu.com/2016/12/18/windows-cmd-20-date-time/</loc>
+    <loc>http://www.wuchenxu.com/2016/12/07/windows-cmd-19-color/</loc>
     <lastmod>2016-12-25T16:00:00.000Z</lastmod>
     <data>
         <display>
-        <title>windows command(20):date time</title>
-        <pubTime>2016-12-18T12:32:28.000Z</pubTime>
+        <title>windows command(19):console颜色 color</title>
+        <pubTime>2016-12-07T12:32:28.000Z</pubTime>
         
         <tag>cmd</tag>
          
-        <tag>date</tag>
-         
-        <tag>time</tag>
+        <tag>color</tag>
          
          
            
@@ -48,16 +66,18 @@
 
     
   <url>
-    <loc>http://www.wuchenxu.com/2016/12/07/windows-cmd-19-color/</loc>
+    <loc>http://www.wuchenxu.com/2016/12/18/windows-cmd-20-date-time/</loc>
     <lastmod>2016-12-25T16:00:00.000Z</lastmod>
     <data>
         <display>
-        <title>windows command(19):console颜色 color</title>
-        <pubTime>2016-12-07T12:32:28.000Z</pubTime>
+        <title>windows command(20):date time</title>
+        <pubTime>2016-12-18T12:32:28.000Z</pubTime>
         
         <tag>cmd</tag>
          
-        <tag>color</tag>
+        <tag>date</tag>
+         
+        <tag>time</tag>
          
          
            
@@ -395,30 +415,6 @@
 
     
   <url>
-    <loc>http://www.wuchenxu.com/2016/04/01/windows-cmd-17-multiple-thread/</loc>
-    <lastmod>2016-06-12T16:00:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>windows command(17):多线程 start call cmd</title>
-        <pubTime>2016-04-01T06:32:28.000Z</pubTime>
-        
-        <tag>cmd</tag>
-         
-        <tag>start</tag>
-         
-        <tag>call</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.wuchenxu.com/2015/11/23/Static-Blog-hexo-github-5-hexo-usage-trick/</loc>
     <lastmod>2016-06-12T16:00:00.000Z</lastmod>
     <data>
@@ -440,6 +436,30 @@
            
              
               <breadCrumb title="hexo" url="http://www.wuchenxu.com/categories/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wuchenxu.com/2016/04/01/windows-cmd-17-multiple-thread/</loc>
+    <lastmod>2016-06-12T16:00:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>windows command(17):多线程 start call cmd</title>
+        <pubTime>2016-04-01T06:32:28.000Z</pubTime>
+        
+        <tag>cmd</tag>
+         
+        <tag>start</tag>
+         
+        <tag>call</tag>
+         
+         
+           
+             
+              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
           
         </display>
     </data>
