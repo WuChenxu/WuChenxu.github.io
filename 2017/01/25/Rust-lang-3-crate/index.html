@@ -86,16 +86,19 @@
 
 
 
-<meta name="description" content="crate.io是Rust社区的中心package仓库，该仓库有各种不同功能的Rust软件库。">
+<meta name="description" content="crate.io是Rust社区的中心package仓库，该仓库有各种不同功能的Rust软件库。
+（过年喽，年前最后一篇了，还有很多坑没填。2017，Year of Rooster，加油，fighting！）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Rust语言(3):引用依赖库">
 <meta property="og:url" content="http://www.wuchenxu.com/2017/01/25/Rust-lang-3-crate/index.html">
 <meta property="og:site_name" content="功不唐捐，玉汝于成">
-<meta property="og:description" content="crate.io是Rust社区的中心package仓库，该仓库有各种不同功能的Rust软件库。">
+<meta property="og:description" content="crate.io是Rust社区的中心package仓库，该仓库有各种不同功能的Rust软件库。
+（过年喽，年前最后一篇了，还有很多坑没填。2017，Year of Rooster，加油，fighting！）">
 <meta property="og:updated_time" content="2017-01-25T14:13:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Rust语言(3):引用依赖库">
-<meta name="twitter:description" content="crate.io是Rust社区的中心package仓库，该仓库有各种不同功能的Rust软件库。">
+<meta name="twitter:description" content="crate.io是Rust社区的中心package仓库，该仓库有各种不同功能的Rust软件库。
+（过年喽，年前最后一篇了，还有很多坑没填。2017，Year of Rooster，加油，fighting！）">
 
 
 
@@ -384,7 +387,10 @@
       
 
       
-        <p><a href="https://crates.io/" target="_blank" rel="external">crate.io</a>是Rust社区的中心package仓库，该仓库有各种不同功能的Rust软件库。</p>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=396696&auto=0&height=66"></iframe>
+
+<p><a href="https://crates.io/" target="_blank" rel="external">crate.io</a>是Rust社区的中心package仓库，该仓库有各种不同功能的Rust软件库。</p>
+<p>（过年喽，年前最后一篇了，还有很多坑没填。2017，Year of Rooster，加油，fighting！）</p>
 <a id="more"></a>
 <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p><a href="https://crates.io/" target="_blank" rel="external">crate.io</a>是Rust社区的中心package仓库，<code>cargo</code>用来管理package，下载、版本管理、编译、运行依赖的packages。<br><code>crate</code>本身是<code>木箱</code>的意思，而<code>cargo</code>有<code>货运</code>的意思，<code>cargo</code>承载着各种<code>货物</code>，其中有一些是封装好的<code>木箱</code>。这个比喻倒也贴切。</p>
 <h1 id="add-package"><a href="#add-package" class="headerlink" title="add package"></a>add package</h1><h2 id="packages-from-crate-io"><a href="#packages-from-crate-io" class="headerlink" title="packages from crate.io"></a>packages from crate.io</h2><p>使用Rust（当前版本<code>1.14.0</code>）过程中，如果需要使用一些非核心库（Rust的核心库功能有限，使用到其他的库是大概率事件），则需要在<code>Cargo.toml</code>文件添加依赖的package。这些package可以是来自<a href="https://crates.io/" target="_blank" rel="external">crate.io</a>，或者<code>git仓库</code>，或者本地路径。</p>
