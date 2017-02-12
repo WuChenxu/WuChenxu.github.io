@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.wuchenxu.com/2016/04/28/Static-Blog-hexo-github-8-binding-domain/</loc>
+    
+    <lastmod>2017-02-12T11:43:26.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wuchenxu.com/2017/01/30/reading-notes-1-history-of-humankind/</loc>
     
     <lastmod>2017-01-30T05:09:04.000Z</lastmod>
@@ -37,14 +44,14 @@
   </url>
   
   <url>
-    <loc>http://www.wuchenxu.com/2016/12/07/windows-cmd-19-color/</loc>
+    <loc>http://www.wuchenxu.com/2016/12/18/windows-cmd-20-date-time/</loc>
     
     <lastmod>2016-12-25T16:00:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wuchenxu.com/2016/12/18/windows-cmd-20-date-time/</loc>
+    <loc>http://www.wuchenxu.com/2016/12/07/windows-cmd-19-color/</loc>
     
     <lastmod>2016-12-25T16:00:00.000Z</lastmod>
     
@@ -173,13 +180,6 @@
     <loc>http://www.wuchenxu.com/2016/03/08/jenkins-auto-deploy-hexo/</loc>
     
     <lastmod>2016-04-28T13:27:52.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wuchenxu.com/2016/04/28/Static-Blog-hexo-github-8-binding-domain/</loc>
-    
-    <lastmod>2016-04-28T11:43:26.000Z</lastmod>
     
   </url>
   

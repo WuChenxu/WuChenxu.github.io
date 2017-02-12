@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://www.wuchenxu.com/2016/04/28/Static-Blog-hexo-github-8-binding-domain/</loc>
+    <lastmod>2017-02-12T11:43:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>个人博客搭建hexo+github(8):独立域名绑定github</title>
+        <pubTime>2016-04-28T11:43:26.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>github</tag>
+         
+        <tag>DNS</tag>
+         
+         
+           
+             
+              <breadCrumb title="hexo" url="http://www.wuchenxu.com/categories/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.wuchenxu.com/2017/01/30/reading-notes-1-history-of-humankind/</loc>
     <lastmod>2017-01-30T05:09:04.000Z</lastmod>
     <data>
@@ -110,28 +134,6 @@
 
     
   <url>
-    <loc>http://www.wuchenxu.com/2016/12/07/windows-cmd-19-color/</loc>
-    <lastmod>2016-12-25T16:00:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>windows command(19):console颜色 color</title>
-        <pubTime>2016-12-07T12:32:28.000Z</pubTime>
-        
-        <tag>cmd</tag>
-         
-        <tag>color</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.wuchenxu.com/2016/12/18/windows-cmd-20-date-time/</loc>
     <lastmod>2016-12-25T16:00:00.000Z</lastmod>
     <data>
@@ -144,6 +146,28 @@
         <tag>date</tag>
          
         <tag>time</tag>
+         
+         
+           
+             
+              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wuchenxu.com/2016/12/07/windows-cmd-19-color/</loc>
+    <lastmod>2016-12-25T16:00:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>windows command(19):console颜色 color</title>
+        <pubTime>2016-12-07T12:32:28.000Z</pubTime>
+        
+        <tag>cmd</tag>
+         
+        <tag>color</tag>
          
          
            
@@ -594,30 +618,6 @@
           
              
               <breadCrumb title="Jenkins" url="http://www.wuchenxu.com/categories/CI/Jenkins/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/04/28/Static-Blog-hexo-github-8-binding-domain/</loc>
-    <lastmod>2016-04-28T11:43:26.000Z</lastmod>
-    <data>
-        <display>
-        <title>个人博客搭建hexo+github(8):独立域名绑定github</title>
-        <pubTime>2016-04-28T11:43:26.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>github</tag>
-         
-        <tag>DNS</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="http://www.wuchenxu.com/categories/hexo/"/>
           
         </display>
     </data>

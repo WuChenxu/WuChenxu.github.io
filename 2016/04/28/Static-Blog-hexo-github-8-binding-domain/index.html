@@ -99,7 +99,7 @@ attraction - 小泽正澄">
 <meta property="og:image" content="http://www.wuchenxu.com/2016/04/28/Static-Blog-hexo-github-8-binding-domain/CNAME_CodingPages.png">
 <meta property="og:image" content="http://www.wuchenxu.com/2016/04/28/Static-Blog-hexo-github-8-binding-domain/ping_domain.png">
 <meta property="og:image" content="http://www.wuchenxu.com/2016/04/28/Static-Blog-hexo-github-8-binding-domain/PC_set_DNS_Server.png">
-<meta property="og:updated_time" content="2016-04-28T11:43:26.000Z">
+<meta property="og:updated_time" content="2017-02-12T11:43:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="个人博客搭建hexo+github(8):独立域名绑定github">
 <meta name="twitter:description" content="独立域名绑定到github的方法。
@@ -340,6 +340,18 @@ attraction - 小泽正澄">
             </time>
 		  </span>
 		
+			<span class="updated-time">
+				&nbsp; | &nbsp;
+				<span class="post-meta-item-icon">
+					<i class="fa fa-calendar-o"></i>
+				</span>
+			  <span class="post-meta-item-text">更新于</span>
+				<time itemprop="dateUpdated" datetime="2017-02-12T19:43:26+08:00" content="2017-02-12">
+				  2017-02-12
+				</time>
+			  </span>
+			</span>
+		  
 		  
           
             <span class="post-category" >
@@ -402,7 +414,7 @@ attraction - 小泽正澄">
 <h2 id="DNS记录"><a href="#DNS记录" class="headerlink" title="DNS记录"></a>DNS记录</h2><p>github Pages和coding Pages同时部署了，DNSPod的一个好处是可以将国内和国内的访问使用不同路线。<br>国内的访问路由到github,国外的路由到coding.<br>几种常用的记录类型：<br><figure class="highlight dns"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">A</span>记录：地址记录，用来指定域名的IPv4地址（如：<span class="number">8.8.8.8</span>），如果需要将域名指向一个IP地址，就需要添加<span class="keyword">A</span>记录。</div><div class="line"><span class="keyword">CNAME</span>： 如果需要将域名指向另一个域名，再由另一个域名提供ip地址，就需要添加<span class="keyword">CNAME</span>记录。</div><div class="line"><span class="keyword">NS</span>：域名服务器记录，如果需要把子域名交给其他DNS服务商解析，就需要添加<span class="keyword">NS</span>记录。</div></pre></td></tr></table></figure></p>
 <p>NS记录为不可修改的域名服务器记录。<br>A记录用来指定<a href="https://help.github.com/articles/troubleshooting-custom-domains/" target="_blank" rel="external">github pages的IP地址</a>，可不设置。<br>CNAME记录需要指定<code>www</code>和<code>@</code>两种主机记录（域名前缀）。<br>github的CNAME指向<code>username.github.io</code> 或者 <code>github.map.fastly.net</code>;<br>coding的CNAME指向<code>pages.coding.me</code>。</p>
 <img src="/2016/04/28/Static-Blog-hexo-github-8-binding-domain/DNSPod_set.png" alt="DNSPod_set.png" title="">
-<h1 id="CNAME重定向"><a href="#CNAME重定向" class="headerlink" title="CNAME重定向"></a>CNAME重定向</h1><p>在hexo/source目录下新建名为<code>CNAME</code>的文件，没有后缀。<br>内容为域名，我这里是<code>wuchenxu.com</code>，没有<code>www</code>的。<br>coding需要手动设置绑定域名<br><img src="/2016/04/28/Static-Blog-hexo-github-8-binding-domain/CNAME_CodingPages.png" alt="CNAME_CodingPages.png" title=""></p>
+<h1 id="CNAME重定向"><a href="#CNAME重定向" class="headerlink" title="CNAME重定向"></a>CNAME重定向</h1><p>在hexo/source目录下新建名为<code>CNAME</code>的文件，没有后缀。<br>内容为域名，我这里是<code>wuchenxu.com</code>，没有<code>www</code>的。<br>coding需要手动设置绑定域名<br><img src="/2016/04/28/Static-Blog-hexo-github-8-binding-domain/CNAME_CodingPages.png" alt="CNAME_CodingPages.png" title=""><br>绑定两个网址，一个带<code>www</code>，另一个不带<code>www</code>，这样两个网址都能够访问。一开始我只绑定了不带<code>www</code>的网址，导致输入<code>www.wuchenxu.com</code>无法解析。</p>
 <h1 id="启用"><a href="#启用" class="headerlink" title="启用"></a>启用</h1><p>重新部署<code>hexo d -g</code>后，可以通过独立域名访问博客啦。</p>
 <h1 id="查看访问源"><a href="#查看访问源" class="headerlink" title="查看访问源"></a>查看访问源</h1><p>可以看到访问的是coding Pages。<br><img src="/2016/04/28/Static-Blog-hexo-github-8-binding-domain/ping_domain.png" alt="ping_domain.png" title=""></p>
 <h1 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h1><p>发现用移动网络可以访问，但是连接家里的广电宽带就是访问不了，出现<code>DNS_PROBE_FINISHED_NXDOMAIN</code>错误。<br>通过<a href="http://bbs.guanjia.qq.com/forum.php?mod=viewthread&amp;tid=2092936&amp;extra=" target="_blank" rel="external">手动设置DNS</a>后问题解决。<br><img src="/2016/04/28/Static-Blog-hexo-github-8-binding-domain/PC_set_DNS_Server.png" alt="PC_set_DNS_Server.png" title=""></p>
