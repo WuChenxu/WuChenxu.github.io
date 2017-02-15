@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://www.wuchenxu.com/2017/02/15/TeX-2-MacTex/</loc>
+    <lastmod>2017-02-15T13:37:13.000Z</lastmod>
+    <data>
+        <display>
+        <title>TeX(2):Mac下安装TeX</title>
+        <pubTime>2017-02-15T13:37:13.000Z</pubTime>
+        
+        <tag>TeX</tag>
+         
+         
+           
+             
+              <breadCrumb title="TeX" url="http://www.wuchenxu.com/categories/TeX/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.wuchenxu.com/2016/04/28/Static-Blog-hexo-github-8-binding-domain/</loc>
     <lastmod>2017-02-12T11:43:26.000Z</lastmod>
     <data>
@@ -189,11 +209,11 @@
         
         <tag>encoding</tag>
          
-        <tag>software</tag>
-         
         <tag>byte order</tag>
          
         <tag>bit order</tag>
+         
+        <tag>software</tag>
          
         <tag>Motorola</tag>
          
@@ -329,11 +349,11 @@
         
         <tag>encoding</tag>
          
-        <tag>software</tag>
-         
         <tag>byte order</tag>
          
         <tag>bit order</tag>
+         
+        <tag>software</tag>
          
         <tag>Motorola</tag>
          
@@ -413,9 +433,9 @@
         
         <tag>encoding</tag>
          
-        <tag>unicode</tag>
-         
         <tag>charset</tag>
+         
+        <tag>unicode</tag>
          
         <tag>GB2312</tag>
          
@@ -467,7 +487,7 @@
         
         <tag>MathJax</tag>
          
-        <tag>LaTex</tag>
+        <tag>TeX</tag>
          
          
            
@@ -1135,11 +1155,11 @@
         
         <tag>encoding</tag>
          
+        <tag>charset</tag>
+         
         <tag>unicode</tag>
          
         <tag>python</tag>
-         
-        <tag>charset</tag>
          
         <tag>html</tag>
          
