@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.wuchenxu.com/"/>
-  <updated>2017-02-15T13:37:13.000Z</updated>
+  <updated>2017-02-15T15:14:57.000Z</updated>
   <id>http://www.wuchenxu.com/</id>
   
   <author>
@@ -14,6 +14,59 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>个人博客搭建hexo+github(9):本地搜索</title>
+    <link href="http://www.wuchenxu.com/2017/02/15/Static-Blog-hexo-github-9-local-search/"/>
+    <id>http://www.wuchenxu.com/2017/02/15/Static-Blog-hexo-github-9-local-search/</id>
+    <published>2017-02-15T15:14:57.000Z</published>
+    <updated>2017-02-15T15:14:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>本地搜索，不需要依赖外部的搜索服务，简单易用。</p>
+<a id="more"></a>
+<h1 id="安装hexo-generator-searchdb"><a href="#安装hexo-generator-searchdb" class="headerlink" title="安装hexo-generator-searchdb"></a>安装hexo-generator-searchdb</h1><p><code>npm install hexo-generator-searchdb --save</code></p>
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>在<code>hexo</code>(~不是主题的~)的 <code>_config.yml</code> 中增加配置</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">search:</span></div><div class="line"><span class="symbol">  path:</span> search.xml</div><div class="line"><span class="symbol">  field:</span> post</div><div class="line"><span class="symbol">  format:</span> raw</div><div class="line"><span class="symbol">  limit:</span> <span class="number">10000</span></div></pre></td></tr></table></figure>
+<ul>
+<li>path - file path. Default is search.xml .</li>
+<li>field - the search scope you want to search, you can chose:<ul>
+<li>post (Default) - will only covers all the posts of your blog.</li>
+<li>page - will only covers all the pages of your blog.</li>
+<li>all - will covers all the posts and pages of your blog.</li>
+</ul>
+</li>
+<li>format - the form of the page contents, options are:<ul>
+<li>html (Default) - original html string being minified.</li>
+<li>raw - markdown text of each posts or pages.</li>
+<li>excerpt - only collect excerpt.</li>
+<li>more - act as you think.</li>
+</ul>
+</li>
+<li>limit - define the maximum number of posts being indexed, always prefer the newest.</li>
+</ul>
+<h1 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h1><img src="/2017/02/15/Static-Blog-hexo-github-9-local-search/local_search_example.png" alt="local_search_example.png" title="">
+<p>Reference:</p>
+<ol>
+<li><a href="https://www.npmjs.com/package/hexo-generator-searchdb" target="_blank" rel="external">hexo-generator-searchdb</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本地搜索，不需要依赖外部的搜索服务，简单易用。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://www.wuchenxu.com/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://www.wuchenxu.com/tags/hexo/"/>
+    
+      <category term="github" scheme="http://www.wuchenxu.com/tags/github/"/>
+    
+      <category term="blog" scheme="http://www.wuchenxu.com/tags/blog/"/>
+    
+  </entry>
   
   <entry>
     <title>TeX(2):Mac下安装TeX</title>
@@ -1183,40 +1236,6 @@
       <category term="github" scheme="http://www.wuchenxu.com/tags/github/"/>
     
       <category term="DNS" scheme="http://www.wuchenxu.com/tags/DNS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python脚本嵌入bat脚本执行</title>
-    <link href="http://www.wuchenxu.com/2016/04/26/python-srcipt-embedded-in-bat/"/>
-    <id>http://www.wuchenxu.com/2016/04/26/python-srcipt-embedded-in-bat/</id>
-    <published>2016-04-26T13:58:37.000Z</published>
-    <updated>2016-04-26T13:58:37.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>通过bat脚本的注释<code>rem</code>以及python脚本的注释<code>&quot;&quot;&quot;</code>实现将python脚本嵌入到bat脚本中执行。</p>
-<a id="more"></a>
-<p>将python语句嵌入到bat脚本中，直接执行bat脚本的最终结果是执行python脚本。<br>python脚本可以接收bat脚本的命令行输入参数。<br>主要用到三个技巧：</p>
-<ol>
-<li>bat的注释<code>rem</code></li>
-<li>python的多行注释<code>&quot;&quot;&quot;</code></li>
-<li>bat的goto label</li>
-</ol>
-<figure class="highlight bat"><figcaption><span> PythonScriptInBat</span><a href="/downloads/code/PythonScriptInBat/pythonScriptInBat.bat">view raw</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">rem = """</span></div><div class="line">@<span class="built_in">echo</span> off</div><div class="line">python.exe -d %<span class="number">0</span> %*</div><div class="line"><span class="built_in">pause</span></div><div class="line"><span class="keyword">goto</span> endofPython """</div><div class="line"> </div><div class="line">import os</div><div class="line">import sys</div><div class="line"><span class="built_in">print</span> "hello,python "</div><div class="line"><span class="built_in">print</span> "pwd: " + os.getcwd()</div><div class="line"></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(sys.argv)):</div><div class="line">	<span class="built_in">print</span> "argv", i, sys.argv[i]</div><div class="line"><span class="comment"> </span></div><div class="line"> </div><div class="line"> </div><div class="line"> </div><div class="line">rem = """</div><div class="line">:endofPython """</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;通过bat脚本的注释&lt;code&gt;rem&lt;/code&gt;以及python脚本的注释&lt;code&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/code&gt;实现将python脚本嵌入到bat脚本中执行。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="windows cmd" scheme="http://www.wuchenxu.com/categories/windows-cmd/"/>
-    
-      <category term="python" scheme="http://www.wuchenxu.com/categories/windows-cmd/python/"/>
-    
-    
-      <category term="python" scheme="http://www.wuchenxu.com/tags/python/"/>
-    
-      <category term="cmd" scheme="http://www.wuchenxu.com/tags/cmd/"/>
     
   </entry>
   
