@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.wuchenxu.com/2017/02/27/software-design-2-variant-handling/</loc>
+    
+    <lastmod>2017-02-27T13:11:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wuchenxu.com/2017/01/16/software-design-1-state-machine/</loc>
+    
+    <lastmod>2017-02-18T13:23:45.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wuchenxu.com/2017/02/15/Static-Blog-hexo-github-9-local-search/</loc>
     
     <lastmod>2017-02-15T15:14:57.000Z</lastmod>
@@ -37,13 +51,6 @@
   </url>
   
   <url>
-    <loc>http://www.wuchenxu.com/2017/01/16/software-design-1-state-machine/</loc>
-    
-    <lastmod>2017-01-16T13:23:45.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.wuchenxu.com/2017/01/11/how-to-develop-a-product/</loc>
     
     <lastmod>2017-01-11T14:02:34.000Z</lastmod>
@@ -58,14 +65,14 @@
   </url>
   
   <url>
-    <loc>http://www.wuchenxu.com/2016/12/18/windows-cmd-20-date-time/</loc>
+    <loc>http://www.wuchenxu.com/2016/12/07/windows-cmd-19-color/</loc>
     
     <lastmod>2016-12-25T16:00:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wuchenxu.com/2016/12/07/windows-cmd-19-color/</loc>
+    <loc>http://www.wuchenxu.com/2016/12/18/windows-cmd-20-date-time/</loc>
     
     <lastmod>2016-12-25T16:00:00.000Z</lastmod>
     

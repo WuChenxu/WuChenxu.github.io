@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.wuchenxu.com/"/>
-  <updated>2017-02-15T15:14:57.000Z</updated>
+  <updated>2017-02-27T13:11:23.000Z</updated>
   <id>http://www.wuchenxu.com/</id>
   
   <author>
@@ -14,6 +14,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>software development(2):variant handling</title>
+    <link href="http://www.wuchenxu.com/2017/02/27/software-design-2-variant-handling/"/>
+    <id>http://www.wuchenxu.com/2017/02/27/software-design-2-variant-handling/</id>
+    <published>2017-02-27T13:11:23.000Z</published>
+    <updated>2017-02-27T13:11:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>we should always avoid to use variant handling in software development, because one solution for all variants is the best solution.But sometimes we should compromise due to some limits.</p>
+<a id="more"></a>
+<p>Here are some scenarios I can see now:</p>
+<ol>
+<li>one platform solution for different microconroller/hardware. <a href="#pre-compile">pre-compile</a>. <a href="##link different libs">link different libs</a></li>
+<li>confilict functions. <a href="#during-compile">during-compile</a></li>
+<li>cross platform(algorithm development on PC, target is other MCU). <a href="#during-compile">during-compile</a></li>
+<li>one ECU for different vehicle models. <a href="#one-time configuraton">one-time configuraton</a>.  <a href="##bootloader">bootloader</a></li>
+<li>differnt Transmission type for one vehicle model. <a href="##constant information from external">constant information from external</a></li>
+</ol>
+<h1 id="pre-compile"><a href="#pre-compile" class="headerlink" title="pre-compile"></a>pre-compile</h1><p>copy choosed target files to target directory<br><figure class="highlight plain"><figcaption><span>two targets(A and B),before compile copy targetA or targetB to copied_target, only files in copied_target are included in makefile</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">_____componentA</div><div class="line">         |______targetA</div><div class="line">         |______targetB</div><div class="line">         |______copied_target</div></pre></td></tr></table></figure></p>
+<h1 id="during-compile"><a href="#during-compile" class="headerlink" title="during-compile"></a>during-compile</h1><p>compile switch(macro)<br><figure class="highlight c"><figcaption><span>compile switch</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">if</span> (GS_MAJOR_VER == GS_TARGET_A)</span></div><div class="line"><span class="comment">// implementation for GS_TARGET_A</span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">else</span> (GS_MAJOR_VER == GS_TARGET_B)</span></div><div class="line"><span class="comment">// implementation for GS_TARGET_B</span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">else</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">error</span> <span class="meta-string">"no such target"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div></pre></td></tr></table></figure></p>
+<h1 id="on-the-fly"><a href="#on-the-fly" class="headerlink" title="on the fly"></a>on the fly</h1><h2 id="one-time-configuraton"><a href="#one-time-configuraton" class="headerlink" title="one-time configuraton"></a>one-time configuraton</h2><p>parameter is seleted by vehicle configuration shored in NVM/flash.<br><figure class="highlight c"><figcaption><span>parametes in flash, variant in NVM</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typedef</span> <span class="keyword">enum</span></div><div class="line">&#123;</div><div class="line">varaint1_enm,</div><div class="line">variant2_enm</div><div class="line">&#125;Variants;</div><div class="line"></div><div class="line"><span class="keyword">const</span> VariantPar_st parameters[]=&#123;variant1_par, variant2_par&#125;;<span class="comment">//all parametes for variants stored in flash</span></div><div class="line"></div><div class="line">g_variant_u8 = getVariant();<span class="comment">//getVariant() read variant from NVM.</span></div><div class="line"></div><div class="line"><span class="keyword">if</span>(varaint1_enm == g_variant_u8)</div><div class="line">&#123;</div><div class="line"><span class="comment">//load variant1 parameter or doing something special for variant1</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">else</span></div><div class="line">&#123;</div><div class="line"><span class="comment">//loac variant2 paramter or doing something special for variant2</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="constant-configuration"><a href="#constant-configuration" class="headerlink" title="constant configuration"></a>constant configuration</h2><h3 id="Signal-Multiplexing"><a href="#Signal-Multiplexing" class="headerlink" title="Signal Multiplexing"></a>Signal Multiplexing</h3><p>One signal in the frame is used as a multiplexor and the remaining payload is interpreted depending on the value of the multiplexor signal.<br><img src="/2017/02/27/software-design-2-variant-handling/signal_multiplexing.png" alt="signal_multiplexing.png" title=""></p>
+<h3 id="adaptive-algorithm"><a href="#adaptive-algorithm" class="headerlink" title="adaptive algorithm"></a>adaptive algorithm</h3><p>differnt parameter according different condition(eg.temperature/huminity/speed…)</p>
+<h1 id="post-compile"><a href="#post-compile" class="headerlink" title="post-compile"></a>post-compile</h1><h2 id="link-different-libs"><a href="#link-different-libs" class="headerlink" title="link different libs"></a>link different libs</h2><figure class="highlight plain"><figcaption><span>check your linker user manual and link different lib according to different target</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-L&#123;path to file containing library&#125; -l$&#123;library name&#125;</div></pre></td></tr></table></figure>
+<h2 id="merge-different-parameters"><a href="#merge-different-parameters" class="headerlink" title="merge different parameters"></a>merge different parameters</h2><p>pre-condition: parameter size for different variants is the same</p>
+<figure class="highlight plain"><figcaption><span>executable file structure</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">------</div><div class="line">Application area</div><div class="line">------</div><div class="line">Calibration area</div><div class="line">------</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>variant1.hex/exe</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">------</div><div class="line">Application area</div><div class="line">------</div><div class="line">Calibration area for variant1</div><div class="line">------</div></pre></td></tr></table></figure>
+<h1 id="version-control"><a href="#version-control" class="headerlink" title="version control"></a>version control</h1><p>manage by version tools using branch, development path.</p>
+<h1 id="deployment"><a href="#deployment" class="headerlink" title="deployment"></a>deployment</h1><h2 id="bootloader"><a href="#bootloader" class="headerlink" title="bootloader"></a>bootloader</h2><p>use bootloader to flash seperate calibartion data during End of Line according to different vehilce models.<br><figure class="highlight plain"><figcaption><span>executable file structure</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">------</div><div class="line">Bootloader area</div><div class="line">------</div><div class="line">Application area</div><div class="line">------</div><div class="line">Calibration area</div><div class="line">------</div></pre></td></tr></table></figure></p>
+<h2 id="sample-label"><a href="#sample-label" class="headerlink" title="sample label"></a>sample label</h2><p>different executable files for differnt ECUs.</p>
+<p>References:</p>
+<ol>
+<li><a href="https://vector.com/portal/medien/cmc/application_notes/AN-ION-1-0521_Extended_Multiplexing_in_DBC_Databases.pdf" target="_blank" rel="external">Extended Signal Multiplexing in DBC Databases</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;we should always avoid to use variant handling in software development, because one solution for all variants is the best solution.But sometimes we should compromise due to some limits.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="software" scheme="http://www.wuchenxu.com/categories/software/"/>
+    
+    
+      <category term="software" scheme="http://www.wuchenxu.com/tags/software/"/>
+    
+  </entry>
   
   <entry>
     <title>个人博客搭建hexo+github(9):本地搜索</title>
@@ -539,15 +587,15 @@
   </entry>
   
   <entry>
-    <title>软件中状态机的实现方法</title>
+    <title>软件开发(1):state machine</title>
     <link href="http://www.wuchenxu.com/2017/01/16/software-design-1-state-machine/"/>
     <id>http://www.wuchenxu.com/2017/01/16/software-design-1-state-machine/</id>
     <published>2017-01-16T13:23:45.000Z</published>
-    <updated>2017-01-16T13:23:45.000Z</updated>
+    <updated>2017-02-18T13:23:45.000Z</updated>
     
     <content type="html"><![CDATA[<p>FSM,HSM,Model-Base…</p>
 <a id="more"></a>
-<h1 id="state-machine"><a href="#state-machine" class="headerlink" title="state machine"></a>state machine</h1><h2 id="状态机是什么"><a href="#状态机是什么" class="headerlink" title="状态机是什么"></a>状态机是什么</h2><h2 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h2><h2 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h2><h2 id="通信"><a href="#通信" class="headerlink" title="通信"></a>通信</h2><h1 id="FSM-Finite-State-Machine"><a href="#FSM-Finite-State-Machine" class="headerlink" title="FSM(Finite State Machine)"></a>FSM(Finite State Machine)</h1><h1 id="HSM-hierarchical-State-Machine"><a href="#HSM-hierarchical-State-Machine" class="headerlink" title="HSM(hierarchical State Machine)"></a>HSM(hierarchical State Machine)</h1><h1 id="Modeling"><a href="#Modeling" class="headerlink" title="Modeling"></a>Modeling</h1><p>design<br>integration<br>simulate<br>validation<br>generate code</p>
+<h1 id="state-machine"><a href="#state-machine" class="headerlink" title="state machine"></a>state machine</h1><h2 id="状态机是什么"><a href="#状态机是什么" class="headerlink" title="状态机是什么"></a>状态机是什么</h2><h2 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h2><h2 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h2><h2 id="通信"><a href="#通信" class="headerlink" title="通信"></a>通信</h2><h1 id="FSM-Finite-State-Machine"><a href="#FSM-Finite-State-Machine" class="headerlink" title="FSM(Finite State Machine)"></a>FSM(Finite State Machine)</h1><h2 id="三段式"><a href="#三段式" class="headerlink" title="三段式"></a>三段式</h2><h2 id="状态转移表"><a href="#状态转移表" class="headerlink" title="状态转移表"></a>状态转移表</h2><h1 id="HSM-hierarchical-State-Machine"><a href="#HSM-hierarchical-State-Machine" class="headerlink" title="HSM(hierarchical State Machine)"></a>HSM(hierarchical State Machine)</h1><h1 id="Modeling"><a href="#Modeling" class="headerlink" title="Modeling"></a>Modeling</h1><p>design<br>integration<br>simulate<br>validation<br>generate code</p>
 <h2 id="Matlab-Stateflow"><a href="#Matlab-Stateflow" class="headerlink" title="Matlab Stateflow"></a><a href="https://www.mathworks.com/products/stateflow.html" target="_blank" rel="external">Matlab Stateflow</a></h2><h2 id="YAKINDU-Statechart-Tools-SCT"><a href="#YAKINDU-Statechart-Tools-SCT" class="headerlink" title="YAKINDU Statechart Tools (SCT)"></a><a href="https://www.itemis.com/en/yakindu/statechart-tools/" target="_blank" rel="external">YAKINDU Statechart Tools (SCT)</a></h2>]]></content>
     
     <summary type="html">
@@ -556,7 +604,7 @@
     
     </summary>
     
-      <category term="software design" scheme="http://www.wuchenxu.com/categories/software-design/"/>
+      <category term="software" scheme="http://www.wuchenxu.com/categories/software/"/>
     
     
       <category term="software" scheme="http://www.wuchenxu.com/tags/software/"/>
@@ -1190,52 +1238,6 @@
     
     
       <category term="hamming-distance" scheme="http://www.wuchenxu.com/tags/hamming-distance/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>个人博客搭建hexo+github(8):独立域名绑定github</title>
-    <link href="http://www.wuchenxu.com/2016/04/28/Static-Blog-hexo-github-8-binding-domain/"/>
-    <id>http://www.wuchenxu.com/2016/04/28/Static-Blog-hexo-github-8-binding-domain/</id>
-    <published>2016-04-28T11:43:26.000Z</published>
-    <updated>2017-02-12T11:43:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>独立域名绑定到github的方法。</p>
-<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=26423116&auto=0&height=66"></iframe><br>attraction - 小泽正澄</p>
-<a id="more"></a>
-<h1 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h1><p>我是在<a href="https://wanwang.aliyun.com/" target="_blank" rel="external">万网</a>购买的，现在已经被阿里云收归旗下，比<a href="https://www.godaddy.com/" target="_blank" rel="external">狗爹</a>便宜，第一年45块。</p>
-<h1 id="DNS设置"><a href="#DNS设置" class="headerlink" title="DNS设置"></a>DNS设置</h1><p>我使用的是国内的<a href="https://www.dnspod.cn" target="_blank" rel="external">DNSPod</a>。</p>
-<h2 id="DNS服务器"><a href="#DNS服务器" class="headerlink" title="DNS服务器"></a>DNS服务器</h2><p>域名解析的DNS服务器设置为SNSPod的地址<br><img src="/2016/04/28/Static-Blog-hexo-github-8-binding-domain/DNS_server.png" alt="DNS_server.png" title=""></p>
-<h2 id="DNS记录"><a href="#DNS记录" class="headerlink" title="DNS记录"></a>DNS记录</h2><p>github Pages和coding Pages同时部署了，DNSPod的一个好处是可以将国内和国内的访问使用不同路线。<br>国内的访问路由到github,国外的路由到coding.<br>几种常用的记录类型：<br><figure class="highlight dns"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">A</span>记录：地址记录，用来指定域名的IPv4地址（如：<span class="number">8.8.8.8</span>），如果需要将域名指向一个IP地址，就需要添加<span class="keyword">A</span>记录。</div><div class="line"><span class="keyword">CNAME</span>： 如果需要将域名指向另一个域名，再由另一个域名提供ip地址，就需要添加<span class="keyword">CNAME</span>记录。</div><div class="line"><span class="keyword">NS</span>：域名服务器记录，如果需要把子域名交给其他DNS服务商解析，就需要添加<span class="keyword">NS</span>记录。</div></pre></td></tr></table></figure></p>
-<p>NS记录为不可修改的域名服务器记录。<br>A记录用来指定<a href="https://help.github.com/articles/troubleshooting-custom-domains/" target="_blank" rel="external">github pages的IP地址</a>，可不设置。<br>CNAME记录需要指定<code>www</code>和<code>@</code>两种主机记录（域名前缀）。<br>github的CNAME指向<code>username.github.io</code> 或者 <code>github.map.fastly.net</code>;<br>coding的CNAME指向<code>pages.coding.me</code>。</p>
-<img src="/2016/04/28/Static-Blog-hexo-github-8-binding-domain/DNSPod_set.png" alt="DNSPod_set.png" title="">
-<h1 id="CNAME重定向"><a href="#CNAME重定向" class="headerlink" title="CNAME重定向"></a>CNAME重定向</h1><p>在hexo/source目录下新建名为<code>CNAME</code>的文件，没有后缀。<br>内容为域名，我这里是<code>wuchenxu.com</code>，没有<code>www</code>的。<br>coding需要手动设置绑定域名<br><img src="/2016/04/28/Static-Blog-hexo-github-8-binding-domain/CNAME_CodingPages.png" alt="CNAME_CodingPages.png" title=""><br>绑定两个网址，一个带<code>www</code>，另一个不带<code>www</code>，这样两个网址都能够访问。一开始我只绑定了不带<code>www</code>的网址，导致输入<code>www.wuchenxu.com</code>无法解析。</p>
-<h1 id="启用"><a href="#启用" class="headerlink" title="启用"></a>启用</h1><p>重新部署<code>hexo d -g</code>后，可以通过独立域名访问博客啦。</p>
-<h1 id="查看访问源"><a href="#查看访问源" class="headerlink" title="查看访问源"></a>查看访问源</h1><p>可以看到访问的是coding Pages。<br><img src="/2016/04/28/Static-Blog-hexo-github-8-binding-domain/ping_domain.png" alt="ping_domain.png" title=""></p>
-<h1 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h1><p>发现用移动网络可以访问，但是连接家里的广电宽带就是访问不了，出现<code>DNS_PROBE_FINISHED_NXDOMAIN</code>错误。<br>通过<a href="http://bbs.guanjia.qq.com/forum.php?mod=viewthread&amp;tid=2092936&amp;extra=" target="_blank" rel="external">手动设置DNS</a>后问题解决。<br><img src="/2016/04/28/Static-Blog-hexo-github-8-binding-domain/PC_set_DNS_Server.png" alt="PC_set_DNS_Server.png" title=""></p>
-<p>References:</p>
-<ol>
-<li><a href="http://www.jianshu.com/p/1d427e888dda" target="_blank" rel="external">域名和github绑定的问题</a></li>
-<li><a href="http://cnfeat.com/blog/2014/05/10/how-to-build-a-blog/" target="_blank" rel="external">如何搭建一个独立博客</a></li>
-<li><a href="http://iread.io/2015/09/hexo-guide-4/" target="_blank" rel="external">将独立域名与GitHub Pages的空间绑定</a></li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;独立域名绑定到github的方法。&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=86 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=26423116&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;attraction - 小泽正澄&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="hexo" scheme="http://www.wuchenxu.com/categories/hexo/"/>
-    
-    
-      <category term="hexo" scheme="http://www.wuchenxu.com/tags/hexo/"/>
-    
-      <category term="github" scheme="http://www.wuchenxu.com/tags/github/"/>
-    
-      <category term="DNS" scheme="http://www.wuchenxu.com/tags/DNS/"/>
     
   </entry>
   

@@ -88,13 +88,13 @@
 
 <meta name="description" content="FSM,HSM,Model-Base…">
 <meta property="og:type" content="article">
-<meta property="og:title" content="软件中状态机的实现方法">
+<meta property="og:title" content="软件开发(1):state machine">
 <meta property="og:url" content="http://www.wuchenxu.com/2017/01/16/software-design-1-state-machine/index.html">
 <meta property="og:site_name" content="功不唐捐，玉汝于成">
 <meta property="og:description" content="FSM,HSM,Model-Base…">
-<meta property="og:updated_time" content="2017-01-16T13:23:45.000Z">
+<meta property="og:updated_time" content="2017-02-18T13:23:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="软件中状态机的实现方法">
+<meta name="twitter:title" content="软件开发(1):state machine">
 <meta name="twitter:description" content="FSM,HSM,Model-Base…">
 
 
@@ -129,7 +129,7 @@
 
 
 
-  <title> 软件中状态机的实现方法 | 功不唐捐，玉汝于成 </title>
+  <title> 软件开发(1):state machine | 功不唐捐，玉汝于成 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -307,7 +307,7 @@
             
             
               
-                软件中状态机的实现方法
+                软件开发(1):state machine
               
             
           </h1>
@@ -324,6 +324,18 @@
             </time>
 		  </span>
 		
+			<span class="updated-time">
+				&nbsp; | &nbsp;
+				<span class="post-meta-item-icon">
+					<i class="fa fa-calendar-o"></i>
+				</span>
+			  <span class="post-meta-item-text">更新于</span>
+				<time itemprop="dateUpdated" datetime="2017-02-18T21:23:45+08:00" content="2017-02-18">
+				  2017-02-18
+				</time>
+			  </span>
+			</span>
+		  
 		  
           
             <span class="post-category" >
@@ -334,8 +346,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software-design/" itemprop="url" rel="index">
-                    <span itemprop="name">software design</span>
+                  <a href="/categories/software/" itemprop="url" rel="index">
+                    <span itemprop="name">software</span>
                   </a>
                 </span>
 
@@ -379,7 +391,7 @@
       
         <p>FSM,HSM,Model-Base…</p>
 <a id="more"></a>
-<h1 id="state-machine"><a href="#state-machine" class="headerlink" title="state machine"></a>state machine</h1><h2 id="状态机是什么"><a href="#状态机是什么" class="headerlink" title="状态机是什么"></a>状态机是什么</h2><h2 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h2><h2 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h2><h2 id="通信"><a href="#通信" class="headerlink" title="通信"></a>通信</h2><h1 id="FSM-Finite-State-Machine"><a href="#FSM-Finite-State-Machine" class="headerlink" title="FSM(Finite State Machine)"></a>FSM(Finite State Machine)</h1><h1 id="HSM-hierarchical-State-Machine"><a href="#HSM-hierarchical-State-Machine" class="headerlink" title="HSM(hierarchical State Machine)"></a>HSM(hierarchical State Machine)</h1><h1 id="Modeling"><a href="#Modeling" class="headerlink" title="Modeling"></a>Modeling</h1><p>design<br>integration<br>simulate<br>validation<br>generate code</p>
+<h1 id="state-machine"><a href="#state-machine" class="headerlink" title="state machine"></a>state machine</h1><h2 id="状态机是什么"><a href="#状态机是什么" class="headerlink" title="状态机是什么"></a>状态机是什么</h2><h2 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h2><h2 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h2><h2 id="通信"><a href="#通信" class="headerlink" title="通信"></a>通信</h2><h1 id="FSM-Finite-State-Machine"><a href="#FSM-Finite-State-Machine" class="headerlink" title="FSM(Finite State Machine)"></a>FSM(Finite State Machine)</h1><h2 id="三段式"><a href="#三段式" class="headerlink" title="三段式"></a>三段式</h2><h2 id="状态转移表"><a href="#状态转移表" class="headerlink" title="状态转移表"></a>状态转移表</h2><h1 id="HSM-hierarchical-State-Machine"><a href="#HSM-hierarchical-State-Machine" class="headerlink" title="HSM(hierarchical State Machine)"></a>HSM(hierarchical State Machine)</h1><h1 id="Modeling"><a href="#Modeling" class="headerlink" title="Modeling"></a>Modeling</h1><p>design<br>integration<br>simulate<br>validation<br>generate code</p>
 <h2 id="Matlab-Stateflow"><a href="#Matlab-Stateflow" class="headerlink" title="Matlab Stateflow"></a><a href="https://www.mathworks.com/products/stateflow.html" target="_blank" rel="external">Matlab Stateflow</a></h2><h2 id="YAKINDU-Statechart-Tools-SCT"><a href="#YAKINDU-Statechart-Tools-SCT" class="headerlink" title="YAKINDU Statechart Tools (SCT)"></a><a href="https://www.itemis.com/en/yakindu/statechart-tools/" target="_blank" rel="external">YAKINDU Statechart Tools (SCT)</a></h2>
       
     </div>
@@ -453,7 +465,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/01/16/software-design-1-state-machine/"
-           data-title="软件中状态机的实现方法" data-url="http://www.wuchenxu.com/2017/01/16/software-design-1-state-machine/">
+           data-title="软件开发(1):state machine" data-url="http://www.wuchenxu.com/2017/01/16/software-design-1-state-machine/">
       </div>
     
   </div>
@@ -498,7 +510,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">60</span>
+              <span class="site-state-item-count">61</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -506,7 +518,7 @@
           
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">37</span>
+                <span class="site-state-item-count">36</span>
                 <span class="site-state-item-name">分类</span>
               
             </div>
@@ -574,7 +586,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#state-machine"><span class="nav-number">1.</span> <span class="nav-text">state machine</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#状态机是什么"><span class="nav-number">1.1.</span> <span class="nav-text">状态机是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#硬件"><span class="nav-number">1.2.</span> <span class="nav-text">硬件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#软件"><span class="nav-number">1.3.</span> <span class="nav-text">软件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通信"><span class="nav-number">1.4.</span> <span class="nav-text">通信</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#FSM-Finite-State-Machine"><span class="nav-number">2.</span> <span class="nav-text">FSM(Finite State Machine)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HSM-hierarchical-State-Machine"><span class="nav-number">3.</span> <span class="nav-text">HSM(hierarchical State Machine)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Modeling"><span class="nav-number">4.</span> <span class="nav-text">Modeling</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Matlab-Stateflow"><span class="nav-number">4.1.</span> <span class="nav-text">Matlab Stateflow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#YAKINDU-Statechart-Tools-SCT"><span class="nav-number">4.2.</span> <span class="nav-text">YAKINDU Statechart Tools (SCT)</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#state-machine"><span class="nav-number">1.</span> <span class="nav-text">state machine</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#状态机是什么"><span class="nav-number">1.1.</span> <span class="nav-text">状态机是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#硬件"><span class="nav-number">1.2.</span> <span class="nav-text">硬件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#软件"><span class="nav-number">1.3.</span> <span class="nav-text">软件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通信"><span class="nav-number">1.4.</span> <span class="nav-text">通信</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#FSM-Finite-State-Machine"><span class="nav-number">2.</span> <span class="nav-text">FSM(Finite State Machine)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#三段式"><span class="nav-number">2.1.</span> <span class="nav-text">三段式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#状态转移表"><span class="nav-number">2.2.</span> <span class="nav-text">状态转移表</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HSM-hierarchical-State-Machine"><span class="nav-number">3.</span> <span class="nav-text">HSM(hierarchical State Machine)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Modeling"><span class="nav-number">4.</span> <span class="nav-text">Modeling</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Matlab-Stateflow"><span class="nav-number">4.1.</span> <span class="nav-text">Matlab Stateflow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#YAKINDU-Statechart-Tools-SCT"><span class="nav-number">4.2.</span> <span class="nav-text">YAKINDU Statechart Tools (SCT)</span></a></li></ol></li></ol></div>
             
 
           </div>
