@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[一线架构师实践指南 by 温昱]]></title>
+      <url>%2F2017%2F05%2F05%2Freading-notes-2-practice-guide-for-frontline-architects%2F</url>
+      <content type="text"><![CDATA[title: 一线架构师实践指南 by 温昱 categories: - reading-notes tags: - reading-notes - technical comments: true layout: post date: 2017-05-05 23:54:00 updated: 2017-05-05 23:54:00 --- {% asset_img cover.png %} 本书从架构师实际困惑出发，提出一套方法体系来解决这些问题。 整理了个思维导图： {% asset_img 一线架构师实践指南.png %}]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Rust语言(4):格式化输出]]></title>
       <url>%2F2017%2F03%2F19%2FRust-lang-4-std-fmt%2F</url>
       <content type="text"><![CDATA[title: Rust语言(4):格式化输出 categories: - Rust - Python tags: - Rust - Python - fmt comments: true layout: post date: 2017-03-19 20:35:24 updated: 2017-03-19 20:35:24 --- 本文对比Rust与Python语言的格式化输出。 # 写在前面 本文所用Rust版本为`1.14.0`，Python为`2.7.12`。 可以使用在线编译调试工具来测试本文所举示例代码。 [Rust playground](https://play.rust-lang.org/) [Python playground](http://ideone.com/) # basic usage Rust与Python都可以用`{}`来表示将要被替换变量的占位符。 ## Rust * `print!`将格式化文本输出到控制台，不带换行符。 * `println!`将格式化文本输出到控制到，末尾加一个换行符。 * `format!`将格式化文本输出到字符串。 ```Rust Rust print!("{}.print is output to console w/o newline.", 1); print!("Continue..."); print!("\n"); println!("{}.println is string to console w/ newline.", 2); let str = format!("{}.format is output to a string.", 3); assert_eq!(str, "3.format is output to a string."); println!("{}", str); ``` ## Python2.7 * `print`来打印文本到控制台，末尾加一个换行符。 * `str.format()`将格式化文本输出到字符串。 ```Python Python2.7 print("{} world".format("Hello")) ``` # with arguments * more arguments * positional arguments * named arguments ```Rust Rust println!("{}, {}", "Hello", "world"); println!("{0}, this is {1}. {1}, this is {0}.", "Hellen", "Tom"); println!("{subject} {verb} {object}", object="the lazy dog", subject="the quick brwon fox", verb="jumps over"); ``` ```Python Python2.7 print("{},{}".format("hello", "world")) print("{0}, this is {1}. {1}, this is {0}.".format("Hellen", "Tom")) print("{subject} {verb} {object}".format(object="the lazy dog", subject="the quick brown fox", verb="jumps over")) ``` # special format |* 数字 *|* Rust格式 *|* Python格式 *|* 输出 *|* 描述 *| |:-------------:|:-------------:|:-----------------:|:-------------------:|:-------------------------:| | 3.1415926 | {:.2} | {:.2f} | 3.14 | 保留小数点后两位 | | 3.1415926 | {:+.2} | {:+.2f} | +3.14 | 带符号保留小数点后两位 | | -1 | {:+.2} | {:+.2f} | -1(R)/-1.00(P) | 带符号保留小数点后两位 | | -1.0 | {:+.2} | {:+.2f} | -1.00 | 带符号保留小数点后两位 | | 2.71828 | {:.0}} | {:.0f} | 3 | 不带小数 | | 5 | {:0>2}/{:02} | {:0>2d}/{:02d} | 05 | 数字补0 (填充左边, 宽度为2)| | 5 | {:x^10} | {:x^10d} | xxxx5xxxxx | 居中对齐 | | 5 | {:x]]></content>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.wuchenxu.com/"/>
-  <updated>2017-03-19T12:35:24.000Z</updated>
+  <updated>2017-05-05T15:54:00.000Z</updated>
   <id>http://www.wuchenxu.com/</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一线架构师实践指南 by 温昱</title>
+    <link href="http://www.wuchenxu.com/2017/05/05/reading-notes-2-practice-guide-for-frontline-architects/"/>
+    <id>http://www.wuchenxu.com/2017/05/05/reading-notes-2-practice-guide-for-frontline-architects/</id>
+    <published>2017-05-05T15:54:00.000Z</published>
+    <updated>2017-05-05T15:54:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/2017/05/05/reading-notes-2-practice-guide-for-frontline-architects/cover.png" alt="cover.png" title="">
+<p>本书从架构师实际困惑出发，提出一套方法体系来解决这些问题。</p>
+<a id="more"></a>
+<p>整理了个思维导图：</p>
+<img src="/2017/05/05/reading-notes-2-practice-guide-for-frontline-architects/一线架构师实践指南.png" alt="一线架构师实践指南.png" title="">]]></content>
+    
+    <summary type="html">
+    
+      &lt;img src=&quot;/2017/05/05/reading-notes-2-practice-guide-for-frontline-architects/cover.png&quot; alt=&quot;cover.png&quot; title=&quot;&quot;&gt;
+&lt;p&gt;本书从架构师实际困惑出发，提出一套方法体系来解决这些问题。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="reading-notes" scheme="http://www.wuchenxu.com/categories/reading-notes/"/>
+    
+    
+      <category term="reading-notes" scheme="http://www.wuchenxu.com/tags/reading-notes/"/>
+    
+      <category term="technical" scheme="http://www.wuchenxu.com/tags/technical/"/>
+    
+  </entry>
   
   <entry>
     <title>Rust语言(4):格式化输出</title>
@@ -1374,39 +1403,6 @@
       <category term="MathJax" scheme="http://www.wuchenxu.com/tags/MathJax/"/>
     
       <category term="TeX" scheme="http://www.wuchenxu.com/tags/TeX/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>湿度humidity</title>
-    <link href="http://www.wuchenxu.com/2016/06/01/humidity/"/>
-    <id>http://www.wuchenxu.com/2016/06/01/humidity/</id>
-    <published>2016-06-01T08:12:30.000Z</published>
-    <updated>2016-06-01T08:12:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<img src="/2016/06/01/humidity/humidity.jpg" alt="humidity.jpg" title="">
-<p>湿度(Humidity)用来表征空气中水蒸气(water vapor)的含量。有三种计量方式：绝对湿度(Absolute Humidity)、相对湿度(Relative Hmidity)、比湿度(Specific Humidity)。</p>
-<a id="more"></a>
-<h1 id="绝对湿度"><a href="#绝对湿度" class="headerlink" title="绝对湿度"></a>绝对湿度</h1><p>绝对湿度指每立方米空气中所含水蒸气的质量，即水蒸气密度，单位为g/m<sup>3</sup>。<br>随着温度和气压的变化，绝对湿度会变化。<br>温度越高，绝对湿度越小。<br>气压越高，绝对湿度越大。</p>
-<h1 id="相对湿度"><a href="#相对湿度" class="headerlink" title="相对湿度"></a>相对湿度</h1><p>相对湿度(RH)指空气中水蒸气压与相同情况下饱和水蒸气压的百分比，表示形式如90%RH。百分比越高，湿度越大。<br>相对湿度能反映降水的可能性，所以常用在天气预报中。<br>在炎热的夏天天气，相对湿度的上升会阻碍皮肤的汗水蒸发，从而增加人类的体感温度。</p>
-<h1 id="比湿度"><a href="#比湿度" class="headerlink" title="比湿度"></a>比湿度</h1><p>一团由干空气和水汽组成的湿空气中的水汽质量与湿空气的总质量之比。若湿空气与外界无质量交换，且无相变，则比湿保持不变。以g/g或g/kg为单位，通常大气中比湿都小于40g/kg。</p>
-<p>Reference:</p>
-<ol>
-<li><a href="https://en.wikipedia.org/wiki/Humidity" target="_blank" rel="external">Humidity wiki</a></li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;img src=&quot;/2016/06/01/humidity/humidity.jpg&quot; alt=&quot;humidity.jpg&quot; title=&quot;&quot;&gt;
-&lt;p&gt;湿度(Humidity)用来表征空气中水蒸气(water vapor)的含量。有三种计量方式：绝对湿度(Absolute Humidity)、相对湿度(Relative Hmidity)、比湿度(Specific Humidity)。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="气象" scheme="http://www.wuchenxu.com/categories/%E6%B0%94%E8%B1%A1/"/>
-    
-    
-      <category term="humidity" scheme="http://www.wuchenxu.com/tags/humidity/"/>
     
   </entry>
   

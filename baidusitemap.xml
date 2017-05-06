@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://www.wuchenxu.com/2017/05/05/reading-notes-2-practice-guide-for-frontline-architects/</loc>
+    <lastmod>2017-05-05T15:54:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>一线架构师实践指南 by 温昱</title>
+        <pubTime>2017-05-05T15:54:00.000Z</pubTime>
+        
+        <tag>reading-notes</tag>
+         
+        <tag>technical</tag>
+         
+         
+           
+             
+              <breadCrumb title="reading-notes" url="http://www.wuchenxu.com/categories/reading-notes/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.wuchenxu.com/2015/11/19/markdown-usage/</loc>
     <lastmod>2017-04-26T13:20:05.000Z</lastmod>
     <data>
@@ -596,30 +618,6 @@
 
     
   <url>
-    <loc>http://www.wuchenxu.com/2016/04/01/windows-cmd-17-multiple-thread/</loc>
-    <lastmod>2016-06-12T16:00:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>windows command(17):多线程 start call cmd</title>
-        <pubTime>2016-04-01T06:32:28.000Z</pubTime>
-        
-        <tag>cmd</tag>
-         
-        <tag>start</tag>
-         
-        <tag>call</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.wuchenxu.com/2015/11/23/Static-Blog-hexo-github-5-hexo-usage-trick/</loc>
     <lastmod>2016-06-12T16:00:00.000Z</lastmod>
     <data>
@@ -641,6 +639,30 @@
            
              
               <breadCrumb title="hexo" url="http://www.wuchenxu.com/categories/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wuchenxu.com/2016/04/01/windows-cmd-17-multiple-thread/</loc>
+    <lastmod>2016-06-12T16:00:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>windows command(17):多线程 start call cmd</title>
+        <pubTime>2016-04-01T06:32:28.000Z</pubTime>
+        
+        <tag>cmd</tag>
+         
+        <tag>start</tag>
+         
+        <tag>call</tag>
+         
+         
+           
+             
+              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
           
         </display>
     </data>
