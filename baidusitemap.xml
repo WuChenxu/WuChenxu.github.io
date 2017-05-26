@@ -269,28 +269,6 @@
 
     
   <url>
-    <loc>http://www.wuchenxu.com/2016/12/07/windows-cmd-19-color/</loc>
-    <lastmod>2016-12-25T16:00:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>windows command(19):console颜色 color</title>
-        <pubTime>2016-12-07T12:32:28.000Z</pubTime>
-        
-        <tag>cmd</tag>
-         
-        <tag>color</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.wuchenxu.com/2016/12/18/windows-cmd-20-date-time/</loc>
     <lastmod>2016-12-25T16:00:00.000Z</lastmod>
     <data>
@@ -303,6 +281,28 @@
         <tag>date</tag>
          
         <tag>time</tag>
+         
+         
+           
+             
+              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wuchenxu.com/2016/12/07/windows-cmd-19-color/</loc>
+    <lastmod>2016-12-25T16:00:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>windows command(19):console颜色 color</title>
+        <pubTime>2016-12-07T12:32:28.000Z</pubTime>
+        
+        <tag>cmd</tag>
+         
+        <tag>color</tag>
          
          
            
@@ -548,9 +548,9 @@
         
         <tag>encoding</tag>
          
-        <tag>unicode</tag>
-         
         <tag>charset</tag>
+         
+        <tag>unicode</tag>
          
         <tag>GB2312</tag>
          
@@ -1270,11 +1270,11 @@
         
         <tag>encoding</tag>
          
+        <tag>charset</tag>
+         
         <tag>unicode</tag>
          
         <tag>python</tag>
-         
-        <tag>charset</tag>
          
         <tag>html</tag>
          
@@ -1439,12 +1439,12 @@
 
     
   <url>
-    <loc>http://www.wuchenxu.com/2015/11/04/Static-Blog-hexo-github-1-Start/</loc>
+    <loc>http://www.wuchenxu.com/2015/11/09/Static-Blog-hexo-github-3-config-theme/</loc>
     <lastmod>2015-11-23T16:00:00.000Z</lastmod>
     <data>
         <display>
-        <title>个人博客搭建hexo+github(1):初体验</title>
-        <pubTime>2015-11-04T15:38:00.000Z</pubTime>
+        <title>个人博客搭建hexo+github(3):主题配置</title>
+        <pubTime>2015-11-09T11:11:56.000Z</pubTime>
         
         <tag>hexo</tag>
          
@@ -1463,12 +1463,12 @@
 
     
   <url>
-    <loc>http://www.wuchenxu.com/2015/11/09/Static-Blog-hexo-github-3-config-theme/</loc>
+    <loc>http://www.wuchenxu.com/2015/11/04/Static-Blog-hexo-github-1-Start/</loc>
     <lastmod>2015-11-23T16:00:00.000Z</lastmod>
     <data>
         <display>
-        <title>个人博客搭建hexo+github(3):主题配置</title>
-        <pubTime>2015-11-09T11:11:56.000Z</pubTime>
+        <title>个人博客搭建hexo+github(1):初体验</title>
+        <pubTime>2015-11-04T15:38:00.000Z</pubTime>
         
         <tag>hexo</tag>
          
