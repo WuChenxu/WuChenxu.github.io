@@ -24,6 +24,7 @@
     
     <content type="html"><![CDATA[<p>先上结论：计算机程序可以在ROM或者RAM里执行。</p>
 <a id="more"></a>
+<p>摘自RL78芯片datasheet：</p>
 <blockquote>
 <p>The RL78/F13 and RL78/F14 incorporate the flash memory to which a program can be written, erased, and overwritten. The flash memory includes the “code flash memory”, in which programs can be executed, and the “data flash memory”, an area for storing data.</p>
 </blockquote>
