@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://www.wuchenxu.com/2017/05/30/where-program-execute-in/</loc>
+    <lastmod>2017-06-15T15:54:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>程序在哪里执行？</title>
+        <pubTime>2017-05-30T15:54:00.000Z</pubTime>
+        
+        <tag>software</tag>
+         
+        <tag>technical</tag>
+         
+         
+           
+             
+              <breadCrumb title="technical" url="http://www.wuchenxu.com/categories/technical/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.wuchenxu.com/2017/05/12/reading-notes-3-Facts-and-fallacies-of-software-engineering/</loc>
     <lastmod>2017-05-27T15:54:00.000Z</lastmod>
     <data>
@@ -269,28 +291,6 @@
 
     
   <url>
-    <loc>http://www.wuchenxu.com/2016/12/07/windows-cmd-19-color/</loc>
-    <lastmod>2016-12-25T16:00:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>windows command(19):console颜色 color</title>
-        <pubTime>2016-12-07T12:32:28.000Z</pubTime>
-        
-        <tag>cmd</tag>
-         
-        <tag>color</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.wuchenxu.com/2016/12/18/windows-cmd-20-date-time/</loc>
     <lastmod>2016-12-25T16:00:00.000Z</lastmod>
     <data>
@@ -303,6 +303,28 @@
         <tag>date</tag>
          
         <tag>time</tag>
+         
+         
+           
+             
+              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.wuchenxu.com/2016/12/07/windows-cmd-19-color/</loc>
+    <lastmod>2016-12-25T16:00:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>windows command(19):console颜色 color</title>
+        <pubTime>2016-12-07T12:32:28.000Z</pubTime>
+        
+        <tag>cmd</tag>
+         
+        <tag>color</tag>
          
          
            
