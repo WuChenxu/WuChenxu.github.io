@@ -30,7 +30,7 @@
 </blockquote>
 <p>计算机设备，包括单片机，PC，DSP，FPGA等不同类型的电子设备，可以从ROM中执行程序（试想系统刚上电，也只有ROM中可以读取指令）。初始化完成后，为了提高执行速度可以将ROM中存储的程序到RAM中，再从RAM中执行。</p>
 <p>由于RAM执行速度（～GHz）相较于NorFlash的XIP执行速度（～100MHz）快很多，所以如果RAM空间足够的情况下，从RAM执行程序速度更快。<br>但是由于成本原因，NorFlash在单片机（code flash一般从几K到几M大小）中作为存储程序的主存储器也是很常见的。</p>
-<p>NorFlash支持XIP（<a href="https://en.wikipedia.org/wiki/Execute_in_place" target="_blank" rel="external">eXecute In Place</a>），CPU直接从NorFlash中去指令、译码、执行。<br>NorFlash使用标准的存储接口，其地址空间与RAM在同一个地址空间，且地址总线共用；而NandFlash更像一个I/O设备，其特殊的驱动来访问。<br>NorFlash直接执行的设备，还是需要RAM的，因为NorFlash中只能存储不可变的指令或数据，运行过程中可变的数据还是需要存储在RAM中。<br>NorFlash的特点(线性存储空间，100%无坏点，随机访问)决定了支持XIP。<br>NorFlash的XIP最快执行速度～100MHz。<br>NorFlash的读取速度（～100ns）比NandFlash（us）快，NandFlash的擦出和写入速度比NorFlash快很多。</p>
+<p>NorFlash支持XIP（<a href="https://en.wikipedia.org/wiki/Execute_in_place" target="_blank" rel="external">eXecute In Place</a>），CPU直接从NorFlash取指令、译码、执行。<br>NorFlash更像RAM，使用标准的存储接口，具有独立的地址总线和数据总线，支持随机访问，地址总线与数据总线共用；而NandFlash更像一个硬盘，需要特殊的驱动来访问，地址总线和数据总线是与I/O总线共享，只允许按页访问，。<br>NorFlash直接执行的设备，还是需要RAM的，因为NorFlash中只能存储不可变的指令或数据，运行过程中可变的数据还是需要存储在RAM中。<br>NorFlash的特点(线性存储空间，100%无坏点，随机访问)决定了支持XIP。<br>NorFlash的XIP最快执行速度～100MHz。<br>NorFlash的读取速度（～100ns）比NandFlash（us）快，NandFlash的擦除和写入速度比NorFlash快很多。</p>
 <p>NandFlash只能保证98%无坏块（bad block），需要坏块处理；会有位翻转（bit-flipping）问题，需要EDC（Error Detection Code）/ECC（Error Correction Code）来检错纠错。</p>
 <img src="/2017/05/30/where-program-execute-in/comparison_NOR_NAND.png" alt="comparison_NOR_NAND.png" title="">
 <ul>
