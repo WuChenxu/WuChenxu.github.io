@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.wuchenxu.com/"/>
-  <updated>2017-06-15T15:54:00.000Z</updated>
+  <updated>2017-07-16T12:05:41.000Z</updated>
   <id>http://www.wuchenxu.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.wuchenxu.com/2017/05/30/where-program-execute-in/"/>
     <id>http://www.wuchenxu.com/2017/05/30/where-program-execute-in/</id>
     <published>2017-05-30T15:54:00.000Z</published>
-    <updated>2017-06-15T15:54:00.000Z</updated>
+    <updated>2017-07-16T12:05:41.000Z</updated>
     
     <content type="html"><![CDATA[<p>先上结论：计算机程序可以在ROM或者RAM里执行。</p>
 <a id="more"></a>
@@ -84,7 +84,7 @@
     <link href="http://www.wuchenxu.com/2017/05/12/reading-notes-3-Facts-and-fallacies-of-software-engineering/"/>
     <id>http://www.wuchenxu.com/2017/05/12/reading-notes-3-Facts-and-fallacies-of-software-engineering/</id>
     <published>2017-05-12T15:54:00.000Z</published>
-    <updated>2017-05-27T15:54:00.000Z</updated>
+    <updated>2017-07-16T13:09:51.000Z</updated>
     
     <content type="html"><![CDATA[<img src="/2017/05/12/reading-notes-3-Facts-and-fallacies-of-software-engineering/cover.jpg" alt="cover.jpg" title="">
 <p>软件工程的55个事实和5+5个谬误。<br>划重点：</p>
@@ -302,7 +302,7 @@
     <link href="http://www.wuchenxu.com/2017/05/05/reading-notes-2-practice-guide-for-frontline-architects/"/>
     <id>http://www.wuchenxu.com/2017/05/05/reading-notes-2-practice-guide-for-frontline-architects/</id>
     <published>2017-05-05T15:54:00.000Z</published>
-    <updated>2017-05-05T15:54:00.000Z</updated>
+    <updated>2017-07-16T13:18:06.000Z</updated>
     
     <content type="html"><![CDATA[<img src="/2017/05/05/reading-notes-2-practice-guide-for-frontline-architects/cover.png" alt="cover.png" title="">
 <p>本书从架构师实际困惑出发，提出一套具有可操作性的方法体系来解决这些问题，作者很擅长用图例、表格来阐述观点，让人很受用。</p>
@@ -331,7 +331,7 @@
     <link href="http://www.wuchenxu.com/2017/03/19/Rust-lang-4-std-fmt/"/>
     <id>http://www.wuchenxu.com/2017/03/19/Rust-lang-4-std-fmt/</id>
     <published>2017-03-19T12:35:24.000Z</published>
-    <updated>2017-03-19T12:35:24.000Z</updated>
+    <updated>2017-07-16T13:17:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>本文对比Rust与Python语言的格式化输出。</p>
 <a id="more"></a>
@@ -551,7 +551,7 @@
     <link href="http://www.wuchenxu.com/2017/02/27/software-design-2-variant-handling/"/>
     <id>http://www.wuchenxu.com/2017/02/27/software-design-2-variant-handling/</id>
     <published>2017-02-27T13:11:23.000Z</published>
-    <updated>2017-03-19T13:11:23.000Z</updated>
+    <updated>2017-07-16T13:17:58.000Z</updated>
     
     <content type="html"><![CDATA[<p>we should always avoid to use variant handling in software development, because one solution for all variants is the best solution.But sometimes we should compromise due to some limits.</p>
 <a id="more"></a>
@@ -599,7 +599,7 @@
     <link href="http://www.wuchenxu.com/2017/02/15/Static-Blog-hexo-github-9-local-search/"/>
     <id>http://www.wuchenxu.com/2017/02/15/Static-Blog-hexo-github-9-local-search/</id>
     <published>2017-02-15T15:14:57.000Z</published>
-    <updated>2017-02-15T15:14:57.000Z</updated>
+    <updated>2017-07-16T13:17:48.000Z</updated>
     
     <content type="html"><![CDATA[<p>本地搜索，不需要依赖外部的搜索服务，简单易用。</p>
 <a id="more"></a>
@@ -652,7 +652,7 @@
     <link href="http://www.wuchenxu.com/2017/02/15/TeX-2-MacTex/"/>
     <id>http://www.wuchenxu.com/2017/02/15/TeX-2-MacTex/</id>
     <published>2017-02-15T13:37:13.000Z</published>
-    <updated>2017-02-15T13:37:13.000Z</updated>
+    <updated>2017-07-16T13:17:53.000Z</updated>
     
     <content type="html"><![CDATA[<p>Mac下TeX环境搭建</p>
 <a id="more"></a>
@@ -688,7 +688,7 @@
     <link href="http://www.wuchenxu.com/2017/01/30/reading-notes-1-history-of-humankind/"/>
     <id>http://www.wuchenxu.com/2017/01/30/reading-notes-1-history-of-humankind/</id>
     <published>2017-01-30T05:09:04.000Z</published>
-    <updated>2017-01-30T05:09:04.000Z</updated>
+    <updated>2017-07-16T13:17:38.000Z</updated>
     
     <content type="html"><![CDATA[<p>在历史的路上，有三大重要革命：大约7万年前，“认知革命”（Cognitive Revolution）让历史正式启动。大约12000年前，“农业革命”（Agricultural Revolution）让历史加速发展。而到了大约不过是500年前，“科学革命”（Scientific Revolution）可以说是让历史画下句点而另创新局。这本书的内容，讲述的就是这三大革命如何改变了人类和其他生物。<br><a id="more"></a></p>
 <img src="/2017/01/30/reading-notes-1-history-of-humankind/cover_of_a_brief_history_of_humankind.jpg" alt="cover_of_a_brief_history_of_humankind.jpg" title="">
@@ -1055,7 +1055,7 @@
     <link href="http://www.wuchenxu.com/2017/01/25/Rust-lang-3-crate/"/>
     <id>http://www.wuchenxu.com/2017/01/25/Rust-lang-3-crate/</id>
     <published>2017-01-25T14:13:03.000Z</published>
-    <updated>2017-01-25T14:13:03.000Z</updated>
+    <updated>2017-07-16T13:17:36.000Z</updated>
     
     <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=396696&auto=0&height=66"></iframe>
 
@@ -1122,7 +1122,7 @@
     <link href="http://www.wuchenxu.com/2017/01/16/software-design-1-state-machine/"/>
     <id>http://www.wuchenxu.com/2017/01/16/software-design-1-state-machine/</id>
     <published>2017-01-16T13:23:45.000Z</published>
-    <updated>2017-02-18T13:23:45.000Z</updated>
+    <updated>2017-07-16T13:17:51.000Z</updated>
     
     <content type="html"><![CDATA[<p>FSM,HSM,Model-Base…</p>
 <a id="more"></a>
@@ -1149,7 +1149,7 @@
     <link href="http://www.wuchenxu.com/2017/01/11/how-to-develop-a-product/"/>
     <id>http://www.wuchenxu.com/2017/01/11/how-to-develop-a-product/</id>
     <published>2017-01-11T14:02:34.000Z</published>
-    <updated>2017-01-11T14:02:34.000Z</updated>
+    <updated>2017-07-16T13:17:02.000Z</updated>
     
     <content type="html"><![CDATA[<p>个人的一点看法，欢迎讨论。谢绝转载。</p>
 <a id="more"></a>
@@ -1195,7 +1195,7 @@
     <link href="http://www.wuchenxu.com/2016/12/18/windows-cmd-20-date-time/"/>
     <id>http://www.wuchenxu.com/2016/12/18/windows-cmd-20-date-time/</id>
     <published>2016-12-18T12:32:28.000Z</published>
-    <updated>2016-12-25T16:00:00.000Z</updated>
+    <updated>2017-07-16T13:16:40.000Z</updated>
     
     <content type="html"><![CDATA[<p><code>data</code>命令用来显示日期；<code>time</code>命令用来显示时间。</p>
 <a id="more"></a>
@@ -1248,7 +1248,7 @@
     <link href="http://www.wuchenxu.com/2016/12/07/windows-cmd-19-color/"/>
     <id>http://www.wuchenxu.com/2016/12/07/windows-cmd-19-color/</id>
     <published>2016-12-07T12:32:28.000Z</published>
-    <updated>2016-12-25T16:00:00.000Z</updated>
+    <updated>2017-07-16T13:16:38.000Z</updated>
     
     <content type="html"><![CDATA[<p>color命令用来设置console的前景色或者背景色。</p>
 <a id="more"></a>
@@ -1280,7 +1280,7 @@
     <link href="http://www.wuchenxu.com/2016/11/20/Conways-law/"/>
     <id>http://www.wuchenxu.com/2016/11/20/Conways-law/</id>
     <published>2016-11-20T14:37:54.000Z</published>
-    <updated>2016-11-20T14:37:54.000Z</updated>
+    <updated>2017-07-16T13:16:57.000Z</updated>
     
     <content type="html"><![CDATA[<img src="/2016/11/20/Conways-law/tech_organization_structure.png" alt="tech_organization_structure.png" title="">
 <p>系统是设计该系统的组织结构的映射。<br><a id="more"></a></p>
@@ -1333,7 +1333,7 @@
     <link href="http://www.wuchenxu.com/2016/09/28/TeX-1-introduction/"/>
     <id>http://www.wuchenxu.com/2016/09/28/TeX-1-introduction/</id>
     <published>2016-09-28T12:44:27.000Z</published>
-    <updated>2016-09-28T12:44:27.000Z</updated>
+    <updated>2017-07-16T13:16:51.000Z</updated>
     
     <content type="html"><![CDATA[<p>本文介绍了在Windows下TeX的安装及使用。</p>
 <a id="more"></a>
@@ -1387,7 +1387,7 @@
     <link href="http://www.wuchenxu.com/2016/09/17/windows-cmd-18-tree/"/>
     <id>http://www.wuchenxu.com/2016/09/17/windows-cmd-18-tree/</id>
     <published>2016-09-17T06:30:33.000Z</published>
-    <updated>2016-09-17T06:30:33.000Z</updated>
+    <updated>2017-07-16T13:16:48.000Z</updated>
     
     <content type="html"><![CDATA[<p>tree命令用来打印文件夹目录结构。</p>
 <a id="more"></a>
@@ -1417,7 +1417,7 @@
     <link href="http://www.wuchenxu.com/2016/09/13/Rust-lang-2-Cargo/"/>
     <id>http://www.wuchenxu.com/2016/09/13/Rust-lang-2-Cargo/</id>
     <published>2016-09-13T13:59:05.000Z</published>
-    <updated>2016-09-13T13:59:05.000Z</updated>
+    <updated>2017-07-16T13:17:33.000Z</updated>
     
     <content type="html"><![CDATA[<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=29431066&auto=0&height=66"></iframe><br>陈粒-奇妙能力歌</p>
 <p>本文介绍了Rust自带的编译和包管理工具Cargo.</p>
@@ -1465,7 +1465,7 @@
     <link href="http://www.wuchenxu.com/2016/09/12/Rust-lang-1-hello-world/"/>
     <id>http://www.wuchenxu.com/2016/09/12/Rust-lang-1-hello-world/</id>
     <published>2016-09-12T13:56:20.000Z</published>
-    <updated>2016-09-12T13:56:20.000Z</updated>
+    <updated>2017-07-16T13:16:46.000Z</updated>
     
     <content type="html"><![CDATA[<img src="/2016/09/12/Rust-lang-1-hello-world/rust-logo-blk.svg" alt="rust-logo-blk.svg" title="">
 <p>本文介绍了Rust语言在Windows下的环境安装，编译，执行。</p>
@@ -1515,7 +1515,7 @@
     <link href="http://www.wuchenxu.com/2016/09/08/MathJax-2-using-in-hexo-markdown/"/>
     <id>http://www.wuchenxu.com/2016/09/08/MathJax-2-using-in-hexo-markdown/</id>
     <published>2016-09-08T12:44:27.000Z</published>
-    <updated>2016-08-08T12:44:27.000Z</updated>
+    <updated>2017-07-16T13:16:43.000Z</updated>
     
     <content type="html"><![CDATA[<p>本文介绍了在Markdown文件中插入MathJax的方法。</p>
 <a id="more"></a>
@@ -1554,7 +1554,7 @@
     <link href="http://www.wuchenxu.com/2016/07/12/software-filtering-algorithm-and-frequency-response/"/>
     <id>http://www.wuchenxu.com/2016/07/12/software-filtering-algorithm-and-frequency-response/</id>
     <published>2016-07-11T17:03:42.000Z</published>
-    <updated>2016-07-11T17:03:42.000Z</updated>
+    <updated>2017-07-16T13:16:54.000Z</updated>
     
     <content type="html"><![CDATA[<p>本文从一种软件滤波算法切入，深入理解了滤波算法的频率响应。</p>
 <a id="more"></a>
