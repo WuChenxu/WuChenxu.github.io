@@ -4,6 +4,31 @@
 
     
   <url>
+    <loc>http://www.wuchenxu.com/2016/01/07/Automative-lead-acid-battery-charging-voltage/</loc>
+    <lastmod>2017-08-30T12:23:03.000Z</lastmod>
+    <data>
+        <display>
+        <title>汽车电池</title>
+        <pubTime>2016-01-07T11:52:35.000Z</pubTime>
+        
+        <tag>Automotive</tag>
+         
+        <tag>Battery</tag>
+         
+         
+           
+             
+              <breadCrumb title="Automotive" url="http://www.wuchenxu.com/categories/Automotive/"/>
+          
+             
+              <breadCrumb title="Battery" url="http://www.wuchenxu.com/categories/Automotive/Battery/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.wuchenxu.com/2017/05/05/reading-notes-2-practice-guide-for-frontline-architects/</loc>
     <lastmod>2017-07-16T13:18:06.000Z</lastmod>
     <data>
@@ -1309,31 +1334,6 @@
            
              
               <breadCrumb title="hexo" url="http://www.wuchenxu.com/categories/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/01/07/Automative-lead-acid-battery-charging-voltage/</loc>
-    <lastmod>2017-07-16T13:10:58.000Z</lastmod>
-    <data>
-        <display>
-        <title>汽车电池</title>
-        <pubTime>2016-01-07T11:52:35.000Z</pubTime>
-        
-        <tag>Automotive</tag>
-         
-        <tag>Battery</tag>
-         
-         
-           
-             
-              <breadCrumb title="Automotive" url="http://www.wuchenxu.com/categories/Automotive/"/>
-          
-             
-              <breadCrumb title="Battery" url="http://www.wuchenxu.com/categories/Automotive/Battery/"/>
           
         </display>
     </data>
