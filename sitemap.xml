@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.wuchenxu.com/2016/07/01/matplotlib-1-introduction/</loc>
+    
+    <lastmod>2017-08-31T14:26:04.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wuchenxu.com/2016/01/07/Automative-lead-acid-battery-charging-voltage/</loc>
     
     <lastmod>2017-08-30T12:23:03.000Z</lastmod>
@@ -180,13 +187,6 @@
     <loc>http://www.wuchenxu.com/2016/01/21/character-encodings-introduce/</loc>
     
     <lastmod>2017-07-16T13:15:38.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wuchenxu.com/2016/07/01/matplotlib-1-introduction/</loc>
-    
-    <lastmod>2017-07-16T13:15:35.000Z</lastmod>
     
   </url>
   

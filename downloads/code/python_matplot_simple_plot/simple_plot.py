@@ -1,34 +1,27 @@
 # -*- coding: utf-8 -*-
-import scipy.signal as signal
 import numpy as np
-import pylab as pl
+import matplotlib.pyplot as plt
 
-# 某个均衡滤波器的参数
-a = np.array([1.0, -1.947463016918843, 0.9555873701383931])
-b = np.array([0.9833716591860479, -1.947463016918843, 0.9722157109523452])
+# Make some data
+x  = np.arange(0.0, 2.0, 0.01)
+# 3 functions
+y1 = x
+y2 = x*x
+y3 = x*x*x
 
-# 44.1kHz， 1秒的频率扫描波
-t = np.arange(0, 0.5, 1/44100.0)
-x= signal.chirp(t, f0=10, t1 = 0.5, f1=1000.0)
-y = signal.lfilter(b, a, x)
-ns = range(10, 1100, 100)
-err = []
+# Create plots with labels
+fig, ax = plt.subplots()
+ax.plot(x, y1, 'b', label='linear')
+ax.plot(x, y2, 'g', label='quadratic')
+ax.plot(x, y3, 'r', label='cubic')
 
-for n in ns:
-    # 计算脉冲响应
-    impulse = np.zeros(n, dtype=np.float)
-    impulse[0] = 1
-    h = signal.lfilter(b, a, impulse)
-    
-    # 直接FIR滤波器的输出
-    y2 = signal.lfilter(h, 1, x)
-   
-    # 输出y和y2之间的误差
-    err.append(np.sum((y-y2)**2))
+# Set title, x lable and y label
+ax.set_title('simple plot')
+ax.set_xlabel('x label')
+ax.set_ylabel('y label')
 
-# 绘图
-pl.figure(figsize=(8,4))
-pl.semilogy(ns , err, "-o")
-pl.xlabel(u"脉冲响应长度")
-pl.ylabel(u"FIR模拟IIR的误差")
-pl.show()
+# Set legend
+legend = ax.legend(loc='upper left', shadow=True, fontsize='smaller')
+legend.get_frame().set_facecolor('#FFFFFF')
+
+plt.show()

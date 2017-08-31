@@ -4,6 +4,31 @@
 
     
   <url>
+    <loc>http://www.wuchenxu.com/2016/07/01/matplotlib-1-introduction/</loc>
+    <lastmod>2017-08-31T14:26:04.000Z</lastmod>
+    <data>
+        <display>
+        <title>matplotlib(1):简介</title>
+        <pubTime>2016-07-01T13:11:08.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>matplotlib</tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="http://www.wuchenxu.com/categories/python/"/>
+          
+             
+              <breadCrumb title="tool" url="http://www.wuchenxu.com/categories/python/tool/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.wuchenxu.com/2016/01/07/Automative-lead-acid-battery-charging-voltage/</loc>
     <lastmod>2017-08-30T12:23:03.000Z</lastmod>
     <data>
@@ -611,31 +636,6 @@
           
              
               <breadCrumb title="encoding" url="http://www.wuchenxu.com/categories/charset/encoding/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/07/01/matplotlib-1-introduction/</loc>
-    <lastmod>2017-07-16T13:15:35.000Z</lastmod>
-    <data>
-        <display>
-        <title>matplotlib(1):简介</title>
-        <pubTime>2016-07-01T13:11:08.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>matplotlib</tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="http://www.wuchenxu.com/categories/python/"/>
-          
-             
-              <breadCrumb title="tool" url="http://www.wuchenxu.com/categories/python/tool/"/>
           
         </display>
     </data>
@@ -1268,9 +1268,9 @@
         <title>Markdown语法对应的CSS实现</title>
         <pubTime>2016-01-27T15:00:05.000Z</pubTime>
         
-        <tag>Markdown</tag>
-         
         <tag>CSS</tag>
+         
+        <tag>Markdown</tag>
          
          
            
