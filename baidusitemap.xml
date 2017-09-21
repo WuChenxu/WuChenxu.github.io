@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://www.wuchenxu.com/2017/09/21/hype-cycle/</loc>
+    <lastmod>2017-09-21T15:08:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>技术炒作周期(Hype Cycle)</title>
+        <pubTime>2017-09-21T12:38:54.000Z</pubTime>
+        
+        <tag>technical</tag>
+         
+         
+           
+             
+              <breadCrumb title="technical" url="http://www.wuchenxu.com/categories/technical/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.wuchenxu.com/2016/07/01/matplotlib-1-introduction/</loc>
     <lastmod>2017-08-31T14:26:04.000Z</lastmod>
     <data>
@@ -61,9 +81,9 @@
         <title>一线架构师实践指南 by 温昱</title>
         <pubTime>2017-05-05T15:54:00.000Z</pubTime>
         
-        <tag>reading-notes</tag>
-         
         <tag>technical</tag>
+         
+        <tag>reading-notes</tag>
          
          
            
@@ -1268,9 +1288,9 @@
         <title>Markdown语法对应的CSS实现</title>
         <pubTime>2016-01-27T15:00:05.000Z</pubTime>
         
-        <tag>CSS</tag>
-         
         <tag>Markdown</tag>
+         
+        <tag>CSS</tag>
          
          
            
@@ -1444,9 +1464,9 @@
         <title>软件工程的事实与谬误 by Robert L·Glass</title>
         <pubTime>2017-05-12T15:54:00.000Z</pubTime>
         
-        <tag>reading-notes</tag>
-         
         <tag>technical</tag>
+         
+        <tag>reading-notes</tag>
          
          
            

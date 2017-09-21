@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.wuchenxu.com/"/>
-  <updated>2017-07-16T12:05:41.000Z</updated>
+  <updated>2017-09-21T15:08:00.000Z</updated>
   <id>http://www.wuchenxu.com/</id>
   
   <author>
@@ -14,6 +14,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>技术炒作周期(Hype Cycle)</title>
+    <link href="http://www.wuchenxu.com/2017/09/21/hype-cycle/"/>
+    <id>http://www.wuchenxu.com/2017/09/21/hype-cycle/</id>
+    <published>2017-09-21T12:38:54.000Z</published>
+    <updated>2017-09-21T15:08:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hype cycle直译过来是<code>炒作周期</code>的意思，是美国咨询公司Gartner从1995年开始每年发布的一个关于技术成熟度报告，从时间维度将技术的成熟度分成5个周期：<br><code>Innovation Trigger（萌芽期）</code> <code>Peak of Inflated Expectations（过热期）</code> <code>Trough of Disillusionment（低谷期）</code> <code>Slope of Enlightenment（复苏期）</code> <code>Plateau of Productivity（成熟期）</code>。</p>
+<a id="more"></a>
+<p>阿马拉法则（Amara’s law）：人们常常高估技术的短期影响力，而低估技术的长期影响力。</p>
+<img src="/2017/09/21/hype-cycle/Emerging-Technology-Hype-Cycle-for-2012.png" alt="Emerging-Technology-Hype-Cycle-for-2012.png" title="">
+<img src="/2017/09/21/hype-cycle/Emerging-Technology-Hype-Cycle-for-2013.png" alt="Emerging-Technology-Hype-Cycle-for-2013.png" title="">
+<img src="/2017/09/21/hype-cycle/Emerging-Technology-Hype-Cycle-for-2014.jpg" alt="Emerging-Technology-Hype-Cycle-for-2014.jpg" title="">
+<img src="/2017/09/21/hype-cycle/Emerging-Technology-Hype-Cycle-for-2015.png" alt="Emerging-Technology-Hype-Cycle-for-2015.png" title="">
+<img src="/2017/09/21/hype-cycle/Emerging-Technology-Hype-Cycle-for-2016.jpg" alt="Emerging-Technology-Hype-Cycle-for-2016.jpg" title="">
+<img src="/2017/09/21/hype-cycle/Emerging-Technology-Hype-Cycle-for-2017.jpg" alt="Emerging-Technology-Hype-Cycle-for-2017.jpg" title="">
+<p>References:</p>
+<ol>
+<li><a href="http://www.gartner.com/technology/research/methodologies/hype-cycle.jsp" target="_blank" rel="external">Gartner hype clcle</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hype_cycle" target="_blank" rel="external">wiki hype cycle</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Hype cycle直译过来是&lt;code&gt;炒作周期&lt;/code&gt;的意思，是美国咨询公司Gartner从1995年开始每年发布的一个关于技术成熟度报告，从时间维度将技术的成熟度分成5个周期：&lt;br&gt;&lt;code&gt;Innovation Trigger（萌芽期）&lt;/code&gt; &lt;code&gt;Peak of Inflated Expectations（过热期）&lt;/code&gt; &lt;code&gt;Trough of Disillusionment（低谷期）&lt;/code&gt; &lt;code&gt;Slope of Enlightenment（复苏期）&lt;/code&gt; &lt;code&gt;Plateau of Productivity（成熟期）&lt;/code&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="technical" scheme="http://www.wuchenxu.com/categories/technical/"/>
+    
+    
+      <category term="technical" scheme="http://www.wuchenxu.com/tags/technical/"/>
+    
+  </entry>
   
   <entry>
     <title>程序在哪里执行？</title>
@@ -291,9 +327,9 @@
       <category term="reading-notes" scheme="http://www.wuchenxu.com/categories/reading-notes/"/>
     
     
-      <category term="reading-notes" scheme="http://www.wuchenxu.com/tags/reading-notes/"/>
-    
       <category term="technical" scheme="http://www.wuchenxu.com/tags/technical/"/>
+    
+      <category term="reading-notes" scheme="http://www.wuchenxu.com/tags/reading-notes/"/>
     
   </entry>
   
@@ -320,9 +356,9 @@
       <category term="reading-notes" scheme="http://www.wuchenxu.com/categories/reading-notes/"/>
     
     
-      <category term="reading-notes" scheme="http://www.wuchenxu.com/tags/reading-notes/"/>
-    
       <category term="technical" scheme="http://www.wuchenxu.com/tags/technical/"/>
+    
+      <category term="reading-notes" scheme="http://www.wuchenxu.com/tags/reading-notes/"/>
     
   </entry>
   
@@ -1546,48 +1582,6 @@
       <category term="Markdown" scheme="http://www.wuchenxu.com/tags/Markdown/"/>
     
       <category term="MathJax" scheme="http://www.wuchenxu.com/tags/MathJax/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>软件滤波算法的频率响应</title>
-    <link href="http://www.wuchenxu.com/2016/07/12/software-filtering-algorithm-and-frequency-response/"/>
-    <id>http://www.wuchenxu.com/2016/07/12/software-filtering-algorithm-and-frequency-response/</id>
-    <published>2016-07-11T17:03:42.000Z</published>
-    <updated>2017-07-16T13:16:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>本文从一种软件滤波算法切入，深入理解了滤波算法的频率响应。</p>
-<a id="more"></a>
-<h1 id="引子"><a href="#引子" class="headerlink" title="引子"></a>引子</h1><p>单片机大多资源小，算法占用的资源越小越好，有一种占用很小资源的算法，具体公式如下：<br>$$  y[n] =y[n-1]- {y[n-1] \over m}+x[n]$$<br>其中：x[n]为采样值，y[n]为滤波后的值，y[n-1]为上一次滤波值，m是放电比例(最好选2的幂次数，可用单片机移位)初始化时如果是跟踪一段时间后使用，可以是任何值，否则可以用采样值乘m初始化。</p>
-<h1 id="推导"><a href="#推导" class="headerlink" title="推导"></a>推导</h1><p>如果写成这样<br>$$  y[n] = x[n] + (1- {1 \over m}) * y[n-1]$$  (1)<br>然后令 $y[n]=m * u[n]$,得<br>$$  n * u[n] = x[n] + (1- {1 \over m}) * m * u[n-1]$$<br>两边同时除m，得<br>$$  u[n] = {1 \over m} * x[n] + (1- {1 \over m})  * u[n-1]$$<br>令 $ \alpha = {1 \over m}$，得<br>$$ u[n] = \alpha * x[n] + (1-\alpha) * u[n-1]$$<br>这是典型的无限脉冲滤波器(IIR),也是最简单的低通滤波器。</p>
-<p>如果直接由式(1)推导z变换<br>$$ Y(z) = X(z) + (1 - {1 \over m}) * z^{-1}Y(z)$$<br>$$ H(z) = {Y(z) \over {X(z)}} = {1 \over {1-(1-{1 \over m}})z^{-1}}$$<br>令$a={1-{1\over m}}$,<br>$$ H(z)={1\over{1-az^{-1}} }$$</p>
-<h1 id="IIR-vs-FIR"><a href="#IIR-vs-FIR" class="headerlink" title="IIR vs FIR"></a>IIR vs FIR</h1><p>IIR(Infinit Impulse Response)滤波器的<a href="https://en.wikipedia.org/wiki/Impulse_response" target="_blank" rel="external">单位脉冲响应</a>是无限长的，如例子中$H(z)={1\over{1-az^{-1}} }$时间域的序列是<br>$$ y[n] = x[n] + ay[n-1]$$<br>根据单位脉冲响应的定义，即$x[n]= \delta[n]=\begin{cases} {1, n=0}\\{0, n \ne 0}\end{cases}$时的y[n]:<br>$$ y[0] = x[0] + ay[-1] = 1, if n&lt;0 let y[0] = 0$$<br>$$ y[1] = x[1] + ay[0] = 0 + a = a $$<br>$$ y[2] = x[2] + ay[1] = 0 + a * a = a^2 $$<br>…<br>$$ y[n] = x[n] + ay[n-1] = a^n $$<br>所以其单位脉冲响应为$h[n]=a^n u[n]$,其中$u[n]=\begin{cases} {1, n \ge 0 }\\{0, n&lt;0}\end{cases}$,可以看到$n\ge 0$时，h[n]每一项都不为0,也就是无限脉冲响应的含义.IIR滤波器时间域的输出，由输入和之前的输出共同决定，是有反馈的。</p>
-<p>FIR(Finit Impulse Response)滤波器的单位脉冲响应是有限长的，其时间域的输出只有输入决定，是无反馈的。如，<a href="https://en.wikipedia.org/wiki/Moving_average" target="_blank" rel="external">滑动平均滤波器</a>,时间域$y[n]={1 \over  3}x[n]+{1 \over  3}x[n-1]+{1 \over  3}x[n-2]$，z变换为$H(z)={1\over3}+{1\over3}z^{-1}+{1\over3}z^{-2}$,单位脉冲响应为$h[n]={1\over3}\delta[n]+{1\over3}\delta[n-1]+{1\over3}\delta[n-2]$,其中$\delta[n]=\begin{cases} {1, n=0}\\{0, n \ne 0}\end{cases}$。</p>
-<h1 id="频率响应"><a href="#频率响应" class="headerlink" title="频率响应"></a>频率响应</h1><h1 id="时间常数"><a href="#时间常数" class="headerlink" title="时间常数"></a>时间常数</h1><p>如果将$y[n]=\alpha x[n]+(1-\alpha)y[n-1]$视作<a href="https://en.wikipedia.org/wiki/Low-pass_filter" target="_blank" rel="external">RC低通滤波器</a><br><img src="/2016/07/12/software-filtering-algorithm-and-frequency-response/250px-1st_Order_Lowpass_Filter_RC.svg.png" alt="250px-1st_Order_Lowpass_Filter_RC.svg.png" title=""><br>$$v_{in}(t)-v_{out}(t)=RC{dv_{out} \over dt}$$</p>
-<p>设$v_{in}$序列为($x_{1}, x_{2}, …, x_{n}$), $v_{out}$序列为($y_{1}, y_{2}, …, y_{n}$).上面的公式近似于<br>$$x_{i} - y_{i} = RC {y_{i}-y_{i-1}}\over{\Delta T}$$</p>
-<p>$$ y_{i} = x_{i}({\Delta T}\over {RC+\Delta T}) + y_{i-1}({RC}\over{RC+\Delta T})$$</p>
-<p>令 $\alpha = \frac{\Delta T}{RC+\Delta T}$,<br>$$ y_{i} = {\alpha x_{i} + (1-\alpha) y_{i-1}}$$<br>其中, $\alpha = \frac{\Delta T}{RC+\Delta T}$<br>可以得出时间常数$RC={\Delta T}\frac{1-\alpha} {\alpha}$.<br>考虑到$f_c= {1 \over{2\pi RC}}$，<br>$$\alpha = \frac{2 \pi \Delta T f_c}{2\pi \Delta T f_c+1}$$<br>$$f_c=\frac{\alpha} {(1-\alpha)2\pi\Delta T}$$</p>
-<p>Reference:</p>
-<ol>
-<li><a href="http://bbs.21ic.com/icview-170880-1-1.html" target="_blank" rel="external">一个非常适合单片机的滤波算法</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Low-pass_filter" target="_blank" rel="external">Low pass filter in wiki</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Exponential_smoothing" target="_blank" rel="external">指数平滑</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Infinite_impulse_response" target="_blank" rel="external">IIR</a></li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本文从一种软件滤波算法切入，深入理解了滤波算法的频率响应。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="filter" scheme="http://www.wuchenxu.com/categories/filter/"/>
-    
-    
-      <category term="software" scheme="http://www.wuchenxu.com/tags/software/"/>
-    
-      <category term="filter" scheme="http://www.wuchenxu.com/tags/filter/"/>
     
   </entry>
   
