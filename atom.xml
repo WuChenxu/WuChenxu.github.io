@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.wuchenxu.com/"/>
-  <updated>2017-12-31T15:45:43.892Z</updated>
+  <updated>2018-02-19T03:18:00.728Z</updated>
   <id>http://www.wuchenxu.com/</id>
   
   <author>
@@ -14,6 +14,124 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Machine Learning笔记</title>
+    <link href="http://www.wuchenxu.com/2018/02/04/machine_learning_notes/"/>
+    <id>http://www.wuchenxu.com/2018/02/04/machine_learning_notes/</id>
+    <published>2018-02-04T12:38:54.000Z</published>
+    <updated>2018-02-19T03:18:00.728Z</updated>
+    
+    <content type="html"><![CDATA[<p>学习吴恩达的machine learning课程笔记。</p>
+<a id="more"></a>
+<h1 id="resources"><a href="#resources" class="headerlink" title="resources"></a>resources</h1><h2 id="website"><a href="#website" class="headerlink" title="website"></a>website</h2><p><a href="http://cs229.stanford.edu/" target="_blank" rel="external">http://cs229.stanford.edu/</a><br><a href="https://see.stanford.edu/Course/CS229" target="_blank" rel="external">https://see.stanford.edu/Course/CS229</a></p>
+<h2 id="tool"><a href="#tool" class="headerlink" title="tool"></a>tool</h2><p>商业软件<a href="https://www.mathworks.com/" target="_blank" rel="external">Matlab</a> or 免费开源软件<a href="http://www.gnu.org/software/octave/" target="_blank" rel="external">Octave</a></p>
+<h1 id="动机与应用"><a href="#动机与应用" class="headerlink" title="动机与应用"></a>动机与应用</h1><h2 id="why？"><a href="#why？" class="headerlink" title="why？"></a>why？</h2><p>很多程序是无法手动编写出来的，eg. 手写文字识别，自动飞行器，自然语言处理NLP</p>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><ul>
+<li>learning algorithm容易实现手动无法编写程序的问题。</li>
+<li>learning algorithm在数据挖掘（data mining）有很好的效果，eg.电子化病例数据，帮助医生更好地决策</li>
+<li>zip code识别</li>
+<li>amazon，netflix推荐系统</li>
+</ul>
+<h2 id="machine-definiton"><a href="#machine-definiton" class="headerlink" title="machine definiton"></a>machine definiton</h2><ol>
+<li><p>Arthur Samuel (1959). Machine Learning: Field of study that gives computers the ability to learn without being explicitly programmed.<br><code>Checkers program</code></p>
+</li>
+<li><p>Tom Mitchell (1998). Well-posed Learning Problem: A computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experience E.</p>
+</li>
+</ol>
+<h2 id="课程4部分"><a href="#课程4部分" class="headerlink" title="课程4部分"></a>课程4部分</h2><h3 id="Supervised-Learning-监督学习"><a href="#Supervised-Learning-监督学习" class="headerlink" title="Supervised Learning(监督学习)"></a>Supervised Learning(监督学习)</h3><p>监督学习中所有的样本都是带有标记的，“正确答案”已经在样本中。</p>
+<ol>
+<li><p>regression problem（回归问题）<br>预测的值是连续（continuous）的。</p>
+<img src="/2018/02/04/machine_learning_notes/regression_problem_continuous.png" alt="regression problem" title="regression problem">
+</li>
+<li><p>classification problem（分类问题）<br>预测的值是离散（discreet）的,eg. SVM(supported vector machine)</p>
+<img src="/2018/02/04/machine_learning_notes/regression_problem_continuous.png" alt="classification problem" title="classification problem">
+</li>
+</ol>
+<h3 id="Learning-Theory"><a href="#Learning-Theory" class="headerlink" title="Learning Theory"></a>Learning Theory</h3><p>learning algorith 为什么是有效的；可以证明什么时候（eg.多大的数据量）可以保证算法有效（eg.&gt;99.9%的正确率)。</p>
+<h3 id="Unspervised-Learning（无监督学习）"><a href="#Unspervised-Learning（无监督学习）" class="headerlink" title="Unspervised Learning（无监督学习）"></a>Unspervised Learning（无监督学习）</h3><p>无监督学习的样本是不带有标记的，无监督学习需要从数据中自己发现特定的结构。</p>
+<ul>
+<li><p><a href="https://en.wikipedia.org/wiki/Cluster_analysis" target="_blank" rel="external">Cluster Analysis Algorithm</a><br>给定一个训练数据集，从中找到某种结构，即将数据集分为几个聚类。（让算法自己从数据中发现规律）</p>
+</li>
+<li><p><a href="https://en.wikipedia.org/wiki/Independent_component_analysis" target="_blank" rel="external">ICA(Independent Component Analysis) Algorithm</a><br>Cocktail party problem<br>在嘈杂的鸡尾酒会区分不同人的语音</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[W,s,v] = svd((<span class="built_in">repmat</span>(sum(x.*x,<span class="number">1</span>),<span class="built_in">size</span>(x,<span class="number">1</span>),<span class="number">1</span>).*x)*x');</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Reinforcement-Learning（增强学习）"><a href="#Reinforcement-Learning（增强学习）" class="headerlink" title="Reinforcement Learning（增强学习）"></a>Reinforcement Learning（增强学习）</h3><p>reward function（回报函数）</p>
+<h1 id="Supervised-Learning"><a href="#Supervised-Learning" class="headerlink" title="Supervised Learning"></a>Supervised Learning</h1><h2 id="Linear-regression"><a href="#Linear-regression" class="headerlink" title="Linear regression"></a>Linear regression</h2><img src="/2018/02/04/machine_learning_notes/supervised_learning_notation_1.png" alt="supervised_learning_notation_1.png" title="">
+<img src="/2018/02/04/machine_learning_notes/supervised_learning_notation_2.png" alt="supervised_learning_notation_2.png" title="">
+<img src="/2018/02/04/machine_learning_notes/supervised_learning_notation_3.png" alt="supervised_learning_notation_3.png" title="">
+<h3 id="Gradient-descent"><a href="#Gradient-descent" class="headerlink" title="Gradient descent"></a><a href="https://en.wikipedia.org/wiki/Gradient_descent" target="_blank" rel="external">Gradient descent</a></h3><img src="/2018/02/04/machine_learning_notes/gradient_descent.png" alt="gradient_descent.png" title="">
+<p>随机选择一个点（特征参数），通过梯度算法找到下降最陡的方向，一步一步迭代，直到找到一个局部最优解（cost函数取最小值）。<br>如果初始化的值不一样，得到的局部最优解可能会不一样。<br>适用于：局部最优解等于全局最优解的情况，想象一个碗形的代价函数。</p>
+<h4 id="Batch-gradient-descent"><a href="#Batch-gradient-descent" class="headerlink" title="Batch gradient descent"></a>Batch gradient descent</h4><p>每次迭代都要遍历所有的训练数据，适用于数据量小的训练集合。<br><img src="/2018/02/04/machine_learning_notes/batch_gradient_descent.png" alt="batch_gradient_descent.png" title=""><br>这种迭代规则，成为LMS(Least Mean Squares) update rule.</p>
+<h4 id="Stochastic-gradient-descent-Incremental-gradient-descent"><a href="#Stochastic-gradient-descent-Incremental-gradient-descent" class="headerlink" title="Stochastic gradient descent(Incremental gradient descent)"></a>Stochastic gradient descent(Incremental gradient descent)</h4><p>只需要遍历一次训练数据，适用于数据量很大的训练集合。<br><img src="/2018/02/04/machine_learning_notes/stochastic_gradient_descent.png" alt="stochastic_gradient_descent.png" title=""></p>
+<p>$ \alpha $表示学习速率，训练的步进，可以随着梯度的下降，减小该值。</p>
+<h3 id="Normal-equations"><a href="#Normal-equations" class="headerlink" title="Normal equations"></a>Normal equations</h3><p>通过矩阵（matrix）的方法推导出的一种不需要迭代，直接可以计算出特征向量的方法。<br><img src="/2018/02/04/machine_learning_notes/normal_equation.png" alt="normal_equation.png" title=""><br>$(X^TX)$不可逆的可能原因：</p>
+<ul>
+<li>存在冗余特征（$\theta $中存在重复）</li>
+<li>特征数量n过多，训练样本数m太少</li>
+</ul>
+<h3 id="Non-parameterical-learning-algorithm"><a href="#Non-parameterical-learning-algorithm" class="headerlink" title="Non-parameterical learning algorithm"></a>Non-parameterical learning algorithm</h3><ul>
+<li><p>parameterical learning algorithm 的参数数量n是固定的，训练完成后不需要样本。<br>特征参数过少，导致欠拟合（underfitting）；特征数过多，导致过拟合（overfitting）。<br>可以通过Feature slection algorithm来自动选取特征参数。</p>
+</li>
+<li><p>Non-parameterical learning algorithm 的参数数量n是随着样本数m的增加而增加的，每次输出结果都需要重新评估训练样本。<br>LWR(Locally weighted linear regressioin)是一种无参数的算法</p>
+<img src="/2018/02/04/machine_learning_notes/LWR_1.png" alt="LWR_1.png" title="">
+<img src="/2018/02/04/machine_learning_notes/LWR_2.png" alt="LWR_2.png" title="">
+</li>
+</ul>
+<h3 id="Probabilistic-interpretatioin"><a href="#Probabilistic-interpretatioin" class="headerlink" title="Probabilistic interpretatioin"></a>Probabilistic interpretatioin</h3><p>最小二乘法的概率学解释：假设误差服从正态分布（高斯分布），最小二乘法求得的特征参数，可以使代价函数最小。</p>
+<h2 id="Classification-and-logistic-regression"><a href="#Classification-and-logistic-regression" class="headerlink" title="Classification and logistic regression"></a>Classification and logistic regression</h2><p>除了y的取值是离散的之外，分类问题与线性回归问题类似。</p>
+<h3 id="Logistic-regression"><a href="#Logistic-regression" class="headerlink" title="Logistic regression"></a>Logistic regression</h3><h4 id="sigmoid-function"><a href="#sigmoid-function" class="headerlink" title="sigmoid function"></a>sigmoid function</h4><img src="/2018/02/04/machine_learning_notes/logistic_regression_1.png" alt="logistic_regression_1.png" title="">
+<img src="/2018/02/04/machine_learning_notes/logistic_regression_2.png" alt="logistic_regression_2.png" title="">
+<img src="/2018/02/04/machine_learning_notes/logistic_regression_3.png" alt="logistic_regression_3.png" title="">
+<h4 id="Newton’s-method"><a href="#Newton’s-method" class="headerlink" title="Newton’s method"></a>Newton’s method</h4><img src="/2018/02/04/machine_learning_notes/Newtons_method_1.png" alt="Newtons_method_1.png" title="">
+<img src="/2018/02/04/machine_learning_notes/Newtons_method_2.png" alt="Newtons_method_2.png" title="">
+<h3 id="Perceptron-learning-algorithm"><a href="#Perceptron-learning-algorithm" class="headerlink" title="Perceptron learning algorithm"></a>Perceptron learning algorithm</h3><img src="/2018/02/04/machine_learning_notes/perceptron_learning_algorithm.png" alt="perceptron_learning_algorithm.png" title="">
+<h2 id="GLM-Generalized-Linear-Models"><a href="#GLM-Generalized-Linear-Models" class="headerlink" title="GLM(Generalized Linear Models)"></a>GLM(Generalized Linear Models)</h2><h3 id="Exponential-family"><a href="#Exponential-family" class="headerlink" title="Exponential family"></a>Exponential family</h3><p>之前的例子中，线性回归算法（最小二乘法）服从高斯分布，逻辑回归算法（sigmoid函数）服从伯努利分布。而这些都是GLM的一些特例。<br><img src="/2018/02/04/machine_learning_notes/exponential_family.png" alt="exponential_family.png" title=""></p>
+<p>以下分布都属于指数家族：<br>高斯分布（Gaussian）：结果是连续的<br>伯努利分布（Bernoulli）：结果是离散的，只有两种结果<br>多项式分布（multinomial）：结果是离散的，有k种结果<br>泊松分布（Poisson）：计数问题，eg.网站访客量，放射性衰变数目。<br>伽马分布（gamma）：时间间隔，eg.等公交车的时间<br>指数分布<br>beta分布<br>Dirichlet分布</p>
+<h3 id="Constructing-GLMs"><a href="#Constructing-GLMs" class="headerlink" title="Constructing GLMs"></a>Constructing GLMs</h3><p>一个重要的设计决策是：<br><img src="/2018/02/04/machine_learning_notes/GLM_design_decision.png" alt="GLM_design_decision.png" title=""></p>
+<h4 id="Ordinary-Least-Squares"><a href="#Ordinary-Least-Squares" class="headerlink" title="Ordinary Least Squares"></a>Ordinary Least Squares</h4><p>高斯分布在指数家族的表示如下：<br><img src="/2018/02/04/machine_learning_notes/Gaussian_in_exponential_family.png" alt="Gaussian_in_exponential_family.png" title=""></p>
+<p>可以推导出，最小二乘法是GLM的一个特例：<br><img src="/2018/02/04/machine_learning_notes/ordianary_least_squares_in_GLM.png" alt="ordianary_least_squares_in_GLM.png" title=""></p>
+<h4 id="Logistic-regression-1"><a href="#Logistic-regression-1" class="headerlink" title="Logistic regression"></a>Logistic regression</h4><p>伯努利分布在指数家族表示如下：<br><img src="/2018/02/04/machine_learning_notes/Bernoulli_in_exponential_family.png" alt="Bernoulli_in_exponential_family.png" title=""></p>
+<p>可以推导出，逻辑回归是GLM的一个特例：<br><img src="/2018/02/04/machine_learning_notes/logistic_regression_in_GLM.png" alt="logistic_regression_in_GLM.png" title=""></p>
+<h4 id="Softmax-regression"><a href="#Softmax-regression" class="headerlink" title="Softmax regression"></a>Softmax regression</h4><p>多项式分布在指数家族表示如下：<br><img src="/2018/02/04/machine_learning_notes/multinomial_in_exponential_family.png" alt="multinomial_in_exponential_family.png" title=""><br>softmax函数：<br><img src="/2018/02/04/machine_learning_notes/softmax_functin.png" alt="softmax_functin.png" title=""><br>可以推导出，softmax回归是GLM的一个特例：<br><img src="/2018/02/04/machine_learning_notes/softmax_regression_in_GLM.png" alt="softmax_regression_in_GLM.png" title=""></p>
+<p>logistic回归是softmax回归在k=2时的特例。</p>
+<h2 id="Generative-learning-algorithms"><a href="#Generative-learning-algorithms" class="headerlink" title="Generative learning algorithms"></a>Generative learning algorithms</h2><ul>
+<li>判别（discriminative）学习算法<br>如逻辑回归，直接学习p(y|x)；或者如感知器算法（perceptron），直接尝试学习从输入到输出的映射（mapping）。</li>
+<li>生成（generative）学习算法<br>对每种类别分别建模,然后通过贝叶斯公式计算出在给定x条件下y的后验分布。<img src="/2018/02/04/machine_learning_notes/generative_learning_algorithm_1.png" alt="generative_learning_algorithm_1.png" title="">
+<img src="/2018/02/04/machine_learning_notes/generative_learning_algorithm_2.png" alt="generative_learning_algorithm_2.png" title="">
+</li>
+</ul>
+<h3 id="GDA（Gaussian-Discriminant-Analysis）"><a href="#GDA（Gaussian-Discriminant-Analysis）" class="headerlink" title="GDA（Gaussian Discriminant Analysis）"></a>GDA（Gaussian Discriminant Analysis）</h3><p>GDA假设p(x|y)服从多元正态分布（multivariate normal distribution）。</p>
+<h4 id="多元正态分布"><a href="#多元正态分布" class="headerlink" title="多元正态分布"></a>多元正态分布</h4><img src="/2018/02/04/machine_learning_notes/multivariant_normal_distribution_1.png" alt="multivariant_normal_distribution_1.png" title="">
+<img src="/2018/02/04/machine_learning_notes/multivariant_normal_distribution_2.png" alt="multivariant_normal_distribution_2.png" title="">
+<h4 id="高斯判定分析模型"><a href="#高斯判定分析模型" class="headerlink" title="高斯判定分析模型"></a>高斯判定分析模型</h4><img src="/2018/02/04/machine_learning_notes/GDA_1.png" alt="GDA_1.png" title="">
+<p>通过计算最大化的似然函数，可以得到参数$\phi \mu_0 \mu_1 \Sigma$的值。<br><img src="/2018/02/04/machine_learning_notes/GDA_2.png" alt="GDA_2.png" title=""></p>
+<h4 id="GDA与逻辑回归"><a href="#GDA与逻辑回归" class="headerlink" title="GDA与逻辑回归"></a>GDA与逻辑回归</h4><p>如果我们将$p(y=1|x;\phi, \mu_0, \mu_1, \Sigma)$视为$x$的函数，那么我们发现可以有如下表示形式：<br>$$ p(y=1|x;\phi, \mu_0, \mu_1, \Sigma)={1 \over {1+exp(-\theta^T x)}}$$<br>这就是逻辑回归—一种判定算法—用来给$p(y=1|x)$建模的形式。</p>
+<p>也就是说，如果数据服从多元高斯分布，那后验分布是逻辑函数；反之，不成立。</p>
+<p>如果$x|y=0 ~ Poisson(\lamda_0), x|y=1 ~Poisson(\lamda_1$,那么$p(y|x)$也是逻辑的（logistic）。<br>也就是说，如果数据服从泊松分布，那后验分布也是逻辑函数；反之，不成立。</p>
+<p>逻辑回归对多元高斯分布，泊松分布等都有效。</p>
+<p>相比逻辑回归，GDA使用了更强的（stronger）假设。<br>如果模型假设正确（服从多元高斯分布），那么GDA可以更好地fit数据，可以通过更少的数据达到更好的效果，这种情况下GDA是更好的模型；<br>与之相对，逻辑回归使用了更弱（weaker）的假设，所以逻辑回归更健壮（robust），且对不正确的模型假设更不敏感。<br>如果数据不符合高斯分布，使用GDA得不到更好的估算，此时使用逻辑回归更好。</p>
+<h3 id="朴素贝叶斯算法（Native-Bayes）"><a href="#朴素贝叶斯算法（Native-Bayes）" class="headerlink" title="朴素贝叶斯算法（Native Bayes）"></a>朴素贝叶斯算法（Native Bayes）</h3><p>References:</p>
+<ol>
+<li><a href="http://blog.csdn.net/artprog/article/details/51172025" target="_blank" rel="external">机器学习笔记03：Normal equation与梯度下降的比较</a></li>
+<li><a href="http://blog.csdn.net/google19890102/article/details/49738427" target="_blank" rel="external">深度学习算法原理——Softmax Regression</a></li>
+<li><a href="https://www.cnblogs.com/realkate1/p/5683939.html" target="_blank" rel="external">生成模型（Generative）和判别模型（Discriminative)</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;学习吴恩达的machine learning课程笔记。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="AI" scheme="http://www.wuchenxu.com/categories/AI/"/>
+    
+    
+      <category term="AI" scheme="http://www.wuchenxu.com/tags/AI/"/>
+    
+  </entry>
   
   <entry>
     <title>ABZ计划</title>
@@ -1531,56 +1649,6 @@
       <category term="Rust" scheme="http://www.wuchenxu.com/tags/Rust/"/>
     
       <category term="Cargo" scheme="http://www.wuchenxu.com/tags/Cargo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Rust语言(1):hello world</title>
-    <link href="http://www.wuchenxu.com/2016/09/12/Rust-lang-1-hello-world/"/>
-    <id>http://www.wuchenxu.com/2016/09/12/Rust-lang-1-hello-world/</id>
-    <published>2016-09-12T13:56:20.000Z</published>
-    <updated>2017-07-16T13:16:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<img src="/2016/09/12/Rust-lang-1-hello-world/rust-logo-blk.svg" alt="rust-logo-blk.svg" title="">
-<p>本文介绍了Rust语言在Windows下的环境安装，编译，执行。</p>
-<a id="more"></a>
-<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>Rust是静态强类型的编译型语言，非动态解释型语言，无垃圾回收。</p>
-<blockquote>
-<p>Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety. </p>
-<ul>
-<li>zero-cost abstractions</li>
-<li>move semantics</li>
-<li>guaranteed memory safety</li>
-<li>threads without data races</li>
-<li>trait-based generics</li>
-<li>pattern matching</li>
-<li>type inference</li>
-<li>minimal runtime</li>
-<li>efficient C bindings</li>
-</ul>
-</blockquote>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>进入<a href="www.rust-lang.org">Rust官网</a>,首页会根据当前操作系统推荐下载安装包。<br>支持Windows(GUN ABI 与 MSVC ABI)、Linux以及Mac。<br>安装完成后，在命令行输入<code>rustc</code>，如果有输出说明安装成功。</p>
-<h1 id="编写代码"><a href="#编写代码" class="headerlink" title="编写代码"></a>编写代码</h1><figure class="highlight rust"><figcaption><span>hello.rs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</div><div class="line">    <span class="built_in">println!</span>(<span class="string">"Hello, world!"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">rustc</span> <span class="selector-tag">hello</span><span class="selector-class">.rs</span></div></pre></td></tr></table></figure>
-<h1 id="执行"><a href="#执行" class="headerlink" title="执行"></a>执行</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;hello<span class="selector-class">.exe</span></div><div class="line">Hello, world!</div></pre></td></tr></table></figure>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p><a href="https://github.com/WuChenxu/Rust/tree/master/01_HelloWorld" target="_blank" rel="external">Code</a></p>
-<p>References:</p>
-<ol>
-<li><a href="https://doc.rust-lang.org/book/getting-started.html" target="_blank" rel="external">Rust official manual</a></li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;img src=&quot;/2016/09/12/Rust-lang-1-hello-world/rust-logo-blk.svg&quot; alt=&quot;rust-logo-blk.svg&quot; title=&quot;&quot;&gt;
-&lt;p&gt;本文介绍了Rust语言在Windows下的环境安装，编译，执行。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Rust" scheme="http://www.wuchenxu.com/categories/Rust/"/>
-    
-    
-      <category term="Rust" scheme="http://www.wuchenxu.com/tags/Rust/"/>
     
   </entry>
   
