@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.wuchenxu.com/"/>
-  <updated>2018-02-19T03:18:00.728Z</updated>
+  <updated>2018-02-25T14:50:21.702Z</updated>
   <id>http://www.wuchenxu.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.wuchenxu.com/2018/02/04/machine_learning_notes/"/>
     <id>http://www.wuchenxu.com/2018/02/04/machine_learning_notes/</id>
     <published>2018-02-04T12:38:54.000Z</published>
-    <updated>2018-02-19T03:18:00.728Z</updated>
+    <updated>2018-02-25T14:50:21.702Z</updated>
     
     <content type="html"><![CDATA[<p>学习吴恩达的machine learning课程笔记。</p>
 <a id="more"></a>
@@ -33,19 +33,19 @@
 <li>zip code识别</li>
 <li>amazon，netflix推荐系统</li>
 </ul>
-<h2 id="machine-definiton"><a href="#machine-definiton" class="headerlink" title="machine definiton"></a>machine definiton</h2><ol>
+<h2 id="machine-learning-definiton"><a href="#machine-learning-definiton" class="headerlink" title="machine learning definiton"></a>machine learning definiton</h2><ol>
 <li><p>Arthur Samuel (1959). Machine Learning: Field of study that gives computers the ability to learn without being explicitly programmed.<br><code>Checkers program</code></p>
 </li>
 <li><p>Tom Mitchell (1998). Well-posed Learning Problem: A computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experience E.</p>
 </li>
 </ol>
-<h2 id="课程4部分"><a href="#课程4部分" class="headerlink" title="课程4部分"></a>课程4部分</h2><h3 id="Supervised-Learning-监督学习"><a href="#Supervised-Learning-监督学习" class="headerlink" title="Supervised Learning(监督学习)"></a>Supervised Learning(监督学习)</h3><p>监督学习中所有的样本都是带有标记的，“正确答案”已经在样本中。</p>
+<h2 id="课程由4部分组成"><a href="#课程由4部分组成" class="headerlink" title="课程由4部分组成"></a>课程由4部分组成</h2><h3 id="Supervised-Learning-监督学习"><a href="#Supervised-Learning-监督学习" class="headerlink" title="Supervised Learning(监督学习)"></a>Supervised Learning(监督学习)</h3><p>监督学习中所有的样本都是带有标记的，“正确答案”已经在样本中。</p>
 <ol>
 <li><p>regression problem（回归问题）<br>预测的值是连续（continuous）的。</p>
 <img src="/2018/02/04/machine_learning_notes/regression_problem_continuous.png" alt="regression problem" title="regression problem">
 </li>
 <li><p>classification problem（分类问题）<br>预测的值是离散（discreet）的,eg. SVM(supported vector machine)</p>
-<img src="/2018/02/04/machine_learning_notes/regression_problem_continuous.png" alt="classification problem" title="classification problem">
+<img src="/2018/02/04/machine_learning_notes/classification_problem_discreet.png" alt="classification problem" title="classification problem">
 </li>
 </ol>
 <h3 id="Learning-Theory"><a href="#Learning-Theory" class="headerlink" title="Learning Theory"></a>Learning Theory</h3><p>learning algorith 为什么是有效的；可以证明什么时候（eg.多大的数据量）可以保证算法有效（eg.&gt;99.9%的正确率)。</p>
@@ -63,7 +63,7 @@
 <img src="/2018/02/04/machine_learning_notes/supervised_learning_notation_3.png" alt="supervised_learning_notation_3.png" title="">
 <h3 id="Gradient-descent"><a href="#Gradient-descent" class="headerlink" title="Gradient descent"></a><a href="https://en.wikipedia.org/wiki/Gradient_descent" target="_blank" rel="external">Gradient descent</a></h3><img src="/2018/02/04/machine_learning_notes/gradient_descent.png" alt="gradient_descent.png" title="">
 <p>随机选择一个点（特征参数），通过梯度算法找到下降最陡的方向，一步一步迭代，直到找到一个局部最优解（cost函数取最小值）。<br>如果初始化的值不一样，得到的局部最优解可能会不一样。<br>适用于：局部最优解等于全局最优解的情况，想象一个碗形的代价函数。</p>
-<h4 id="Batch-gradient-descent"><a href="#Batch-gradient-descent" class="headerlink" title="Batch gradient descent"></a>Batch gradient descent</h4><p>每次迭代都要遍历所有的训练数据，适用于数据量小的训练集合。<br><img src="/2018/02/04/machine_learning_notes/batch_gradient_descent.png" alt="batch_gradient_descent.png" title=""><br>这种迭代规则，成为LMS(Least Mean Squares) update rule.</p>
+<h4 id="Batch-gradient-descent"><a href="#Batch-gradient-descent" class="headerlink" title="Batch gradient descent"></a>Batch gradient descent</h4><p>每次迭代都要遍历所有的训练数据，适用于数据量小的训练集合。<br><img src="/2018/02/04/machine_learning_notes/batch_gradient_descent.png" alt="batch_gradient_descent.png" title=""><br>这种迭代规则，称为LMS(Least Mean Squares) update rule.</p>
 <h4 id="Stochastic-gradient-descent-Incremental-gradient-descent"><a href="#Stochastic-gradient-descent-Incremental-gradient-descent" class="headerlink" title="Stochastic gradient descent(Incremental gradient descent)"></a>Stochastic gradient descent(Incremental gradient descent)</h4><p>只需要遍历一次训练数据，适用于数据量很大的训练集合。<br><img src="/2018/02/04/machine_learning_notes/stochastic_gradient_descent.png" alt="stochastic_gradient_descent.png" title=""></p>
 <p>$ \alpha $表示学习速率，训练的步进，可以随着梯度的下降，减小该值。</p>
 <h3 id="Normal-equations"><a href="#Normal-equations" class="headerlink" title="Normal equations"></a>Normal equations</h3><p>通过矩阵（matrix）的方法推导出的一种不需要迭代，直接可以计算出特征向量的方法。<br><img src="/2018/02/04/machine_learning_notes/normal_equation.png" alt="normal_equation.png" title=""><br>$(X^TX)$不可逆的可能原因：</p>
@@ -112,7 +112,26 @@
 <p>如果$x|y=0 ~ Poisson(\lamda_0), x|y=1 ~Poisson(\lamda_1$,那么$p(y|x)$也是逻辑的（logistic）。<br>也就是说，如果数据服从泊松分布，那后验分布也是逻辑函数；反之，不成立。</p>
 <p>逻辑回归对多元高斯分布，泊松分布等都有效。</p>
 <p>相比逻辑回归，GDA使用了更强的（stronger）假设。<br>如果模型假设正确（服从多元高斯分布），那么GDA可以更好地fit数据，可以通过更少的数据达到更好的效果，这种情况下GDA是更好的模型；<br>与之相对，逻辑回归使用了更弱（weaker）的假设，所以逻辑回归更健壮（robust），且对不正确的模型假设更不敏感。<br>如果数据不符合高斯分布，使用GDA得不到更好的估算，此时使用逻辑回归更好。</p>
-<h3 id="朴素贝叶斯算法（Native-Bayes）"><a href="#朴素贝叶斯算法（Native-Bayes）" class="headerlink" title="朴素贝叶斯算法（Native Bayes）"></a>朴素贝叶斯算法（Native Bayes）</h3><p>References:</p>
+<h3 id="朴素贝叶斯算法（Naive-Bayes）"><a href="#朴素贝叶斯算法（Naive-Bayes）" class="headerlink" title="朴素贝叶斯算法（Naive Bayes）"></a>朴素贝叶斯算法（Naive Bayes）</h3><h4 id="Naive-Bayes"><a href="#Naive-Bayes" class="headerlink" title="Naive Bayes"></a>Naive Bayes</h4><ul>
+<li>GDA的特征向量是连续的实数向量。</li>
+<li>Naive Bayes的特征向量是离散的值。<br>以垃圾邮件分类器（email span filter）为例,这个模型也称为多元伯努利事件模型（multi-variate Bernoulli event model）：</li>
+</ul>
+<img src="/2018/02/04/machine_learning_notes/NB_feature_vector_1.png" alt="NB_feature_vector_1.png" title="">
+<img src="/2018/02/04/machine_learning_notes/NB_feature_vector_2.png" alt="NB_feature_vector_2.png" title="">
+<p>朴素贝叶斯算法假设：<br><img src="/2018/02/04/machine_learning_notes/NB_assumption.png" alt="NB_assumption.png" title=""></p>
+<p>朴素贝叶斯算法的参数：</p>
+<img src="/2018/02/04/machine_learning_notes/NB_1.png" alt="NB_1.png" title="">
+<img src="/2018/02/04/machine_learning_notes/NB_2.png" alt="NB_2.png" title="">
+<img src="/2018/02/04/machine_learning_notes/NB_3.png" alt="NB_3.png" title="">
+<img src="/2018/02/04/machine_learning_notes/NB_4.png" alt="NB_4.png" title="">
+<h4 id="Laplace-smoothing"><a href="#Laplace-smoothing" class="headerlink" title="Laplace smoothing"></a>Laplace smoothing</h4><p>设想如下场景：<br>一个从来没有在训练邮件中出现过的单词，但是这个单词在字典里，如果有一天收到一封邮件里包含这类单词。<br>会导致$\phi_{i|y=1}=0$,且$\phi_{i|y=0}=0$<br>从而<br>$$ p(y=1|x) = {0 \over 0}$$<br>这是一个未定义的值，无法作出估计。</p>
+<img src="/2018/02/04/machine_learning_notes/Laplace_smoothing.png" alt="Laplace_smoothing.png" title="">
+<p>计算明天太阳升起来的概率(假设太阳已经连续n天升起来了)<br>明天太阳不会升起来的概率：<br>$$ \phi_0 = {1 \over n+2}$$，<br>明天太阳还会升起来的概率：<br>$$ \phi_1 = {n+1 \over n+2}$$</p>
+<h4 id="Event-models-for-text-classification"><a href="#Event-models-for-text-classification" class="headerlink" title="Event models for text classification"></a>Event models for text classification</h4><img src="/2018/02/04/machine_learning_notes/multinomial_event_model_1.png" alt="multinomial_event_model_1.png" title="">
+<img src="/2018/02/04/machine_learning_notes/multinomial_event_model_2.png" alt="multinomial_event_model_2.png" title="">
+<img src="/2018/02/04/machine_learning_notes/multinomial_event_model_3.png" alt="multinomial_event_model_3.png" title="">
+<img src="/2018/02/04/machine_learning_notes/multinomial_event_model_4.png" alt="multinomial_event_model_4.png" title="">
+<p>References:</p>
 <ol>
 <li><a href="http://blog.csdn.net/artprog/article/details/51172025" target="_blank" rel="external">机器学习笔记03：Normal equation与梯度下降的比较</a></li>
 <li><a href="http://blog.csdn.net/google19890102/article/details/49738427" target="_blank" rel="external">深度学习算法原理——Softmax Regression</a></li>
