@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.wuchenxu.com/"/>
-  <updated>2018-02-25T14:50:21.702Z</updated>
+  <updated>2018-04-15T14:03:58.670Z</updated>
   <id>http://www.wuchenxu.com/</id>
   
   <author>
@@ -16,11 +16,97 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>软件开发(3):软件集成重名解决方案</title>
+    <link href="http://www.wuchenxu.com/2018/04/15/integrate-files-with-same-name-same-function-in-C/"/>
+    <id>http://www.wuchenxu.com/2018/04/15/integrate-files-with-same-name-same-function-in-C/</id>
+    <published>2018-04-15T09:55:16.000Z</published>
+    <updated>2018-04-15T14:03:58.670Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文介绍了一种在软件集成过程中，遇到重名文件 和/或 重名函数时的解决方案。</p>
+<a id="more"></a>
+<h1 id="why"><a href="#why" class="headerlink" title="why"></a>why</h1><p>在<a href="wuchenxu.com/2017/02/27/software-design-2-variant-handling/">software development(2):variant handling</a>一文中介绍了很多种variant管理的方法，其中有关于<a href="wuchenxu.com/2017/02/27/software-design-2-variant-handling/#link different libs">link different libs</a>的方法。<br>设想如下场景：开发过程中（针对C语言），各个模块分别由不同的团队开发，最后集成的时候，如果遇到重名的函数怎么处理？<br>本文针对这种场景，搜集了几种解决方案。</p>
+<h1 id="what"><a href="#what" class="headerlink" title="what"></a>what</h1><p>场景设置: 三个模块，<code>a</code> <code>b</code> <code>os</code>，其中<code>a</code>和<code>b</code>模块都包含一个名字为<code>func_internal.c</code>的文件，这个同名文件中包含了名字一样的函数，分别为<code>int func_internal(void)</code>与<code>int func_internal(int a)</code>。这两个函数都没有申明为static，但是没有外部调用。</p>
+<p><a href="https://github.com/WuChenxu/C/tree/master/link2step" target="_blank" rel="external">demo in github</a><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── README<span class="selector-class">.md</span></div><div class="line">├── component_a</div><div class="line">│   ├── exported_sym<span class="selector-class">.list</span></div><div class="line">│   ├── func_a<span class="selector-class">.c</span></div><div class="line">│   ├── func_internal<span class="selector-class">.c</span></div><div class="line">│   ├── func_internal<span class="selector-class">.h</span></div><div class="line">│   ├── functions<span class="selector-class">.h</span></div><div class="line">│   ├── makefile</div><div class="line">│   └── redefine<span class="selector-class">.syms</span></div><div class="line">├── component_b</div><div class="line">│   ├── exported_sym<span class="selector-class">.list</span></div><div class="line">│   ├── func_b<span class="selector-class">.c</span></div><div class="line">│   ├── func_internal<span class="selector-class">.c</span></div><div class="line">│   ├── func_internal<span class="selector-class">.h</span></div><div class="line">│   ├── functions<span class="selector-class">.h</span></div><div class="line">│   └── makefile</div><div class="line">├── makefile</div><div class="line">├── obj</div><div class="line">└── os</div><div class="line">    ├── exported_sym<span class="selector-class">.list</span></div><div class="line">    ├── main<span class="selector-class">.c</span></div><div class="line">    └── makefile</div></pre></td></tr></table></figure></p>
+<figure class="highlight c"><figcaption><span> component_a/func_a.c</span><a href="/downloads/code/link2steps/component_a/func_a.c">view raw</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"functions.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"func_internal.h"</span></span></div><div class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">func_internal_s</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">{</div><div class="line"><span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">func_a</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">{</div><div class="line">   <span class="keyword">int</span> a = func_internal();</div><div class="line">   <span class="built_in">printf</span>(<span class="string">"this is func a. %d\n"</span>, a);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"this is static internal %d\n"</span>, func_internal_s());</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;    </div><div class="line"></div><div class="line">}</div></pre></td></tr></table></figure>
+<figure class="highlight c"><figcaption><span> component_a/func_internal.c</span><a href="/downloads/code/link2steps/component_a/func_internal.c">view raw</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"functions.h"</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">func_internal</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">{</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+<figure class="highlight c"><figcaption><span> component_b/func_b.c</span><a href="/downloads/code/link2steps/component_b/func_b.c">view raw</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"functions.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"func_internal.h"</span></span></div><div class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">func_internal_s</span><span class="params">(<span class="keyword">int</span> a)</span></span></div><div class="line">{</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"func B %d\n"</span>, a);</div><div class="line">    <span class="keyword">return</span> a;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">func_b</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">{</div><div class="line">    <span class="keyword">int</span> a = func_internal(<span class="number">100</span>);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"this is func b. %d"</span>, a);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"internal func %d\n."</span>, func_internal_s(<span class="number">-100</span>));</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;    </div><div class="line"></div><div class="line">}</div></pre></td></tr></table></figure>
+<figure class="highlight c"><figcaption><span> component_b/func_internal.c</span><a href="/downloads/code/link2steps/component_b/func_internal.c">view raw</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"functions.h"</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">func_internal</span><span class="params">(<span class="keyword">int</span> a)</span></span></div><div class="line">{</div><div class="line">    <span class="keyword">return</span> a;</div><div class="line">}</div></pre></td></tr></table></figure>
+<h1 id="how"><a href="#how" class="headerlink" title="how"></a>how</h1><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><ol>
+<li><p>由于有文件重名，所以不能每个<code>.c</code>单独编译成<code>.o</code>，然后再链接；<br>出现两个同名的<code>.o</code>，要不然链接器报错，要不然只用了其中一个<code>.o</code>，这样会导致运行时异常。</p>
+</li>
+<li><p>由于有函数重名，且函数没有申明为局部，链接的时候必然会出现错误：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">duplicate symbol _func_internal <span class="keyword">in</span>:</div><div class="line">    component_a/func_internal<span class="selector-class">.o</span></div><div class="line">    component_b/func_internal.o</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h3><p>本文采用的方法：<br>每个模块单独编译成一个<code>.o</code>文件。</p>
+<p>其他方法：</p>
+<ol>
+<li>重名文件改名；重名函数改名；局部函数申明为static。</li>
+<li>定义函数时定义visibility属性（GUN only）<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">__attribute__((<span class="name">visibility</span>(<span class="string">"hidden"</span>)))</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>本文采用的方法：</p>
+<p><code>-exported_symbols_list filename</code>(Mac) 或者 <code>--retain-symbols-file=filename</code>(linux)</p>
+<figure class="highlight plain"><figcaption><span>link all the .o in each component to one .o file; and only export symbols in the list</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ld -r -exported_symbols_list exported_sym.list $&#123;OBJECTS&#125;  -o $&#123;TARGET&#125;.o</div></pre></td></tr></table></figure>
+<img src="/2018/04/15/integrate-files-with-same-name-same-function-in-C/ld.png" alt="ld.png" title="">
+<p>其实是强制将符号表里的全局符号(<code>T</code>)变成了局部符号(<code>t</code>)，这样除了列表文件里的函数，其他对外均不可见。</p>
+<p>其他方法：</p>
+<ol>
+<li><p>gcc在链接时设置 -fvisibility=hidden，则不加 visibility声明的都默认为hidden; gcc默认设置 -fvisibility=default，即全部可见；</p>
+</li>
+<li><p>使用export map，gcc -Wl,–version-script=export.map, 在export.map中指定</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"></div><div class="line"><span class="attribute">global</span>:export_func;</div><div class="line"></div><div class="line"><span class="attribute">local</span>:*;</div><div class="line"></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="objcopy"><a href="#objcopy" class="headerlink" title="objcopy"></a>objcopy</h3><ol>
+<li><p>将全局符号修改为局部符号：<br><code>-L symbolname</code></p>
+</li>
+<li><p>替换符号名<br><code>--redefine-sym old=new</code><br><code>--redefine-syms=filename</code></p>
+</li>
+</ol>
+<h1 id="recap"><a href="#recap" class="headerlink" title="recap"></a>recap</h1><ol>
+<li>由于C语言没有namespace的概念，可以在开发之前约定好，所有的<code>全局函数</code>和<code>全局变量</code>都加上特殊的前缀，eg. <code>CompanyName_ProductName_ComponentName_FunctionName</code>。</li>
+<li>所有的局部函数定义都加上static。</li>
+<li>可以先编译各个模块，再链接（类似于每个模块编译成静态库），这样可以防止重名的文件名报错。</li>
+<li>可以在链接的时候控制各个模块编译后全局函数，将内部使用的但没有申明为static的函数，在符号表中强制修改为local的符号。</li>
+<li>链接后，可以通过<code>objcopy</code>改变符号的属性（全局-&gt;局部）或者 修改全局符号的名字。</li>
+</ol>
+<p>Reference：</p>
+<ol>
+<li><a href="https://developer.apple.com/library/content/technotes/tn2185/_index.html#//apple_ref/doc/uid/DTS10004200-CH1-SUBSECTION5" target="_blank" rel="external">Choosing Visibility Options for Mac</a></li>
+<li><a href="https://www.ibm.com/developerworks/aix/library/au-aix-symbol-visibility/index.html" target="_blank" rel="external">Introduction to symbol visibility</a></li>
+<li><a href="http://www.man7.org/linux/man-pages/man1/ld.1.html" target="_blank" rel="external">man ld</a></li>
+<li><a href="http://www.it1352.com/539295.html" target="_blank" rel="external">将两个GCC编译的.o目标文件合并到第三个.o文件中</a></li>
+<li><a href="https://stackoverflow.com/questions/1506346/with-gcc-how-do-i-export-only-certain-functions-in-a-static-library" target="_blank" rel="external">export obly centain functioins in a static lib</a></li>
+<li><a href="https://gcc.gnu.org/wiki/Visibility" target="_blank" rel="external">visibility of GCC</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文介绍了一种在软件集成过程中，遇到重名文件 和/或 重名函数时的解决方案。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="software" scheme="http://www.wuchenxu.com/categories/software/"/>
+    
+      <category term="build" scheme="http://www.wuchenxu.com/categories/software/build/"/>
+    
+    
+      <category term="software" scheme="http://www.wuchenxu.com/tags/software/"/>
+    
+      <category term="build" scheme="http://www.wuchenxu.com/tags/build/"/>
+    
+      <category term="c-lang" scheme="http://www.wuchenxu.com/tags/c-lang/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Machine Learning笔记</title>
     <link href="http://www.wuchenxu.com/2018/02/04/machine_learning_notes/"/>
     <id>http://www.wuchenxu.com/2018/02/04/machine_learning_notes/</id>
     <published>2018-02-04T12:38:54.000Z</published>
-    <updated>2018-02-25T14:50:21.702Z</updated>
+    <updated>2018-02-25T14:56:46.597Z</updated>
     
     <content type="html"><![CDATA[<p>学习吴恩达的machine learning课程笔记。</p>
 <a id="more"></a>
@@ -126,7 +212,7 @@
 <img src="/2018/02/04/machine_learning_notes/NB_4.png" alt="NB_4.png" title="">
 <h4 id="Laplace-smoothing"><a href="#Laplace-smoothing" class="headerlink" title="Laplace smoothing"></a>Laplace smoothing</h4><p>设想如下场景：<br>一个从来没有在训练邮件中出现过的单词，但是这个单词在字典里，如果有一天收到一封邮件里包含这类单词。<br>会导致$\phi_{i|y=1}=0$,且$\phi_{i|y=0}=0$<br>从而<br>$$ p(y=1|x) = {0 \over 0}$$<br>这是一个未定义的值，无法作出估计。</p>
 <img src="/2018/02/04/machine_learning_notes/Laplace_smoothing.png" alt="Laplace_smoothing.png" title="">
-<p>计算明天太阳升起来的概率(假设太阳已经连续n天升起来了)<br>明天太阳不会升起来的概率：<br>$$ \phi_0 = {1 \over n+2}$$，<br>明天太阳还会升起来的概率：<br>$$ \phi_1 = {n+1 \over n+2}$$</p>
+<p>计算明天太阳升起来的概率(假设太阳已经连续n天升起来了)<br>明天太阳不会升起来的概率：<br>$$ \phi_0 = {1 \over n+2}$$<br>明天太阳还会升起来的概率：<br>$$ \phi_1 = {n+1 \over n+2}$$</p>
 <h4 id="Event-models-for-text-classification"><a href="#Event-models-for-text-classification" class="headerlink" title="Event models for text classification"></a>Event models for text classification</h4><img src="/2018/02/04/machine_learning_notes/multinomial_event_model_1.png" alt="multinomial_event_model_1.png" title="">
 <img src="/2018/02/04/machine_learning_notes/multinomial_event_model_2.png" alt="multinomial_event_model_2.png" title="">
 <img src="/2018/02/04/machine_learning_notes/multinomial_event_model_3.png" alt="multinomial_event_model_3.png" title="">
@@ -1620,54 +1706,6 @@
       <category term="cmd" scheme="http://www.wuchenxu.com/tags/cmd/"/>
     
       <category term="tree" scheme="http://www.wuchenxu.com/tags/tree/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Rust语言(2):Cargo</title>
-    <link href="http://www.wuchenxu.com/2016/09/13/Rust-lang-2-Cargo/"/>
-    <id>http://www.wuchenxu.com/2016/09/13/Rust-lang-2-Cargo/</id>
-    <published>2016-09-13T13:59:05.000Z</published>
-    <updated>2017-07-16T13:17:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=29431066&auto=0&height=66"></iframe><br>陈粒-奇妙能力歌</p>
-<p>本文介绍了Rust自带的编译和包管理工具Cargo.</p>
-<a id="more"></a>
-<h1 id="Carog的存在意义"><a href="#Carog的存在意义" class="headerlink" title="Carog的存在意义"></a>Carog的存在意义</h1><blockquote>
-<p>Cargo is a tool that allows Rust projects to declare their various dependencies and ensure that you’ll always get a repeatable build.</p>
-<p>To accomplish this goal, Cargo does four things:</p>
-<ul>
-<li>Introduces two metadata files with various bits of project information.</li>
-<li>Fetches and builds your project’s dependencies.</li>
-<li>Invokes rustc or another build tool with the correct parameters to build your project.</li>
-<li>Introduces conventions to make working with Rust projects easier.</li>
-</ul>
-</blockquote>
-<h1 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h1><p>执行命令<code>cargo new hello_world --bin</code>可以生成一个可用cargo来编译运行的目录结构。<br><code>--bin</code>表示生成可执行文件。<br><figure class="highlight plain"><figcaption><span>Cargo目录结构</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">│  Cargo.toml</div><div class="line">│</div><div class="line">├─src</div><div class="line">│      main.rs</div></pre></td></tr></table></figure></p>
-<p>Cargo.toml是TOML(Tom’s Obvious, Minimal Language)格式的配置文件：<br><figure class="highlight toml"><figcaption><span>Cargo.toml</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="section">[package]</span></div><div class="line"></div><div class="line"><span class="attr">name</span> = <span class="string">"hello_world"</span></div><div class="line"><span class="attr">version</span> = <span class="string">"0.0.1"</span></div><div class="line"><span class="attr">authors</span> = [ <span class="string">"Your name &lt;you@example.com&gt;"</span> ]</div></pre></td></tr></table></figure></p>
-<p>main.rs存放Rust文件:<br><figure class="highlight rust"><figcaption><span>hello_world.rs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</div><div class="line">    <span class="built_in">println!</span>(<span class="string">"Hello, world!"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h1 id="编译运行"><a href="#编译运行" class="headerlink" title="编译运行"></a>编译运行</h1><p><code>cargo build</code>编译。<br><code>cargo run</code>文件未改动则直接运行，文件改动则重新编译并运行。<br><code>cargo build --release</code>编译release版本，带优化功能。</p>
-<h1 id="包管理"><a href="#包管理" class="headerlink" title="包管理"></a>包管理</h1><h2 id="从crates-io增加依赖库"><a href="#从crates-io增加依赖库" class="headerlink" title="从crates.io增加依赖库"></a>从crates.io增加依赖库</h2><p>在Cargo.toml增加<br><figure class="highlight toml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="section">[dependencies]</span></div><div class="line"><span class="attr">time</span> = <span class="string">"0.1.12"</span></div></pre></td></tr></table></figure></p>
-<h2 id="从github增加依赖库"><a href="#从github增加依赖库" class="headerlink" title="从github增加依赖库"></a>从github增加依赖库</h2><figure class="highlight toml"><figcaption><span>Cargo.toml</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="section">[dependencies]</span></div><div class="line"><span class="attr">rand</span> = &#123; git = <span class="string">"https://github.com/rust-lang-nursery/rand.git"</span> &#125;</div></pre></td></tr></table></figure>
-<p>References:</p>
-<ol>
-<li><a href="http://doc.crates.io/guide.html" target="_blank" rel="external">Cargo official website</a></li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=86 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=29431066&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;陈粒-奇妙能力歌&lt;/p&gt;
-&lt;p&gt;本文介绍了Rust自带的编译和包管理工具Cargo.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Rust" scheme="http://www.wuchenxu.com/categories/Rust/"/>
-    
-    
-      <category term="Rust" scheme="http://www.wuchenxu.com/tags/Rust/"/>
-    
-      <category term="Cargo" scheme="http://www.wuchenxu.com/tags/Cargo/"/>
     
   </entry>
   

@@ -4,8 +4,36 @@
 
     
   <url>
+    <loc>http://www.wuchenxu.com/2018/04/15/integrate-files-with-same-name-same-function-in-C/</loc>
+    <lastmod>2018-04-15T14:03:58.670Z</lastmod>
+    <data>
+        <display>
+        <title>软件开发(3):软件集成重名解决方案</title>
+        <pubTime>2018-04-15T09:55:16.000Z</pubTime>
+        
+        <tag>software</tag>
+         
+        <tag>build</tag>
+         
+        <tag>c-lang</tag>
+         
+         
+           
+             
+              <breadCrumb title="software" url="http://www.wuchenxu.com/categories/software/"/>
+          
+             
+              <breadCrumb title="build" url="http://www.wuchenxu.com/categories/software/build/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
     <loc>http://www.wuchenxu.com/2018/02/04/machine_learning_notes/</loc>
-    <lastmod>2018-02-25T14:50:21.702Z</lastmod>
+    <lastmod>2018-02-25T14:56:46.597Z</lastmod>
     <data>
         <display>
         <title>Machine Learning笔记</title>
