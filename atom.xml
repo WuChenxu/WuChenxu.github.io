@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.wuchenxu.com/"/>
-  <updated>2018-04-15T14:03:58.670Z</updated>
+  <updated>2018-05-11T15:23:04.237Z</updated>
   <id>http://www.wuchenxu.com/</id>
   
   <author>
@@ -14,6 +14,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>functional safety and cyber security</title>
+    <link href="http://www.wuchenxu.com/2018/05/11/safety-and-security/"/>
+    <id>http://www.wuchenxu.com/2018/05/11/safety-and-security/</id>
+    <published>2018-05-11T14:03:39.000Z</published>
+    <updated>2018-05-11T15:23:04.237Z</updated>
+    
+    <content type="html"><![CDATA[<p>safety: 安全，侧重于防止系统的内部故障导致生命财产损失。<br>security： 安保/防护，侧重于防止外部侵入导致生命财产损失。<br>对应到汽车领域：functional safety(功能安全)与cyber security(网络安全)</p>
+<a id="more"></a>
+<h1 id="overview"><a href="#overview" class="headerlink" title="overview"></a>overview</h1><p>functional safety: absence of unreasonable risk due to hazards caused by malfunctioning behavior of E/E systems.<br>Cyber security : protection of systems from the theft and damage to their hardware, software or information, as well as from disruption or misdirection of the services they provide.</p>
+<img src="/2018/05/11/safety-and-security/overview_safety_security.png" alt="overview_safety_security.png" title="">
+<p>功能安全还有个进化版本 SOTIF(Safety of the intended functionality, ISO21448).</p>
+<h1 id="method"><a href="#method" class="headerlink" title="method"></a>method</h1><p>功能安全和网络安全的方法都需要在考虑整个产品生命周期（life cycle）的基础上，从两个大的方面来实施：技术与流程。<br><img src="/2018/05/11/safety-and-security/methods_safety_security.png" alt="methods_safety_security.png" title=""></p>
+<p>功能安全的一些方法在ISO26262里有详细的推荐，包括硬件失效分析以及诊断方法，软件开发方法，测试方法等。</p>
+<img src="/2018/05/11/safety-and-security/security_solutions.png" alt="security_solutions.png" title="">
+<img src="/2018/05/11/safety-and-security/safety_efforts.png" alt="safety_efforts.png" title="">
+<h1 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h1><p><a href="https://en.wikipedia.org/wiki/Cyclic_redundancy_check" target="_blank" rel="external">CRC(Cyclic redundancy check)</a> - safety point of view: data error detection<br><a href="https://en.wikipedia.org/wiki/Message_authentication_code#Security" target="_blank" rel="external">MAC(Message authentication code)</a> - security point of view：data autenticity check.</p>
+<p>References</p>
+<ol>
+<li><a href="https://www.zhihu.com/question/28426435?sort=created" target="_blank" rel="external">关于safety和security的翻译问题</a></li>
+<li><a href="https://www.controleng.com/single-article/combining-functional-safety-and-cyber-security/" target="_blank" rel="external">Combining functional safety and cyber security</a></li>
+<li><a href="https://vector.com/technologie-tage/files/VTT17_Grundlagenseminar_Security_Safety.pdf" target="_blank" rel="external">Functional safety and cyber security</a></li>
+<li><a href="http://www.umtri.umich.edu/sites/default/files/Safety.2014.Andre_.Weimerskirch_0.pdf" target="_blank" rel="external">The relevance of cyber-security to functional safety of connected and automated vehicles</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;safety: 安全，侧重于防止系统的内部故障导致生命财产损失。&lt;br&gt;security： 安保/防护，侧重于防止外部侵入导致生命财产损失。&lt;br&gt;对应到汽车领域：functional safety(功能安全)与cyber security(网络安全)&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="safety" scheme="http://www.wuchenxu.com/categories/safety/"/>
+    
+      <category term="security" scheme="http://www.wuchenxu.com/categories/safety/security/"/>
+    
+    
+      <category term="safety" scheme="http://www.wuchenxu.com/tags/safety/"/>
+    
+      <category term="security" scheme="http://www.wuchenxu.com/tags/security/"/>
+    
+  </entry>
   
   <entry>
     <title>软件开发(3):软件集成重名解决方案</title>
@@ -1676,36 +1719,6 @@
     
     
       <category term="TeX" scheme="http://www.wuchenxu.com/tags/TeX/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>windows command(18):打印目录结构tree</title>
-    <link href="http://www.wuchenxu.com/2016/09/17/windows-cmd-18-tree/"/>
-    <id>http://www.wuchenxu.com/2016/09/17/windows-cmd-18-tree/</id>
-    <published>2016-09-17T06:30:33.000Z</published>
-    <updated>2017-07-16T13:16:48.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>tree命令用来打印文件夹目录结构。</p>
-<a id="more"></a>
-<h1 id="tree打印目录结构"><a href="#tree打印目录结构" class="headerlink" title="tree打印目录结构"></a>tree打印目录结构</h1><figure class="highlight bat"><figcaption><span>tree打印目录结构</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function">D:\<span class="title">test</span>\<span class="title">tree</span>&gt;<span class="title">tree</span></span></div><div class="line">卷 <span class="title">LENOVO</span> 的文件夹 <span class="title">PATH</span> 列表</div><div class="line">卷序列号为 0005-42<span class="title">D7</span></div><div class="line"><span class="title">D</span>:.</div><div class="line">├─<span class="title">node1</span></div><div class="line">└─<span class="title">node2</span></div></pre></td></tr></table></figure>
-<h1 id="tree-F打印目录结构及每个目录下的文件"><a href="#tree-F打印目录结构及每个目录下的文件" class="headerlink" title="tree /F打印目录结构及每个目录下的文件"></a>tree /F打印目录结构及每个目录下的文件</h1><p>显示每个目录的文件名<br><figure class="highlight bat"><figcaption><span>tree</span><a href="/F">link</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function">D:\<span class="title">test</span>\<span class="title">tree</span>&gt;<span class="title">tree</span> /<span class="title">F</span></span></div><div class="line">卷 <span class="title">LENOVO</span> 的文件夹 <span class="title">PATH</span> 列表</div><div class="line">卷序列号为 0005-42<span class="title">D7</span></div><div class="line"><span class="title">D</span>:.</div><div class="line">│  <span class="title">tree.txt</span></div><div class="line">│</div><div class="line">├─<span class="title">node1</span></div><div class="line">│      <span class="title">node1.txt</span></div><div class="line">│</div><div class="line">└─<span class="title">node2</span></div><div class="line">        <span class="title">node2.txt</span></div></pre></td></tr></table></figure></p>
-<h1 id="打印结果输出到到文件"><a href="#打印结果输出到到文件" class="headerlink" title="打印结果输出到到文件"></a>打印结果输出到到文件</h1><p><code>tree /f &gt; file.txt</code></p>
-<p>References:<br><figure class="highlight plain"><figcaption><span>help tree</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">以图形显示驱动器或路径的文件夹结构。</div><div class="line"></div><div class="line">TREE [drive:][path] [/F] [/A]</div><div class="line"></div><div class="line">   /F   显示每个文件夹中文件的名称。</div><div class="line">   /A   使用 ASCII 字符，而不使用扩展字符。</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;tree命令用来打印文件夹目录结构。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="windows cmd" scheme="http://www.wuchenxu.com/categories/windows-cmd/"/>
-    
-    
-      <category term="cmd" scheme="http://www.wuchenxu.com/tags/cmd/"/>
-    
-      <category term="tree" scheme="http://www.wuchenxu.com/tags/tree/"/>
     
   </entry>
   
