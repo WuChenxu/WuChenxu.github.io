@@ -2,14 +2,27 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next gemini use-motion" lang="zh-CN">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -26,9 +39,6 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
 
 
 
@@ -45,7 +55,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -79,57 +89,42 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="encoding,charset,unicode,python,html," />
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
 
 
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
 
 
-
-  <link rel="alternate" href="/atom.xml" title="功不唐捐，玉汝于成" type="application/atom+xml" />
-
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
 
 
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
 
 
 
 
 
 
-<meta name="description" content="徐佳莹-失落沙洲">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Python获取网页编码">
-<meta property="og:url" content="http://www.wuchenxu.com/2016/01/14/charset-of-website/index.html">
-<meta property="og:site_name" content="功不唐捐，玉汝于成">
-<meta property="og:description" content="徐佳莹-失落沙洲">
-<meta property="og:image" content="http://www.wuchenxu.com/2016/01/14/charset-of-website/chrome_view_web_source.png">
-<meta property="og:image" content="http://www.wuchenxu.com/2016/01/14/charset-of-website/Historical_yearly_trends_in_the_usage_of_character_encodings_for_websites.png">
-<meta property="og:updated_time" content="2017-07-16T13:11:38.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python获取网页编码">
-<meta name="twitter:description" content="徐佳莹-失落沙洲">
-<meta name="twitter:image" content="http://www.wuchenxu.com/2016/01/14/charset-of-website/chrome_view_web_source.png">
 
 
 
-<script type="text/javascript" id="hexo.configurations">
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    scheme: 'Gemini',
+    version: '6.6.0',
+    sidebar: {"position":"left","Pisces | Gemini":240,"display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -141,29 +136,51 @@
 </script>
 
 
-
-  <link rel="canonical" href="http://www.wuchenxu.com/2016/01/14/charset-of-website/"/>
-
+  
 
 
 
 
-  <title>Python获取网页编码 | 功不唐捐，玉汝于成</title>
+  <meta name="description" content="徐佳莹-失落沙洲">
+<meta name="keywords" content="encoding,unicode,python,charset,html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python获取网页编码">
+<meta property="og:url" content="https://www.wuchenxu.com/2016/01/14/charset-of-website/index.html">
+<meta property="og:site_name" content="玉汝于成，功不唐捐">
+<meta property="og:description" content="徐佳莹-失落沙洲">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://www.wuchenxu.com/2016/01/14/charset-of-website/chrome_view_web_source.png">
+<meta property="og:image" content="https://www.wuchenxu.com/2016/01/14/charset-of-website/Historical_yearly_trends_in_the_usage_of_character_encodings_for_websites.png">
+<meta property="og:updated_time" content="2017-07-16T13:11:38.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python获取网页编码">
+<meta name="twitter:description" content="徐佳莹-失落沙洲">
+<meta name="twitter:image" content="https://www.wuchenxu.com/2016/01/14/charset-of-website/chrome_view_web_source.png">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="玉汝于成，功不唐捐" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="https://www.wuchenxu.com/2016/01/14/charset-of-website/"/>
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Python获取网页编码 | 玉汝于成，功不唐捐</title>
   
 
 
 
 
 
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?a3b3cbdcabc63b90db78f1474d6810b5";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
 
 
 
@@ -171,40 +188,65 @@
 
 
 
+  <noscript>
+  <style>
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
 
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
 
+    .use-motion .logo-line-before i { left: initial; }
+    .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">功不唐捐，玉汝于成</span>
+        <span class="site-title">玉汝于成，功不唐捐</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">记录点滴</p>
       
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -212,66 +254,121 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
 
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签<span class="badge">88</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类<span class="badge">43</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档<span class="badge">70</span></a>
+
+  </li>
+
+      
       
         <li class="menu-item menu-item-search">
           
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
         </li>
       
     </ul>
+  
+
   
 
   
@@ -302,12 +399,23 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
 
@@ -320,17 +428,23 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.wuchenxu.com/2016/01/14/charset-of-website/">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2016/01/14/charset-of-website/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="WuChenxu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="name" content="WU Chenxu">
+      <meta itemprop="description" content="一切都会成为过去">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="功不唐捐，玉汝于成">
+      <meta itemprop="name" content="玉汝于成，功不唐捐">
     </span>
 
     
@@ -338,11 +452,20 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python获取网页编码</h1>
+          <h1 class="post-title" itemprop="name headline">Python获取网页编码
+
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -350,25 +473,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-01-14T22:20:18+08:00">
-                2016-01-14
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2016-01-14 22:20:18" itemprop="dateCreated datePublished" datetime="2016-01-14T22:20:18+08:00">2016-01-14</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于</span>
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2017-07-16 21:11:38" itemprop="dateModified" datetime="2017-07-16T21:11:38+08:00">2017-07-16</time>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-07-16T21:11:38+08:00">
-                2017-07-16
-              </time>
             
           </span>
 
@@ -384,22 +512,14 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
 
                 
                 
-                  ， 
+                  ，
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/encoding/" itemprop="url" rel="index">
-                    <span itemprop="name">encoding</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python/encoding/" itemprop="url" rel="index"><span itemprop="name">encoding</span></a></span>
 
                 
                 
@@ -415,8 +535,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2016/01/14/charset-of-website/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/01/14/charset-of-website/" itemprop="commentCount"></span>
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2016/01/14/charset-of-website/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -428,6 +547,34 @@
           
 
           
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">4.9k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">4 分钟</span>
+              
+            </div>
+          
 
           
 
@@ -435,6 +582,9 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -442,64 +592,58 @@
 
       
         <p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=306662&auto=0&height=66"></iframe><br>徐佳莹-失落沙洲</p>
-<img src="/2016/01/14/charset-of-website/chrome_view_web_source.png" alt="chrome_view_web_source.png" title="">
+<img src="/2016/01/14/charset-of-website/chrome_view_web_source.png">
 <a id="more"></a>
 <h1 id="不同网页选择不同编码形式"><a href="#不同网页选择不同编码形式" class="headerlink" title="不同网页选择不同编码形式"></a>不同网页选择不同编码形式</h1><p>我们将字符的集合成为字符集(char set)，为了让计算机能存储、传输并显示字符，需要给字符集以编码。<br>由于历史的原因字符集的编码形式有多种。<br>如：ASCII码只能表示一些英文字符(7bit)；GBK/GB2312用两个字节表示中文；UTF-16用2个或者4个字节表示一个字符；UTF-8用变长形式表示unicode,兼容ASCII，英文只需要1个字节表示，而中文则需用三个字节表示。<br>不同的网站可能会使用不同的编码字符集，如UTF-8虽然完美兼容ASCII，而且俨然是网页编码的主流选择，但是每个中文字符字节数是GBK/GB2312的1.5倍，网站传输过程中的流量也就是1.5倍，所以一些中文网站还是选用GBK/GB2312字符集。</p>
 <h1 id="怎么获取网页字符集"><a href="#怎么获取网页字符集" class="headerlink" title="怎么获取网页字符集"></a>怎么获取网页字符集</h1><h2 id="web-server-response-header"><a href="#web-server-response-header" class="headerlink" title="web server response header"></a>web server response header</h2><p>对网页而言，第一种方法是web server在HTML page之前返回一个类似于<code>Content-Type: text/html; charset=utf-8</code>的http header，这个header作为response header返回而不是网页的一部分。<br>但是如果网站由很多网页组成，而且不同的网页由使用不同的语言的用户贡献上传，那么web server不知道每个文件的真实编码集。</p>
-<h2 id="Content-Type-of-HTML"><a href="#Content-Type-of-HTML" class="headerlink" title="Content-Type of HTML"></a>Content-Type of HTML</h2><p>第二种方法是在HTML文件中直接写入Content-Type来指定charset。<br>这里有个<code>鸡生蛋蛋生鸡</code>的问题，你怎么能在不知道HTML文件编码方式的情况下来读取文件呢？<br>幸运的是，基本上几乎所有的字符集从32到127的字符都是一样的，也就是兼容ASCII码。所以我们可以用ASCII来写HTML页面的tag来指定charset：<br><figure class="highlight html"><figcaption><span>html header</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=gb2312"</span> /&gt;</span></div></pre></td></tr></table></figure></p>
-<p>我们必须将这段<head>tag放在HTML最开始的地方，因为只要浏览器读取到这个tag，会停止分析网页并用指定的编码集重新解析整个网页。</head></p>
+<h2 id="Content-Type-of-HTML"><a href="#Content-Type-of-HTML" class="headerlink" title="Content-Type of HTML"></a>Content-Type of HTML</h2><p>第二种方法是在HTML文件中直接写入Content-Type来指定charset。<br>这里有个<code>鸡生蛋蛋生鸡</code>的问题，你怎么能在不知道HTML文件编码方式的情况下来读取文件呢？<br>幸运的是，基本上几乎所有的字符集从32到127的字符都是一样的，也就是兼容ASCII码。所以我们可以用ASCII来写HTML页面的tag来指定charset：<br><figure class="highlight html"><figcaption><span>html header</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=gb2312"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>我们必须将这段<head><meta name="generator" content="Hexo 3.8.0">tag放在HTML最开始的地方，因为只要浏览器读取到这个tag，会停止分析网页并用指定的编码集重新解析整个网页。</head></p>
 <h2 id="web-brower-guessing"><a href="#web-brower-guessing" class="headerlink" title="web brower guessing"></a>web brower guessing</h2><p>如果浏览器没有找到<code>Content-Type</code>怎么办？<br>浏览器会基于不同语言常用字符集的高词频编码来猜测字符集。<br>当然猜测就会有猜错的几率，如果猜错了，我们可以手动改变浏览器的编码（如Chrome，在<code>更多工具</code>-&gt;<code>编码</code>里可以修改编码）。</p>
 <h1 id="Python获取网页编码"><a href="#Python获取网页编码" class="headerlink" title="Python获取网页编码"></a>Python获取网页编码</h1><p>用三种不同的方法获取网页编码。</p>
-<figure class="highlight python"><figcaption><span> get_website_charset</span><a href="/downloads/code/get_website_charset/get_website_charset.py">view raw</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#encoding=utf-8</span></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">import</span> urllib2</div><div class="line"><span class="keyword">import</span> re</div><div class="line"><span class="keyword">import</span> zlib</div><div class="line"><span class="comment">#http://pypi.python.org/pypi/chardet</span></div><div class="line"><span class="keyword">import</span> chardet</div><div class="line"><span class="keyword">from</span> chardet.universaldetector <span class="keyword">import</span> UniversalDetector  </div><div class="line"></div><div class="line"></div><div class="line">__author__ = <span class="string">'wu_chenxu@126.com'</span></div><div class="line">__version__ = <span class="string">'0.1'</span></div><div class="line"></div><div class="line">urls = [<span class="string">'http://www.163.com.cn'</span>,</div><div class="line"><span class="string">'http://www.sohu.com'</span>,</div><div class="line"><span class="string">'http://www.qq.com'</span>,</div><div class="line"><span class="string">'http://www.sina.com.cn'</span>,</div><div class="line"><span class="string">'http://www.baidu.com'</span>,</div><div class="line"><span class="string">'http://www.renren.com'</span>,</div><div class="line"><span class="string">'http://www.iqiyi.com'</span>,</div><div class="line"><span class="string">'http://www.taobao.com'</span>,</div><div class="line"><span class="string">'http://www.jd.com'</span>,</div><div class="line"><span class="string">'http://www.tweeter.com'</span>,</div><div class="line"><span class="string">'http://www.gov.hk/'</span>,</div><div class="line"><span class="string">'http://www.naver.com'</span>,</div><div class="line"><span class="string">'http://www.rakuten.co.jp/'</span>]</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">chardetect</span><span class="params">(html)</span>:</span></div><div class="line">	<span class="comment">#create a new detector object	</span></div><div class="line">	detector = UniversalDetector()  </div><div class="line">	<span class="keyword">for</span> line <span class="keyword">in</span> html.split(<span class="string">'\n'</span>):  </div><div class="line">		<span class="comment">#test in blocks until reach to limit  </span></div><div class="line">		detector.feed(line)  </div><div class="line">		<span class="keyword">if</span> detector.done: <span class="keyword">break</span>  </div><div class="line">	<span class="comment">#close detector object</span></div><div class="line">	detector.close()  </div><div class="line">	<span class="comment">#output detect result </span></div><div class="line">	<span class="keyword">return</span> detector.result  </div><div class="line">	</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_charset</span><span class="params">(url)</span>:</span></div><div class="line">	request = urllib2.Request(url)</div><div class="line">	<span class="comment">#request for gzip file</span></div><div class="line">	request.add_header(<span class="string">'Accept-encoding'</span>, <span class="string">'gzip'</span>)</div><div class="line">	<span class="keyword">try</span>:</div><div class="line">		opener = urllib2.build_opener()</div><div class="line">		response = opener.open(request, timeout=<span class="number">10</span>)</div><div class="line">		html = response.read()</div><div class="line">		<span class="keyword">print</span> <span class="string">'URL:'</span>, url</div><div class="line">		raw_headers = response.headers</div><div class="line">		<span class="comment">#print raw_headers</span></div><div class="line">		<span class="comment">#norm_header=dict(zip(map(lambda x:x.lower(), raw_headers.keys()),raw_headers.values()))</span></div><div class="line">		<span class="comment">#print norm_header</span></div><div class="line">		</div><div class="line">		<span class="comment">#1.get the charset from response header</span></div><div class="line">		contentType = raw_headers.get(<span class="string">'Content-Type'</span>)</div><div class="line"></div><div class="line">		matchObj = re.search(<span class="string">'charset=(.*)'</span>, contentType)</div><div class="line">		<span class="keyword">print</span> <span class="string">'response header: '</span>,</div><div class="line">		<span class="keyword">if</span> matchObj:</div><div class="line">			<span class="keyword">print</span> matchObj.group(<span class="number">1</span>)</div><div class="line">		<span class="keyword">else</span>:</div><div class="line">			<span class="keyword">print</span> <span class="string">'None'</span></div><div class="line">			</div><div class="line">		<span class="comment">#1.1 unzip the html if needed</span></div><div class="line">		gzipped = raw_headers.get(<span class="string">'Content-Encoding'</span>)</div><div class="line">		<span class="keyword">if</span> gzipped:</div><div class="line">			html = zlib.decompress(html, <span class="number">16</span>+zlib.MAX_WBITS)</div><div class="line">			</div><div class="line">		<span class="comment">#2. get charset from html page header</span></div><div class="line">		matchObj = re.search(<span class="string">'charset=([^ \t\n\r\f\v/&gt;]*)'</span>, html[<span class="number">0</span>:<span class="number">1024</span>])</div><div class="line">		<span class="keyword">print</span> <span class="string">'html     header: '</span>,</div><div class="line">		<span class="keyword">if</span> matchObj:</div><div class="line">			<span class="keyword">print</span> matchObj.group(<span class="number">1</span>).replace(<span class="string">'"'</span>,<span class="string">''</span>)</div><div class="line">		<span class="keyword">else</span>:</div><div class="line">			<span class="keyword">print</span> <span class="string">'None'</span></div><div class="line">			</div><div class="line">		<span class="comment">#3. get charset by guessing the page content</span></div><div class="line">		<span class="keyword">print</span> <span class="string">'chardet analysis: '</span>+chardetect(html[<span class="number">0</span>:<span class="number">10</span>*<span class="number">1024</span>]).get(<span class="string">'encoding'</span>)</div><div class="line">		<span class="comment">#4. print the first 10 bytes of html</span></div><div class="line">		<span class="keyword">print</span> <span class="string">":"</span>.join(<span class="string">"{:02x}"</span>.format(ord(c)) <span class="keyword">for</span> c <span class="keyword">in</span> html[<span class="number">0</span>:<span class="number">20</span>])</div><div class="line">		<span class="keyword">print</span> <span class="string">" "</span>.join( c <span class="keyword">for</span> c <span class="keyword">in</span> html[<span class="number">0</span>:<span class="number">20</span>])</div><div class="line">		<span class="comment">#print convert2sysEncode(html[0:1024])</span></div><div class="line">	<span class="keyword">except</span> Exception,e:  </div><div class="line">		<span class="keyword">print</span> url,<span class="string">':'</span>,Exception,<span class="string">":"</span>,e</div><div class="line">		</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">convert2sysEncode</span><span class="params">(data)</span>:</span></div><div class="line">	<span class="string">'''</span></div><div class="line">	convert the data content  to system charset</div><div class="line">	'''</div><div class="line">	sysEncode = sys.getfilesystemencoding()</div><div class="line">	dataEncode = chardet.detect(data).get(<span class="string">'encoding'</span>, <span class="string">'utf-8'</span>)</div><div class="line">	dataConvert2sysEncode = data.decode(dataEncode, <span class="string">'ignore'</span>).encode(sysEncode)</div><div class="line">	<span class="keyword">return</span> dataConvert2sysEncode</div><div class="line">	</div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">	<span class="keyword">print</span> <span class="string">"system charset:"</span>, sys.getfilesystemencoding()</div><div class="line">	<span class="keyword">for</span> url <span class="keyword">in</span> urls:</div><div class="line">		get_charset(url)</div><div class="line">		<span class="keyword">print</span></div></pre></td></tr></table></figure>
-<p>运行结果：<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">system <span class="string">charset:</span> mbcs</div><div class="line"><span class="string">URL:</span> <span class="string">http:</span><span class="comment">//www.163.com.cn</span></div><div class="line">response <span class="string">header:</span>  UTF<span class="number">-8</span></div><div class="line">html     <span class="string">header:</span>  UTF<span class="number">-8</span></div><div class="line">chardet <span class="string">analysis:</span> UTF<span class="number">-8</span>-SIG</div><div class="line"><span class="string">ef:</span><span class="string">bb:</span><span class="string">bf:</span><span class="number">0</span><span class="string">a:</span><span class="number">3</span><span class="string">c:</span><span class="number">21</span>:<span class="number">44</span>:<span class="number">4</span><span class="string">f:</span><span class="number">43</span>:<span class="number">54</span>:<span class="number">59</span>:<span class="number">50</span>:<span class="number">45</span>:<span class="number">20</span>:<span class="number">68</span>:<span class="number">74</span>:<span class="number">6</span><span class="string">d:</span><span class="number">6</span><span class="string">c:</span><span class="number">3</span><span class="string">e:</span><span class="number">0</span>a</div><div class="line">???</div><div class="line"> &lt; ! D O C T Y P E   h t m l &gt;</div><div class="line"></div><div class="line"></div><div class="line">URL: <span class="string">http:</span><span class="comment">//www.sohu.com</span></div><div class="line">response <span class="string">header:</span>  None</div><div class="line">html     <span class="string">header:</span>  GBK</div><div class="line">chardet <span class="string">analysis:</span> GB2312</div><div class="line"><span class="number">3</span><span class="string">c:</span><span class="number">21</span>:<span class="number">44</span>:<span class="number">4</span><span class="string">f:</span><span class="number">43</span>:<span class="number">54</span>:<span class="number">59</span>:<span class="number">50</span>:<span class="number">45</span>:<span class="number">20</span>:<span class="number">68</span>:<span class="number">74</span>:<span class="number">6</span><span class="string">d:</span><span class="number">6</span><span class="string">c:</span><span class="number">20</span>:<span class="number">50</span>:<span class="number">55</span>:<span class="number">42</span>:<span class="number">4</span><span class="string">c:</span><span class="number">49</span></div><div class="line">&lt; ! D O C T Y P E   h t m l   P U B L I</div></pre></td></tr></table></figure></p>
+<figure class="highlight python"><figcaption><span> get_website_charset</span><a href="/downloads/code/get_website_charset/get_website_charset.py">view raw</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#encoding=utf-8</span></span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> urllib2</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> zlib</span><br><span class="line"><span class="comment">#http://pypi.python.org/pypi/chardet</span></span><br><span class="line"><span class="keyword">import</span> chardet</span><br><span class="line"><span class="keyword">from</span> chardet.universaldetector <span class="keyword">import</span> UniversalDetector  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">__author__ = <span class="string">'wu_chenxu@126.com'</span></span><br><span class="line">__version__ = <span class="string">'0.1'</span></span><br><span class="line"></span><br><span class="line">urls = [<span class="string">'http://www.163.com.cn'</span>,</span><br><span class="line"><span class="string">'http://www.sohu.com'</span>,</span><br><span class="line"><span class="string">'http://www.qq.com'</span>,</span><br><span class="line"><span class="string">'http://www.sina.com.cn'</span>,</span><br><span class="line"><span class="string">'http://www.baidu.com'</span>,</span><br><span class="line"><span class="string">'http://www.renren.com'</span>,</span><br><span class="line"><span class="string">'http://www.iqiyi.com'</span>,</span><br><span class="line"><span class="string">'http://www.taobao.com'</span>,</span><br><span class="line"><span class="string">'http://www.jd.com'</span>,</span><br><span class="line"><span class="string">'http://www.tweeter.com'</span>,</span><br><span class="line"><span class="string">'http://www.gov.hk/'</span>,</span><br><span class="line"><span class="string">'http://www.naver.com'</span>,</span><br><span class="line"><span class="string">'http://www.rakuten.co.jp/'</span>]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">chardetect</span><span class="params">(html)</span>:</span></span><br><span class="line">	<span class="comment">#create a new detector object	</span></span><br><span class="line">	detector = UniversalDetector()  </span><br><span class="line">	<span class="keyword">for</span> line <span class="keyword">in</span> html.split(<span class="string">'\n'</span>):  </span><br><span class="line">		<span class="comment">#test in blocks until reach to limit  </span></span><br><span class="line">		detector.feed(line)  </span><br><span class="line">		<span class="keyword">if</span> detector.done: <span class="keyword">break</span>  </span><br><span class="line">	<span class="comment">#close detector object</span></span><br><span class="line">	detector.close()  </span><br><span class="line">	<span class="comment">#output detect result </span></span><br><span class="line">	<span class="keyword">return</span> detector.result  </span><br><span class="line">	</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_charset</span><span class="params">(url)</span>:</span></span><br><span class="line">	request = urllib2.Request(url)</span><br><span class="line">	<span class="comment">#request for gzip file</span></span><br><span class="line">	request.add_header(<span class="string">'Accept-encoding'</span>, <span class="string">'gzip'</span>)</span><br><span class="line">	<span class="keyword">try</span>:</span><br><span class="line">		opener = urllib2.build_opener()</span><br><span class="line">		response = opener.open(request, timeout=<span class="number">10</span>)</span><br><span class="line">		html = response.read()</span><br><span class="line">		<span class="keyword">print</span> <span class="string">'URL:'</span>, url</span><br><span class="line">		raw_headers = response.headers</span><br><span class="line">		<span class="comment">#print raw_headers</span></span><br><span class="line">		<span class="comment">#norm_header=dict(zip(map(lambda x:x.lower(), raw_headers.keys()),raw_headers.values()))</span></span><br><span class="line">		<span class="comment">#print norm_header</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">#1.get the charset from response header</span></span><br><span class="line">		contentType = raw_headers.get(<span class="string">'Content-Type'</span>)</span><br><span class="line"></span><br><span class="line">		matchObj = re.search(<span class="string">'charset=(.*)'</span>, contentType)</span><br><span class="line">		<span class="keyword">print</span> <span class="string">'response header: '</span>,</span><br><span class="line">		<span class="keyword">if</span> matchObj:</span><br><span class="line">			<span class="keyword">print</span> matchObj.group(<span class="number">1</span>)</span><br><span class="line">		<span class="keyword">else</span>:</span><br><span class="line">			<span class="keyword">print</span> <span class="string">'None'</span></span><br><span class="line">			</span><br><span class="line">		<span class="comment">#1.1 unzip the html if needed</span></span><br><span class="line">		gzipped = raw_headers.get(<span class="string">'Content-Encoding'</span>)</span><br><span class="line">		<span class="keyword">if</span> gzipped:</span><br><span class="line">			html = zlib.decompress(html, <span class="number">16</span>+zlib.MAX_WBITS)</span><br><span class="line">			</span><br><span class="line">		<span class="comment">#2. get charset from html page header</span></span><br><span class="line">		matchObj = re.search(<span class="string">'charset=([^ \t\n\r\f\v/&gt;]*)'</span>, html[<span class="number">0</span>:<span class="number">1024</span>])</span><br><span class="line">		<span class="keyword">print</span> <span class="string">'html     header: '</span>,</span><br><span class="line">		<span class="keyword">if</span> matchObj:</span><br><span class="line">			<span class="keyword">print</span> matchObj.group(<span class="number">1</span>).replace(<span class="string">'"'</span>,<span class="string">''</span>)</span><br><span class="line">		<span class="keyword">else</span>:</span><br><span class="line">			<span class="keyword">print</span> <span class="string">'None'</span></span><br><span class="line">			</span><br><span class="line">		<span class="comment">#3. get charset by guessing the page content</span></span><br><span class="line">		<span class="keyword">print</span> <span class="string">'chardet analysis: '</span>+chardetect(html[<span class="number">0</span>:<span class="number">10</span>*<span class="number">1024</span>]).get(<span class="string">'encoding'</span>)</span><br><span class="line">		<span class="comment">#4. print the first 10 bytes of html</span></span><br><span class="line">		<span class="keyword">print</span> <span class="string">":"</span>.join(<span class="string">"{:02x}"</span>.format(ord(c)) <span class="keyword">for</span> c <span class="keyword">in</span> html[<span class="number">0</span>:<span class="number">20</span>])</span><br><span class="line">		<span class="keyword">print</span> <span class="string">" "</span>.join( c <span class="keyword">for</span> c <span class="keyword">in</span> html[<span class="number">0</span>:<span class="number">20</span>])</span><br><span class="line">		<span class="comment">#print convert2sysEncode(html[0:1024])</span></span><br><span class="line">	<span class="keyword">except</span> Exception,e:  </span><br><span class="line">		<span class="keyword">print</span> url,<span class="string">':'</span>,Exception,<span class="string">":"</span>,e</span><br><span class="line">		</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">convert2sysEncode</span><span class="params">(data)</span>:</span></span><br><span class="line">	<span class="string">'''</span></span><br><span class="line"><span class="string">	convert the data content  to system charset</span></span><br><span class="line"><span class="string">	'''</span></span><br><span class="line">	sysEncode = sys.getfilesystemencoding()</span><br><span class="line">	dataEncode = chardet.detect(data).get(<span class="string">'encoding'</span>, <span class="string">'utf-8'</span>)</span><br><span class="line">	dataConvert2sysEncode = data.decode(dataEncode, <span class="string">'ignore'</span>).encode(sysEncode)</span><br><span class="line">	<span class="keyword">return</span> dataConvert2sysEncode</span><br><span class="line">	</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	<span class="keyword">print</span> <span class="string">"system charset:"</span>, sys.getfilesystemencoding()</span><br><span class="line">	<span class="keyword">for</span> url <span class="keyword">in</span> urls:</span><br><span class="line">		get_charset(url)</span><br><span class="line">		<span class="keyword">print</span></span><br></pre></td></tr></table></figure>
+<p>运行结果：<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">system <span class="string">charset:</span> mbcs</span><br><span class="line"><span class="string">URL:</span> <span class="string">http:</span><span class="comment">//www.163.com.cn</span></span><br><span class="line">response <span class="string">header:</span>  UTF<span class="number">-8</span></span><br><span class="line">html     <span class="string">header:</span>  UTF<span class="number">-8</span></span><br><span class="line">chardet <span class="string">analysis:</span> UTF<span class="number">-8</span>-SIG</span><br><span class="line"><span class="string">ef:</span><span class="string">bb:</span><span class="string">bf:</span><span class="number">0</span><span class="string">a:</span><span class="number">3</span><span class="string">c:</span><span class="number">21</span>:<span class="number">44</span>:<span class="number">4</span><span class="string">f:</span><span class="number">43</span>:<span class="number">54</span>:<span class="number">59</span>:<span class="number">50</span>:<span class="number">45</span>:<span class="number">20</span>:<span class="number">68</span>:<span class="number">74</span>:<span class="number">6</span><span class="string">d:</span><span class="number">6</span><span class="string">c:</span><span class="number">3</span><span class="string">e:</span><span class="number">0</span>a</span><br><span class="line">???</span><br><span class="line"> &lt; ! D O C T Y P E   h t m l &gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">URL: <span class="string">http:</span><span class="comment">//www.sohu.com</span></span><br><span class="line">response <span class="string">header:</span>  None</span><br><span class="line">html     <span class="string">header:</span>  GBK</span><br><span class="line">chardet <span class="string">analysis:</span> GB2312</span><br><span class="line"><span class="number">3</span><span class="string">c:</span><span class="number">21</span>:<span class="number">44</span>:<span class="number">4</span><span class="string">f:</span><span class="number">43</span>:<span class="number">54</span>:<span class="number">59</span>:<span class="number">50</span>:<span class="number">45</span>:<span class="number">20</span>:<span class="number">68</span>:<span class="number">74</span>:<span class="number">6</span><span class="string">d:</span><span class="number">6</span><span class="string">c:</span><span class="number">20</span>:<span class="number">50</span>:<span class="number">55</span>:<span class="number">42</span>:<span class="number">4</span><span class="string">c:</span><span class="number">49</span></span><br><span class="line">&lt; ! D O C T Y P E   h t m l   P U B L I</span><br></pre></td></tr></table></figure></p>
 <p>可以看到结果有些站点的response是空值。<br>大部分网站采用的UTF-8编码，一些网站如qq、sohu、163、jd用的是GBK/GB2312，而日本乐天网站用的是EUC-JP编码。</p>
-<h1 id="网页字符集统计"><a href="#网页字符集统计" class="headerlink" title="网页字符集统计"></a>网页字符集统计</h1><p>通过<a href="http://w3techs.com/technologies/history_overview/character_encoding/ms/y" target="_blank" rel="external">Historical yearly trends in the usage of character encodings for websites</a>这个网页可以看到UTF-8是网页编码无可争议的绝对主导地位。<br>在2016年1月23号，我们看到排在前列的编码字符集是：UTF-8(86.2%) ISO-8859-1(6.8%) Windows-1251(1.9%) Shift JIS(1.1%) Windows-1252(1.0%) GB2312(0.9%)…<br><img src="/2016/01/14/charset-of-website/Historical_yearly_trends_in_the_usage_of_character_encodings_for_websites.png" alt="website encoding trend" title="website encoding trend"></p>
+<h1 id="网页字符集统计"><a href="#网页字符集统计" class="headerlink" title="网页字符集统计"></a>网页字符集统计</h1><p>通过<a href="http://w3techs.com/technologies/history_overview/character_encoding/ms/y" target="_blank" rel="noopener">Historical yearly trends in the usage of character encodings for websites</a>这个网页可以看到UTF-8是网页编码无可争议的绝对主导地位。<br>在2016年1月23号，我们看到排在前列的编码字符集是：UTF-8(86.2%) ISO-8859-1(6.8%) Windows-1251(1.9%) Shift JIS(1.1%) Windows-1252(1.0%) GB2312(0.9%)…<br><img src="/2016/01/14/charset-of-website/Historical_yearly_trends_in_the_usage_of_character_encodings_for_websites.png" title="website encoding trend"></p>
 <p>Reference:</p>
 <ol>
-<li><a href="http://www.joelonsoftware.com/articles/Unicode.html" target="_blank" rel="external">The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)</a></li>
-<li><a href="http://www.zhxl.me/1409.html" target="_blank" rel="external">使用 python urllib2 抓取网页时出现乱码的解决方案</a></li>
-<li><a href="http://blog.csdn.net/wisha1989/article/details/19010539" target="_blank" rel="external">用Python抓网页的注意事项</a></li>
-<li><a href="http://blog.csdn.net/aqwd2008/article/details/7506007" target="_blank" rel="external">python 模块 chardet下载方法及介绍</a></li>
-<li><a href="http://www.qkankan.com/" target="_blank" rel="external">国外网站大全</a></li>
+<li><a href="http://www.joelonsoftware.com/articles/Unicode.html" target="_blank" rel="noopener">The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)</a></li>
+<li><a href="http://www.zhxl.me/1409.html" target="_blank" rel="noopener">使用 python urllib2 抓取网页时出现乱码的解决方案</a></li>
+<li><a href="http://blog.csdn.net/wisha1989/article/details/19010539" target="_blank" rel="noopener">用Python抓网页的注意事项</a></li>
+<li><a href="http://blog.csdn.net/aqwd2008/article/details/7506007" target="_blank" rel="noopener">python 模块 chardet下载方法及介绍</a></li>
+<li><a href="http://www.qkankan.com/" target="_blank" rel="noopener">国外网站大全</a></li>
 </ol>
 
       
     </div>
 
-    <div>
-      
-        
+    
 
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-        
+    
 
+    
       
-    </div>
+    
+    
 
-    <div>
-      
-        
-
-      
-    </div>
+    
 
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/encoding/" <i class="fa fa-tag"></i> encoding</a>
+            <a href="/tags/encoding/" rel="tag"># encoding</a>
           
-            <a href="/tags/charset/" <i class="fa fa-tag"></i> charset</a>
+            <a href="/tags/unicode/" rel="tag"># unicode</a>
           
-            <a href="/tags/unicode/" <i class="fa fa-tag"></i> unicode</a>
+            <a href="/tags/python/" rel="tag"># python</a>
           
-            <a href="/tags/python/" <i class="fa fa-tag"></i> python</a>
+            <a href="/tags/charset/" rel="tag"># charset</a>
           
-            <a href="/tags/html/" <i class="fa fa-tag"></i> html</a>
+            <a href="/tags/html/" rel="tag"># html</a>
           
         </div>
       
@@ -533,31 +677,25 @@
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
           </div>
           
 
+  
+    <div class="comments" id="comments">
+    </div>
 
-          
-  <div class="comments" id="comments">
-    
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
-  </div>
+  
+
 
 
         </div>
@@ -580,104 +718,392 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
             站点概览
           </li>
         </ul>
       
 
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/avatar.png"
-               alt="WuChenxu" />
-          <p class="site-author-name" itemprop="name">WuChenxu</p>
-           
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/avatar.jpg"
+                alt="WU Chenxu" />
+            
+              <p class="site-author-name" itemprop="name">WU Chenxu</p>
               <p class="site-description motion-element" itemprop="description">一切都会成为过去</p>
-          
-        </div>
-        <nav class="site-state motion-element">
+          </div>
 
           
-            <div class="site-state-item site-state-posts">
-              <a href="/archives/">
-                <span class="site-state-item-count">70</span>
-                <span class="site-state-item-name">日志</span>
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">70</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">41</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">86</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
               </a>
             </div>
           
 
           
-            
-            
-            <div class="site-state-item site-state-categories">
+            <div class="links-of-author motion-element">
               
-                <span class="site-state-item-count">43</span>
-                <span class="site-state-item-name">分类</span>
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/WuChenxu" title="GitHub &rarr; https://github.com/WuChenxu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:wu_chenxu@126.com" title="E-Mail &rarr; mailto:wu_chenxu@126.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
               
             </div>
           
 
           
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">88</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
+             <div class="cc-license motion-element" itemprop="license">
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" /></a>
+             </div>
           
 
-        </nav>
+          
+          
 
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
-        
-
-        <div class="links-of-author motion-element">
           
             
-              <span class="links-of-author-item">
-                <a href="https://github.com/WuChenxu" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
           
+          
+
         </div>
-
-        
-        
-          <div class="cc-license motion-element" itemprop="license">
-            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
-              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
-            </a>
-          </div>
-        
-
-        
-        
-
-        
-
-
-      </section>
+      </div>
 
       
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
@@ -689,7 +1115,7 @@
             
 
           </div>
-        </section>
+        </div>
       <!--/noindex-->
       
 
@@ -705,35 +1131,59 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2015 - 
-  <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+        <div class="copyright">&copy; 2015 – <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">WuChenxu</span>
+  <span class="author" itemprop="copyrightHolder">WU Chenxu</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">224k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    
+    <span title="站点阅读时长">3:24</span>
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动</div>
 
 
 
   <span class="post-meta-divider">|</span>
-  <span>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a></div>
+
+
+
+  <div class="footer-custom">Hosted by <a href="https://pages.coding.me" class="theme-link" rel="noopener" target="_blank">Coding Pages</a></div>
 
 
         
+
+
+
+
+
+
+
 
         
       </div>
@@ -746,11 +1196,16 @@
       </div>
     
 
+    
+
+    
+
+    
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -764,101 +1219,6 @@
 
 
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
-
-
-
-  
-
-
-  
-
-    
-      <script id="dsq-count-scr" src="https://wuchenxu.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://www.wuchenxu.com/2016/01/14/charset-of-website/';
-          this.page.identifier = '2016/01/14/charset-of-website/';
-          this.page.title = 'Python获取网页编码';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://wuchenxu.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
-
-
-
-	
-
-
 
 
 
@@ -871,9 +1231,110 @@
 
 
 
+
+
+
+
+
+
+
+  
+  
+    <script src="/lib/jquery/index.js?v=2.1.3"></script>
   
 
-  <script type="text/javascript">
+  
+  
+    <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.6.0"></script>
+
+  <script src="/js/src/motion.js?v=6.6.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.6.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.6.0"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script src="/js/src/post-details.js?v=6.6.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.6.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+  <script>
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'cUCWv4VRYjKGSICWV819XA6C-gzGzoHsz',
+        appKey: 'wwuXS4PSgyQdr8sHb2OVteKd',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'6' || 10,
+        visitor: false
+    });
+  </script>
+
+
+
+
+  
+
+  <script>
     // Popup Window;
     var isfetched = false;
     var isXml = true;
@@ -922,6 +1383,8 @@
         .css('overflow', 'hidden');
       $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
 
+      
+
       $.ajax({
         url: path,
         dataType: isXml ? "xml" : "json",
@@ -955,6 +1418,7 @@
                 var title = data.title.trim();
                 var titleInLowerCase = title.toLowerCase();
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
                 var contentInLowerCase = content.toLowerCase();
                 var articleUrl = decodeURIComponent(data.url);
                 var indexOfTitle = [];
@@ -1201,30 +1665,135 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
 
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
         for (i=0; i < all.length; i += 1) {
           all[i].SourceElement().parentNode.className += ' has-jax';
         }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+    overflow: auto hidden;
+}
+</style>
+
+    
   
 
 
   
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function () {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
 
   
 

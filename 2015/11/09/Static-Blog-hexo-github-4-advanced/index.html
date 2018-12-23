@@ -2,14 +2,27 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -26,9 +39,6 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
 
 
 
@@ -45,7 +55,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -79,59 +89,42 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="hexo,github,blog," />
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
 
 
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
 
 
-
-  <link rel="alternate" href="/atom.xml" title="功不唐捐，玉汝于成" type="application/atom+xml" />
-
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
 
 
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
 
 
 
 
 
 
-<meta name="description" content="文章生成模板命令1hexo new [layout] &quot;postName&quot;  #新建文章
-按照layout格式，根据postName生成文章到hexo/source/_posts/postNmae.md.layout为可选参数，默认为post，其他可选项在hexo/scaffolds目录下查看，md文件就是layout的名字。可以自行添加新的layout或者更改现有的layout。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="个人博客搭建hexo+github(4):进阶配置">
-<meta property="og:url" content="http://www.wuchenxu.com/2015/11/09/Static-Blog-hexo-github-4-advanced/index.html">
-<meta property="og:site_name" content="功不唐捐，玉汝于成">
-<meta property="og:description" content="文章生成模板命令1hexo new [layout] &quot;postName&quot;  #新建文章
-按照layout格式，根据postName生成文章到hexo/source/_posts/postNmae.md.layout为可选参数，默认为post，其他可选项在hexo/scaffolds目录下查看，md文件就是layout的名字。可以自行添加新的layout或者更改现有的layout。">
-<meta property="og:image" content="http://www.wuchenxu.com/2015/11/09/Static-Blog-hexo-github-4-advanced/improve.jpg">
-<meta property="og:updated_time" content="2017-07-16T13:10:39.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="个人博客搭建hexo+github(4):进阶配置">
-<meta name="twitter:description" content="文章生成模板命令1hexo new [layout] &quot;postName&quot;  #新建文章
-按照layout格式，根据postName生成文章到hexo/source/_posts/postNmae.md.layout为可选参数，默认为post，其他可选项在hexo/scaffolds目录下查看，md文件就是layout的名字。可以自行添加新的layout或者更改现有的layout。">
-<meta name="twitter:image" content="http://www.wuchenxu.com/2015/11/09/Static-Blog-hexo-github-4-advanced/improve.jpg">
 
 
 
-<script type="text/javascript" id="hexo.configurations">
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    scheme: 'Gemini',
+    version: '6.6.0',
+    sidebar: {"position":"left","Pisces | Gemini":240,"display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -143,29 +136,50 @@
 </script>
 
 
-
-  <link rel="canonical" href="http://www.wuchenxu.com/2015/11/09/Static-Blog-hexo-github-4-advanced/"/>
-
+  
 
 
 
 
-  <title>个人博客搭建hexo+github(4):进阶配置 | 功不唐捐，玉汝于成</title>
+  <meta name="description" content="文章生成模板命令1hexo new [layout] &quot;postName&quot;  #新建文章 按照layout格式，根据postName生成文章到hexo/source/_posts/postNmae.md.layout为可选参数，默认为post，其他可选项在hexo/scaffolds目录下查看，md文件就是layout的名字。可以自行添加新的layout或者更改现有的layout。">
+<meta name="keywords" content="hexo,github,blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="个人博客搭建hexo+github(4):进阶配置">
+<meta property="og:url" content="https://www.wuchenxu.com/2015/11/09/Static-Blog-hexo-github-4-advanced/index.html">
+<meta property="og:site_name" content="玉汝于成，功不唐捐">
+<meta property="og:description" content="文章生成模板命令1hexo new [layout] &quot;postName&quot;  #新建文章 按照layout格式，根据postName生成文章到hexo/source/_posts/postNmae.md.layout为可选参数，默认为post，其他可选项在hexo/scaffolds目录下查看，md文件就是layout的名字。可以自行添加新的layout或者更改现有的layout。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://www.wuchenxu.com/2015/11/09/Static-Blog-hexo-github-4-advanced/improve.jpg">
+<meta property="og:updated_time" content="2017-07-16T13:10:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="个人博客搭建hexo+github(4):进阶配置">
+<meta name="twitter:description" content="文章生成模板命令1hexo new [layout] &quot;postName&quot;  #新建文章 按照layout格式，根据postName生成文章到hexo/source/_posts/postNmae.md.layout为可选参数，默认为post，其他可选项在hexo/scaffolds目录下查看，md文件就是layout的名字。可以自行添加新的layout或者更改现有的layout。">
+<meta name="twitter:image" content="https://www.wuchenxu.com/2015/11/09/Static-Blog-hexo-github-4-advanced/improve.jpg">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="玉汝于成，功不唐捐" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="https://www.wuchenxu.com/2015/11/09/Static-Blog-hexo-github-4-advanced/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>个人博客搭建hexo+github(4):进阶配置 | 玉汝于成，功不唐捐</title>
   
 
 
 
 
 
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?a3b3cbdcabc63b90db78f1474d6810b5";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
 
 
 
@@ -173,40 +187,65 @@
 
 
 
+  <noscript>
+  <style>
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
 
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
 
+    .use-motion .logo-line-before i { left: initial; }
+    .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">功不唐捐，玉汝于成</span>
+        <span class="site-title">玉汝于成，功不唐捐</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">记录点滴</p>
       
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -214,66 +253,121 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
 
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">88</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">43</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">70</span></a>
+
+  </li>
+
+      
       
         <li class="menu-item menu-item-search">
           
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
+  
+
   
 
   
@@ -288,9 +382,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -304,12 +396,23 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
 
@@ -322,17 +425,23 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.wuchenxu.com/2015/11/09/Static-Blog-hexo-github-4-advanced/">
+  
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="WuChenxu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2015/11/09/Static-Blog-hexo-github-4-advanced/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="WU Chenxu">
+      <meta itemprop="description" content="一切都会成为过去">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="功不唐捐，玉汝于成">
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="玉汝于成，功不唐捐">
     </span>
 
     
@@ -340,11 +449,20 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">个人博客搭建hexo+github(4):进阶配置</h1>
+          <h1 class="post-title" itemprop="name headline">个人博客搭建hexo+github(4):进阶配置
+
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -352,30 +470,35 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-11-09T19:32:36+08:00">
-                2015-11-09
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2015-11-09 19:32:36" itemprop="dateCreated datePublished" datetime="2015-11-09T19:32:36+08:00">2015-11-09</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于</span>
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2017-07-16 21:10:39" itemprop="dateModified" datetime="2017-07-16T21:10:39+08:00">2017-07-16</time>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-07-16T21:10:39+08:00">
-                2017-07-16
-              </time>
             
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -386,11 +509,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span>
 
                 
                 
@@ -406,8 +525,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2015/11/09/Static-Blog-hexo-github-4-advanced/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2015/11/09/Static-Blog-hexo-github-4-advanced/" itemprop="commentCount"></span>
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2015/11/09/Static-Blog-hexo-github-4-advanced/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -419,6 +537,34 @@
           
 
           
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">2.7k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">2 分钟</span>
+              
+            </div>
+          
 
           
 
@@ -426,85 +572,82 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
       
 
       
-        <img src="/2015/11/09/Static-Blog-hexo-github-4-advanced/improve.jpg" alt="improve.jpg" title="">
-<h1 id="文章生成模板"><a href="#文章生成模板" class="headerlink" title="文章生成模板"></a>文章生成模板</h1><p>命令<br><figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo <span class="keyword">new</span> <span class="type"></span>[layout] <span class="string">"postName"</span>  <span class="meta">#新建文章</span></div></pre></td></tr></table></figure></p>
-<p>按照layout格式，根据<code>postName</code>生成文章到<code>hexo/source/_posts/postNmae.md</code>.<br>layout为可选参数，默认为post，其他可选项在<code>hexo/scaffolds</code>目录下查看，md文件就是layout的名字。<br>可以自行添加新的layout或者更改现有的layout。<br> <a id="more"></a><br>修改post.md:<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="attr">title:</span> &#123;&#123; title &#125;&#125;</div><div class="line"><span class="attr">date:</span> &#123;&#123; date &#125;&#125;</div><div class="line"><span class="attr">updated:</span> &#123;&#123; date &#125;&#125;</div><div class="line"><span class="attr">categories:</span> </div><div class="line"><span class="bullet">-</span> C1</div><div class="line"><span class="bullet">-</span> C2</div><div class="line"><span class="attr">tags:</span> [T1, T2]</div><div class="line"><span class="attr">comments:</span> <span class="literal">true</span></div><div class="line"><span class="attr">layout:</span> &#123;&#123; layout &#125;&#125;</div><div class="line"><span class="meta">---</span></div><div class="line">&lt;!--more--<span class="string">&gt;</span></div></pre></td></tr></table></figure></p>
+        <img src="/2015/11/09/Static-Blog-hexo-github-4-advanced/improve.jpg">
+<h1 id="文章生成模板"><a href="#文章生成模板" class="headerlink" title="文章生成模板"></a>文章生成模板</h1><p>命令<br><figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="type"></span>[layout] <span class="string">"postName"</span>  <span class="meta">#新建文章</span></span><br></pre></td></tr></table></figure></p>
+<p>按照layout格式，根据<code>postName</code>生成文章到<code>hexo/source/_posts/postNmae.md</code>.<br>layout为可选参数，默认为post，其他可选项在<code>hexo/scaffolds</code>目录下查看，md文件就是layout的名字。<br>可以自行添加新的layout或者更改现有的layout。<br> <a id="more"></a><br>修改post.md:<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">&#123;&#123;</span> <span class="string">title</span> <span class="string">&#125;&#125;</span></span><br><span class="line"><span class="attr">date:</span> <span class="string">&#123;&#123;</span> <span class="string">date</span> <span class="string">&#125;&#125;</span></span><br><span class="line"><span class="attr">updated:</span> <span class="string">&#123;&#123;</span> <span class="string">date</span> <span class="string">&#125;&#125;</span></span><br><span class="line"><span class="attr">categories:</span> </span><br><span class="line"><span class="bullet">-</span> <span class="string">C1</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">C2</span></span><br><span class="line"><span class="attr">tags:</span> <span class="string">[T1,</span> <span class="string">T2]</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">&#123;&#123;</span> <span class="string">layout</span> <span class="string">&#125;&#125;</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="string">&lt;!--more--&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>注意<code>:</code>后面有空格。</p>
 <h1 id="添加RSS"><a href="#添加RSS" class="headerlink" title="添加RSS"></a>添加RSS</h1><ol>
-<li><p>github src<br><a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="external">https://github.com/hexojs/hexo-generator-feed</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-generator-feed –-save</div></pre></td></tr></table></figure>
+<li><p>github src<br><a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="noopener">https://github.com/hexojs/hexo-generator-feed</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-feed –-save</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>修改 hexo配置文件_config.yml, add</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">feed:</div><div class="line">  <span class="keyword">type</span>: atom</div><div class="line">  path: atom.<span class="keyword">xml</span></div><div class="line">  <span class="title">limit</span>: <span class="number">20</span></div></pre></td></tr></table></figure>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">feed:</span><br><span class="line">  <span class="keyword">type</span>: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: <span class="number">20</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h1 id="添加sitemap"><a href="#添加sitemap" class="headerlink" title="添加sitemap"></a>添加sitemap</h1><blockquote>
 <p>Sitemap 的提交主要的目的，是要避免搜索引擎的爬虫没有完整的收录整个网页&gt; 的内容，所以提交 Sitemap 是能够补足搜索引擎的不足，进而加速网页的收录<br>速度，达到搜寻引擎友好的目的。</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-generator-sitemap --save</div><div class="line">$ npm install hexo-generator-baidu-sitemap --save <span class="comment">#this is for baidu</span></div></pre></td></tr></table></figure>
-<p>add below to _config.yml in the root dir of Hexo<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">sitemap:</span></div><div class="line"><span class="symbol">  path:</span> sitemap.xml</div><div class="line"><span class="symbol">baidusitemap:</span></div><div class="line"><span class="symbol">  path:</span> baidusitemap.xml</div></pre></td></tr></table></figure></p>
-<h1 id="添加robots-txt"><a href="#添加robots-txt" class="headerlink" title="添加robots.txt"></a>添加robots.txt</h1><p>把<a href="https://en.wikipedia.org/wiki/Robots_exclusion_standard" target="_blank" rel="external">robots.txt</a>放在<code>source</code>文件夹下。<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># hexo robots.txt</span></div><div class="line">User-agent: *</div><div class="line"><span class="symbol">Allow:</span> /</div><div class="line"><span class="symbol">Allow:</span> <span class="meta-keyword">/archives/</span></div><div class="line"><span class="symbol"></span></div><div class="line">Disallow: <span class="meta-keyword">/vendors/</span></div><div class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/js/</span></div><div class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/css/</span></div><div class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/fonts/</span></div><div class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/vendors/</span></div><div class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/fancybox/</span></div><div class="line"><span class="symbol"></span></div><div class="line">Sitemap: http:<span class="comment">//WuChenxu.github.io/sitemap.xml</span></div><div class="line"><span class="symbol">Sitemap:</span> http:<span class="comment">//WuChenxu.github.io/baidusitemap.xml</span></div></pre></td></tr></table></figure></p>
-<h1 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h1><p>使用<a href="tongji.baidu.com">百度统计</a>,注册账号后，截取<code>hm.js?</code>后的字符串为Baidu Analytics ID.<br>在next主题配置文件中，修改baidu_analytics的值。<br><br><figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># Baidu Analytics ID</span></div><div class="line"><span class="meta"># 为百度统计提供脚本中 hm.js? 后字符串，非百度统计帐号</span></div><div class="line">baidu_analytics:xxxx</div></pre></td></tr></table></figure></p>
-<h1 id="计数"><a href="#计数" class="headerlink" title="计数"></a>计数</h1><p>使用<a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="external">不蒜子</a>.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-sitemap --save</span><br><span class="line">$ npm install hexo-generator-baidu-sitemap --save <span class="comment">#this is for baidu</span></span><br></pre></td></tr></table></figure>
+<p>add below to _config.yml in the root dir of Hexo<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">sitemap:</span></span><br><span class="line"><span class="symbol">  path:</span> sitemap.xml</span><br><span class="line"><span class="symbol">baidusitemap:</span></span><br><span class="line"><span class="symbol">  path:</span> baidusitemap.xml</span><br></pre></td></tr></table></figure></p>
+<h1 id="添加robots-txt"><a href="#添加robots-txt" class="headerlink" title="添加robots.txt"></a>添加robots.txt</h1><p>把<a href="https://en.wikipedia.org/wiki/Robots_exclusion_standard" target="_blank" rel="noopener">robots.txt</a>放在<code>source</code>文件夹下。<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># hexo robots.txt</span></span><br><span class="line">User-agent: *</span><br><span class="line"><span class="symbol">Allow:</span> /</span><br><span class="line"><span class="symbol">Allow:</span> <span class="meta-keyword">/archives/</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/vendors/</span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/js/</span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/css/</span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/fonts/</span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/vendors/</span></span><br><span class="line"><span class="symbol">Disallow:</span> <span class="meta-keyword">/fancybox/</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">Sitemap:</span> http:<span class="comment">//WuChenxu.github.io/sitemap.xml</span></span><br><span class="line"><span class="symbol">Sitemap:</span> http:<span class="comment">//WuChenxu.github.io/baidusitemap.xml</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h1><p>使用<a href="tongji.baidu.com">百度统计</a>,注册账号后，截取<code>hm.js?</code>后的字符串为Baidu Analytics ID.<br>在next主题配置文件中，修改baidu_analytics的值。<br><br><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># Baidu Analytics ID</span></span><br><span class="line"><span class="meta"># 为百度统计提供脚本中 hm.js? 后字符串，非百度统计帐号</span></span><br><span class="line">baidu_analytics:xxxx</span><br></pre></td></tr></table></figure></p>
+<h1 id="计数"><a href="#计数" class="headerlink" title="计数"></a>计数</h1><p>使用<a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="noopener">不蒜子</a>.</p>
 <ol>
 <li><p>安装脚本<br>在<code>themes/你的主题/layout/_partial/footer.ejs</code>添加</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>安装标签<br>在footer.ejs中增加访问量标签。<br>pv方式，单个用户连续点击n篇文章算n次访问量：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_pv"</span>&gt;</span></div><div class="line">    本站总访问量<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_pv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>次</div><div class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_pv"</span>&gt;</span></span><br><span class="line">    本站总访问量<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_pv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>次</span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>uv方式，单个用户连续点击n篇文章算1次访问量：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_uv"</span>&gt;</span></div><div class="line">  本站访客数<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_uv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>人次</div><div class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>uv方式，单个用户连续点击n篇文章算1次访问量：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_uv"</span>&gt;</span></span><br><span class="line">  本站访客数<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_uv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>人次</span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>注意:<code>&lt;div&gt;</code>标签默认会换行，可以把<code>&lt;span&gt;</code>放在上一个<code>&lt;div&gt;</code>标签里，这样可以让计数显示不换行显示。</p>
-<h1 id="404页面"><a href="#404页面" class="headerlink" title="404页面"></a>404页面</h1><p><a href="http://www.qq.com/404/" target="_blank" rel="external">腾讯公益404</a>生成代码嵌入404.html，放在<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo\source</div><div class="line">│  <span class="number">404</span><span class="selector-class">.html</span></div><div class="line">│</div><div class="line">└─_posts</div></pre></td></tr></table></figure></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>   </div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>404<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="comment">&lt;!--</span></div><div class="line">&lt;!DOCTYPE HTML&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta charset="UTF-8" /&gt;</div><div class="line">	&lt;title&gt;公益404&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;h1&gt;404 Page Not Found&lt;/h1&gt;</div><div class="line">--&gt;<span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"http://www.qq.com/404/search_children.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span> <span class="attr">homePageUrl</span>=<span class="string">"https://WuChenxu.github.io/"</span> <span class="attr">homePageName</span>=<span class="string">"回到我的主页"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h1 id="404页面"><a href="#404页面" class="headerlink" title="404页面"></a>404页面</h1><p><a href="http://www.qq.com/404/" target="_blank" rel="noopener">腾讯公益404</a>生成代码嵌入404.html，放在<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo\source</span><br><span class="line">│  <span class="number">404</span>.html</span><br><span class="line">│</span><br><span class="line">└─_posts</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>   </span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>404<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">&lt;!DOCTYPE HTML&gt;</span></span><br><span class="line"><span class="comment">&lt;html&gt;</span></span><br><span class="line"><span class="comment">&lt;head&gt;</span></span><br><span class="line"><span class="comment">	&lt;meta charset="UTF-8" /&gt;</span></span><br><span class="line"><span class="comment">	&lt;title&gt;公益404&lt;/title&gt;</span></span><br><span class="line"><span class="comment">&lt;/head&gt;</span></span><br><span class="line"><span class="comment">&lt;body&gt;</span></span><br><span class="line"><span class="comment">&lt;h1&gt;404 Page Not Found&lt;/h1&gt;</span></span><br><span class="line"><span class="comment">--&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"http://www.qq.com/404/search_children.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span> <span class="attr">homePageUrl</span>=<span class="string">"https://WuChenxu.github.io/"</span> <span class="attr">homePageName</span>=<span class="string">"回到我的主页"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>html文件必须以utf-8格式保存，否则中文会出现乱码。</p>
 <p> Reference:</p>
 <ol>
-<li><a href="http://cnfeat.com/blog/2014/05/10/how-to-build-a-blog/" target="_blank" rel="external">简明 Github Pages与 jekyll 教程</a></li>
-<li><a href="http://www.jianshu.com/p/35e197cb1273" target="_blank" rel="external">Hexo搭建Github-Pages博客</a></li>
-<li><a href="http://www.arao.me/2015/hexo-next-theme-optimize-seo/" target="_blank" rel="external">NexT主题与Hexo更搭哦</a></li>
+<li><a href="http://cnfeat.com/blog/2014/05/10/how-to-build-a-blog/" target="_blank" rel="noopener">简明 Github Pages与 jekyll 教程</a></li>
+<li><a href="http://www.jianshu.com/p/35e197cb1273" target="_blank" rel="noopener">Hexo搭建Github-Pages博客</a></li>
+<li><a href="http://www.arao.me/2015/hexo-next-theme-optimize-seo/" target="_blank" rel="noopener">NexT主题与Hexo更搭哦</a></li>
 </ol>
 
       
     </div>
 
-    <div>
-      
-        
+    
 
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-        
+    
 
+    
       
-    </div>
+    
+    
 
-    <div>
-      
-        
-
-      
-    </div>
+    
 
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" <i class="fa fa-tag"></i> hexo</a>
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
           
-            <a href="/tags/github/" <i class="fa fa-tag"></i> github</a>
+            <a href="/tags/github/" rel="tag"># github</a>
           
-            <a href="/tags/blog/" <i class="fa fa-tag"></i> blog</a>
+            <a href="/tags/blog/" rel="tag"># blog</a>
           
         </div>
       
@@ -538,31 +681,25 @@
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
           </div>
           
 
+  
+    <div class="comments" id="comments">
+    </div>
 
-          
-  <div class="comments" id="comments">
-    
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
-  </div>
+  
+
 
 
         </div>
@@ -585,104 +722,390 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
             站点概览
           </li>
         </ul>
       
 
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/avatar.png"
-               alt="WuChenxu" />
-          <p class="site-author-name" itemprop="name">WuChenxu</p>
-           
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="WU Chenxu">
+            
+              <p class="site-author-name" itemprop="name">WU Chenxu</p>
               <p class="site-description motion-element" itemprop="description">一切都会成为过去</p>
-          
-        </div>
-        <nav class="site-state motion-element">
+          </div>
 
           
-            <div class="site-state-item site-state-posts">
-              <a href="/archives/">
-                <span class="site-state-item-count">70</span>
-                <span class="site-state-item-name">日志</span>
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">70</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">41</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">86</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
               </a>
             </div>
           
 
           
-            
-            
-            <div class="site-state-item site-state-categories">
+            <div class="links-of-author motion-element">
               
-                <span class="site-state-item-count">43</span>
-                <span class="site-state-item-name">分类</span>
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/WuChenxu" title="GitHub &rarr; https://github.com/WuChenxu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:wu_chenxu@126.com" title="E-Mail &rarr; mailto:wu_chenxu@126.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
               
             </div>
           
 
           
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">88</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
+             <div class="cc-license motion-element" itemprop="license">
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
           
 
-        </nav>
+          
+          
 
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
-        
-
-        <div class="links-of-author motion-element">
           
             
-              <span class="links-of-author-item">
-                <a href="https://github.com/WuChenxu" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
           
+          
+
         </div>
-
-        
-        
-          <div class="cc-license motion-element" itemprop="license">
-            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
-              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
-            </a>
-          </div>
-        
-
-        
-        
-
-        
-
-
-      </section>
+      </div>
 
       
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
@@ -694,7 +1117,7 @@
             
 
           </div>
-        </section>
+        </div>
       <!--/noindex-->
       
 
@@ -710,35 +1133,59 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2015 - 
-  <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+        <div class="copyright">&copy; 2015 – <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">WuChenxu</span>
+  <span class="author" itemprop="copyrightHolder">WU Chenxu</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">224k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    
+    <span title="站点阅读时长">3:24</span>
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动</div>
 
 
 
   <span class="post-meta-divider">|</span>
-  <span>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a></div>
+
+
+
+  <div class="footer-custom">Hosted by <a href="https://pages.coding.me" class="theme-link" rel="noopener" target="_blank">Coding Pages</a></div>
 
 
         
+
+
+
+
+
+
+
 
         
       </div>
@@ -751,11 +1198,16 @@
       </div>
     
 
+    
+
+    
+
+    
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -769,101 +1221,6 @@
 
 
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
-
-
-
-  
-
-
-  
-
-    
-      <script id="dsq-count-scr" src="https://wuchenxu.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://www.wuchenxu.com/2015/11/09/Static-Blog-hexo-github-4-advanced/';
-          this.page.identifier = '2015/11/09/Static-Blog-hexo-github-4-advanced/';
-          this.page.title = '个人博客搭建hexo+github(4):进阶配置';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://wuchenxu.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
-
-
-
-	
-
-
 
 
 
@@ -876,9 +1233,110 @@
 
 
 
+
+
+
+
+
+
+
+  
+  
+    <script src="/lib/jquery/index.js?v=2.1.3"></script>
   
 
-  <script type="text/javascript">
+  
+  
+    <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.6.0"></script>
+
+  <script src="/js/src/motion.js?v=6.6.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.6.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.6.0"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script src="/js/src/post-details.js?v=6.6.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.6.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+  <script>
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'cUCWv4VRYjKGSICWV819XA6C-gzGzoHsz',
+        appKey: 'wwuXS4PSgyQdr8sHb2OVteKd',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'6' || 10,
+        visitor: false
+    });
+  </script>
+
+
+
+
+  
+
+  <script>
     // Popup Window;
     var isfetched = false;
     var isXml = true;
@@ -927,6 +1385,8 @@
         .css('overflow', 'hidden');
       $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
 
+      
+
       $.ajax({
         url: path,
         dataType: isXml ? "xml" : "json",
@@ -960,6 +1420,7 @@
                 var title = data.title.trim();
                 var titleInLowerCase = title.toLowerCase();
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
                 var contentInLowerCase = content.toLowerCase();
                 var articleUrl = decodeURIComponent(data.url);
                 var indexOfTitle = [];
@@ -1206,30 +1667,135 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
 
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
         for (i=0; i < all.length; i += 1) {
           all[i].SourceElement().parentNode.className += ' has-jax';
         }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+    overflow: auto hidden;
+}
+</style>
+
+    
   
 
 
   
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function () {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
 
   
 

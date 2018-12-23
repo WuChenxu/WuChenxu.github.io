@@ -2,14 +2,27 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -26,9 +39,6 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
 
 
 
@@ -45,7 +55,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -79,56 +89,42 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="cmd,set," />
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
 
 
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
 
 
-
-  <link rel="alternate" href="/atom.xml" title="功不唐捐，玉汝于成" type="application/atom+xml" />
-
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
 
 
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
 
 
 
 
 
 
-<meta name="description" content="变量设置命令，非常有用。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="windows command(14):SET SETLOCAL ENDLOCAL">
-<meta property="og:url" content="http://www.wuchenxu.com/2016/04/01/windows-cmd-14-set-setlocal-endlocal/index.html">
-<meta property="og:site_name" content="功不唐捐，玉汝于成">
-<meta property="og:description" content="变量设置命令，非常有用。">
-<meta property="og:image" content="http://www.wuchenxu.com/2016/04/01/windows-cmd-14-set-setlocal-endlocal/set.png">
-<meta property="og:updated_time" content="2017-07-16T13:14:38.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="windows command(14):SET SETLOCAL ENDLOCAL">
-<meta name="twitter:description" content="变量设置命令，非常有用。">
-<meta name="twitter:image" content="http://www.wuchenxu.com/2016/04/01/windows-cmd-14-set-setlocal-endlocal/set.png">
 
 
 
-<script type="text/javascript" id="hexo.configurations">
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    scheme: 'Gemini',
+    version: '6.6.0',
+    sidebar: {"position":"left","Pisces | Gemini":240,"display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -140,29 +136,50 @@
 </script>
 
 
-
-  <link rel="canonical" href="http://www.wuchenxu.com/2016/04/01/windows-cmd-14-set-setlocal-endlocal/"/>
-
+  
 
 
 
 
-  <title>windows command(14):SET SETLOCAL ENDLOCAL | 功不唐捐，玉汝于成</title>
+  <meta name="description" content="变量设置命令，非常有用。">
+<meta name="keywords" content="cmd,set">
+<meta property="og:type" content="article">
+<meta property="og:title" content="windows command(14):SET SETLOCAL ENDLOCAL">
+<meta property="og:url" content="https://www.wuchenxu.com/2016/04/01/windows-cmd-14-set-setlocal-endlocal/index.html">
+<meta property="og:site_name" content="玉汝于成，功不唐捐">
+<meta property="og:description" content="变量设置命令，非常有用。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://www.wuchenxu.com/2016/04/01/windows-cmd-14-set-setlocal-endlocal/set.png">
+<meta property="og:updated_time" content="2017-07-16T13:14:38.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="windows command(14):SET SETLOCAL ENDLOCAL">
+<meta name="twitter:description" content="变量设置命令，非常有用。">
+<meta name="twitter:image" content="https://www.wuchenxu.com/2016/04/01/windows-cmd-14-set-setlocal-endlocal/set.png">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="玉汝于成，功不唐捐" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="https://www.wuchenxu.com/2016/04/01/windows-cmd-14-set-setlocal-endlocal/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>windows command(14):SET SETLOCAL ENDLOCAL | 玉汝于成，功不唐捐</title>
   
 
 
 
 
 
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?a3b3cbdcabc63b90db78f1474d6810b5";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
 
 
 
@@ -170,40 +187,65 @@
 
 
 
+  <noscript>
+  <style>
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
 
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
 
+    .use-motion .logo-line-before i { left: initial; }
+    .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">功不唐捐，玉汝于成</span>
+        <span class="site-title">玉汝于成，功不唐捐</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">记录点滴</p>
       
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -211,66 +253,121 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
 
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">88</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">43</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">70</span></a>
+
+  </li>
+
+      
       
         <li class="menu-item menu-item-search">
           
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
+  
+
   
 
   
@@ -285,9 +382,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -301,12 +396,23 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
 
@@ -319,17 +425,23 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.wuchenxu.com/2016/04/01/windows-cmd-14-set-setlocal-endlocal/">
+  
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="WuChenxu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2016/04/01/windows-cmd-14-set-setlocal-endlocal/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="WU Chenxu">
+      <meta itemprop="description" content="一切都会成为过去">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="功不唐捐，玉汝于成">
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="玉汝于成，功不唐捐">
     </span>
 
     
@@ -337,11 +449,20 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">windows command(14):SET SETLOCAL ENDLOCAL</h1>
+          <h1 class="post-title" itemprop="name headline">windows command(14):SET SETLOCAL ENDLOCAL
+
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -349,30 +470,35 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-01T14:21:57+08:00">
-                2016-04-01
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2016-04-01 14:21:57" itemprop="dateCreated datePublished" datetime="2016-04-01T14:21:57+08:00">2016-04-01</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于</span>
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2017-07-16 21:14:38" itemprop="dateModified" datetime="2017-07-16T21:14:38+08:00">2017-07-16</time>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-07-16T21:14:38+08:00">
-                2017-07-16
-              </time>
             
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -383,11 +509,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/windows-cmd/" itemprop="url" rel="index">
-                    <span itemprop="name">windows cmd</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/windows-cmd/" itemprop="url" rel="index"><span itemprop="name">windows cmd</span></a></span>
 
                 
                 
@@ -403,8 +525,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2016/04/01/windows-cmd-14-set-setlocal-endlocal/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/04/01/windows-cmd-14-set-setlocal-endlocal/" itemprop="commentCount"></span>
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2016/04/01/windows-cmd-14-set-setlocal-endlocal/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -416,6 +537,34 @@
           
 
           
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">6.3k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">6 分钟</span>
+              
+            </div>
+          
 
           
 
@@ -423,69 +572,66 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
       
 
       
-        <img src="/2016/04/01/windows-cmd-14-set-setlocal-endlocal/set.png" alt="set.png" title="">
+        <img src="/2016/04/01/windows-cmd-14-set-setlocal-endlocal/set.png">
 <p>变量设置命令，非常有用。</p>
 <a id="more"></a>
 <h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><p><code>set [[/a [expression]] [/p [variable=]] string]</code></p>
-<figure class="highlight bat"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function">D:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">set</span> <span class="title">a</span>=1</span></div><div class="line"></div><div class="line"><span class="title">D</span>:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">echo</span> %<span class="title">a</span>%</div><div class="line">1</div></pre></td></tr></table></figure>
-<h1 id="无参数"><a href="#无参数" class="headerlink" title="无参数"></a>无参数</h1><p><code>set</code>的执行结果是显示所有环境变量;如果跟字符串，会显示匹配字符串的环境变量。<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">D</span>:\<span class="keyword">test</span>\<span class="keyword">test</span>&gt;<span class="keyword">set</span> <span class="keyword">win</span></div><div class="line">windir=C:\WINDOWS</div></pre></td></tr></table></figure></p>
-<h1 id="常规用法"><a href="#常规用法" class="headerlink" title="常规用法"></a>常规用法</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">D:\<span class="built_in">test</span>\<span class="built_in">test</span>&gt;<span class="built_in">set</span> a=123</div><div class="line"></div><div class="line">D:\<span class="built_in">test</span>\<span class="built_in">test</span>&gt;<span class="built_in">echo</span> %a%</div><div class="line">123</div><div class="line">rem cancel var a</div><div class="line">D:\<span class="built_in">test</span>\<span class="built_in">test</span>&gt;<span class="built_in">set</span> a=</div><div class="line"></div><div class="line">D:\<span class="built_in">test</span>\<span class="built_in">test</span>&gt;<span class="built_in">echo</span> %a%</div><div class="line">%a%</div></pre></td></tr></table></figure>
-<h1 id="参数-A"><a href="#参数-A" class="headerlink" title="参数/A"></a>参数/A</h1><p>/A 命令行开关指定等号右边的字符串为被评估的数字表达式。<br><figure class="highlight bat"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function">D:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">set</span> /<span class="title">a</span> <span class="title">b</span>=1+%<span class="title">a</span>%</span></div><div class="line">2</div></pre></td></tr></table></figure></p>
-<h1 id="参数-P"><a href="#参数-P" class="headerlink" title="参数/P"></a>参数/P</h1><p>/P 命令行开关允许将变量数值设成用户输入的一行输入。读取输入<br>行之前，显示指定的 promptString。promptString 可以是空的。<br><figure class="highlight bat"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function">D:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">set</span> /<span class="title">p</span> <span class="title">c</span>=</span></div><div class="line">123</div><div class="line"><span class="title">D</span>:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">echo</span> %<span class="title">c</span>%</div><div class="line">123</div></pre></td></tr></table></figure></p>
-<h1 id="变量格式化"><a href="#变量格式化" class="headerlink" title="变量格式化"></a>变量格式化</h1><h2 id="替换-Replace"><a href="#替换-Replace" class="headerlink" title="替换 Replace"></a>替换 Replace</h2><p><code>%PATH:str1=str2%</code>会扩展 PATH 环境变量，用 “str2” 代替扩展结果中的每个 “str1”。要有效地从扩展结果中删除所有的 “str1”，”str2” 可以是空的。<br>“str1” 可以以星号打头；在这种情况下，”str1” 会从扩展结果的开始到 str1 剩余部分第一次出现的地方，都一直保持相配。<br><figure class="highlight bat"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function">D:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">set</span> <span class="title">str</span>=<span class="title">hello_world</span></span></div><div class="line"><span class="title">D</span>:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">echo</span> %<span class="title">str</span>:*<span class="title">o</span>=<span class="title">hi</span>%</div><div class="line"><span class="title">hi_world</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">set</span> <span class="title">a</span>=1</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">D</span>:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">echo</span> %<span class="title">a</span>%</span></span><br><span class="line"><span class="function">1</span></span><br></pre></td></tr></table></figure>
+<h1 id="无参数"><a href="#无参数" class="headerlink" title="无参数"></a>无参数</h1><p><code>set</code>的执行结果是显示所有环境变量;如果跟字符串，会显示匹配字符串的环境变量。<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">D:\test\test&gt;<span class="builtin-name">set</span> win</span><br><span class="line"><span class="attribute">windir</span>=C:\WINDOWS</span><br></pre></td></tr></table></figure></p>
+<h1 id="常规用法"><a href="#常规用法" class="headerlink" title="常规用法"></a>常规用法</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">D:\<span class="built_in">test</span>\<span class="built_in">test</span>&gt;<span class="built_in">set</span> a=123</span><br><span class="line"></span><br><span class="line">D:\<span class="built_in">test</span>\<span class="built_in">test</span>&gt;<span class="built_in">echo</span> %a%</span><br><span class="line">123</span><br><span class="line">rem cancel var a</span><br><span class="line">D:\<span class="built_in">test</span>\<span class="built_in">test</span>&gt;<span class="built_in">set</span> a=</span><br><span class="line"></span><br><span class="line">D:\<span class="built_in">test</span>\<span class="built_in">test</span>&gt;<span class="built_in">echo</span> %a%</span><br><span class="line">%a%</span><br></pre></td></tr></table></figure>
+<h1 id="参数-A"><a href="#参数-A" class="headerlink" title="参数/A"></a>参数/A</h1><p>/A 命令行开关指定等号右边的字符串为被评估的数字表达式。<br><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">set</span> /<span class="title">a</span> <span class="title">b</span>=1+%<span class="title">a</span>%</span></span><br><span class="line"><span class="function">2</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="参数-P"><a href="#参数-P" class="headerlink" title="参数/P"></a>参数/P</h1><p>/P 命令行开关允许将变量数值设成用户输入的一行输入。读取输入<br>行之前，显示指定的 promptString。promptString 可以是空的。<br><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">set</span> /<span class="title">p</span> <span class="title">c</span>=</span></span><br><span class="line"><span class="function">123</span></span><br><span class="line"><span class="function"><span class="title">D</span>:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">echo</span> %<span class="title">c</span>%</span></span><br><span class="line"><span class="function">123</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="变量格式化"><a href="#变量格式化" class="headerlink" title="变量格式化"></a>变量格式化</h1><h2 id="替换-Replace"><a href="#替换-Replace" class="headerlink" title="替换 Replace"></a>替换 Replace</h2><p><code>%PATH:str1=str2%</code>会扩展 PATH 环境变量，用 “str2” 代替扩展结果中的每个 “str1”。要有效地从扩展结果中删除所有的 “str1”，”str2” 可以是空的。<br>“str1” 可以以星号打头；在这种情况下，”str1” 会从扩展结果的开始到 str1 剩余部分第一次出现的地方，都一直保持相配。<br><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">set</span> <span class="title">str</span>=<span class="title">hello_world</span></span></span><br><span class="line"><span class="function"><span class="title">D</span>:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">echo</span> %<span class="title">str</span>:*<span class="title">o</span>=<span class="title">hi</span>%</span></span><br><span class="line"><span class="function"><span class="title">hi_world</span></span></span><br></pre></td></tr></table></figure></p>
 <h2 id="子集-Subset"><a href="#子集-Subset" class="headerlink" title="子集 Subset"></a>子集 Subset</h2><p><code>%PATH:~10,5%</code>会扩展 PATH 环境变量，然后只使用在扩展结果中从第 11 个(偏移量 10)字符开始的五个字符。如果没有指定长度，则采用默认<br>值，即变量数值的余数。如果两个数字(偏移量和长度)都是负数，使用的数字则是环境变量数值长度加上指定的偏移量或长度。</p>
 <p><code>%PATH:~-10%</code>会提取 PATH 变量的最后十个字符。<br><code>%PATH:~0,-2%</code>会提取 PATH 变量的所有字符，除了最后两个。</p>
-<figure class="highlight bat"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function">D:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">echo</span> %<span class="title">str</span>:~0,5%</span></div><div class="line"><span class="title">hello</span></div><div class="line"><span class="title">D</span>:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">echo</span> %<span class="title">str</span>:~-2%</div><div class="line"><span class="title">ld</span></div></pre></td></tr></table></figure>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">echo</span> %<span class="title">str</span>:~0,5%</span></span><br><span class="line"><span class="function"><span class="title">hello</span></span></span><br><span class="line"><span class="function"><span class="title">D</span>:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">echo</span> %<span class="title">str</span>:~-2%</span></span><br><span class="line"><span class="function"><span class="title">ld</span></span></span><br></pre></td></tr></table></figure>
 <h1 id="动态环境变量"><a href="#动态环境变量" class="headerlink" title="动态环境变量"></a>动态环境变量</h1><p>%CD% - 扩展到当前目录字符串。</p>
 <p>%DATE% - 用跟 DATE 命令同样的格式扩展到当前日期。</p>
 <p>%TIME% - 用跟 TIME 命令同样的格式扩展到当前时间。</p>
 <p>%RANDOM% - 扩展到 0 和 32767 之间的任意十进制数字。</p>
 <p>%ERRORLEVEL% - 扩展到当前 ERRORLEVEL 数值。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">D:\<span class="built_in">test</span>\<span class="built_in">test</span>&gt;<span class="built_in">echo</span> %CD%</div><div class="line">D:\<span class="built_in">test</span>\<span class="built_in">test</span></div><div class="line"></div><div class="line">D:\<span class="built_in">test</span>\<span class="built_in">test</span>&gt;<span class="built_in">echo</span> %DATE%</div><div class="line">2016/04/19 周二</div><div class="line"></div><div class="line">D:\<span class="built_in">test</span>\<span class="built_in">test</span>&gt;<span class="built_in">echo</span> %DATE:~0,10%</div><div class="line">2016/04/19</div><div class="line"></div><div class="line">D:\<span class="built_in">test</span>\<span class="built_in">test</span>&gt;<span class="built_in">echo</span> %TIME%</div><div class="line">22:17:53.64</div><div class="line"></div><div class="line">D:\<span class="built_in">test</span>\<span class="built_in">test</span>&gt;<span class="built_in">echo</span> %RANDOM%</div><div class="line">21380</div><div class="line"></div><div class="line">D:\<span class="built_in">test</span>\<span class="built_in">test</span>&gt;<span class="built_in">echo</span> %RANDOM%</div><div class="line">9100</div><div class="line"></div><div class="line">D:\<span class="built_in">test</span>\<span class="built_in">test</span>&gt;<span class="built_in">echo</span> %RANDOM%</div><div class="line">26811</div><div class="line"></div><div class="line">D:\<span class="built_in">test</span>\<span class="built_in">test</span>&gt;<span class="built_in">echo</span> %RANDOM%</div><div class="line">10502</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">D:\<span class="built_in">test</span>\<span class="built_in">test</span>&gt;<span class="built_in">echo</span> %CD%</span><br><span class="line">D:\<span class="built_in">test</span>\<span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">D:\<span class="built_in">test</span>\<span class="built_in">test</span>&gt;<span class="built_in">echo</span> %DATE%</span><br><span class="line">2016/04/19 周二</span><br><span class="line"></span><br><span class="line">D:\<span class="built_in">test</span>\<span class="built_in">test</span>&gt;<span class="built_in">echo</span> %DATE:~0,10%</span><br><span class="line">2016/04/19</span><br><span class="line"></span><br><span class="line">D:\<span class="built_in">test</span>\<span class="built_in">test</span>&gt;<span class="built_in">echo</span> %TIME%</span><br><span class="line">22:17:53.64</span><br><span class="line"></span><br><span class="line">D:\<span class="built_in">test</span>\<span class="built_in">test</span>&gt;<span class="built_in">echo</span> %RANDOM%</span><br><span class="line">21380</span><br><span class="line"></span><br><span class="line">D:\<span class="built_in">test</span>\<span class="built_in">test</span>&gt;<span class="built_in">echo</span> %RANDOM%</span><br><span class="line">9100</span><br><span class="line"></span><br><span class="line">D:\<span class="built_in">test</span>\<span class="built_in">test</span>&gt;<span class="built_in">echo</span> %RANDOM%</span><br><span class="line">26811</span><br><span class="line"></span><br><span class="line">D:\<span class="built_in">test</span>\<span class="built_in">test</span>&gt;<span class="built_in">echo</span> %RANDOM%</span><br><span class="line">10502</span><br></pre></td></tr></table></figure>
 <h1 id="环境变量本地化修改SETLOCAL-ENDLOCAL"><a href="#环境变量本地化修改SETLOCAL-ENDLOCAL" class="headerlink" title="环境变量本地化修改SETLOCAL ENDLOCAL"></a>环境变量本地化修改SETLOCAL ENDLOCAL</h1><p>开始批处理文件中环境改动的本地化操作。在执行 SETLOCAL 之后所做的环境改动只限于批处理文件。要还原原先的设置，必须执行 ENDLOCAL。达到批处理文件结尾时，对于该批处理文件的每个尚未执行的 SETLOCAL 命令，都会有一个隐含的 ENDLOCAL 被执行。</p>
 <p>一般在脚本文件开头加上SETLOCAL，结尾加上ENDLOCAL。</p>
-<p>Reference:<br><figure class="highlight plain"><figcaption><span>help set</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div></pre></td><td class="code"><pre><div class="line">显示、设置或删除 cmd.exe 环境变量。</div><div class="line"></div><div class="line">SET [variable=[string]]</div><div class="line"></div><div class="line">  variable  指定环境变量名。</div><div class="line">  string    指定要指派给变量的一系列字符串。</div><div class="line"></div><div class="line">要显示当前环境变量，键入不带参数的 SET。</div><div class="line"></div><div class="line">如果命令扩展被启用，SET 会如下改变:</div><div class="line"></div><div class="line">可仅用一个变量激活 SET 命令，等号或值不显示所有前缀匹配</div><div class="line">SET 命令已使用的名称的所有变量的值。例如:</div><div class="line"></div><div class="line">    SET P</div><div class="line"></div><div class="line">会显示所有以字母 P 打头的变量</div><div class="line"></div><div class="line">如果在当前环境中找不到该变量名称，SET 命令将把 ERRORLEVEL</div><div class="line">设置成 1。</div><div class="line"></div><div class="line">SET 命令不允许变量名含有等号。</div><div class="line"></div><div class="line">在 SET 命令中添加了两个新命令行开关:</div><div class="line"></div><div class="line">    SET /A expression</div><div class="line">    SET /P variable=[promptString]</div><div class="line"></div><div class="line">/A 命令行开关指定等号右边的字符串为被评估的数字表达式。该表达式</div><div class="line">评估器很简单并以递减的优先权顺序支持下列操作:</div><div class="line"></div><div class="line">    ()                  - 分组</div><div class="line">    ! ~ -               - 一元运算符</div><div class="line">    * / %               - 算数运算符</div><div class="line">    + -                 - 算数运算符</div><div class="line">    &lt;&lt; &gt;&gt;               - 逻辑移位</div><div class="line">    &amp;                   - 按位“与”</div><div class="line">    ^                   - 按位“异”</div><div class="line">    |                   - 按位“或”</div><div class="line">    = *= /= %= += -=    - 赋值</div><div class="line">      &amp;= ^= |= &lt;&lt;= &gt;&gt;=</div><div class="line">    ,                   - 表达式分隔符</div><div class="line"></div><div class="line">如果你使用任何逻辑或取余操作符， 你需要将表达式字符串用</div><div class="line">引号扩起来。在表达式中的任何非数字字符串键作为环境变量</div><div class="line">名称，这些环境变量名称的值已在使用前转换成数字。如果指定</div><div class="line">了一个环境变量名称，但未在当前环境中定义，那么值将被定为</div><div class="line">零。这使你可以使用环境变量值做计算而不用键入那些 % 符号</div><div class="line">来得到它们的值。如果 SET /A 在命令脚本外的命令行执行的，</div><div class="line">那么它显示该表达式的最后值。该分配的操作符在分配的操作符</div><div class="line">左边需要一个环境变量名称。除十六进制有 0x 前缀，八进制</div><div class="line">有 0 前缀的，数字值为十进位数字。因此，0x12 与 18 和 022</div><div class="line">相同。请注意八进制公式可能很容易搞混: 08 和 09 是无效的数字，</div><div class="line">因为 8 和 9 不是有效的八进制位数。(&amp; )</div><div class="line"></div><div class="line">/P 命令行开关允许将变量数值设成用户输入的一行输入。读取输入</div><div class="line">行之前，显示指定的 promptString。promptString 可以是空的。</div><div class="line"></div><div class="line">环境变量替换已如下增强:</div><div class="line"></div><div class="line">    %PATH:str1=str2%</div><div class="line"></div><div class="line">会扩展 PATH 环境变量，用 &quot;str2&quot; 代替扩展结果中的每个 &quot;str1&quot;。</div><div class="line">要有效地从扩展结果中删除所有的 &quot;str1&quot;，&quot;str2&quot; 可以是空的。</div><div class="line">&quot;str1&quot; 可以以星号打头；在这种情况下，&quot;str1&quot; 会从扩展结果的</div><div class="line">开始到 str1 剩余部分第一次出现的地方，都一直保持相配。</div><div class="line"></div><div class="line">也可以为扩展名指定子字符串。</div><div class="line"></div><div class="line">    %PATH:~10,5%</div><div class="line"></div><div class="line">会扩展 PATH 环境变量，然后只使用在扩展结果中从第 11 个(偏</div><div class="line">移量 10)字符开始的五个字符。如果没有指定长度，则采用默认</div><div class="line">值，即变量数值的余数。如果两个数字(偏移量和长度)都是负数，</div><div class="line">使用的数字则是环境变量数值长度加上指定的偏移量或长度。</div><div class="line"></div><div class="line">    %PATH:~-10%</div><div class="line"></div><div class="line">会提取 PATH 变量的最后十个字符。</div><div class="line"></div><div class="line">    %PATH:~0,-2%</div><div class="line"></div><div class="line">会提取 PATH 变量的所有字符，除了最后两个。</div><div class="line"></div><div class="line">终于添加了延迟环境变量扩充的支持。该支持总是按默认值被</div><div class="line">停用，但也可以通过 CMD.EXE 的 /V 命令行开关而被启用/停用。</div><div class="line">请参阅 CMD /?</div><div class="line"></div><div class="line">考虑到读取一行文本时所遇到的目前扩充的限制时，延迟环境</div><div class="line">变量扩充是很有用的，而不是执行的时候。以下例子说明直接</div><div class="line">变量扩充的问题:</div><div class="line"></div><div class="line">    set VAR=before</div><div class="line">    if &quot;%VAR%&quot; == &quot;before&quot; (</div><div class="line">        set VAR=after</div><div class="line">        if &quot;%VAR%&quot; == &quot;after&quot; @echo If you see this, it worked</div><div class="line">    )</div><div class="line"></div><div class="line">不会显示消息，因为在读到第一个 IF 语句时，BOTH IF 语句中</div><div class="line">的 %VAR% 会被代替；原因是: 它包含 IF 的文体，IF 是一个</div><div class="line">复合语句。所以，复合语句中的 IF 实际上是在比较 &quot;before&quot; 和</div><div class="line">&quot;after&quot;，这两者永远不会相等。同样，以下这个例子也不会达到</div><div class="line">预期效果:</div><div class="line"></div><div class="line">    set LIST=</div><div class="line">    for %i in (*) do set LIST=%LIST% %i</div><div class="line">    echo %LIST%</div><div class="line"></div><div class="line">原因是，它不会在目前的目录中建立一个文件列表，而只是将</div><div class="line">LIST 变量设成找到的最后一个文件。这也是因为 %LIST% 在</div><div class="line">FOR 语句被读取时，只被扩充了一次；而且，那时的 LIST 变量</div><div class="line">是空的。因此，我们真正执行的 FOR 循环是:</div><div class="line"></div><div class="line">    for %i in (*) do set LIST= %i</div><div class="line"></div><div class="line">这个循环继续将 LIST 设成找到的最后一个文件。</div><div class="line"></div><div class="line">延迟环境变量扩充允许你使用一个不同的字符(惊叹号)在执行</div><div class="line">时间扩充环境变量。如果延迟的变量扩充被启用，可以将上面</div><div class="line">例子写成以下所示，以达到预期效果:</div><div class="line"></div><div class="line">    set VAR=before</div><div class="line">    if &quot;%VAR%&quot; == &quot;before&quot; (</div><div class="line">        set VAR=after</div><div class="line">        if &quot;!VAR!&quot; == &quot;after&quot; @echo If you see this, it worked</div><div class="line">    )</div><div class="line"></div><div class="line">    set LIST=</div><div class="line">    for %i in (*) do set LIST=!LIST! %i</div><div class="line">    echo %LIST%</div><div class="line"></div><div class="line">如果命令扩展被启用，有几个动态环境变量可以被扩展，但不会出现在 SET 显示的变</div><div class="line">量列表中。每次变量数值被扩展时，这些变量数值都会被动态计算。如果用户用这些</div><div class="line">名称中任何一个明确定义变量，那个定义会替代下面描述的动态定义:</div><div class="line"></div><div class="line">%CD% - 扩展到当前目录字符串。</div><div class="line"></div><div class="line">%DATE% - 用跟 DATE 命令同样的格式扩展到当前日期。</div><div class="line"></div><div class="line">%TIME% - 用跟 TIME 命令同样的格式扩展到当前时间。</div><div class="line"></div><div class="line">%RANDOM% - 扩展到 0 和 32767 之间的任意十进制数字。</div><div class="line"></div><div class="line">%ERRORLEVEL% - 扩展到当前 ERRORLEVEL 数值。</div><div class="line"></div><div class="line">%CMDEXTVERSION% - 扩展到当前命令处理器扩展版本号。</div><div class="line"></div><div class="line">%CMDCMDLINE% - 扩展到调用命令处理器的原始命令行。</div><div class="line"></div><div class="line">%HIGHESTNUMANODENUMBER% - 扩展到此计算机上的最高 NUMA 节点号。</div></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><figcaption><span>help setlocal</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">开始批处理文件中环境改动的本地化操作。在执行 SETLOCAL 之后</div><div class="line">所做的环境改动只限于批处理文件。要还原原先的设置，必须执</div><div class="line">行 ENDLOCAL。达到批处理文件结尾时，对于该批处理文件的每个</div><div class="line">尚未执行的 SETLOCAL 命令，都会有一个隐含的 ENDLOCAL 被执行。</div><div class="line"></div><div class="line">SETLOCAL</div><div class="line"></div><div class="line">如果启用命令扩展，则 SETLOCAL 更改如下:</div><div class="line"></div><div class="line">SETLOCAL 批命令现在可以接受可选参数:</div><div class="line">        ENABLEEXTENSIONS / DISABLEEXTENSIONS</div><div class="line">            启用或禁用命令处理器扩展。这些</div><div class="line">            参数比 CMD /E:ON 或 /E:OFF</div><div class="line">            开关有优先权。请参阅 CMD /? 获取详细信息。</div><div class="line">        ENABLEDELAYEDEXPANSION / DISABLEDELAYEDEXPANSION</div><div class="line">            启用或禁用延缓环境变量</div><div class="line">            扩展。这些参数比 CMD</div><div class="line">            /V:ON 或 /V:OFF 开关有优先权。请参阅 CMD /? 获取详细信息。</div><div class="line">无论在 SETLOCAL 命令之前的设置是什么，这些修改会一直</div><div class="line">生效，直到出现相应的 ENDLOCAL 命令。</div><div class="line"></div><div class="line">在给定参数的情况下，</div><div class="line">SETLOCAL 命令将设置 ERRORLEVEL 值。如果给定两个有效参数中的一个，另一个未给定，</div><div class="line">则该值为零。</div><div class="line">通过以下方法，你可以在批脚本中</div><div class="line">使用此项来确定扩展是否可用:</div><div class="line"></div><div class="line">    VERIFY OTHER 2&gt;nul</div><div class="line">    SETLOCAL ENABLEEXTENSIONS</div><div class="line">    IF ERRORLEVEL 1 echo Unable to enable extensions</div><div class="line"></div><div class="line">此方法之所以有效，是因为在 CMD.EXE 的旧版本上，SETLOCAL</div><div class="line">不设置 ERRORLEVEL 值。如果参数不正确，VERIFY 命令会将</div><div class="line">ERRORLEVEL 值初始化为非零值。</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><figcaption><span>help endlocal</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">结束批处理文件中环境改动的本地化操作。在执行ENDLOCAL 之后</div><div class="line">所做的环境改动不再仅限于批处理文件。批处理文件结束后，</div><div class="line">原先的设置无法还原。</div><div class="line"></div><div class="line">ENDLOCAL</div><div class="line"></div><div class="line">如果命令扩展被启用，ENDLOCAL 会如下改变:</div><div class="line"></div><div class="line">如果相应的 SETLOCAL 用新的 ENABLEEXTENSIONS 或</div><div class="line">DISABLEEXTENSIONS 选项启用或停用了命令扩展，那么，在</div><div class="line">ENDLOCAL 之后，命令扩展的启用/停用状态会还原到执行</div><div class="line">相应的 SETLOCAL 命令前的状态。</div></pre></td></tr></table></figure>
-<p><a href="https://technet.microsoft.com/en-us/library/bb490998.aspx" target="_blank" rel="external">set in MS doc</a></p>
+<p>Reference:<br><figure class="highlight plain"><figcaption><span>help set</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br></pre></td><td class="code"><pre><span class="line">显示、设置或删除 cmd.exe 环境变量。</span><br><span class="line"></span><br><span class="line">SET [variable=[string]]</span><br><span class="line"></span><br><span class="line">  variable  指定环境变量名。</span><br><span class="line">  string    指定要指派给变量的一系列字符串。</span><br><span class="line"></span><br><span class="line">要显示当前环境变量，键入不带参数的 SET。</span><br><span class="line"></span><br><span class="line">如果命令扩展被启用，SET 会如下改变:</span><br><span class="line"></span><br><span class="line">可仅用一个变量激活 SET 命令，等号或值不显示所有前缀匹配</span><br><span class="line">SET 命令已使用的名称的所有变量的值。例如:</span><br><span class="line"></span><br><span class="line">    SET P</span><br><span class="line"></span><br><span class="line">会显示所有以字母 P 打头的变量</span><br><span class="line"></span><br><span class="line">如果在当前环境中找不到该变量名称，SET 命令将把 ERRORLEVEL</span><br><span class="line">设置成 1。</span><br><span class="line"></span><br><span class="line">SET 命令不允许变量名含有等号。</span><br><span class="line"></span><br><span class="line">在 SET 命令中添加了两个新命令行开关:</span><br><span class="line"></span><br><span class="line">    SET /A expression</span><br><span class="line">    SET /P variable=[promptString]</span><br><span class="line"></span><br><span class="line">/A 命令行开关指定等号右边的字符串为被评估的数字表达式。该表达式</span><br><span class="line">评估器很简单并以递减的优先权顺序支持下列操作:</span><br><span class="line"></span><br><span class="line">    ()                  - 分组</span><br><span class="line">    ! ~ -               - 一元运算符</span><br><span class="line">    * / %               - 算数运算符</span><br><span class="line">    + -                 - 算数运算符</span><br><span class="line">    &lt;&lt; &gt;&gt;               - 逻辑移位</span><br><span class="line">    &amp;                   - 按位“与”</span><br><span class="line">    ^                   - 按位“异”</span><br><span class="line">    |                   - 按位“或”</span><br><span class="line">    = *= /= %= += -=    - 赋值</span><br><span class="line">      &amp;= ^= |= &lt;&lt;= &gt;&gt;=</span><br><span class="line">    ,                   - 表达式分隔符</span><br><span class="line"></span><br><span class="line">如果你使用任何逻辑或取余操作符， 你需要将表达式字符串用</span><br><span class="line">引号扩起来。在表达式中的任何非数字字符串键作为环境变量</span><br><span class="line">名称，这些环境变量名称的值已在使用前转换成数字。如果指定</span><br><span class="line">了一个环境变量名称，但未在当前环境中定义，那么值将被定为</span><br><span class="line">零。这使你可以使用环境变量值做计算而不用键入那些 % 符号</span><br><span class="line">来得到它们的值。如果 SET /A 在命令脚本外的命令行执行的，</span><br><span class="line">那么它显示该表达式的最后值。该分配的操作符在分配的操作符</span><br><span class="line">左边需要一个环境变量名称。除十六进制有 0x 前缀，八进制</span><br><span class="line">有 0 前缀的，数字值为十进位数字。因此，0x12 与 18 和 022</span><br><span class="line">相同。请注意八进制公式可能很容易搞混: 08 和 09 是无效的数字，</span><br><span class="line">因为 8 和 9 不是有效的八进制位数。(&amp; )</span><br><span class="line"></span><br><span class="line">/P 命令行开关允许将变量数值设成用户输入的一行输入。读取输入</span><br><span class="line">行之前，显示指定的 promptString。promptString 可以是空的。</span><br><span class="line"></span><br><span class="line">环境变量替换已如下增强:</span><br><span class="line"></span><br><span class="line">    %PATH:str1=str2%</span><br><span class="line"></span><br><span class="line">会扩展 PATH 环境变量，用 &quot;str2&quot; 代替扩展结果中的每个 &quot;str1&quot;。</span><br><span class="line">要有效地从扩展结果中删除所有的 &quot;str1&quot;，&quot;str2&quot; 可以是空的。</span><br><span class="line">&quot;str1&quot; 可以以星号打头；在这种情况下，&quot;str1&quot; 会从扩展结果的</span><br><span class="line">开始到 str1 剩余部分第一次出现的地方，都一直保持相配。</span><br><span class="line"></span><br><span class="line">也可以为扩展名指定子字符串。</span><br><span class="line"></span><br><span class="line">    %PATH:~10,5%</span><br><span class="line"></span><br><span class="line">会扩展 PATH 环境变量，然后只使用在扩展结果中从第 11 个(偏</span><br><span class="line">移量 10)字符开始的五个字符。如果没有指定长度，则采用默认</span><br><span class="line">值，即变量数值的余数。如果两个数字(偏移量和长度)都是负数，</span><br><span class="line">使用的数字则是环境变量数值长度加上指定的偏移量或长度。</span><br><span class="line"></span><br><span class="line">    %PATH:~-10%</span><br><span class="line"></span><br><span class="line">会提取 PATH 变量的最后十个字符。</span><br><span class="line"></span><br><span class="line">    %PATH:~0,-2%</span><br><span class="line"></span><br><span class="line">会提取 PATH 变量的所有字符，除了最后两个。</span><br><span class="line"></span><br><span class="line">终于添加了延迟环境变量扩充的支持。该支持总是按默认值被</span><br><span class="line">停用，但也可以通过 CMD.EXE 的 /V 命令行开关而被启用/停用。</span><br><span class="line">请参阅 CMD /?</span><br><span class="line"></span><br><span class="line">考虑到读取一行文本时所遇到的目前扩充的限制时，延迟环境</span><br><span class="line">变量扩充是很有用的，而不是执行的时候。以下例子说明直接</span><br><span class="line">变量扩充的问题:</span><br><span class="line"></span><br><span class="line">    set VAR=before</span><br><span class="line">    if &quot;%VAR%&quot; == &quot;before&quot; (</span><br><span class="line">        set VAR=after</span><br><span class="line">        if &quot;%VAR%&quot; == &quot;after&quot; @echo If you see this, it worked</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">不会显示消息，因为在读到第一个 IF 语句时，BOTH IF 语句中</span><br><span class="line">的 %VAR% 会被代替；原因是: 它包含 IF 的文体，IF 是一个</span><br><span class="line">复合语句。所以，复合语句中的 IF 实际上是在比较 &quot;before&quot; 和</span><br><span class="line">&quot;after&quot;，这两者永远不会相等。同样，以下这个例子也不会达到</span><br><span class="line">预期效果:</span><br><span class="line"></span><br><span class="line">    set LIST=</span><br><span class="line">    for %i in (*) do set LIST=%LIST% %i</span><br><span class="line">    echo %LIST%</span><br><span class="line"></span><br><span class="line">原因是，它不会在目前的目录中建立一个文件列表，而只是将</span><br><span class="line">LIST 变量设成找到的最后一个文件。这也是因为 %LIST% 在</span><br><span class="line">FOR 语句被读取时，只被扩充了一次；而且，那时的 LIST 变量</span><br><span class="line">是空的。因此，我们真正执行的 FOR 循环是:</span><br><span class="line"></span><br><span class="line">    for %i in (*) do set LIST= %i</span><br><span class="line"></span><br><span class="line">这个循环继续将 LIST 设成找到的最后一个文件。</span><br><span class="line"></span><br><span class="line">延迟环境变量扩充允许你使用一个不同的字符(惊叹号)在执行</span><br><span class="line">时间扩充环境变量。如果延迟的变量扩充被启用，可以将上面</span><br><span class="line">例子写成以下所示，以达到预期效果:</span><br><span class="line"></span><br><span class="line">    set VAR=before</span><br><span class="line">    if &quot;%VAR%&quot; == &quot;before&quot; (</span><br><span class="line">        set VAR=after</span><br><span class="line">        if &quot;!VAR!&quot; == &quot;after&quot; @echo If you see this, it worked</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    set LIST=</span><br><span class="line">    for %i in (*) do set LIST=!LIST! %i</span><br><span class="line">    echo %LIST%</span><br><span class="line"></span><br><span class="line">如果命令扩展被启用，有几个动态环境变量可以被扩展，但不会出现在 SET 显示的变</span><br><span class="line">量列表中。每次变量数值被扩展时，这些变量数值都会被动态计算。如果用户用这些</span><br><span class="line">名称中任何一个明确定义变量，那个定义会替代下面描述的动态定义:</span><br><span class="line"></span><br><span class="line">%CD% - 扩展到当前目录字符串。</span><br><span class="line"></span><br><span class="line">%DATE% - 用跟 DATE 命令同样的格式扩展到当前日期。</span><br><span class="line"></span><br><span class="line">%TIME% - 用跟 TIME 命令同样的格式扩展到当前时间。</span><br><span class="line"></span><br><span class="line">%RANDOM% - 扩展到 0 和 32767 之间的任意十进制数字。</span><br><span class="line"></span><br><span class="line">%ERRORLEVEL% - 扩展到当前 ERRORLEVEL 数值。</span><br><span class="line"></span><br><span class="line">%CMDEXTVERSION% - 扩展到当前命令处理器扩展版本号。</span><br><span class="line"></span><br><span class="line">%CMDCMDLINE% - 扩展到调用命令处理器的原始命令行。</span><br><span class="line"></span><br><span class="line">%HIGHESTNUMANODENUMBER% - 扩展到此计算机上的最高 NUMA 节点号。</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><figcaption><span>help setlocal</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">开始批处理文件中环境改动的本地化操作。在执行 SETLOCAL 之后</span><br><span class="line">所做的环境改动只限于批处理文件。要还原原先的设置，必须执</span><br><span class="line">行 ENDLOCAL。达到批处理文件结尾时，对于该批处理文件的每个</span><br><span class="line">尚未执行的 SETLOCAL 命令，都会有一个隐含的 ENDLOCAL 被执行。</span><br><span class="line"></span><br><span class="line">SETLOCAL</span><br><span class="line"></span><br><span class="line">如果启用命令扩展，则 SETLOCAL 更改如下:</span><br><span class="line"></span><br><span class="line">SETLOCAL 批命令现在可以接受可选参数:</span><br><span class="line">        ENABLEEXTENSIONS / DISABLEEXTENSIONS</span><br><span class="line">            启用或禁用命令处理器扩展。这些</span><br><span class="line">            参数比 CMD /E:ON 或 /E:OFF</span><br><span class="line">            开关有优先权。请参阅 CMD /? 获取详细信息。</span><br><span class="line">        ENABLEDELAYEDEXPANSION / DISABLEDELAYEDEXPANSION</span><br><span class="line">            启用或禁用延缓环境变量</span><br><span class="line">            扩展。这些参数比 CMD</span><br><span class="line">            /V:ON 或 /V:OFF 开关有优先权。请参阅 CMD /? 获取详细信息。</span><br><span class="line">无论在 SETLOCAL 命令之前的设置是什么，这些修改会一直</span><br><span class="line">生效，直到出现相应的 ENDLOCAL 命令。</span><br><span class="line"></span><br><span class="line">在给定参数的情况下，</span><br><span class="line">SETLOCAL 命令将设置 ERRORLEVEL 值。如果给定两个有效参数中的一个，另一个未给定，</span><br><span class="line">则该值为零。</span><br><span class="line">通过以下方法，你可以在批脚本中</span><br><span class="line">使用此项来确定扩展是否可用:</span><br><span class="line"></span><br><span class="line">    VERIFY OTHER 2&gt;nul</span><br><span class="line">    SETLOCAL ENABLEEXTENSIONS</span><br><span class="line">    IF ERRORLEVEL 1 echo Unable to enable extensions</span><br><span class="line"></span><br><span class="line">此方法之所以有效，是因为在 CMD.EXE 的旧版本上，SETLOCAL</span><br><span class="line">不设置 ERRORLEVEL 值。如果参数不正确，VERIFY 命令会将</span><br><span class="line">ERRORLEVEL 值初始化为非零值。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>help endlocal</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">结束批处理文件中环境改动的本地化操作。在执行ENDLOCAL 之后</span><br><span class="line">所做的环境改动不再仅限于批处理文件。批处理文件结束后，</span><br><span class="line">原先的设置无法还原。</span><br><span class="line"></span><br><span class="line">ENDLOCAL</span><br><span class="line"></span><br><span class="line">如果命令扩展被启用，ENDLOCAL 会如下改变:</span><br><span class="line"></span><br><span class="line">如果相应的 SETLOCAL 用新的 ENABLEEXTENSIONS 或</span><br><span class="line">DISABLEEXTENSIONS 选项启用或停用了命令扩展，那么，在</span><br><span class="line">ENDLOCAL 之后，命令扩展的启用/停用状态会还原到执行</span><br><span class="line">相应的 SETLOCAL 命令前的状态。</span><br></pre></td></tr></table></figure>
+<p><a href="https://technet.microsoft.com/en-us/library/bb490998.aspx" target="_blank" rel="noopener">set in MS doc</a></p>
 
       
     </div>
 
-    <div>
-      
-        
+    
 
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-        
+    
 
+    
       
-    </div>
+    
+    
 
-    <div>
-      
-        
-
-      
-    </div>
+    
 
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/cmd/" <i class="fa fa-tag"></i> cmd</a>
+            <a href="/tags/cmd/" rel="tag"># cmd</a>
           
-            <a href="/tags/set/" <i class="fa fa-tag"></i> set</a>
+            <a href="/tags/set/" rel="tag"># set</a>
           
         </div>
       
@@ -519,31 +665,25 @@
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
           </div>
           
 
+  
+    <div class="comments" id="comments">
+    </div>
 
-          
-  <div class="comments" id="comments">
-    
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
-  </div>
+  
+
 
 
         </div>
@@ -566,104 +706,390 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
             站点概览
           </li>
         </ul>
       
 
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/avatar.png"
-               alt="WuChenxu" />
-          <p class="site-author-name" itemprop="name">WuChenxu</p>
-           
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="WU Chenxu">
+            
+              <p class="site-author-name" itemprop="name">WU Chenxu</p>
               <p class="site-description motion-element" itemprop="description">一切都会成为过去</p>
-          
-        </div>
-        <nav class="site-state motion-element">
+          </div>
 
           
-            <div class="site-state-item site-state-posts">
-              <a href="/archives/">
-                <span class="site-state-item-count">70</span>
-                <span class="site-state-item-name">日志</span>
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">70</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">41</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">86</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
               </a>
             </div>
           
 
           
-            
-            
-            <div class="site-state-item site-state-categories">
+            <div class="links-of-author motion-element">
               
-                <span class="site-state-item-count">43</span>
-                <span class="site-state-item-name">分类</span>
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/WuChenxu" title="GitHub &rarr; https://github.com/WuChenxu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:wu_chenxu@126.com" title="E-Mail &rarr; mailto:wu_chenxu@126.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
               
             </div>
           
 
           
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">88</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
+             <div class="cc-license motion-element" itemprop="license">
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
           
 
-        </nav>
+          
+          
 
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
-        
-
-        <div class="links-of-author motion-element">
           
             
-              <span class="links-of-author-item">
-                <a href="https://github.com/WuChenxu" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
           
+          
+
         </div>
-
-        
-        
-          <div class="cc-license motion-element" itemprop="license">
-            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
-              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
-            </a>
-          </div>
-        
-
-        
-        
-
-        
-
-
-      </section>
+      </div>
 
       
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
@@ -675,7 +1101,7 @@
             
 
           </div>
-        </section>
+        </div>
       <!--/noindex-->
       
 
@@ -691,35 +1117,59 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2015 - 
-  <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+        <div class="copyright">&copy; 2015 – <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">WuChenxu</span>
+  <span class="author" itemprop="copyrightHolder">WU Chenxu</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">224k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    
+    <span title="站点阅读时长">3:24</span>
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动</div>
 
 
 
   <span class="post-meta-divider">|</span>
-  <span>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a></div>
+
+
+
+  <div class="footer-custom">Hosted by <a href="https://pages.coding.me" class="theme-link" rel="noopener" target="_blank">Coding Pages</a></div>
 
 
         
+
+
+
+
+
+
+
 
         
       </div>
@@ -732,11 +1182,16 @@
       </div>
     
 
+    
+
+    
+
+    
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -750,101 +1205,6 @@
 
 
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
-
-
-
-  
-
-
-  
-
-    
-      <script id="dsq-count-scr" src="https://wuchenxu.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://www.wuchenxu.com/2016/04/01/windows-cmd-14-set-setlocal-endlocal/';
-          this.page.identifier = '2016/04/01/windows-cmd-14-set-setlocal-endlocal/';
-          this.page.title = 'windows command(14):SET SETLOCAL ENDLOCAL';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://wuchenxu.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
-
-
-
-	
-
-
 
 
 
@@ -857,9 +1217,110 @@
 
 
 
+
+
+
+
+
+
+
+  
+  
+    <script src="/lib/jquery/index.js?v=2.1.3"></script>
   
 
-  <script type="text/javascript">
+  
+  
+    <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.6.0"></script>
+
+  <script src="/js/src/motion.js?v=6.6.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.6.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.6.0"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script src="/js/src/post-details.js?v=6.6.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.6.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+  <script>
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'cUCWv4VRYjKGSICWV819XA6C-gzGzoHsz',
+        appKey: 'wwuXS4PSgyQdr8sHb2OVteKd',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'6' || 10,
+        visitor: false
+    });
+  </script>
+
+
+
+
+  
+
+  <script>
     // Popup Window;
     var isfetched = false;
     var isXml = true;
@@ -908,6 +1369,8 @@
         .css('overflow', 'hidden');
       $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
 
+      
+
       $.ajax({
         url: path,
         dataType: isXml ? "xml" : "json",
@@ -941,6 +1404,7 @@
                 var title = data.title.trim();
                 var titleInLowerCase = title.toLowerCase();
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
                 var contentInLowerCase = content.toLowerCase();
                 var articleUrl = decodeURIComponent(data.url);
                 var indexOfTitle = [];
@@ -1187,30 +1651,135 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
 
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
         for (i=0; i < all.length; i += 1) {
           all[i].SourceElement().parentNode.className += ' has-jax';
         }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+    overflow: auto hidden;
+}
+</style>
+
+    
   
 
 
   
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function () {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
 
   
 

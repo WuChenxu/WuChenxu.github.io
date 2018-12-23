@@ -2,14 +2,27 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -26,9 +39,6 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
 
 
 
@@ -45,7 +55,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -79,56 +89,42 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="software,build,c-lang," />
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
 
 
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
 
 
-
-  <link rel="alternate" href="/atom.xml" title="功不唐捐，玉汝于成" type="application/atom+xml" />
-
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
 
 
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
 
 
 
 
 
 
-<meta name="description" content="本文介绍了一种在软件集成过程中，遇到重名文件 和/或 重名函数时的解决方案。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="软件开发(3):软件集成重名解决方案">
-<meta property="og:url" content="http://www.wuchenxu.com/2018/04/15/integrate-files-with-same-name-same-function-in-C/index.html">
-<meta property="og:site_name" content="功不唐捐，玉汝于成">
-<meta property="og:description" content="本文介绍了一种在软件集成过程中，遇到重名文件 和/或 重名函数时的解决方案。">
-<meta property="og:image" content="http://www.wuchenxu.com/2018/04/15/integrate-files-with-same-name-same-function-in-C/ld.png">
-<meta property="og:updated_time" content="2018-04-15T14:03:58.670Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="软件开发(3):软件集成重名解决方案">
-<meta name="twitter:description" content="本文介绍了一种在软件集成过程中，遇到重名文件 和/或 重名函数时的解决方案。">
-<meta name="twitter:image" content="http://www.wuchenxu.com/2018/04/15/integrate-files-with-same-name-same-function-in-C/ld.png">
 
 
 
-<script type="text/javascript" id="hexo.configurations">
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    scheme: 'Gemini',
+    version: '6.6.0',
+    sidebar: {"position":"left","Pisces | Gemini":240,"display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -140,29 +136,50 @@
 </script>
 
 
-
-  <link rel="canonical" href="http://www.wuchenxu.com/2018/04/15/integrate-files-with-same-name-same-function-in-C/"/>
-
+  
 
 
 
 
-  <title>软件开发(3):软件集成重名解决方案 | 功不唐捐，玉汝于成</title>
+  <meta name="description" content="本文介绍了一种在软件集成过程中，遇到重名文件 和/或 重名函数时的解决方案。">
+<meta name="keywords" content="software,build,c-lang">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软件开发(3):软件集成重名解决方案">
+<meta property="og:url" content="https://www.wuchenxu.com/2018/04/15/integrate-files-with-same-name-same-function-in-C/index.html">
+<meta property="og:site_name" content="玉汝于成，功不唐捐">
+<meta property="og:description" content="本文介绍了一种在软件集成过程中，遇到重名文件 和/或 重名函数时的解决方案。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://www.wuchenxu.com/2018/04/15/integrate-files-with-same-name-same-function-in-C/ld.png">
+<meta property="og:updated_time" content="2018-04-15T14:03:58.671Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="软件开发(3):软件集成重名解决方案">
+<meta name="twitter:description" content="本文介绍了一种在软件集成过程中，遇到重名文件 和/或 重名函数时的解决方案。">
+<meta name="twitter:image" content="https://www.wuchenxu.com/2018/04/15/integrate-files-with-same-name-same-function-in-C/ld.png">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="玉汝于成，功不唐捐" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="https://www.wuchenxu.com/2018/04/15/integrate-files-with-same-name-same-function-in-C/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>软件开发(3):软件集成重名解决方案 | 玉汝于成，功不唐捐</title>
   
 
 
 
 
 
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?a3b3cbdcabc63b90db78f1474d6810b5";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
 
 
 
@@ -170,40 +187,65 @@
 
 
 
+  <noscript>
+  <style>
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
 
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
 
+    .use-motion .logo-line-before i { left: initial; }
+    .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">功不唐捐，玉汝于成</span>
+        <span class="site-title">玉汝于成，功不唐捐</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">记录点滴</p>
       
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -211,66 +253,121 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
 
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">88</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">43</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">70</span></a>
+
+  </li>
+
+      
       
         <li class="menu-item menu-item-search">
           
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
+  
+
   
 
   
@@ -285,9 +382,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -301,12 +396,23 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
 
@@ -319,17 +425,23 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.wuchenxu.com/2018/04/15/integrate-files-with-same-name-same-function-in-C/">
+  
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="WuChenxu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2018/04/15/integrate-files-with-same-name-same-function-in-C/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="WU Chenxu">
+      <meta itemprop="description" content="一切都会成为过去">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="功不唐捐，玉汝于成">
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="玉汝于成，功不唐捐">
     </span>
 
     
@@ -337,11 +449,20 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">软件开发(3):软件集成重名解决方案</h1>
+          <h1 class="post-title" itemprop="name headline">软件开发(3):软件集成重名解决方案
+
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -349,30 +470,23 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-15T17:55:16+08:00">
-                2018-04-15
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-04-15 17:55:16 / 修改时间：22:03:58" itemprop="dateCreated datePublished" datetime="2018-04-15T17:55:16+08:00">2018-04-15</time>
             
 
             
-              <span class="post-meta-divider">|</span>
-            
+              
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">更新于</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-15T22:03:58+08:00">
-                2018-04-15
-              </time>
             
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -383,22 +497,14 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software/" itemprop="url" rel="index">
-                    <span itemprop="name">software</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/software/" itemprop="url" rel="index"><span itemprop="name">software</span></a></span>
 
                 
                 
-                  ， 
+                  ，
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software/build/" itemprop="url" rel="index">
-                    <span itemprop="name">build</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/software/build/" itemprop="url" rel="index"><span itemprop="name">build</span></a></span>
 
                 
                 
@@ -414,8 +520,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2018/04/15/integrate-files-with-same-name-same-function-in-C/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/04/15/integrate-files-with-same-name-same-function-in-C/" itemprop="commentCount"></span>
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/04/15/integrate-files-with-same-name-same-function-in-C/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -427,6 +532,34 @@
           
 
           
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">3.1k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">3 分钟</span>
+              
+            </div>
+          
 
           
 
@@ -434,6 +567,9 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -444,36 +580,36 @@
 <a id="more"></a>
 <h1 id="why"><a href="#why" class="headerlink" title="why"></a>why</h1><p>在<a href="wuchenxu.com/2017/02/27/software-design-2-variant-handling/">software development(2):variant handling</a>一文中介绍了很多种variant管理的方法，其中有关于<a href="wuchenxu.com/2017/02/27/software-design-2-variant-handling/#link different libs">link different libs</a>的方法。<br>设想如下场景：开发过程中（针对C语言），各个模块分别由不同的团队开发，最后集成的时候，如果遇到重名的函数怎么处理？<br>本文针对这种场景，搜集了几种解决方案。</p>
 <h1 id="what"><a href="#what" class="headerlink" title="what"></a>what</h1><p>场景设置: 三个模块，<code>a</code> <code>b</code> <code>os</code>，其中<code>a</code>和<code>b</code>模块都包含一个名字为<code>func_internal.c</code>的文件，这个同名文件中包含了名字一样的函数，分别为<code>int func_internal(void)</code>与<code>int func_internal(int a)</code>。这两个函数都没有申明为static，但是没有外部调用。</p>
-<p><a href="https://github.com/WuChenxu/C/tree/master/link2step" target="_blank" rel="external">demo in github</a><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── README<span class="selector-class">.md</span></div><div class="line">├── component_a</div><div class="line">│   ├── exported_sym<span class="selector-class">.list</span></div><div class="line">│   ├── func_a<span class="selector-class">.c</span></div><div class="line">│   ├── func_internal<span class="selector-class">.c</span></div><div class="line">│   ├── func_internal<span class="selector-class">.h</span></div><div class="line">│   ├── functions<span class="selector-class">.h</span></div><div class="line">│   ├── makefile</div><div class="line">│   └── redefine<span class="selector-class">.syms</span></div><div class="line">├── component_b</div><div class="line">│   ├── exported_sym<span class="selector-class">.list</span></div><div class="line">│   ├── func_b<span class="selector-class">.c</span></div><div class="line">│   ├── func_internal<span class="selector-class">.c</span></div><div class="line">│   ├── func_internal<span class="selector-class">.h</span></div><div class="line">│   ├── functions<span class="selector-class">.h</span></div><div class="line">│   └── makefile</div><div class="line">├── makefile</div><div class="line">├── obj</div><div class="line">└── os</div><div class="line">    ├── exported_sym<span class="selector-class">.list</span></div><div class="line">    ├── main<span class="selector-class">.c</span></div><div class="line">    └── makefile</div></pre></td></tr></table></figure></p>
-<figure class="highlight c"><figcaption><span> component_a/func_a.c</span><a href="/downloads/code/link2steps/component_a/func_a.c">view raw</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"functions.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"func_internal.h"</span></span></div><div class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">func_internal_s</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">{</div><div class="line"><span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">func_a</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">{</div><div class="line">   <span class="keyword">int</span> a = func_internal();</div><div class="line">   <span class="built_in">printf</span>(<span class="string">"this is func a. %d\n"</span>, a);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"this is static internal %d\n"</span>, func_internal_s());</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;    </div><div class="line"></div><div class="line">}</div></pre></td></tr></table></figure>
-<figure class="highlight c"><figcaption><span> component_a/func_internal.c</span><a href="/downloads/code/link2steps/component_a/func_internal.c">view raw</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"functions.h"</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">func_internal</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">{</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
-<figure class="highlight c"><figcaption><span> component_b/func_b.c</span><a href="/downloads/code/link2steps/component_b/func_b.c">view raw</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"functions.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"func_internal.h"</span></span></div><div class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">func_internal_s</span><span class="params">(<span class="keyword">int</span> a)</span></span></div><div class="line">{</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"func B %d\n"</span>, a);</div><div class="line">    <span class="keyword">return</span> a;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">func_b</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">{</div><div class="line">    <span class="keyword">int</span> a = func_internal(<span class="number">100</span>);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"this is func b. %d"</span>, a);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"internal func %d\n."</span>, func_internal_s(<span class="number">-100</span>));</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;    </div><div class="line"></div><div class="line">}</div></pre></td></tr></table></figure>
-<figure class="highlight c"><figcaption><span> component_b/func_internal.c</span><a href="/downloads/code/link2steps/component_b/func_internal.c">view raw</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"functions.h"</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">func_internal</span><span class="params">(<span class="keyword">int</span> a)</span></span></div><div class="line">{</div><div class="line">    <span class="keyword">return</span> a;</div><div class="line">}</div></pre></td></tr></table></figure>
+<p><a href="https://github.com/WuChenxu/C/tree/master/link2step" target="_blank" rel="noopener">demo in github</a><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── README.md</span><br><span class="line">├── component_a</span><br><span class="line">│   ├── exported_sym.list</span><br><span class="line">│   ├── func_a.c</span><br><span class="line">│   ├── func_internal.c</span><br><span class="line">│   ├── func_internal.h</span><br><span class="line">│   ├── functions.h</span><br><span class="line">│   ├── makefile</span><br><span class="line">│   └── redefine.syms</span><br><span class="line">├── component_b</span><br><span class="line">│   ├── exported_sym.list</span><br><span class="line">│   ├── func_b.c</span><br><span class="line">│   ├── func_internal.c</span><br><span class="line">│   ├── func_internal.h</span><br><span class="line">│   ├── functions.h</span><br><span class="line">│   └── makefile</span><br><span class="line">├── makefile</span><br><span class="line">├── obj</span><br><span class="line">└── os</span><br><span class="line">    ├── exported_sym.list</span><br><span class="line">    ├── main.c</span><br><span class="line">    └── makefile</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight c"><figcaption><span> component_a/func_a.c</span><a href="/downloads/code/link2steps/component_a/func_a.c">view raw</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"functions.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"func_internal.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">func_internal_s</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line"><span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">func_a</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">   <span class="keyword">int</span> a = func_internal();</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"this is func a. %d\n"</span>, a);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"this is static internal %d\n"</span>, func_internal_s());</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;    </span><br><span class="line"></span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><figcaption><span> component_a/func_internal.c</span><a href="/downloads/code/link2steps/component_a/func_internal.c">view raw</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"functions.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">func_internal</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><figcaption><span> component_b/func_b.c</span><a href="/downloads/code/link2steps/component_b/func_b.c">view raw</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"functions.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"func_internal.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">func_internal_s</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"func B %d\n"</span>, a);</span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">func_b</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">int</span> a = func_internal(<span class="number">100</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"this is func b. %d"</span>, a);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"internal func %d\n."</span>, func_internal_s(<span class="number">-100</span>));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;    </span><br><span class="line"></span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><figcaption><span> component_b/func_internal.c</span><a href="/downloads/code/link2steps/component_b/func_internal.c">view raw</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"functions.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">func_internal</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 <h1 id="how"><a href="#how" class="headerlink" title="how"></a>how</h1><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><ol>
 <li><p>由于有文件重名，所以不能每个<code>.c</code>单独编译成<code>.o</code>，然后再链接；<br>出现两个同名的<code>.o</code>，要不然链接器报错，要不然只用了其中一个<code>.o</code>，这样会导致运行时异常。</p>
 </li>
 <li><p>由于有函数重名，且函数没有申明为局部，链接的时候必然会出现错误：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">duplicate symbol _func_internal <span class="keyword">in</span>:</div><div class="line">    component_a/func_internal<span class="selector-class">.o</span></div><div class="line">    component_b/func_internal.o</div></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">duplicate symbol _func_internal <span class="keyword">in</span>:</span><br><span class="line">    component_a/func_internal.o</span><br><span class="line">    component_b/func_internal.o</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h3><p>本文采用的方法：<br>每个模块单独编译成一个<code>.o</code>文件。</p>
 <p>其他方法：</p>
 <ol>
 <li>重名文件改名；重名函数改名；局部函数申明为static。</li>
-<li>定义函数时定义visibility属性（GUN only）<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">__attribute__((<span class="name">visibility</span>(<span class="string">"hidden"</span>)))</div></pre></td></tr></table></figure>
+<li>定义函数时定义visibility属性（GUN only）<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">__attribute__((<span class="name">visibility</span>(<span class="string">"hidden"</span>)))</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>本文采用的方法：</p>
 <p><code>-exported_symbols_list filename</code>(Mac) 或者 <code>--retain-symbols-file=filename</code>(linux)</p>
-<figure class="highlight plain"><figcaption><span>link all the .o in each component to one .o file; and only export symbols in the list</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ld -r -exported_symbols_list exported_sym.list $&#123;OBJECTS&#125;  -o $&#123;TARGET&#125;.o</div></pre></td></tr></table></figure>
-<img src="/2018/04/15/integrate-files-with-same-name-same-function-in-C/ld.png" alt="ld.png" title="">
+<figure class="highlight plain"><figcaption><span>link all the .o in each component to one .o file; and only export symbols in the list</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ld -r -exported_symbols_list exported_sym.list $&#123;OBJECTS&#125;  -o $&#123;TARGET&#125;.o</span><br></pre></td></tr></table></figure>
+<img src="/2018/04/15/integrate-files-with-same-name-same-function-in-C/ld.png">
 <p>其实是强制将符号表里的全局符号(<code>T</code>)变成了局部符号(<code>t</code>)，这样除了列表文件里的函数，其他对外均不可见。</p>
 <p>其他方法：</p>
 <ol>
 <li><p>gcc在链接时设置 -fvisibility=hidden，则不加 visibility声明的都默认为hidden; gcc默认设置 -fvisibility=default，即全部可见；</p>
 </li>
 <li><p>使用export map，gcc -Wl,–version-script=export.map, 在export.map中指定</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"></div><div class="line"><span class="attribute">global</span>:export_func;</div><div class="line"></div><div class="line"><span class="attribute">local</span>:*;</div><div class="line"></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"></span><br><span class="line"><span class="attribute">global</span>:export_func;</span><br><span class="line"></span><br><span class="line"><span class="attribute">local</span>:*;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h3 id="objcopy"><a href="#objcopy" class="headerlink" title="objcopy"></a>objcopy</h3><ol>
@@ -491,47 +627,41 @@
 </ol>
 <p>Reference：</p>
 <ol>
-<li><a href="https://developer.apple.com/library/content/technotes/tn2185/_index.html#//apple_ref/doc/uid/DTS10004200-CH1-SUBSECTION5" target="_blank" rel="external">Choosing Visibility Options for Mac</a></li>
-<li><a href="https://www.ibm.com/developerworks/aix/library/au-aix-symbol-visibility/index.html" target="_blank" rel="external">Introduction to symbol visibility</a></li>
-<li><a href="http://www.man7.org/linux/man-pages/man1/ld.1.html" target="_blank" rel="external">man ld</a></li>
-<li><a href="http://www.it1352.com/539295.html" target="_blank" rel="external">将两个GCC编译的.o目标文件合并到第三个.o文件中</a></li>
-<li><a href="https://stackoverflow.com/questions/1506346/with-gcc-how-do-i-export-only-certain-functions-in-a-static-library" target="_blank" rel="external">export obly centain functioins in a static lib</a></li>
-<li><a href="https://gcc.gnu.org/wiki/Visibility" target="_blank" rel="external">visibility of GCC</a></li>
+<li><a href="https://developer.apple.com/library/content/technotes/tn2185/_index.html#//apple_ref/doc/uid/DTS10004200-CH1-SUBSECTION5" target="_blank" rel="noopener">Choosing Visibility Options for Mac</a></li>
+<li><a href="https://www.ibm.com/developerworks/aix/library/au-aix-symbol-visibility/index.html" target="_blank" rel="noopener">Introduction to symbol visibility</a></li>
+<li><a href="http://www.man7.org/linux/man-pages/man1/ld.1.html" target="_blank" rel="noopener">man ld</a></li>
+<li><a href="http://www.it1352.com/539295.html" target="_blank" rel="noopener">将两个GCC编译的.o目标文件合并到第三个.o文件中</a></li>
+<li><a href="https://stackoverflow.com/questions/1506346/with-gcc-how-do-i-export-only-certain-functions-in-a-static-library" target="_blank" rel="noopener">export obly centain functioins in a static lib</a></li>
+<li><a href="https://gcc.gnu.org/wiki/Visibility" target="_blank" rel="noopener">visibility of GCC</a></li>
 </ol>
 
       
     </div>
 
-    <div>
-      
-        
+    
 
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-        
+    
 
+    
       
-    </div>
+    
+    
 
-    <div>
-      
-        
-
-      
-    </div>
+    
 
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/software/" <i class="fa fa-tag"></i> software</a>
+            <a href="/tags/software/" rel="tag"># software</a>
           
-            <a href="/tags/build/" <i class="fa fa-tag"></i> build</a>
+            <a href="/tags/build/" rel="tag"># build</a>
           
-            <a href="/tags/c-lang/" <i class="fa fa-tag"></i> c-lang</a>
+            <a href="/tags/c-lang/" rel="tag"># c-lang</a>
           
         </div>
       
@@ -565,31 +695,25 @@
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
           </div>
           
 
+  
+    <div class="comments" id="comments">
+    </div>
 
-          
-  <div class="comments" id="comments">
-    
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
-  </div>
+  
+
 
 
         </div>
@@ -612,104 +736,390 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
             站点概览
           </li>
         </ul>
       
 
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/avatar.png"
-               alt="WuChenxu" />
-          <p class="site-author-name" itemprop="name">WuChenxu</p>
-           
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="WU Chenxu">
+            
+              <p class="site-author-name" itemprop="name">WU Chenxu</p>
               <p class="site-description motion-element" itemprop="description">一切都会成为过去</p>
-          
-        </div>
-        <nav class="site-state motion-element">
+          </div>
 
           
-            <div class="site-state-item site-state-posts">
-              <a href="/archives/">
-                <span class="site-state-item-count">70</span>
-                <span class="site-state-item-name">日志</span>
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">70</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">41</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">86</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
               </a>
             </div>
           
 
           
-            
-            
-            <div class="site-state-item site-state-categories">
+            <div class="links-of-author motion-element">
               
-                <span class="site-state-item-count">43</span>
-                <span class="site-state-item-name">分类</span>
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/WuChenxu" title="GitHub &rarr; https://github.com/WuChenxu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:wu_chenxu@126.com" title="E-Mail &rarr; mailto:wu_chenxu@126.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
               
             </div>
           
 
           
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">88</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
+             <div class="cc-license motion-element" itemprop="license">
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
           
 
-        </nav>
+          
+          
 
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
-        
-
-        <div class="links-of-author motion-element">
           
             
-              <span class="links-of-author-item">
-                <a href="https://github.com/WuChenxu" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
           
+          
+
         </div>
-
-        
-        
-          <div class="cc-license motion-element" itemprop="license">
-            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
-              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
-            </a>
-          </div>
-        
-
-        
-        
-
-        
-
-
-      </section>
+      </div>
 
       
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
@@ -721,7 +1131,7 @@
             
 
           </div>
-        </section>
+        </div>
       <!--/noindex-->
       
 
@@ -737,35 +1147,59 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2015 - 
-  <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+        <div class="copyright">&copy; 2015 – <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">WuChenxu</span>
+  <span class="author" itemprop="copyrightHolder">WU Chenxu</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">224k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    
+    <span title="站点阅读时长">3:24</span>
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动</div>
 
 
 
   <span class="post-meta-divider">|</span>
-  <span>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a></div>
+
+
+
+  <div class="footer-custom">Hosted by <a href="https://pages.coding.me" class="theme-link" rel="noopener" target="_blank">Coding Pages</a></div>
 
 
         
+
+
+
+
+
+
+
 
         
       </div>
@@ -778,11 +1212,16 @@
       </div>
     
 
+    
+
+    
+
+    
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -796,101 +1235,6 @@
 
 
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
-
-
-
-  
-
-
-  
-
-    
-      <script id="dsq-count-scr" src="https://wuchenxu.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://www.wuchenxu.com/2018/04/15/integrate-files-with-same-name-same-function-in-C/';
-          this.page.identifier = '2018/04/15/integrate-files-with-same-name-same-function-in-C/';
-          this.page.title = '软件开发(3):软件集成重名解决方案';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://wuchenxu.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
-
-
-
-	
-
-
 
 
 
@@ -903,9 +1247,110 @@
 
 
 
+
+
+
+
+
+
+
+  
+  
+    <script src="/lib/jquery/index.js?v=2.1.3"></script>
   
 
-  <script type="text/javascript">
+  
+  
+    <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.6.0"></script>
+
+  <script src="/js/src/motion.js?v=6.6.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.6.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.6.0"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script src="/js/src/post-details.js?v=6.6.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.6.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+  <script>
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'cUCWv4VRYjKGSICWV819XA6C-gzGzoHsz',
+        appKey: 'wwuXS4PSgyQdr8sHb2OVteKd',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'6' || 10,
+        visitor: false
+    });
+  </script>
+
+
+
+
+  
+
+  <script>
     // Popup Window;
     var isfetched = false;
     var isXml = true;
@@ -954,6 +1399,8 @@
         .css('overflow', 'hidden');
       $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
 
+      
+
       $.ajax({
         url: path,
         dataType: isXml ? "xml" : "json",
@@ -987,6 +1434,7 @@
                 var title = data.title.trim();
                 var titleInLowerCase = title.toLowerCase();
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
                 var contentInLowerCase = content.toLowerCase();
                 var articleUrl = decodeURIComponent(data.url);
                 var indexOfTitle = [];
@@ -1233,30 +1681,135 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
 
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
         for (i=0; i < all.length; i += 1) {
           all[i].SourceElement().parentNode.className += ' has-jax';
         }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+    overflow: auto hidden;
+}
+</style>
+
+    
   
 
 
   
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function () {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
 
   
 

@@ -1,1649 +1,214 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-
-    
   <url>
-    <loc>http://www.wuchenxu.com/2017/09/21/hype-cycle/</loc>
+    <loc>https://www.wuchenxu.com/2015/11/05/Static-Blog-hexo-github-2-config-hexo/</loc>
+    <lastmod>2018-12-23T09:56:17.872Z</lastmod>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2015/11/09/Static-Blog-hexo-github-3-config-theme/</loc>
+    <lastmod>2018-12-23T09:55:41.490Z</lastmod>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/04/28/Static-Blog-hexo-github-8-binding-domain/</loc>
+    <lastmod>2018-12-23T08:02:21.000Z</lastmod>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2015/11/04/Static-Blog-hexo-github-1-Start/</loc>
+    <lastmod>2018-12-23T06:26:43.319Z</lastmod>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2017/09/21/hype-cycle/</loc>
     <lastmod>2018-12-08T09:21:33.742Z</lastmod>
-    <data>
-        <display>
-        <title>技术炒作周期(Hype Cycle)</title>
-        <pubTime>2017-09-21T12:38:54.000Z</pubTime>
-        
-        <tag>technical</tag>
-         
-         
-           
-             
-              <breadCrumb title="technical" url="http://www.wuchenxu.com/categories/technical/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2018/05/11/safety-and-security/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2018/05/11/safety-and-security/</loc>
     <lastmod>2018-05-11T15:23:04.237Z</lastmod>
-    <data>
-        <display>
-        <title>functional safety and cyber security</title>
-        <pubTime>2018-05-11T14:03:39.000Z</pubTime>
-        
-        <tag>safety</tag>
-         
-        <tag>security</tag>
-         
-         
-           
-             
-              <breadCrumb title="safety" url="http://www.wuchenxu.com/categories/safety/"/>
-          
-             
-              <breadCrumb title="security" url="http://www.wuchenxu.com/categories/safety/security/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2018/04/15/integrate-files-with-same-name-same-function-in-C/</loc>
-    <lastmod>2018-04-15T14:03:58.670Z</lastmod>
-    <data>
-        <display>
-        <title>软件开发(3):软件集成重名解决方案</title>
-        <pubTime>2018-04-15T09:55:16.000Z</pubTime>
-        
-        <tag>software</tag>
-         
-        <tag>build</tag>
-         
-        <tag>c-lang</tag>
-         
-         
-           
-             
-              <breadCrumb title="software" url="http://www.wuchenxu.com/categories/software/"/>
-          
-             
-              <breadCrumb title="build" url="http://www.wuchenxu.com/categories/software/build/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2018/02/04/machine_learning_notes/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2018/04/15/integrate-files-with-same-name-same-function-in-C/</loc>
+    <lastmod>2018-04-15T14:03:58.671Z</lastmod>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2018/02/04/machine_learning_notes/</loc>
     <lastmod>2018-02-25T14:56:46.597Z</lastmod>
-    <data>
-        <display>
-        <title>Machine Learning笔记</title>
-        <pubTime>2018-02-04T12:38:54.000Z</pubTime>
-        
-        <tag>AI</tag>
-         
-         
-           
-             
-              <breadCrumb title="AI" url="http://www.wuchenxu.com/categories/AI/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2017/12/31/ABZ-Plan/</loc>
-    <lastmod>2017-12-31T15:45:43.892Z</lastmod>
-    <data>
-        <display>
-        <title>ABZ计划</title>
-        <pubTime>2017-12-31T12:38:54.000Z</pubTime>
-        
-        <tag>management</tag>
-         
-         
-           
-             
-              <breadCrumb title="management" url="http://www.wuchenxu.com/categories/management/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/07/01/matplotlib-1-introduction/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2017/12/31/ABZ-Plan/</loc>
+    <lastmod>2017-12-31T15:45:43.893Z</lastmod>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/07/01/matplotlib-1-introduction/</loc>
     <lastmod>2017-08-31T14:26:04.000Z</lastmod>
-    <data>
-        <display>
-        <title>matplotlib(1):简介</title>
-        <pubTime>2016-07-01T13:11:08.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>matplotlib</tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="http://www.wuchenxu.com/categories/python/"/>
-          
-             
-              <breadCrumb title="tool" url="http://www.wuchenxu.com/categories/python/tool/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/01/07/Automative-lead-acid-battery-charging-voltage/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/01/07/Automative-lead-acid-battery-charging-voltage/</loc>
     <lastmod>2017-08-30T12:23:03.000Z</lastmod>
-    <data>
-        <display>
-        <title>汽车电池</title>
-        <pubTime>2016-01-07T11:52:35.000Z</pubTime>
-        
-        <tag>Automotive</tag>
-         
-        <tag>Battery</tag>
-         
-         
-           
-             
-              <breadCrumb title="Automotive" url="http://www.wuchenxu.com/categories/Automotive/"/>
-          
-             
-              <breadCrumb title="Battery" url="http://www.wuchenxu.com/categories/Automotive/Battery/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2017/05/05/reading-notes-2-practice-guide-for-frontline-architects/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2017/05/05/reading-notes-2-practice-guide-for-frontline-architects/</loc>
     <lastmod>2017-07-16T13:18:06.000Z</lastmod>
-    <data>
-        <display>
-        <title>一线架构师实践指南 by 温昱</title>
-        <pubTime>2017-05-05T15:54:00.000Z</pubTime>
-        
-        <tag>technical</tag>
-         
-        <tag>reading-notes</tag>
-         
-         
-           
-             
-              <breadCrumb title="reading-notes" url="http://www.wuchenxu.com/categories/reading-notes/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2015/11/19/markdown-usage/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2015/11/19/markdown-usage/</loc>
     <lastmod>2017-07-16T13:18:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>标记语言Markdown使用说明</title>
-        <pubTime>2015-11-19T15:23:00.000Z</pubTime>
-        
-        <tag>Markdown</tag>
-         
-         
-           
-             
-              <breadCrumb title="Markdown" url="http://www.wuchenxu.com/categories/Markdown/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2017/02/27/software-design-2-variant-handling/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2017/02/27/software-design-2-variant-handling/</loc>
     <lastmod>2017-07-16T13:17:58.000Z</lastmod>
-    <data>
-        <display>
-        <title>software development(2):variant handling</title>
-        <pubTime>2017-02-27T13:11:23.000Z</pubTime>
-        
-        <tag>software</tag>
-         
-         
-           
-             
-              <breadCrumb title="software" url="http://www.wuchenxu.com/categories/software/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2017/03/19/Rust-lang-4-std-fmt/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2017/03/19/Rust-lang-4-std-fmt/</loc>
     <lastmod>2017-07-16T13:17:56.000Z</lastmod>
-    <data>
-        <display>
-        <title>Rust语言(4):格式化输出</title>
-        <pubTime>2017-03-19T12:35:24.000Z</pubTime>
-        
-        <tag>Rust</tag>
-         
-        <tag>Python</tag>
-         
-        <tag>fmt</tag>
-         
-         
-           
-             
-              <breadCrumb title="Rust" url="http://www.wuchenxu.com/categories/Rust/"/>
-          
-             
-              <breadCrumb title="Python" url="http://www.wuchenxu.com/categories/Rust/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2017/02/15/TeX-2-MacTex/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2017/02/15/TeX-2-MacTex/</loc>
     <lastmod>2017-07-16T13:17:53.000Z</lastmod>
-    <data>
-        <display>
-        <title>TeX(2):Mac下安装TeX</title>
-        <pubTime>2017-02-15T13:37:13.000Z</pubTime>
-        
-        <tag>TeX</tag>
-         
-         
-           
-             
-              <breadCrumb title="TeX" url="http://www.wuchenxu.com/categories/TeX/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2017/01/16/software-design-1-state-machine/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2017/01/16/software-design-1-state-machine/</loc>
     <lastmod>2017-07-16T13:17:51.000Z</lastmod>
-    <data>
-        <display>
-        <title>软件开发(1):state machine</title>
-        <pubTime>2017-01-16T13:23:45.000Z</pubTime>
-        
-        <tag>software</tag>
-         
-        <tag>design</tag>
-         
-         
-           
-             
-              <breadCrumb title="software" url="http://www.wuchenxu.com/categories/software/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2017/02/15/Static-Blog-hexo-github-9-local-search/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2017/02/15/Static-Blog-hexo-github-9-local-search/</loc>
     <lastmod>2017-07-16T13:17:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>个人博客搭建hexo+github(9):本地搜索</title>
-        <pubTime>2017-02-15T15:14:57.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>github</tag>
-         
-        <tag>blog</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="http://www.wuchenxu.com/categories/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/06/28/MathJax-1-introduction/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/06/28/MathJax-1-introduction/</loc>
     <lastmod>2017-07-16T13:17:45.000Z</lastmod>
-    <data>
-        <display>
-        <title>MathJax(1):简介</title>
-        <pubTime>2016-06-28T14:17:45.000Z</pubTime>
-        
-        <tag>MathJax</tag>
-         
-        <tag>TeX</tag>
-         
-         
-           
-             
-              <breadCrumb title="MathJax" url="http://www.wuchenxu.com/categories/MathJax/"/>
-          
-             
-              <breadCrumb title="tool" url="http://www.wuchenxu.com/categories/MathJax/tool/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/03/02/IP-code-degree-of-protection-by-enclosure/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/03/02/IP-code-degree-of-protection-by-enclosure/</loc>
     <lastmod>2017-07-16T13:17:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>防护等级IP代码</title>
-        <pubTime>2016-03-02T12:30:42.000Z</pubTime>
-        
-        <tag>IP code</tag>
-         
-        <tag>IEC</tag>
-         
-         
-           
-             
-              <breadCrumb title="standard" url="http://www.wuchenxu.com/categories/standard/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/04/28/Static-Blog-hexo-github-8-binding-domain/</loc>
-    <lastmod>2017-07-16T13:17:40.000Z</lastmod>
-    <data>
-        <display>
-        <title>个人博客搭建hexo+github(8):独立域名绑定github</title>
-        <pubTime>2016-04-28T11:43:26.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>github</tag>
-         
-        <tag>DNS</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="http://www.wuchenxu.com/categories/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2017/01/30/reading-notes-1-history-of-humankind/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2017/01/30/reading-notes-1-history-of-humankind/</loc>
     <lastmod>2017-07-16T13:17:38.000Z</lastmod>
-    <data>
-        <display>
-        <title>人类简史：从动物到上帝 by 尤瓦尔·赫拉利</title>
-        <pubTime>2017-01-30T05:09:04.000Z</pubTime>
-        
-        <tag>reading-notes</tag>
-         
-        <tag>history</tag>
-         
-         
-           
-             
-              <breadCrumb title="reading-notes" url="http://www.wuchenxu.com/categories/reading-notes/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2017/01/25/Rust-lang-3-crate/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2017/01/25/Rust-lang-3-crate/</loc>
     <lastmod>2017-07-16T13:17:36.000Z</lastmod>
-    <data>
-        <display>
-        <title>Rust语言(3):引用依赖库</title>
-        <pubTime>2017-01-25T14:13:03.000Z</pubTime>
-        
-        <tag>Rust</tag>
-         
-        <tag>crate</tag>
-         
-         
-           
-             
-              <breadCrumb title="Rust" url="http://www.wuchenxu.com/categories/Rust/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/09/13/Rust-lang-2-Cargo/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/09/13/Rust-lang-2-Cargo/</loc>
     <lastmod>2017-07-16T13:17:33.000Z</lastmod>
-    <data>
-        <display>
-        <title>Rust语言(2):Cargo</title>
-        <pubTime>2016-09-13T13:59:05.000Z</pubTime>
-        
-        <tag>Rust</tag>
-         
-        <tag>Cargo</tag>
-         
-         
-           
-             
-              <breadCrumb title="Rust" url="http://www.wuchenxu.com/categories/Rust/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2017/01/11/how-to-develop-a-product/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2017/01/11/how-to-develop-a-product/</loc>
     <lastmod>2017-07-16T13:17:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>怎样开发一个产品</title>
-        <pubTime>2017-01-11T14:02:34.000Z</pubTime>
-        
-        <tag>idea</tag>
-         
-         
-           
-             
-              <breadCrumb title="product" url="http://www.wuchenxu.com/categories/product/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2015/11/29/byte-bit-endian/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2015/11/29/byte-bit-endian/</loc>
     <lastmod>2017-07-16T13:16:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>字节序与大小端</title>
-        <pubTime>2015-11-29T13:08:43.000Z</pubTime>
-        
-        <tag>encoding</tag>
-         
-        <tag>software</tag>
-         
-        <tag>byte order</tag>
-         
-        <tag>bit order</tag>
-         
-        <tag>Motorola</tag>
-         
-        <tag>Intel</tag>
-         
-        <tag>MSB</tag>
-         
-        <tag>LSB</tag>
-         
-         
-           
-             
-              <breadCrumb title="encoding" url="http://www.wuchenxu.com/categories/encoding/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/11/20/Conways-law/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/11/20/Conways-law/</loc>
     <lastmod>2017-07-16T13:16:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>康威定律（Conway's law）</title>
-        <pubTime>2016-11-20T14:37:54.000Z</pubTime>
-        
-        <tag>architecture</tag>
-         
-        <tag>programmer</tag>
-         
-         
-           
-             
-              <breadCrumb title="software" url="http://www.wuchenxu.com/categories/software/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/07/12/software-filtering-algorithm-and-frequency-response/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/07/12/software-filtering-algorithm-and-frequency-response/</loc>
     <lastmod>2017-07-16T13:16:54.000Z</lastmod>
-    <data>
-        <display>
-        <title>软件滤波算法的频率响应</title>
-        <pubTime>2016-07-11T17:03:42.000Z</pubTime>
-        
-        <tag>software</tag>
-         
-        <tag>filter</tag>
-         
-         
-           
-             
-              <breadCrumb title="filter" url="http://www.wuchenxu.com/categories/filter/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/09/28/TeX-1-introduction/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/09/28/TeX-1-introduction/</loc>
     <lastmod>2017-07-16T13:16:51.000Z</lastmod>
-    <data>
-        <display>
-        <title>TeX(1):简介</title>
-        <pubTime>2016-09-28T12:44:27.000Z</pubTime>
-        
-        <tag>TeX</tag>
-         
-         
-           
-             
-              <breadCrumb title="TeX" url="http://www.wuchenxu.com/categories/TeX/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/09/17/windows-cmd-18-tree/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/09/17/windows-cmd-18-tree/</loc>
     <lastmod>2017-07-16T13:16:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>windows command(18):打印目录结构tree</title>
-        <pubTime>2016-09-17T06:30:33.000Z</pubTime>
-        
-        <tag>cmd</tag>
-         
-        <tag>tree</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/09/12/Rust-lang-1-hello-world/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/09/12/Rust-lang-1-hello-world/</loc>
     <lastmod>2017-07-16T13:16:46.000Z</lastmod>
-    <data>
-        <display>
-        <title>Rust语言(1):hello world</title>
-        <pubTime>2016-09-12T13:56:20.000Z</pubTime>
-        
-        <tag>Rust</tag>
-         
-         
-           
-             
-              <breadCrumb title="Rust" url="http://www.wuchenxu.com/categories/Rust/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/09/08/MathJax-2-using-in-hexo-markdown/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/09/08/MathJax-2-using-in-hexo-markdown/</loc>
     <lastmod>2017-07-16T13:16:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>MathJax(2):Markdown中使用MathJax</title>
-        <pubTime>2016-09-08T12:44:27.000Z</pubTime>
-        
-        <tag>Markdown</tag>
-         
-        <tag>MathJax</tag>
-         
-         
-           
-             
-              <breadCrumb title="MathJax" url="http://www.wuchenxu.com/categories/MathJax/"/>
-          
-             
-              <breadCrumb title="tool" url="http://www.wuchenxu.com/categories/MathJax/tool/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/12/18/windows-cmd-20-date-time/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/12/18/windows-cmd-20-date-time/</loc>
     <lastmod>2017-07-16T13:16:40.000Z</lastmod>
-    <data>
-        <display>
-        <title>windows command(20):date time</title>
-        <pubTime>2016-12-18T12:32:28.000Z</pubTime>
-        
-        <tag>cmd</tag>
-         
-        <tag>date</tag>
-         
-        <tag>time</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/12/07/windows-cmd-19-color/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/12/07/windows-cmd-19-color/</loc>
     <lastmod>2017-07-16T13:16:38.000Z</lastmod>
-    <data>
-        <display>
-        <title>windows command(19):console颜色 color</title>
-        <pubTime>2016-12-07T12:32:28.000Z</pubTime>
-        
-        <tag>cmd</tag>
-         
-        <tag>color</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2015/12/03/CAN-byte-order/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2015/12/03/CAN-byte-order/</loc>
     <lastmod>2017-07-16T13:15:41.000Z</lastmod>
-    <data>
-        <display>
-        <title>CAN总线字节序</title>
-        <pubTime>2015-12-03T12:14:13.000Z</pubTime>
-        
-        <tag>encoding</tag>
-         
-        <tag>software</tag>
-         
-        <tag>byte order</tag>
-         
-        <tag>bit order</tag>
-         
-        <tag>Motorola</tag>
-         
-        <tag>Intel</tag>
-         
-        <tag>MSB</tag>
-         
-        <tag>LSB</tag>
-         
-         
-           
-             
-              <breadCrumb title="encoding" url="http://www.wuchenxu.com/categories/encoding/"/>
-          
-             
-              <breadCrumb title="CAN" url="http://www.wuchenxu.com/categories/encoding/CAN/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/01/21/character-encodings-introduce/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/01/21/character-encodings-introduce/</loc>
     <lastmod>2017-07-16T13:15:38.000Z</lastmod>
-    <data>
-        <display>
-        <title>编码字符集</title>
-        <pubTime>2016-01-21T06:59:51.000Z</pubTime>
-        
-        <tag>encoding</tag>
-         
-        <tag>charset</tag>
-         
-        <tag>unicode</tag>
-         
-        <tag>GB2312</tag>
-         
-         
-           
-             
-              <breadCrumb title="charset" url="http://www.wuchenxu.com/categories/charset/"/>
-          
-             
-              <breadCrumb title="encoding" url="http://www.wuchenxu.com/categories/charset/encoding/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2015/12/07/CRC8-calculate/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2015/12/07/CRC8-calculate/</loc>
     <lastmod>2017-07-16T13:15:32.000Z</lastmod>
-    <data>
-        <display>
-        <title>CRC8计算</title>
-        <pubTime>2015-12-07T15:13:08.000Z</pubTime>
-        
-        <tag>CRC</tag>
-         
-         
-           
-             
-              <breadCrumb title="checksum" url="http://www.wuchenxu.com/categories/checksum/"/>
-          
-             
-              <breadCrumb title="CRC" url="http://www.wuchenxu.com/categories/checksum/CRC/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/03/30/windows-cmd-9-find-findstr/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/03/30/windows-cmd-9-find-findstr/</loc>
     <lastmod>2017-07-16T13:15:29.000Z</lastmod>
-    <data>
-        <display>
-        <title>windows command(9):FIND FINDSTR</title>
-        <pubTime>2016-03-30T12:06:28.000Z</pubTime>
-        
-        <tag>cmd</tag>
-         
-        <tag>find</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2015/11/23/Static-Blog-hexo-github-5-hexo-usage-trick/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2015/11/23/Static-Blog-hexo-github-5-hexo-usage-trick/</loc>
     <lastmod>2017-07-16T13:15:25.000Z</lastmod>
-    <data>
-        <display>
-        <title>个人博客搭建hexo+github(5):Hexo写作实用技巧</title>
-        <pubTime>2015-11-23T14:06:58.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>github</tag>
-         
-        <tag>blog</tag>
-         
-        <tag>music</tag>
-         
-        <tag>video</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="http://www.wuchenxu.com/categories/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/04/01/windows-cmd-17-multiple-thread/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/04/01/windows-cmd-17-multiple-thread/</loc>
     <lastmod>2017-07-16T13:15:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>windows command(17):多线程 start call cmd</title>
-        <pubTime>2016-04-01T06:32:28.000Z</pubTime>
-        
-        <tag>cmd</tag>
-         
-        <tag>start</tag>
-         
-        <tag>call</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/06/01/humidity/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/06/01/humidity/</loc>
     <lastmod>2017-07-16T13:15:17.000Z</lastmod>
-    <data>
-        <display>
-        <title>湿度humidity</title>
-        <pubTime>2016-06-01T08:12:30.000Z</pubTime>
-        
-        <tag>humidity</tag>
-         
-         
-           
-             
-              <breadCrumb title="气象" url="http://www.wuchenxu.com/categories/%E6%B0%94%E8%B1%A1/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/05/12/hamming-distance/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/05/12/hamming-distance/</loc>
     <lastmod>2017-07-16T13:15:14.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hamming Distance</title>
-        <pubTime>2016-05-12T13:32:44.000Z</pubTime>
-        
-        <tag>hamming-distance</tag>
-         
-         
-           
-             
-              <breadCrumb title="distance" url="http://www.wuchenxu.com/categories/distance/"/>
-          
-             
-              <breadCrumb title="coding" url="http://www.wuchenxu.com/categories/distance/coding/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/03/08/jenkins-auto-deploy-hexo/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/03/08/jenkins-auto-deploy-hexo/</loc>
     <lastmod>2017-07-16T13:15:12.000Z</lastmod>
-    <data>
-        <display>
-        <title>Jenkins自动部署hexo到github</title>
-        <pubTime>2016-03-08T13:27:52.000Z</pubTime>
-        
-        <tag>CI</tag>
-         
-        <tag>Jenkins</tag>
-         
-         
-           
-             
-              <breadCrumb title="CI" url="http://www.wuchenxu.com/categories/CI/"/>
-          
-             
-              <breadCrumb title="Jenkins" url="http://www.wuchenxu.com/categories/CI/Jenkins/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/04/26/python-srcipt-embedded-in-bat/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/04/26/python-srcipt-embedded-in-bat/</loc>
     <lastmod>2017-07-16T13:15:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>python脚本嵌入bat脚本执行</title>
-        <pubTime>2016-04-26T13:58:37.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>cmd</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-             
-              <breadCrumb title="python" url="http://www.wuchenxu.com/categories/windows-cmd/python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/04/01/windows-cmd-16-compound-command/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/04/01/windows-cmd-16-compound-command/</loc>
     <lastmod>2017-07-16T13:14:44.000Z</lastmod>
-    <data>
-        <display>
-        <title>windows command(16):组合命令 & |</title>
-        <pubTime>2016-04-01T06:29:48.000Z</pubTime>
-        
-        <tag>cmd</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/04/01/windows-cmd-15-shift/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/04/01/windows-cmd-15-shift/</loc>
     <lastmod>2017-07-16T13:14:41.000Z</lastmod>
-    <data>
-        <display>
-        <title>windows command(15):SHIFT及参数编辑符%~dp0</title>
-        <pubTime>2016-04-01T06:22:44.000Z</pubTime>
-        
-        <tag>cmd</tag>
-         
-        <tag>shift</tag>
-         
-        <tag>parameter</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/04/01/windows-cmd-14-set-setlocal-endlocal/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/04/01/windows-cmd-14-set-setlocal-endlocal/</loc>
     <lastmod>2017-07-16T13:14:38.000Z</lastmod>
-    <data>
-        <display>
-        <title>windows command(14):SET SETLOCAL ENDLOCAL</title>
-        <pubTime>2016-04-01T06:21:57.000Z</pubTime>
-        
-        <tag>cmd</tag>
-         
-        <tag>set</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/04/01/windows-cmd-13-goto/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/04/01/windows-cmd-13-goto/</loc>
     <lastmod>2017-07-16T13:14:35.000Z</lastmod>
-    <data>
-        <display>
-        <title>windows command(13):GOTO :label</title>
-        <pubTime>2016-04-01T06:20:22.000Z</pubTime>
-        
-        <tag>cmd</tag>
-         
-        <tag>goto</tag>
-         
-        <tag>label</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/04/01/windows-cmd-10-sort/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/04/01/windows-cmd-10-sort/</loc>
     <lastmod>2017-07-16T13:14:31.000Z</lastmod>
-    <data>
-        <display>
-        <title>windows command(10):SORT</title>
-        <pubTime>2016-04-01T06:10:59.000Z</pubTime>
-        
-        <tag>cmd</tag>
-         
-        <tag>sort</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/04/01/windows-cmd-11-if-else/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/04/01/windows-cmd-11-if-else/</loc>
     <lastmod>2017-07-16T13:14:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>windows command(11):IF ELSE</title>
-        <pubTime>2016-04-01T06:15:54.000Z</pubTime>
-        
-        <tag>cmd</tag>
-         
-        <tag>if</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/04/01/windows-cmd-12-for/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/04/01/windows-cmd-12-for/</loc>
     <lastmod>2017-07-16T13:14:24.000Z</lastmod>
-    <data>
-        <display>
-        <title>windows command(12):FOR</title>
-        <pubTime>2016-04-01T06:18:08.000Z</pubTime>
-        
-        <tag>cmd</tag>
-         
-        <tag>for</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/03/30/windows-cmd-8-move/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/03/30/windows-cmd-8-move/</loc>
     <lastmod>2017-07-16T13:13:58.000Z</lastmod>
-    <data>
-        <display>
-        <title>windows command(8):MOVE</title>
-        <pubTime>2016-03-30T11:50:41.000Z</pubTime>
-        
-        <tag>cmd</tag>
-         
-        <tag>move</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/03/28/windows-cmd-7-ren-replace/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/03/28/windows-cmd-7-ren-replace/</loc>
     <lastmod>2017-07-16T13:13:50.000Z</lastmod>
-    <data>
-        <display>
-        <title>windows command(7):RENAME REPLACE</title>
-        <pubTime>2016-03-28T14:30:38.000Z</pubTime>
-        
-        <tag>cmd</tag>
-         
-        <tag>rename</tag>
-         
-        <tag>replace</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/03/28/jpeg-rar/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/03/28/jpeg-rar/</loc>
     <lastmod>2017-07-16T13:13:35.000Z</lastmod>
-    <data>
-        <display>
-        <title>数据隐藏:jpeg+RAR</title>
-        <pubTime>2016-03-28T13:55:44.000Z</pubTime>
-        
-        <tag>data hiding</tag>
-         
-        <tag>data encrypt</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/03/09/windows-cmd-1-copy-xcopy-robocopy/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/03/09/windows-cmd-1-copy-xcopy-robocopy/</loc>
     <lastmod>2017-07-16T13:13:31.000Z</lastmod>
-    <data>
-        <display>
-        <title>windows command(1):COPY XCOPY ROBOCOPY</title>
-        <pubTime>2016-03-09T13:21:27.000Z</pubTime>
-        
-        <tag>cmd</tag>
-         
-        <tag>copy</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/03/26/windows-cmd-6-attrib/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/03/26/windows-cmd-6-attrib/</loc>
     <lastmod>2017-07-16T13:13:27.000Z</lastmod>
-    <data>
-        <display>
-        <title>windows command(6):ATTRIB</title>
-        <pubTime>2016-03-26T15:53:14.000Z</pubTime>
-        
-        <tag>cmd</tag>
-         
-        <tag>attrib</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/03/23/windows-cmd-4-echo/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/03/23/windows-cmd-4-echo/</loc>
     <lastmod>2017-07-16T13:13:22.000Z</lastmod>
-    <data>
-        <display>
-        <title>windows command(4):ECHO</title>
-        <pubTime>2016-03-23T15:50:56.000Z</pubTime>
-        
-        <tag>cmd</tag>
-         
-        <tag>echo</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/03/15/windows-cmd-3-dir-mkdir-rmdir-chdir/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/03/15/windows-cmd-3-dir-mkdir-rmdir-chdir/</loc>
     <lastmod>2017-07-16T13:13:18.000Z</lastmod>
-    <data>
-        <display>
-        <title>windows command(3):DIR MD RD CD</title>
-        <pubTime>2016-03-15T15:47:01.000Z</pubTime>
-        
-        <tag>cmd</tag>
-         
-        <tag>dir</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/03/15/windows-cmd-2-del-erase/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/03/15/windows-cmd-2-del-erase/</loc>
     <lastmod>2017-07-16T13:13:12.000Z</lastmod>
-    <data>
-        <display>
-        <title>windows command(2):DEL/ERASE</title>
-        <pubTime>2016-03-15T14:50:19.000Z</pubTime>
-        
-        <tag>cmd</tag>
-         
-        <tag>del</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/03/25/windows-cmd-5-type/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/03/25/windows-cmd-5-type/</loc>
     <lastmod>2017-07-16T13:13:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>windows command(5):TYPE</title>
-        <pubTime>2016-03-25T15:52:00.000Z</pubTime>
-        
-        <tag>cmd</tag>
-         
-        <tag>type</tag>
-         
-         
-           
-             
-              <breadCrumb title="windows cmd" url="http://www.wuchenxu.com/categories/windows-cmd/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2015/11/05/Static-Blog-hexo-github-2-config-hexo/</loc>
-    <lastmod>2017-07-16T13:12:10.000Z</lastmod>
-    <data>
-        <display>
-        <title>个人博客搭建hexo+github(2):配置hexo</title>
-        <pubTime>2015-11-05T13:23:54.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>github</tag>
-         
-        <tag>blog</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="http://www.wuchenxu.com/categories/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/03/01/code-coverage-in-unit-test/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/03/01/code-coverage-in-unit-test/</loc>
     <lastmod>2017-07-16T13:12:01.000Z</lastmod>
-    <data>
-        <display>
-        <title>单元测试中的代码覆盖率(Code Coverage in Unit Test)</title>
-        <pubTime>2016-03-01T12:33:50.000Z</pubTime>
-        
-        <tag>test</tag>
-         
-         
-           
-             
-              <breadCrumb title="code coverage" url="http://www.wuchenxu.com/categories/code-coverage/"/>
-          
-             
-              <breadCrumb title="unit test" url="http://www.wuchenxu.com/categories/code-coverage/unit-test/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2015/12/30/Markdown-html-compare/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2015/12/30/Markdown-html-compare/</loc>
     <lastmod>2017-07-16T13:11:53.000Z</lastmod>
-    <data>
-        <display>
-        <title>Markdown语法对应的HTML标签实现</title>
-        <pubTime>2015-12-30T06:09:11.000Z</pubTime>
-        
-        <tag>Markdown</tag>
-         
-        <tag>HTML</tag>
-         
-         
-           
-             
-              <breadCrumb title="Markdown" url="http://www.wuchenxu.com/categories/Markdown/"/>
-          
-             
-              <breadCrumb title="HTML" url="http://www.wuchenxu.com/categories/Markdown/HTML/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/01/27/Markdown-inline-css-compare/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/01/27/Markdown-inline-css-compare/</loc>
     <lastmod>2017-07-16T13:11:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>Markdown语法对应的CSS实现</title>
-        <pubTime>2016-01-27T15:00:05.000Z</pubTime>
-        
-        <tag>Markdown</tag>
-         
-        <tag>CSS</tag>
-         
-         
-           
-             
-              <breadCrumb title="Markdown" url="http://www.wuchenxu.com/categories/Markdown/"/>
-          
-             
-              <breadCrumb title="CSS" url="http://www.wuchenxu.com/categories/Markdown/CSS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2016/01/14/charset-of-website/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/01/14/charset-of-website/</loc>
     <lastmod>2017-07-16T13:11:38.000Z</lastmod>
-    <data>
-        <display>
-        <title>Python获取网页编码</title>
-        <pubTime>2016-01-14T14:20:18.000Z</pubTime>
-        
-        <tag>encoding</tag>
-         
-        <tag>charset</tag>
-         
-        <tag>unicode</tag>
-         
-        <tag>python</tag>
-         
-        <tag>html</tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="http://www.wuchenxu.com/categories/python/"/>
-          
-             
-              <breadCrumb title="encoding" url="http://www.wuchenxu.com/categories/python/encoding/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2015/12/13/Static-Blog-hexo-github-7-display-updated-date/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2015/12/13/Static-Blog-hexo-github-7-display-updated-date/</loc>
     <lastmod>2017-07-16T13:11:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>个人博客搭建hexo+github(7):显示每篇文章的更新时间</title>
-        <pubTime>2015-12-13T12:18:54.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>github</tag>
-         
-        <tag>blog</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="http://www.wuchenxu.com/categories/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2015/12/08/Static-Blog-hexo-github-6-tag-plugins/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2015/12/08/Static-Blog-hexo-github-6-tag-plugins/</loc>
     <lastmod>2017-07-16T13:10:49.000Z</lastmod>
-    <data>
-        <display>
-        <title>个人博客搭建hexo+github(6):标签插件</title>
-        <pubTime>2015-12-08T13:56:39.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>github</tag>
-         
-        <tag>blog</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="http://www.wuchenxu.com/categories/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2015/11/09/Static-Blog-hexo-github-4-advanced/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2015/11/09/Static-Blog-hexo-github-4-advanced/</loc>
     <lastmod>2017-07-16T13:10:39.000Z</lastmod>
-    <data>
-        <display>
-        <title>个人博客搭建hexo+github(4):进阶配置</title>
-        <pubTime>2015-11-09T11:32:36.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>github</tag>
-         
-        <tag>blog</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="http://www.wuchenxu.com/categories/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2015/11/09/Static-Blog-hexo-github-3-config-theme/</loc>
-    <lastmod>2017-07-16T13:10:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>个人博客搭建hexo+github(3):主题配置</title>
-        <pubTime>2015-11-09T11:11:56.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>github</tag>
-         
-        <tag>blog</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="http://www.wuchenxu.com/categories/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2015/11/04/Static-Blog-hexo-github-1-Start/</loc>
-    <lastmod>2017-07-16T13:10:17.000Z</lastmod>
-    <data>
-        <display>
-        <title>个人博客搭建hexo+github(1):初体验</title>
-        <pubTime>2015-11-04T15:38:00.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>github</tag>
-         
-        <tag>blog</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="http://www.wuchenxu.com/categories/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2017/05/12/reading-notes-3-Facts-and-fallacies-of-software-engineering/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2017/05/12/reading-notes-3-Facts-and-fallacies-of-software-engineering/</loc>
     <lastmod>2017-07-16T13:09:51.000Z</lastmod>
-    <data>
-        <display>
-        <title>软件工程的事实与谬误 by Robert L·Glass</title>
-        <pubTime>2017-05-12T15:54:00.000Z</pubTime>
-        
-        <tag>technical</tag>
-         
-        <tag>reading-notes</tag>
-         
-         
-           
-             
-              <breadCrumb title="reading-notes" url="http://www.wuchenxu.com/categories/reading-notes/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2017/05/30/where-program-execute-in/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2017/05/30/where-program-execute-in/</loc>
     <lastmod>2017-07-16T12:05:41.000Z</lastmod>
-    <data>
-        <display>
-        <title>程序在哪里执行？</title>
-        <pubTime>2017-05-30T15:54:00.000Z</pubTime>
-        
-        <tag>software</tag>
-         
-        <tag>technical</tag>
-         
-         
-           
-             
-              <breadCrumb title="technical" url="http://www.wuchenxu.com/categories/technical/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2015/11/18/BCD-CODE/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2015/11/18/BCD-CODE/</loc>
     <lastmod>2015-11-25T12:21:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>BCD码</title>
-        <pubTime>2015-11-18T09:48:13.000Z</pubTime>
-        
-        <tag>encoding</tag>
-         
-        <tag>software</tag>
-         
-        <tag>computing</tag>
-         
-        <tag>electronic</tag>
-         
-         
-           
-             
-              <breadCrumb title="encoding" url="http://www.wuchenxu.com/categories/encoding/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.wuchenxu.com/2015/11/11/Tmall-Box-Install-other-video-app/</loc>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2015/11/11/Tmall-Box-Install-other-video-app/</loc>
     <lastmod>2015-11-18T12:12:32.000Z</lastmod>
-    <data>
-        <display>
-        <title>天猫魔盒安装视频APP</title>
-        <pubTime>2015-11-11T15:25:00.000Z</pubTime>
-        
-        <tag>Tool</tag>
-         
-        <tag>APP</tag>
-         
-        <tag>Video</tag>
-         
-         
-           
-             
-              <breadCrumb title="APP" url="http://www.wuchenxu.com/categories/APP/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
+  </url>
 </urlset>
