@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.wuchenxu.com/2015/11/09/Static-Blog-hexo-github-4-advanced/</loc>
+    <lastmod>2018-12-24T15:01:31.356Z</lastmod>
+  </url>  <url>
     <loc>https://www.wuchenxu.com/2015/11/05/Static-Blog-hexo-github-2-config-hexo/</loc>
     <lastmod>2018-12-23T09:56:17.872Z</lastmod>
   </url>  <url>
@@ -195,9 +198,6 @@
   </url>  <url>
     <loc>https://www.wuchenxu.com/2015/12/08/Static-Blog-hexo-github-6-tag-plugins/</loc>
     <lastmod>2017-07-16T13:10:49.000Z</lastmod>
-  </url>  <url>
-    <loc>https://www.wuchenxu.com/2015/11/09/Static-Blog-hexo-github-4-advanced/</loc>
-    <lastmod>2017-07-16T13:10:39.000Z</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2017/05/12/reading-notes-3-Facts-and-fallacies-of-software-engineering/</loc>
     <lastmod>2017-07-16T13:09:51.000Z</lastmod>
