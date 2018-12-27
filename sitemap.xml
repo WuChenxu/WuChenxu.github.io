@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.wuchenxu.com/2015/12/07/CRC8-calculate/</loc>
+    
+    <lastmod>2018-12-27T11:54:40.072Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.wuchenxu.com/2015/11/09/Static-Blog-hexo-github-4-advanced/</loc>
     
     <lastmod>2018-12-24T15:01:31.356Z</lastmod>
@@ -9,14 +16,14 @@
   </url>
   
   <url>
-    <loc>https://www.wuchenxu.com/404.html</loc>
+    <loc>https://www.wuchenxu.com/downloads/code/404.html</loc>
     
     <lastmod>2018-12-24T14:22:16.053Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.wuchenxu.com/downloads/code/404.html</loc>
+    <loc>https://www.wuchenxu.com/404.html</loc>
     
     <lastmod>2018-12-24T14:22:16.053Z</lastmod>
     
@@ -285,13 +292,6 @@
     <loc>https://www.wuchenxu.com/2016/01/21/character-encodings-introduce/</loc>
     
     <lastmod>2017-07-16T13:15:38.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.wuchenxu.com/2015/12/07/CRC8-calculate/</loc>
-    
-    <lastmod>2017-07-16T13:15:32.000Z</lastmod>
     
   </url>
   
