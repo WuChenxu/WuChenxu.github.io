@@ -141,18 +141,18 @@
 
 
 
-  <meta name="description" content="纪晓君-爱延续 如果要显示每篇文章的更新时间，需要修改主题的js代码，通过以下步骤，可以通过主题配置文件选择显示或者不显示更新时间。">
+  <meta name="description" content="纪晓君-爱延续 NexT主题从6.0开始只需要简单的配置就支持显示或者不显示更新时间了。">
 <meta name="keywords" content="hexo,github,blog">
 <meta property="og:type" content="article">
 <meta property="og:title" content="个人博客搭建hexo+github(7):显示每篇文章的更新时间">
 <meta property="og:url" content="https://www.wuchenxu.com/2015/12/13/Static-Blog-hexo-github-7-display-updated-date/index.html">
 <meta property="og:site_name" content="玉汝于成，功不唐捐">
-<meta property="og:description" content="纪晓君-爱延续 如果要显示每篇文章的更新时间，需要修改主题的js代码，通过以下步骤，可以通过主题配置文件选择显示或者不显示更新时间。">
+<meta property="og:description" content="纪晓君-爱延续 NexT主题从6.0开始只需要简单的配置就支持显示或者不显示更新时间了。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-07-16T13:11:08.000Z">
+<meta property="og:updated_time" content="2018-12-29T12:26:51.947Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="个人博客搭建hexo+github(7):显示每篇文章的更新时间">
-<meta name="twitter:description" content="纪晓君-爱延续 如果要显示每篇文章的更新时间，需要修改主题的js代码，通过以下步骤，可以通过主题配置文件选择显示或者不显示更新时间。">
+<meta name="twitter:description" content="纪晓君-爱延续 NexT主题从6.0开始只需要简单的配置就支持显示或者不显示更新时间了。">
 
 
 
@@ -490,7 +490,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2017-07-16 21:11:08" itemprop="dateModified" datetime="2017-07-16T21:11:08+08:00">2017-07-16</time>
+                <time title="修改时间：2018-12-29 20:26:51" itemprop="dateModified" datetime="2018-12-29T20:26:51+08:00">2018-12-29</time>
               
             
           </span>
@@ -556,7 +556,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.2k</span>
+                <span title="本文字数">975</span>
               
 
               
@@ -591,18 +591,16 @@
 
       
         <p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=247745&auto=0&height=66"></iframe><br>纪晓君-爱延续</p>
-<p>如果要显示每篇文章的更新时间，需要修改主题的js代码，通过以下步骤，可以通过主题配置文件选择显示或者不显示更新时间。</p>
+<p>NexT主题从6.0开始只需要简单的配置就支持显示或者不显示更新时间了。</p>
 <a id="more"></a>
-<h1 id="主题代码"><a href="#主题代码" class="headerlink" title="主题代码"></a>主题代码</h1><p>对于Next主题，在<code>hexo/themes/hexo-theme-next/layout/_macro/post.swig</code>文件里，<code>&lt;div class=&quot;post-meta&quot;&gt; &lt;span class=&quot;post-time&quot;&gt;</code>标签后增加<br><figure class="highlight plain"><figcaption><span>hexo/themes/hexo-theme-next/layout/_macro/post.swig</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;%if post.updated and post.updated &gt; post.date%&#125;</span><br><span class="line">  &lt;span class=&quot;post-updated&quot;&gt;</span><br><span class="line">	&amp;nbsp; | &amp;nbsp; &#123;&#123; __(&apos;post.updated&apos;) &#125;&#125;</span><br><span class="line">	&lt;time itemprop=&quot;dateUpdated&quot; datetime=&quot;&#123;&#123; moment(post.updated).format() &#125;&#125;&quot; content=&quot;&#123;&#123; date(post.updated, config.date_format) &#125;&#125;&quot;&gt;</span><br><span class="line">	  &#123;&#123; date(post.updated, config.date_format) &#125;&#125;</span><br><span class="line">	&lt;/time&gt;</span><br><span class="line">  &lt;/span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure></p>
-<p><code>post-updated</code>用来访问对应的语言配置文件里的值，<code>theme.</code>来访问主题配置文件的变量，<code>post.</code>来访问每篇文章的前置设置(<a href="https://hexo.io/docs/front-matter.html" target="_blank" rel="noopener">Front Matter</a>)里的变量。<br>代码里需要保证updated的时间是date之后才会显示</p>
-<h1 id="语言配置文件"><a href="#语言配置文件" class="headerlink" title="语言配置文件"></a>语言配置文件</h1><p>增加post下updated的配置<br><figure class="highlight yml"><figcaption><span>hexo/themes/hexo-theme-next/languages/zh-Hans.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">post:</span></span><br><span class="line"><span class="attr">  updated:</span> <span class="string">更新于</span></span><br></pre></td></tr></table></figure></p>
-<h1 id="主题配置文件"><a href="#主题配置文件" class="headerlink" title="主题配置文件"></a>主题配置文件</h1><p>增加一行<br><figure class="highlight yml"><figcaption><span>hexo/themes/hexo-theme-next/_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">display_updated:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
-<h1 id="文章的前置设置"><a href="#文章的前置设置" class="headerlink" title="文章的前置设置"></a>文章的前置设置</h1><p>在文章的开头增加<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">updated</span>: 2015<span class="selector-tag">-12-13</span> 20<span class="selector-pseudo">:18</span><span class="selector-pseudo">:54</span></span><br></pre></td></tr></table></figure></p>
-<p>然后重新<code>hexo g</code>一下就可以看到效果了。</p>
+<h1 id="配置NexT主题"><a href="#配置NexT主题" class="headerlink" title="配置NexT主题"></a>配置<a href="https://theme-next.org/docs/theme-settings/" target="_blank" rel="noopener">NexT主题</a></h1><figure class="highlight yml"><figcaption><span>enable display updated date</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Post meta display settings</span></span><br><span class="line"><span class="attr">post_meta:</span></span><br><span class="line"><span class="attr">  item_text:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  created_at:</span> <span class="literal">true</span>. <span class="comment"># 发表于</span></span><br><span class="line"><span class="attr">  updated_at:</span></span><br><span class="line"><span class="attr">    enabled:</span> <span class="literal">true</span> <span class="comment">#更新于</span></span><br><span class="line">    <span class="comment"># If true, show updated date label only if `updated date` different from 'created date' (post edited in another day than was created).</span></span><br><span class="line">    <span class="comment"># And if post will edited in same day as created, edited time will show in popup title under created time label.</span></span><br><span class="line">    <span class="comment"># If false show anyway, but if post edited in same day, show only edited time.</span></span><br><span class="line"><span class="attr">    another_day:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  categories:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h1 id="配置post-layout参数"><a href="#配置post-layout参数" class="headerlink" title="配置post layout参数"></a>配置post layout参数</h1><p>每篇post（md文件）的layout参数<code>modified</code>（或者<code>updated</code>）就是文章的更新时间。<br>如果<code>modified</code>与<code>date</code>相同，则只显示发表时间，不显示更新时间；如果<code>modified</code>与<code>date</code>不同，则<code>date</code>显示为发表时间，<code>modified</code>显示为更新时间；</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">'个人博客搭建hexo+github(7):显示每篇文章的更新时间'</span></span><br><span class="line"><span class="attr">categories:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo</span></span><br><span class="line"><span class="attr">tags:</span> <span class="string">[hexo,</span> <span class="string">github,</span> <span class="string">blog]</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">post</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2015</span><span class="bullet">-12</span><span class="bullet">-13</span> <span class="number">20</span><span class="string">:18:54</span></span><br><span class="line"><span class="attr">modified:</span> <span class="number">2018</span><span class="bullet">-12</span><span class="bullet">-29</span> <span class="number">20</span><span class="string">:18:54</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="string">以下为正文。</span></span><br></pre></td></tr></table></figure>
 <p>Reference:</p>
 <ol>
 <li><a href="http://howiefh.github.io/2014/04/20/hexo-optimize-and-my-theme-landscape-f/" target="_blank" rel="noopener">Landscape-F</a></li>
 <li><a href="https://hexo.io/docs/front-matter.html" target="_blank" rel="noopener">Front Matter</a></li>
+<li><a href="https://theme-next.org/docs/theme-settings/" target="_blank" rel="noopener">NexT them settings</a></li>
 </ol>
 
       
@@ -1101,7 +1099,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#主题代码"><span class="nav-number">1.</span> <span class="nav-text">主题代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#语言配置文件"><span class="nav-number">2.</span> <span class="nav-text">语言配置文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主题配置文件"><span class="nav-number">3.</span> <span class="nav-text">主题配置文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文章的前置设置"><span class="nav-number">4.</span> <span class="nav-text">文章的前置设置</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#配置NexT主题"><span class="nav-number">1.</span> <span class="nav-text">配置NexT主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置post-layout参数"><span class="nav-number">2.</span> <span class="nav-text">配置post layout参数</span></a></li></ol></div>
             
 
           </div>
@@ -1146,7 +1144,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:26</span>
+    <span title="站点阅读时长">3:25</span>
   
 </div>
 
