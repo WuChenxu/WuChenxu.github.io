@@ -295,8 +295,8 @@
         <category>tool</category>
       </categories>
       <tags>
-        <tag>Markdown</tag>
         <tag>MathJax</tag>
+        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -729,7 +729,7 @@
   <entry>
     <title><![CDATA[个人博客搭建hexo+github(6):标签插件]]></title>
     <url>%2F2015%2F12%2F08%2FStatic-Blog-hexo-github-6-tag-plugins%2F</url>
-    <content type="text"><![CDATA[title: 个人博客搭建hexo+github(6):标签插件 categories: - hexo tags: [hexo, github, blog] comments: true layout: post date: 2015-12-08 21:56:39 modified: 2015-12-13 21:56:39 --- 标签插件(tag plugins)是hexo用于在文章中快速插入特定内容的插件。 hexo的很多插件类似octopress，有些插件的使用方法官方文档没有octopress的文档详细。 有些tag，markdown的语法就能实现类似的效果就使用更通用的markdown，按照我的使用先后来记录，慢慢补齐。 我使用的hexo版本是3.1.1 # Include Code 插入代码，这个是可以把整个文件作为代码插入，这样做的好处是作为可运行的代码后续如果修正了bug，重新`hexo g`一下文章中的代码就会自动更新；不需要每次从文件中拷贝粘贴代码到文章中。 ## 配置code存放路径 在hexo的配置文件`hexo/_config.yml`中看到`code_dir: downloads/code`,说明所有的code文件都放到`source/downloads/code`文件夹下。 ## 语法 ``` {% include_code [title] [lang:language] path/to/file %} ``` `[title]`:可选，标题名，默认是文件名 `[lang:language]`:可选设置语言后，根据不同的语言设置语法高亮 ## 举例 代码文件存放在`source/downloads/code/hello_world.c`. ``` {% include_code lang:c hello world in c lang hello_world.c %} ``` {% include_code lang:c hello world in c lang hello_world.c %} # frame To embed an iframe: ``` {% iframe url [width] [height] %} ``` 当然也可以直接插入HTML格式的标签。 ```html ``` Reference: 1. [tag plugins in hexo doc](https://hexo.io/docs/tag-plugins.html) 1. [octopress include code](http://octopress.org/docs/plugins/include-code/)]]></content>
+    <content type="text"><![CDATA[title: 个人博客搭建hexo+github(6):标签插件 categories: - hexo tags: [hexo, github, blog] comments: true layout: post date: 2015-12-08 21:56:39 modified: 2018-12-31 21:56:39 --- 标签插件(tag plugins)是hexo用于在文章中快速插入特定内容的插件。 hexo的很多插件类似octopress，有些插件的使用方法官方文档没有octopress的文档详细。 有些tag，markdown的语法就能实现类似的效果就使用更通用的markdown，按照我的使用先后来记录，慢慢补齐。 我使用的hexo版本是3.8.0 # Include Code 插入代码，这个是可以把整个文件作为代码插入，这样做的好处是作为可运行的代码后续如果修正了bug，重新`hexo g`一下文章中的代码就会自动更新；不需要每次从文件中拷贝粘贴代码到文章中。 ## 配置code存放路径 在hexo的配置文件`hexo/_config.yml`中看到`code_dir: downloads/code`,说明所有的code文件都放到`source/downloads/code`文件夹下。 ## 语法 ``` {% include_code [title] [lang:language] path/to/file %} ``` `[title]`:可选，标题名，默认是文件名 `[lang:language]`:可选设置语言后，根据不同的语言设置语法高亮 ## 举例 代码文件存放在`source/downloads/code/hello_world.c`. ``` {% include_code lang:c hello world in c lang hello_world.c %} ``` {% include_code lang:c hello world in c lang hello_world.c %} # frame To embed an iframe: ``` {% iframe url [width] [height] %} ``` 当然也可以直接插入HTML格式的标签。 ```html ``` Reference: 1. [tag plugins in hexo doc](https://hexo.io/docs/tag-plugins.html) 1. [octopress include code](http://octopress.org/docs/plugins/include-code/)]]></content>
       <categories>
         <category>hexo</category>
       </categories>
