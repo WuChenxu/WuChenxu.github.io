@@ -150,7 +150,7 @@
 <meta property="og:description" content="本文介绍了一种在软件集成过程中，遇到重名文件 和/或 重名函数时的解决方案。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://www.wuchenxu.com/2018/04/15/integrate-files-with-same-name-same-function-in-C/ld.png">
-<meta property="og:updated_time" content="2018-04-15T14:03:58.671Z">
+<meta property="og:updated_time" content="2019-01-01T14:40:02.539Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="软件开发(3):软件集成重名解决方案">
 <meta name="twitter:description" content="本文介绍了一种在软件集成过程中，遇到重名文件 和/或 重名函数时的解决方案。">
@@ -313,7 +313,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">89</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">90</span></a>
 
   </li>
         
@@ -332,7 +332,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">44</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">45</span></a>
 
   </li>
         
@@ -351,7 +351,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">71</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">72</span></a>
 
   </li>
 
@@ -475,12 +475,24 @@
                 
               
 
-              <time title="创建时间：2018-04-15 17:55:16 / 修改时间：22:03:58" itemprop="dateCreated datePublished" datetime="2018-04-15T17:55:16+08:00">2018-04-15</time>
+              <time title="创建时间：2018-04-15 17:55:16" itemprop="dateCreated datePublished" datetime="2018-04-15T17:55:16+08:00">2018-04-15</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-01-01 22:40:02" itemprop="dateModified" datetime="2019-01-01T22:40:02+08:00">2019-01-01</time>
               
             
           </span>
@@ -589,7 +601,7 @@
       
         <p>本文介绍了一种在软件集成过程中，遇到重名文件 和/或 重名函数时的解决方案。</p>
 <a id="more"></a>
-<h1 id="why"><a href="#why" class="headerlink" title="why"></a>why</h1><p>在<a href="wuchenxu.com/2017/02/27/software-design-2-variant-handling/">software development(2):variant handling</a>一文中介绍了很多种variant管理的方法，其中有关于<a href="wuchenxu.com/2017/02/27/software-design-2-variant-handling/#link different libs">link different libs</a>的方法。<br>设想如下场景：开发过程中（针对C语言），各个模块分别由不同的团队开发，最后集成的时候，如果遇到重名的函数怎么处理？<br>本文针对这种场景，搜集了几种解决方案。</p>
+<h1 id="why"><a href="#why" class="headerlink" title="why"></a>why</h1><p>在<a href="https://wuchenxu.com/2017/02/27/software-design-2-variant-handling/" target="_blank" rel="noopener">software development(2):variant handling</a>一文中介绍了很多种variant管理的方法，其中有关于<a href="https://wuchenxu.com/2017/02/27/software-design-2-variant-handling/#link different libs" target="_blank" rel="noopener">link different libs</a>的方法。<br>设想如下场景：开发过程中（针对C语言），各个模块分别由不同的团队开发，最后集成的时候，如果遇到重名的函数怎么处理？<br>本文针对这种场景，搜集了几种解决方案。</p>
 <h1 id="what"><a href="#what" class="headerlink" title="what"></a>what</h1><p>场景设置: 三个模块，<code>a</code> <code>b</code> <code>os</code>，其中<code>a</code>和<code>b</code>模块都包含一个名字为<code>func_internal.c</code>的文件，这个同名文件中包含了名字一样的函数，分别为<code>int func_internal(void)</code>与<code>int func_internal(int a)</code>。这两个函数都没有申明为static，但是没有外部调用。</p>
 <p><a href="https://github.com/WuChenxu/C/tree/master/link2step" target="_blank" rel="noopener">demo in github</a><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── README.md</span><br><span class="line">├── component_a</span><br><span class="line">│   ├── exported_sym.list</span><br><span class="line">│   ├── func_a.c</span><br><span class="line">│   ├── func_internal.c</span><br><span class="line">│   ├── func_internal.h</span><br><span class="line">│   ├── functions.h</span><br><span class="line">│   ├── makefile</span><br><span class="line">│   └── redefine.syms</span><br><span class="line">├── component_b</span><br><span class="line">│   ├── exported_sym.list</span><br><span class="line">│   ├── func_b.c</span><br><span class="line">│   ├── func_internal.c</span><br><span class="line">│   ├── func_internal.h</span><br><span class="line">│   ├── functions.h</span><br><span class="line">│   └── makefile</span><br><span class="line">├── makefile</span><br><span class="line">├── obj</span><br><span class="line">└── os</span><br><span class="line">    ├── exported_sym.list</span><br><span class="line">    ├── main.c</span><br><span class="line">    └── makefile</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight c"><figcaption><span> component_a/func_a.c</span><a href="/downloads/code/link2steps/component_a/func_a.c">view raw</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"functions.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"func_internal.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">func_internal_s</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line"><span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">func_a</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">   <span class="keyword">int</span> a = func_internal();</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"this is func a. %d\n"</span>, a);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"this is static internal %d\n"</span>, func_internal_s());</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;    </span><br><span class="line"></span><br><span class="line">}</span><br></pre></td></tr></table></figure>
@@ -773,7 +785,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">71</span>
+                    <span class="site-state-item-count">72</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -874,7 +886,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">42</span>
+                      
+                    
+                    <span class="site-state-item-count">43</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1065,7 +1079,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">87</span>
+                      
+                    
+                    <span class="site-state-item-count">88</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1162,7 +1178,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2015 – <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2015 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -1176,7 +1192,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">226k</span>
+    <span title="站点总字数">229k</span>
   
 
   
@@ -1187,7 +1203,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:25</span>
+    <span title="站点阅读时长">3:28</span>
   
 </div>
 

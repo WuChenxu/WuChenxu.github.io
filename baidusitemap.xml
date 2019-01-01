@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.wuchenxu.com/2018/12/31/Unix-Linux-cmd-1-find-grep/</loc>
+    <lastmod>2019-01-01T14:46:51.995Z</lastmod>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2015/11/19/markdown-usage/</loc>
+    <lastmod>2019-01-01T14:44:29.383Z</lastmod>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2017/02/15/TeX-2-MacTex/</loc>
+    <lastmod>2019-01-01T14:43:21.833Z</lastmod>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2015/12/30/Markdown-html-compare/</loc>
+    <lastmod>2019-01-01T14:42:39.819Z</lastmod>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2018/04/15/integrate-files-with-same-name-same-function-in-C/</loc>
+    <lastmod>2019-01-01T14:40:02.539Z</lastmod>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2016/01/27/Markdown-inline-css-compare/</loc>
+    <lastmod>2019-01-01T14:37:55.776Z</lastmod>
+  </url>  <url>
     <loc>https://www.wuchenxu.com/2016/04/01/windows-cmd-17-multiple-thread/</loc>
     <lastmod>2018-12-31T12:26:09.929Z</lastmod>
   </url>  <url>
@@ -34,9 +52,6 @@
     <loc>https://www.wuchenxu.com/2016/03/01/code-coverage-in-unit-test/</loc>
     <lastmod>2018-12-31T11:43:38.004Z</lastmod>
   </url>  <url>
-    <loc>https://www.wuchenxu.com/2016/01/27/Markdown-inline-css-compare/</loc>
-    <lastmod>2018-12-31T11:41:55.589Z</lastmod>
-  </url>  <url>
     <loc>https://www.wuchenxu.com/2016/01/21/character-encodings-introduce/</loc>
     <lastmod>2018-12-31T11:39:32.209Z</lastmod>
   </url>  <url>
@@ -45,9 +60,6 @@
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/01/07/Automative-lead-acid-battery-charging-voltage/</loc>
     <lastmod>2018-12-31T11:38:01.883Z</lastmod>
-  </url>  <url>
-    <loc>https://www.wuchenxu.com/2015/12/30/Markdown-html-compare/</loc>
-    <lastmod>2018-12-31T11:27:12.182Z</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2015/12/13/Static-Blog-hexo-github-7-display-updated-date/</loc>
     <lastmod>2018-12-31T11:22:22.740Z</lastmod>
@@ -76,9 +88,6 @@
     <loc>https://www.wuchenxu.com/2018/05/11/safety-and-security/</loc>
     <lastmod>2018-05-11T15:23:04.237Z</lastmod>
   </url>  <url>
-    <loc>https://www.wuchenxu.com/2018/04/15/integrate-files-with-same-name-same-function-in-C/</loc>
-    <lastmod>2018-04-15T14:03:58.671Z</lastmod>
-  </url>  <url>
     <loc>https://www.wuchenxu.com/2018/02/04/machine_learning_notes/</loc>
     <lastmod>2018-02-25T14:56:46.597Z</lastmod>
   </url>  <url>
@@ -91,17 +100,11 @@
     <loc>https://www.wuchenxu.com/2017/05/05/reading-notes-2-practice-guide-for-frontline-architects/</loc>
     <lastmod>2017-07-16T13:18:06.000Z</lastmod>
   </url>  <url>
-    <loc>https://www.wuchenxu.com/2015/11/19/markdown-usage/</loc>
-    <lastmod>2017-07-16T13:18:02.000Z</lastmod>
-  </url>  <url>
     <loc>https://www.wuchenxu.com/2017/02/27/software-design-2-variant-handling/</loc>
     <lastmod>2017-07-16T13:17:58.000Z</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2017/03/19/Rust-lang-4-std-fmt/</loc>
     <lastmod>2017-07-16T13:17:56.000Z</lastmod>
-  </url>  <url>
-    <loc>https://www.wuchenxu.com/2017/02/15/TeX-2-MacTex/</loc>
-    <lastmod>2017-07-16T13:17:53.000Z</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2017/01/16/software-design-1-state-machine/</loc>
     <lastmod>2017-07-16T13:17:51.000Z</lastmod>
