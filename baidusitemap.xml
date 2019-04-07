@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.wuchenxu.com/2018/12/27/Knowledge-model/</loc>
+    <lastmod>2019-04-07T13:36:51.608Z</lastmod>
+  </url>  <url>
     <loc>https://www.wuchenxu.com/2018/12/31/Unix-Linux-cmd-1-find-grep/</loc>
     <lastmod>2019-01-01T14:46:51.995Z</lastmod>
   </url>  <url>
@@ -66,9 +69,6 @@
   </url>  <url>
     <loc>https://www.wuchenxu.com/2015/11/09/Static-Blog-hexo-github-4-advanced/</loc>
     <lastmod>2018-12-29T12:10:46.003Z</lastmod>
-  </url>  <url>
-    <loc>https://www.wuchenxu.com/2018/12/27/Knowledge-model/</loc>
-    <lastmod>2018-12-27T15:03:03.161Z</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2015/12/07/CRC8-calculate/</loc>
     <lastmod>2018-12-27T11:54:40.072Z</lastmod>
