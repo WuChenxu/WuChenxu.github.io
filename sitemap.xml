@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.wuchenxu.com/2019/05/02/reading-notes-4-Head-First-Design-Pattern/</loc>
+    
+    <lastmod>2019-05-02T14:11:23.864Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.wuchenxu.com/2018/12/27/Knowledge-model/</loc>
     
-    <lastmod>2019-04-07T13:36:51.608Z</lastmod>
+    <lastmod>2019-04-07T13:45:01.605Z</lastmod>
     
   </url>
   
@@ -170,14 +177,14 @@
   </url>
   
   <url>
-    <loc>https://www.wuchenxu.com/404.html</loc>
+    <loc>https://www.wuchenxu.com/downloads/code/404.html</loc>
     
     <lastmod>2018-12-24T14:22:16.053Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.wuchenxu.com/downloads/code/404.html</loc>
+    <loc>https://www.wuchenxu.com/404.html</loc>
     
     <lastmod>2018-12-24T14:22:16.053Z</lastmod>
     

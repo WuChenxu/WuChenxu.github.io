@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.wuchenxu.com/"/>
-  <updated>2019-01-01T14:46:51.995Z</updated>
+  <updated>2019-05-02T14:11:23.864Z</updated>
   <id>https://www.wuchenxu.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Head Frist 设计模式 by Freeman E.</title>
+    <link href="https://www.wuchenxu.com/2019/05/02/reading-notes-4-Head-First-Design-Pattern/"/>
+    <id>https://www.wuchenxu.com/2019/05/02/reading-notes-4-Head-First-Design-Pattern/</id>
+    <published>2019-05-02T09:28:05.000Z</published>
+    <updated>2019-05-02T14:11:23.864Z</updated>
+    
+    <content type="html"><![CDATA[<p>设计模式</p><a id="more"></a><h1 id="Head-First"><a href="#Head-First" class="headerlink" title="Head First"></a>Head First</h1><h2 id="Head-Frist学习原则"><a href="#Head-Frist学习原则" class="headerlink" title="Head Frist学习原则"></a>Head Frist学习原则</h2><ol><li>慢一点，你理解的越多，需要记的就越少。</li><li>勤做练习，自己记笔记。</li><li>There are no dumb Questions。</li><li>上床睡觉之前不要再看别的书了，活着至少不再看其他有难度的东西。</li><li>要喝水，而且要多喝水。</li><li>大声说出来。</li><li>听听你大脑怎么说。</li><li>要有点感觉！</li><li>设计一些东西！</li></ol><h1 id="OO基础"><a href="#OO基础" class="headerlink" title="OO基础"></a>OO基础</h1><ol><li>抽象（Abstract）</li><li>封装（Encapsulate）</li><li>多态（Polymorphic）</li><li>继承（Inheritance）</li></ol><h1 id="OO设计原则"><a href="#OO设计原则" class="headerlink" title="OO设计原则"></a>OO设计原则</h1><ol><li>封装变化（Encapsulate what varies）</li><li>多用组合，少用继承（Composition Favor over inheritance）</li><li>针对接口编程，不针对实现编程（Program to interface， not an implementation）</li></ol><h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><h1 id="策略模式（Strategy-Pattern）"><a href="#策略模式（Strategy-Pattern）" class="headerlink" title="策略模式（Strategy Pattern）"></a>策略模式（Strategy Pattern）</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>定义算法族，分别封装起来，让它们之间可以互相替换，此模式让算法的变化独立于使用算法的客户。</p><h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p><a href="https://github.com/WuChenxu/Ruby/tree/master/HeadFirstDesignPattern/StrategyPattern" target="_blank" rel="noopener">strategy pattern in ruby</a></p><h2 id="UML"><a href="#UML" class="headerlink" title="UML"></a>UML</h2><p><img src="https://github.com/WuChenxu/Ruby/blob/master/HeadFirstDesignPattern/StrategyPattern/strategy_pattern.svg" alt="strategy pattern UML"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;设计模式&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="reading-notes" scheme="https://www.wuchenxu.com/categories/reading-notes/"/>
+    
+    
+      <category term="technical" scheme="https://www.wuchenxu.com/tags/technical/"/>
+    
+      <category term="reading-notes" scheme="https://www.wuchenxu.com/tags/reading-notes/"/>
+    
+  </entry>
   
   <entry>
     <title>Unix/Linux command(1):find 与 grep</title>
@@ -43,7 +67,7 @@
     <link href="https://www.wuchenxu.com/2018/12/27/Knowledge-model/"/>
     <id>https://www.wuchenxu.com/2018/12/27/Knowledge-model/</id>
     <published>2018-12-27T14:14:20.000Z</published>
-    <updated>2019-04-07T13:36:51.608Z</updated>
+    <updated>2019-04-07T13:45:01.605Z</updated>
     
     <content type="html"><![CDATA[<img src="/2018/12/27/Knowledge-model/knowledge-model.jpeg"><blockquote><p>在某个领域深耕细作的同时，不要忘记拓宽自己的知识面。如果一个人的领域太过专业化，一段时间后，你可能会发现自己的专业已经陈旧了。如果一个人的知识面很广，在终身教育的配合下，你的专业可以随着时代的变化而改变。<br>—  《MacTalk跨越边界》</p></blockquote><a id="more"></a><h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>理想的知识结构模型应该是T字形，横表示广度，竖表示深度。缺一不可。<br><a href="https://wiki.mbalib.com/wiki/%E6%9C%A8%E6%A1%B6%E5%8E%9F%E7%90%86" target="_blank" rel="noopener">木桶理论</a>过分强调不要短板，广度优先，处处平衡;<br><a href="https://baike.sogou.com/v62597640.htm?fromTitle=%E9%95%BF%E6%9D%BF%E7%90%86%E8%AE%BA" target="_blank" rel="noopener">长板理论</a>过分强调深度，深度优先，精耕细作。<br>考虑到多个领域，可以是多个T的叠加，最终的结果就是类似于上图所示的图形，有点像二师兄的九齿钉耙。 :)<br>如果考虑到知识随着时间的迭代，那么我们最终会看到三个维度：</p><ul><li>广度：博</li><li>深度：专</li><li>时间：新</li></ul><h1 id="知识分类"><a href="#知识分类" class="headerlink" title="知识分类"></a>知识分类</h1><h2 id="广义"><a href="#广义" class="headerlink" title="广义"></a>广义</h2><p>所有的文字、语言、经验、哲学、科学、宗教都可以算是一种广义的知识。</p><h2 id="狭义"><a href="#狭义" class="headerlink" title="狭义"></a>狭义</h2><p>以软件开发为例：</p><ul><li>通用性的：如C语言、编程范式、设计模式、软件架构、软件开发流程。。。</li><li>领域相关的：如汽车领域软件开发：AUTOSAR架构、诊断、ASPICE、ISO26262.。。</li><li>产品相关的：如ADAS产品软件开发： 功能、距离检测算法、路径规划、横向控制、纵向控制。。。</li></ul><h1 id="训练方法"><a href="#训练方法" class="headerlink" title="训练方法"></a>训练方法</h1><ul><li>广度：<a href="https://ideas.ted.com/dont-have-10000-hours-to-learn-something-new-thats-fine-all-you-need-is-20-hours/" target="_blank" rel="noopener">关键20小时</a></li></ul><ol><li>Break down a skill into its components.</li><li>Learn enough to know when you’re making a mistake.</li><li>Remove any and all barriers to practice.</li><li>Practice for at least 20 hours.</li></ol><ul><li><p>深度：10000小时理论<br>人们眼中的天才之所以卓越非凡，并非天资超人一等，而是付出了持续不断的努力。只要经过1万小时的锤炼，任何人都能从平凡变成超凡。 — 《异类》（Utliers）</p></li><li><p>时间：<br>根据不同的知识种类进行迭代，可以通过RSS订阅，查看最新的前沿论文等。</p></li></ul><p>Reference:</p><ol><li><a href="https://blog.csdn.net/u014805066/article/details/64437617" target="_blank" rel="noopener">T型知识结构</a></li><li><a href="https://ideas.ted.com/dont-have-10000-hours-to-learn-something-new-thats-fine-all-you-need-is-20-hours/" target="_blank" rel="noopener">20 hours to learn something new</a></li><li><a href="https://www.zhihu.com/question/19933005" target="_blank" rel="noopener">哪些网站适合用于充电、学习新知识？</a></li></ol>]]></content>
     
@@ -482,30 +506,6 @@
       <category term="date" scheme="https://www.wuchenxu.com/tags/date/"/>
     
       <category term="time" scheme="https://www.wuchenxu.com/tags/time/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>windows command(19):console颜色 color</title>
-    <link href="https://www.wuchenxu.com/2016/12/07/windows-cmd-19-color/"/>
-    <id>https://www.wuchenxu.com/2016/12/07/windows-cmd-19-color/</id>
-    <published>2016-12-07T12:32:28.000Z</published>
-    <updated>2017-07-16T13:16:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>color命令用来设置console的前景色或者背景色。</p><a id="more"></a><h1 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h1><p>用法很简单，<code>color [fb]</code>，其中<code>f</code>表示前景色，<code>b</code>表示背景色，取值范围为<code>0</code>-<code>F</code>，也就是十六进制数的一位。<br>color definition:<br><span style="background-color:gray;color:black">0 = Black </span><br><span style="background-color:black;color:blue"> 1 = Blue  </span><br><span style="background-color:black;color:green">2 = Green  </span><br><span style="background-color:black;color:aqua"> 3 = Aqua  </span><br><span style="background-color:black;color:red">  4 = Red  </span><br><span style="background-color:black;color:purple"> 5 = Purple  </span><br><span style="background-color:black;color:yellow"> 6 = Yellow  </span><br><span style="background-color:black;color:white"> 7 = White  </span><br><span style="background-color:black;color:gray"> 8 = Gray  </span><br><span style="background-color:black;color:#ADD8E6"> 9 = Light Blue  </span><br><span style="background-color:black;color:#90ee90"> A = Light Green  </span><br><span style="background-color:black;color:#93FFE8"> B = Light Aqua  </span><br><span style="background-color:black;color:#CD5C5C"> C = Light Red  </span><br><span style="background-color:black;color:#9370D8"> D = Light Purple  </span><br><span style="background-color:black;color:#FFFFE0"> E = Light Yellow  </span><br><span style="background-color:black;color:#FEFCFF"> F = Bright White  </span></p><h1 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h1><h2 id="foreground"><a href="#foreground" class="headerlink" title="foreground"></a>foreground</h2><img src="/2016/12/07/windows-cmd-19-color/cmd_color_02.png" class="image"><h2 id="background"><a href="#background" class="headerlink" title="background"></a>background</h2><img src="/2016/12/07/windows-cmd-19-color/cmd_color_20.png" class="image"><h2 id="same-color"><a href="#same-color" class="headerlink" title="same color"></a>same color</h2><p>如果前景色与背景色设置为一样，如<code>color 00</code>，设置不会生效，结果是保持当前的前景色和背景色不变。<br><img src="/2016/12/07/windows-cmd-19-color/cmd_color_same_color_error.png"></p><h2 id="start-new-console"><a href="#start-new-console" class="headerlink" title="start new console"></a>start new console</h2><p>在改变console颜色之后，再通过<code>start</code>来创建一个新的console，新的控制台颜色还是保持<br><img src="/2016/12/07/windows-cmd-19-color/change_color_start_console.png"></p><h1 id="Advanced"><a href="#Advanced" class="headerlink" title="Advanced"></a>Advanced</h1><p>修改注册表<code>HKEY_CURRENT_USER\Software\Microsoft\Command Processor\DefaultColor</code>的键值，可以修改通过<code>cmd.exe</code>或者<code>start</code>启动的窗口的颜色。</p><figure class="highlight plain"><figcaption><span>help COLOR</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">Sets the default console foreground and background colors.</span><br><span class="line"></span><br><span class="line">COLOR [attr]</span><br><span class="line"></span><br><span class="line">  attr        Specifies color attribute of console output</span><br><span class="line"></span><br><span class="line">Color attributes are specified by TWO hex digits -- the first</span><br><span class="line">corresponds to the background; the second the foreground.  Each digit</span><br><span class="line">can be any of the following values:</span><br><span class="line"></span><br><span class="line">    0 = Black       8 = Gray</span><br><span class="line">    1 = Blue        9 = Light Blue</span><br><span class="line">    2 = Green       A = Light Green</span><br><span class="line">    3 = Aqua        B = Light Aqua</span><br><span class="line">    4 = Red         C = Light Red</span><br><span class="line">    5 = Purple      D = Light Purple</span><br><span class="line">    6 = Yellow      E = Light Yellow</span><br><span class="line">    7 = White       F = Bright White</span><br><span class="line"></span><br><span class="line">If no argument is given, this command restores the color to what it was</span><br><span class="line">when CMD.EXE started.  This value either comes from the current console</span><br><span class="line">window, the /T command line switch or from the DefaultColor registry</span><br><span class="line">value.</span><br><span class="line"></span><br><span class="line">The COLOR command sets ERRORLEVEL to 1 if an attempt is made to execute</span><br><span class="line">the COLOR command with a foreground and background color that are the</span><br><span class="line">same.</span><br><span class="line"></span><br><span class="line">Example: &quot;COLOR fc&quot; produces light red on bright white</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;color命令用来设置console的前景色或者背景色。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="windows cmd" scheme="https://www.wuchenxu.com/categories/windows-cmd/"/>
-    
-    
-      <category term="cmd" scheme="https://www.wuchenxu.com/tags/cmd/"/>
-    
-      <category term="color" scheme="https://www.wuchenxu.com/tags/color/"/>
     
   </entry>
   
