@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.wuchenxu.com/2019/05/02/reading-notes-4-Head-First-Design-Pattern/</loc>
+    <lastmod>2019-05-05T14:51:22.654Z</lastmod>
+  </url>  <url>
     <loc>https://www.wuchenxu.com/2016/06/28/MathJax-1-introduction/</loc>
     <lastmod>2019-05-05T13:21:46.501Z</lastmod>
   </url>  <url>
@@ -9,9 +12,6 @@
   </url>  <url>
     <loc>https://www.wuchenxu.com/2017/01/16/software-design-1-state-machine/</loc>
     <lastmod>2019-05-05T12:45:19.289Z</lastmod>
-  </url>  <url>
-    <loc>https://www.wuchenxu.com/2019/05/02/reading-notes-4-Head-First-Design-Pattern/</loc>
-    <lastmod>2019-05-04T09:15:00.081Z</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2018/12/27/Knowledge-model/</loc>
     <lastmod>2019-04-07T13:45:01.605Z</lastmod>
