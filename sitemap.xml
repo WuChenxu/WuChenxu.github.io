@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.wuchenxu.com/2016/06/28/MathJax-1-introduction/</loc>
+    
+    <lastmod>2019-05-05T13:21:46.501Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.wuchenxu.com/2016/09/08/MathJax-2-using-in-hexo-markdown/</loc>
+    
+    <lastmod>2019-05-05T13:14:53.550Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.wuchenxu.com/2017/01/16/software-design-1-state-machine/</loc>
+    
+    <lastmod>2019-05-05T12:45:19.289Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.wuchenxu.com/2019/05/02/reading-notes-4-Head-First-Design-Pattern/</loc>
     
-    <lastmod>2019-05-04T08:34:36.973Z</lastmod>
+    <lastmod>2019-05-04T09:15:00.081Z</lastmod>
     
   </url>
   
@@ -103,13 +124,6 @@
     <loc>https://www.wuchenxu.com/2016/05/12/hamming-distance/</loc>
     
     <lastmod>2018-12-31T12:22:24.853Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.wuchenxu.com/2016/06/28/MathJax-1-introduction/</loc>
-    
-    <lastmod>2018-12-31T12:20:01.206Z</lastmod>
     
   </url>
   
@@ -289,13 +303,6 @@
   </url>
   
   <url>
-    <loc>https://www.wuchenxu.com/2017/01/16/software-design-1-state-machine/</loc>
-    
-    <lastmod>2017-07-16T13:17:51.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.wuchenxu.com/2017/02/15/Static-Blog-hexo-github-9-local-search/</loc>
     
     <lastmod>2017-07-16T13:17:48.000Z</lastmod>
@@ -369,13 +376,6 @@
     <loc>https://www.wuchenxu.com/2016/09/12/Rust-lang-1-hello-world/</loc>
     
     <lastmod>2017-07-16T13:16:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.wuchenxu.com/2016/09/08/MathJax-2-using-in-hexo-markdown/</loc>
-    
-    <lastmod>2017-07-16T13:16:43.000Z</lastmod>
     
   </url>
   
