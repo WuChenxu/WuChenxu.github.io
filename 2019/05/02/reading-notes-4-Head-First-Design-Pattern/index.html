@@ -162,10 +162,11 @@
 <meta property="og:site_name" content="玉汝于成，功不唐捐">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://www.wuchenxu.com/2019/05/02/reading-notes-4-Head-First-Design-Pattern/HFDP.jpg">
+<meta property="og:image" content="https://www.wuchenxu.com/2019/05/02/reading-notes-4-Head-First-Design-Pattern/design-patten_framework_architecture_module.jpeg">
 <meta property="og:image" content="https://www.wuchenxu.com/2019/05/02/reading-notes-4-Head-First-Design-Pattern/strategy_pattern.svg">
 <meta property="og:image" content="https://www.wuchenxu.com/2019/05/02/reading-notes-4-Head-First-Design-Pattern/observer_pattern.svg">
 <meta property="og:image" content="https://www.wuchenxu.com/2019/05/02/reading-notes-4-Head-First-Design-Pattern/singleton_pattern.svg">
-<meta property="og:updated_time" content="2019-05-06T14:30:27.387Z">
+<meta property="og:updated_time" content="2019-06-02T04:06:22.536Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Head Frist 设计模式 by Freeman E.">
 <meta name="twitter:image" content="https://www.wuchenxu.com/2019/05/02/reading-notes-4-Head-First-Design-Pattern/HFDP.jpg">
@@ -516,7 +517,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-06 22:30:27" itemprop="dateModified" datetime="2019-05-06T22:30:27+08:00">2019-05-06</time>
+                <time title="修改时间：2019-06-02 12:06:22" itemprop="dateModified" datetime="2019-06-02T12:06:22+08:00">2019-06-02</time>
               
             
           </span>
@@ -657,19 +658,28 @@
 <h2 id="依赖倒置原则（Dependence-Inversion-Principle）"><a href="#依赖倒置原则（Dependence-Inversion-Principle）" class="headerlink" title="依赖倒置原则（Dependence Inversion Principle）"></a>依赖倒置原则（Dependence Inversion Principle）</h2><blockquote>
 <p>针对接口编程，不针对实现编程（Program to interface， not an implementation）</p>
 </blockquote>
-<h2 id="为交互对象之间的松耦合设计而努力"><a href="#为交互对象之间的松耦合设计而努力" class="headerlink" title="为交互对象之间的松耦合设计而努力"></a>为交互对象之间的松耦合设计而努力</h2><h2 id="开闭原则"><a href="#开闭原则" class="headerlink" title="开闭原则"></a>开闭原则</h2><blockquote>
-<p>类应该对扩展开放，对修改关闭。</p>
+<h2 id="为交互对象之间的松耦合设计而努力（loose-coupling）"><a href="#为交互对象之间的松耦合设计而努力（loose-coupling）" class="headerlink" title="为交互对象之间的松耦合设计而努力（loose coupling）"></a>为交互对象之间的松耦合设计而努力（loose coupling）</h2><h2 id="开闭原则"><a href="#开闭原则" class="headerlink" title="开闭原则"></a>开闭原则</h2><blockquote>
+<p>类应该对扩展开放，对修改关闭。Open to extension and closed to modifcaiton.</p>
 </blockquote>
 <p>遵循开放-关闭原则通常会引入新的抽象层次，增加代码的复杂度。我们要把注意力几种在设计中最有可能改变的地方来应用开闭原则。</p>
+<h1 id="与架构模式、框架、模块的对比"><a href="#与架构模式、框架、模块的对比" class="headerlink" title="与架构模式、框架、模块的对比"></a>与架构模式、框架、模块的对比</h1><p>参考<a href="https://wuchenxu.com/2017/05/05/reading-notes-2-practice-guide-for-frontline-architects/" target="_blank" rel="noopener">一线架构师实践指南</a><br>设计模式，相比架构模式应用面更狭窄，针对于特定场景；相比与框架活着模块，更抽象。框架、模块本身也会用到设计模式。<br><img src="/2019/05/02/reading-notes-4-Head-First-Design-Pattern/design-patten_framework_architecture_module.jpeg"></p>
 <h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><h2 id="策略模式（Strategy-Pattern）"><a href="#策略模式（Strategy-Pattern）" class="headerlink" title="策略模式（Strategy Pattern）"></a>策略模式（Strategy Pattern）</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><blockquote>
-<p>策略模式（Strategy Pattern）定义算法族，分别封装起来，让它们之间可以互相替换，此模式让算法的变化独立于使用算法的客户。</p>
+<p><strong><code>策略模式（Strategy Pattern）</code></strong>定义算法族，分别封装起来，让它们之间可以互相替换，此模式让算法的变化独立于使用算法的客户。</p>
 </blockquote>
+<ul>
+<li><p><a href="#OO设计原则">设计原则</a>：多用组合，少用继承; 封装变化；针对接口编程，不针对实现编程。</p>
+</li>
+<li><p><code>IS-A</code>：继承 ； <code>HAS-A/Implements</code>：组合</p>
+</li>
+</ul>
 <h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p><a href="https://github.com/WuChenxu/Ruby/tree/master/HeadFirstDesignPattern/StrategyPattern" target="_blank" rel="noopener">strategy pattern in ruby</a></p>
 <h3 id="UML"><a href="#UML" class="headerlink" title="UML"></a>UML</h3><img src="/2019/05/02/reading-notes-4-Head-First-Design-Pattern/strategy_pattern.svg" title="strategy pattern UML">
 <h2 id="观察者模式（Observer-Pattern）"><a href="#观察者模式（Observer-Pattern）" class="headerlink" title="观察者模式（Observer Pattern）"></a>观察者模式（Observer Pattern）</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><blockquote>
-<p>观察者模式（Observer Pattern）在对象之间定义一对多依赖，当一个对象的状态改变时，它的所有依赖者都会收到通知并自动更新。</p>
+<p><strong><code>观察者模式（Observer Pattern）</code></strong>在对象之间定义一对多依赖，当一个对象的状态改变时，它的所有依赖者都会收到通知并自动更新。</p>
 </blockquote>
 <ul>
+<li><p><a href="#OO设计原则">设计原则</a> ：松耦合。</p>
+</li>
 <li><p><code>观察者</code>和<code>可观察者</code>（主题）之间用松耦合方式结合（loose coupling），<code>可观察者</code>不知道<code>观察者</code>的细节，只知道<code>观察者</code>实现了<code>观察者</code>接口。</p>
 </li>
 <li><p>使用观察者模式，可以从观察者处推（push）或者拉（pull）数据。</p>
@@ -680,15 +690,26 @@
 <h3 id="实现-1"><a href="#实现-1" class="headerlink" title="实现"></a>实现</h3><p><a href="https://github.com/WuChenxu/Ruby/tree/master/HeadFirstDesignPattern/ObserverPattern" target="_blank" rel="noopener">observer pattern in ruby</a></p>
 <h3 id="UML-1"><a href="#UML-1" class="headerlink" title="UML"></a>UML</h3><img src="/2019/05/02/reading-notes-4-Head-First-Design-Pattern/observer_pattern.svg" title="observer pattern UML">
 <h3 id="常见场景"><a href="#常见场景" class="headerlink" title="常见场景"></a>常见场景</h3><p>GUI框架里的按键等组件，注册不同的观察者到组件的不同类型事件上（如按键按下）。</p>
-<h2 id="装饰器模式（Decorator-Pattern）"><a href="#装饰器模式（Decorator-Pattern）" class="headerlink" title="装饰器模式（Decorator Pattern）"></a>装饰器模式（Decorator Pattern）</h2><h2 id="工厂模式（Factory-Pattern）"><a href="#工厂模式（Factory-Pattern）" class="headerlink" title="工厂模式（Factory Pattern）"></a>工厂模式（Factory Pattern）</h2><h2 id="单件模式（Singleton-Pattern）"><a href="#单件模式（Singleton-Pattern）" class="headerlink" title="单件模式（Singleton Pattern）"></a>单件模式（Singleton Pattern）</h2><h3 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a>定义</h3><blockquote>
+<h2 id="装饰者模式（Decorator-Wrapper-Pattern）"><a href="#装饰者模式（Decorator-Wrapper-Pattern）" class="headerlink" title="装饰者模式（Decorator/Wrapper Pattern）"></a>装饰者模式（Decorator/Wrapper Pattern）</h2><h3 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a>定义</h3><blockquote>
+<p><strong><code>装饰者模式（Decorator/Wrapper Pattern）</code></strong>动态地将责任附加到对象上。若要扩展功能，装饰者提供了比继承更有弹性的替代方案。</p>
+</blockquote>
+<ul>
+<li><a href="#OO设计原则">设计原则</a> ：类应对扩展开放，对修改关闭。</li>
+<li>装饰者和被装饰者对象有相同的超类，这里利用继承来达到“类型匹配”，而不是用继承来获得“行为”。</li>
+<li>可以用一个或多个装饰着包装一个对象。</li>
+<li>装饰者可以在所委托被装饰者的行为之前与/或之后，加上自己的行为。</li>
+<li>装饰者一般对组件的客户是透明的，除非客户程序依赖于组件的具体类型。</li>
+<li>装饰者会导致设计中出现许多小对象，如果过度使用，会让程序变得很复杂。</li>
+</ul>
+<h3 id="实现-2"><a href="#实现-2" class="headerlink" title="实现"></a>实现</h3><h3 id="UML-2"><a href="#UML-2" class="headerlink" title="UML"></a>UML</h3><h2 id="工厂模式（Factory-Pattern）"><a href="#工厂模式（Factory-Pattern）" class="headerlink" title="工厂模式（Factory Pattern）"></a>工厂模式（Factory Pattern）</h2><h2 id="单件模式（Singleton-Pattern）"><a href="#单件模式（Singleton-Pattern）" class="headerlink" title="单件模式（Singleton Pattern）"></a>单件模式（Singleton Pattern）</h2><h3 id="定义-3"><a href="#定义-3" class="headerlink" title="定义"></a>定义</h3><blockquote>
 <p>单件模式（Singleton Pattern）确保一个类只有一个实例，并提供一个全局访问点。</p>
 </blockquote>
 <ul>
 <li>在JAVA中实现单件模式需要私有的构造器、一个静态方法和一个静态变量。</li>
 <li>确定在性能和资源上的限制，然后小心地选择适当的方案来实现单件，以解决多线程问题（我们必须认定所有的程序都是多线程的）。</li>
 </ul>
-<h3 id="实现-2"><a href="#实现-2" class="headerlink" title="实现"></a>实现</h3><p><a href="https://github.com/WuChenxu/Ruby/tree/master/HeadFirstDesignPattern/SingletonPattern" target="_blank" rel="noopener">singleton pattern in ruby</a></p>
-<h3 id="UML-2"><a href="#UML-2" class="headerlink" title="UML"></a>UML</h3><img src="/2019/05/02/reading-notes-4-Head-First-Design-Pattern/singleton_pattern.svg" title="singleton pattern UML">
+<h3 id="实现-3"><a href="#实现-3" class="headerlink" title="实现"></a>实现</h3><p><a href="https://github.com/WuChenxu/Ruby/tree/master/HeadFirstDesignPattern/SingletonPattern" target="_blank" rel="noopener">singleton pattern in ruby</a></p>
+<h3 id="UML-3"><a href="#UML-3" class="headerlink" title="UML"></a>UML</h3><img src="/2019/05/02/reading-notes-4-Head-First-Design-Pattern/singleton_pattern.svg" title="singleton pattern UML">
 <h3 id="常见场景-1"><a href="#常见场景-1" class="headerlink" title="常见场景"></a>常见场景</h3><p>共享资源管理，如线程池（thread pool）、缓存池（cache）、注册表设置（registry setting）。</p>
 <p>Reference:</p>
 <ol>
@@ -1205,7 +1226,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Head-First-Design-Patterns"><span class="nav-number">1.</span> <span class="nav-text">Head First Design Patterns</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Head-Frist学习原则"><span class="nav-number">1.1.</span> <span class="nav-text">Head Frist学习原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么需要设计模式"><span class="nav-number">1.2.</span> <span class="nav-text">为什么需要设计模式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#OO基础"><span class="nav-number">2.</span> <span class="nav-text">OO基础</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#OO设计原则"><span class="nav-number">3.</span> <span class="nav-text">OO设计原则</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#封装变化（Encapsulate-what-varies）"><span class="nav-number">3.1.</span> <span class="nav-text">封装变化（Encapsulate what varies）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#合成复用原则（Composite-Reuse-Principle）"><span class="nav-number">3.2.</span> <span class="nav-text">合成复用原则（Composite Reuse Principle）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#依赖倒置原则（Dependence-Inversion-Principle）"><span class="nav-number">3.3.</span> <span class="nav-text">依赖倒置原则（Dependence Inversion Principle）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为交互对象之间的松耦合设计而努力"><span class="nav-number">3.4.</span> <span class="nav-text">为交互对象之间的松耦合设计而努力</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开闭原则"><span class="nav-number">3.5.</span> <span class="nav-text">开闭原则</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式"><span class="nav-number">4.</span> <span class="nav-text">设计模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#策略模式（Strategy-Pattern）"><span class="nav-number">4.1.</span> <span class="nav-text">策略模式（Strategy Pattern）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">4.1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现"><span class="nav-number">4.1.2.</span> <span class="nav-text">实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UML"><span class="nav-number">4.1.3.</span> <span class="nav-text">UML</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#观察者模式（Observer-Pattern）"><span class="nav-number">4.2.</span> <span class="nav-text">观察者模式（Observer Pattern）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-1"><span class="nav-number">4.2.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现-1"><span class="nav-number">4.2.2.</span> <span class="nav-text">实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UML-1"><span class="nav-number">4.2.3.</span> <span class="nav-text">UML</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见场景"><span class="nav-number">4.2.4.</span> <span class="nav-text">常见场景</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#装饰器模式（Decorator-Pattern）"><span class="nav-number">4.3.</span> <span class="nav-text">装饰器模式（Decorator Pattern）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工厂模式（Factory-Pattern）"><span class="nav-number">4.4.</span> <span class="nav-text">工厂模式（Factory Pattern）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单件模式（Singleton-Pattern）"><span class="nav-number">4.5.</span> <span class="nav-text">单件模式（Singleton Pattern）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-2"><span class="nav-number">4.5.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现-2"><span class="nav-number">4.5.2.</span> <span class="nav-text">实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UML-2"><span class="nav-number">4.5.3.</span> <span class="nav-text">UML</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见场景-1"><span class="nav-number">4.5.4.</span> <span class="nav-text">常见场景</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Head-First-Design-Patterns"><span class="nav-number">1.</span> <span class="nav-text">Head First Design Patterns</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Head-Frist学习原则"><span class="nav-number">1.1.</span> <span class="nav-text">Head Frist学习原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么需要设计模式"><span class="nav-number">1.2.</span> <span class="nav-text">为什么需要设计模式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#OO基础"><span class="nav-number">2.</span> <span class="nav-text">OO基础</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#OO设计原则"><span class="nav-number">3.</span> <span class="nav-text">OO设计原则</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#封装变化（Encapsulate-what-varies）"><span class="nav-number">3.1.</span> <span class="nav-text">封装变化（Encapsulate what varies）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#合成复用原则（Composite-Reuse-Principle）"><span class="nav-number">3.2.</span> <span class="nav-text">合成复用原则（Composite Reuse Principle）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#依赖倒置原则（Dependence-Inversion-Principle）"><span class="nav-number">3.3.</span> <span class="nav-text">依赖倒置原则（Dependence Inversion Principle）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为交互对象之间的松耦合设计而努力（loose-coupling）"><span class="nav-number">3.4.</span> <span class="nav-text">为交互对象之间的松耦合设计而努力（loose coupling）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开闭原则"><span class="nav-number">3.5.</span> <span class="nav-text">开闭原则</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#与架构模式、框架、模块的对比"><span class="nav-number">4.</span> <span class="nav-text">与架构模式、框架、模块的对比</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式"><span class="nav-number">5.</span> <span class="nav-text">设计模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#策略模式（Strategy-Pattern）"><span class="nav-number">5.1.</span> <span class="nav-text">策略模式（Strategy Pattern）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">5.1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现"><span class="nav-number">5.1.2.</span> <span class="nav-text">实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UML"><span class="nav-number">5.1.3.</span> <span class="nav-text">UML</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#观察者模式（Observer-Pattern）"><span class="nav-number">5.2.</span> <span class="nav-text">观察者模式（Observer Pattern）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-1"><span class="nav-number">5.2.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现-1"><span class="nav-number">5.2.2.</span> <span class="nav-text">实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UML-1"><span class="nav-number">5.2.3.</span> <span class="nav-text">UML</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见场景"><span class="nav-number">5.2.4.</span> <span class="nav-text">常见场景</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#装饰者模式（Decorator-Wrapper-Pattern）"><span class="nav-number">5.3.</span> <span class="nav-text">装饰者模式（Decorator/Wrapper Pattern）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-2"><span class="nav-number">5.3.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现-2"><span class="nav-number">5.3.2.</span> <span class="nav-text">实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UML-2"><span class="nav-number">5.3.3.</span> <span class="nav-text">UML</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工厂模式（Factory-Pattern）"><span class="nav-number">5.4.</span> <span class="nav-text">工厂模式（Factory Pattern）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单件模式（Singleton-Pattern）"><span class="nav-number">5.5.</span> <span class="nav-text">单件模式（Singleton Pattern）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-3"><span class="nav-number">5.5.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现-3"><span class="nav-number">5.5.2.</span> <span class="nav-text">实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UML-3"><span class="nav-number">5.5.3.</span> <span class="nav-text">UML</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见场景-1"><span class="nav-number">5.5.4.</span> <span class="nav-text">常见场景</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -1258,7 +1279,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:36</span>
+    <span title="站点阅读时长">3:37</span>
   
 </div>
 
