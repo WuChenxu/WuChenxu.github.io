@@ -46,8 +46,6 @@
 
 
 
-
-
   
   
   
@@ -105,19 +103,19 @@
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
 
-<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.2">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.2">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.2">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=7.1.1" color="#222">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.2" color="#222">
 
 
 
@@ -130,7 +128,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '7.1.1',
+    version: '7.1.2',
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
     back2top: true,
     back2top_sidebar: true,
@@ -279,7 +277,6 @@
 
     
     
-    
       
     
 
@@ -296,7 +293,6 @@
           
           <li class="menu-item menu-item-about">
 
-    
     
     
       
@@ -317,7 +313,6 @@
 
     
     
-    
       
     
 
@@ -336,7 +331,6 @@
 
     
     
-    
       
     
 
@@ -353,7 +347,6 @@
           
           <li class="menu-item menu-item-archives">
 
-    
     
     
       
@@ -3233,7 +3226,7 @@
 
 
 
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.1</div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.2</div>
 
 
 
@@ -3313,29 +3306,29 @@
   
 
 
-  <script src="/js/utils.js?v=7.1.1"></script>
+  <script src="/js/utils.js?v=7.1.2"></script>
 
-  <script src="/js/motion.js?v=7.1.1"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/affix.js?v=7.1.1"></script>
-
-  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
-
+  <script src="/js/motion.js?v=7.1.2"></script>
 
 
 
   
+  
+
+
+  <script src="/js/affix.js?v=7.1.2"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.2"></script>
+
+
+
+
+  
 
   
 
 
-  <script src="/js/next-boot.js?v=7.1.1"></script>
+  <script src="/js/next-boot.js?v=7.1.2"></script>
 
 
   
@@ -3376,10 +3369,6 @@
 
   
   
-
-<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
-
-
 
 <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 
@@ -3801,6 +3790,8 @@
       ta.readOnly = true;
       ta.value = code;
       document.body.appendChild(ta);
+      const selection = document.getSelection();
+      const selected = selection.rangeCount > 0 ? selection.getRangeAt(0) : false;
       ta.select();
       ta.setSelectionRange(0, code.length);
       ta.readOnly = false;
@@ -3811,6 +3802,10 @@
       
       ta.blur(); // For iOS
       $(this).blur();
+      if (selected) {
+        selection.removeAllRanges();
+        selection.addRange(selected);
+      }
     })).on('mouseleave', function(e) {
       var $b = $(this).find('.copy-btn');
       setTimeout(function() {
