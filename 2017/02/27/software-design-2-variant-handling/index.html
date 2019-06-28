@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -227,7 +227,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -237,7 +237,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta custom-logo">
     
@@ -444,20 +444,20 @@
     <div class="reading-progress-bar"></div>
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2017/02/27/software-design-2-variant-handling/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WU Chenxu">
       <meta itemprop="description" content="一切都会成为过去">
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="玉汝于成，功不唐捐">
     </span>
 
@@ -526,7 +526,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/software/" itemprop="url" rel="index"><span itemprop="name">software</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/software/" itemprop="url" rel="index"><span itemprop="name">software</span></a></span>
 
                 
                 
@@ -623,17 +623,30 @@
 <li>one ECU for different vehicle models. <a href="#one-time-configuraton">one-time configuraton</a>.  <a href="#bootloader">bootloader</a></li>
 <li>differnt Transmission type for one vehicle model. <a href="#constant-configuration">constant configuration</a></li>
 </ol>
-<h1 id="pre-compile"><a href="#pre-compile" class="headerlink" title="pre-compile"></a>pre-compile</h1><p>copy choosed target files to target directory<br><figure class="highlight plain"><figcaption><span>two targets(A and B),before compile copy targetA or targetB to copied_target, only files in copied_target are included in makefile</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">_____componentA</span><br><span class="line">         |______targetA</span><br><span class="line">         |______targetB</span><br><span class="line">         |______copied_target</span><br></pre></td></tr></table></figure></p>
-<h1 id="during-compile"><a href="#during-compile" class="headerlink" title="during-compile"></a>during-compile</h1><p>compile switch(macro)<br><figure class="highlight c"><figcaption><span>compile switch</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">if</span> (GS_MAJOR_VER == GS_TARGET_A)</span></span><br><span class="line"><span class="comment">// implementation for GS_TARGET_A</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">else</span> (GS_MAJOR_VER == GS_TARGET_B)</span></span><br><span class="line"><span class="comment">// implementation for GS_TARGET_B</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">else</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">error</span> <span class="meta-string">"no such target"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure></p>
-<h1 id="on-the-fly"><a href="#on-the-fly" class="headerlink" title="on the fly"></a>on the fly</h1><h2 id="one-time-configuraton"><a href="#one-time-configuraton" class="headerlink" title="one-time configuraton"></a>one-time configuraton</h2><p>parameter is seleted by vehicle configuration shored in NVM/flash.<br><figure class="highlight c"><figcaption><span>parametes in flash, variant in NVM</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">enum</span></span><br><span class="line">&#123;</span><br><span class="line">varaint1_enm,</span><br><span class="line">variant2_enm</span><br><span class="line">&#125;Variants;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> VariantPar_st parameters[]=&#123;variant1_par, variant2_par&#125;;<span class="comment">//all parametes for variants stored in flash</span></span><br><span class="line"></span><br><span class="line">g_variant_u8 = getVariant();<span class="comment">//getVariant() read variant from NVM.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(varaint1_enm == g_variant_u8)</span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">//load variant1 parameter or doing something special for variant1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">//loac variant2 paramter or doing something special for variant2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="constant-configuration"><a href="#constant-configuration" class="headerlink" title="constant configuration"></a>constant configuration</h2><h3 id="Signal-Multiplexing"><a href="#Signal-Multiplexing" class="headerlink" title="Signal Multiplexing"></a>Signal Multiplexing</h3><p>One signal in the frame is used as a multiplexor and the remaining payload is interpreted depending on the value of the multiplexor signal.<br><img src="/2017/02/27/software-design-2-variant-handling/signal_multiplexing.png"></p>
+<h1 id="pre-compile"><a href="#pre-compile" class="headerlink" title="pre-compile"></a>pre-compile</h1><p>copy choosed target files to target directory</p>
+<figure class="highlight plain"><figcaption><span>two targets(A and B),before compile copy targetA or targetB to copied_target, only files in copied_target are included in makefile</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">_____componentA</span><br><span class="line">         |______targetA</span><br><span class="line">         |______targetB</span><br><span class="line">         |______copied_target</span><br></pre></td></tr></table></figure>
+
+<h1 id="during-compile"><a href="#during-compile" class="headerlink" title="during-compile"></a>during-compile</h1><p>compile switch(macro)</p>
+<figure class="highlight c"><figcaption><span>compile switch</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">if</span> (GS_MAJOR_VER == GS_TARGET_A)</span></span><br><span class="line"><span class="comment">// implementation for GS_TARGET_A</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">else</span> (GS_MAJOR_VER == GS_TARGET_B)</span></span><br><span class="line"><span class="comment">// implementation for GS_TARGET_B</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">else</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">error</span> <span class="meta-string">"no such target"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+
+<h1 id="on-the-fly"><a href="#on-the-fly" class="headerlink" title="on the fly"></a>on the fly</h1><h2 id="one-time-configuraton"><a href="#one-time-configuraton" class="headerlink" title="one-time configuraton"></a>one-time configuraton</h2><p>parameter is seleted by vehicle configuration shored in NVM/flash.</p>
+<figure class="highlight c"><figcaption><span>parametes in flash, variant in NVM</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">enum</span></span><br><span class="line">&#123;</span><br><span class="line">varaint1_enm,</span><br><span class="line">variant2_enm</span><br><span class="line">&#125;Variants;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> VariantPar_st parameters[]=&#123;variant1_par, variant2_par&#125;;<span class="comment">//all parametes for variants stored in flash</span></span><br><span class="line"></span><br><span class="line">g_variant_u8 = getVariant();<span class="comment">//getVariant() read variant from NVM.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(varaint1_enm == g_variant_u8)</span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">//load variant1 parameter or doing something special for variant1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">//loac variant2 paramter or doing something special for variant2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="constant-configuration"><a href="#constant-configuration" class="headerlink" title="constant configuration"></a>constant configuration</h2><h3 id="Signal-Multiplexing"><a href="#Signal-Multiplexing" class="headerlink" title="Signal Multiplexing"></a>Signal Multiplexing</h3><p>One signal in the frame is used as a multiplexor and the remaining payload is interpreted depending on the value of the multiplexor signal.</p>
+<img src="/2017/02/27/software-design-2-variant-handling/signal_multiplexing.png">
+
 <h3 id="adaptive-algorithm"><a href="#adaptive-algorithm" class="headerlink" title="adaptive algorithm"></a>adaptive algorithm</h3><p>differnt parameter according different condition(eg.temperature/huminity/speed…)</p>
 <h1 id="post-compile"><a href="#post-compile" class="headerlink" title="post-compile"></a>post-compile</h1><h2 id="link-different-libs"><a href="#link-different-libs" class="headerlink" title="link different libs"></a>link different libs</h2><figure class="highlight plain"><figcaption><span>check your linker user manual and link different lib according to different target</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-L&#123;path to file containing library&#125; -l$&#123;library name&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="merge-different-parameters"><a href="#merge-different-parameters" class="headerlink" title="merge different parameters"></a>merge different parameters</h2><p>pre-condition: parameter size for different variants is the same</p>
 <figure class="highlight plain"><figcaption><span>executable file structure</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">------</span><br><span class="line">Application area</span><br><span class="line">------</span><br><span class="line">Calibration area</span><br><span class="line">------</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight plain"><figcaption><span>variant1.hex/exe</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">------</span><br><span class="line">Application area</span><br><span class="line">------</span><br><span class="line">Calibration area for variant1</span><br><span class="line">------</span><br></pre></td></tr></table></figure>
+
 <h1 id="version-control"><a href="#version-control" class="headerlink" title="version control"></a>version control</h1><p>manage by version tools using branch, development path.</p>
-<h1 id="deployment"><a href="#deployment" class="headerlink" title="deployment"></a>deployment</h1><h2 id="bootloader"><a href="#bootloader" class="headerlink" title="bootloader"></a>bootloader</h2><p>use bootloader to flash seperate calibartion data during End of Line according to different vehilce models.<br><figure class="highlight plain"><figcaption><span>executable file structure</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">------</span><br><span class="line">Bootloader area</span><br><span class="line">------</span><br><span class="line">Application area</span><br><span class="line">------</span><br><span class="line">Calibration area</span><br><span class="line">------</span><br></pre></td></tr></table></figure></p>
+<h1 id="deployment"><a href="#deployment" class="headerlink" title="deployment"></a>deployment</h1><h2 id="bootloader"><a href="#bootloader" class="headerlink" title="bootloader"></a>bootloader</h2><p>use bootloader to flash seperate calibartion data during End of Line according to different vehilce models.</p>
+<figure class="highlight plain"><figcaption><span>executable file structure</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">------</span><br><span class="line">Bootloader area</span><br><span class="line">------</span><br><span class="line">Application area</span><br><span class="line">------</span><br><span class="line">Calibration area</span><br><span class="line">------</span><br></pre></td></tr></table></figure>
+
 <h2 id="sample-label"><a href="#sample-label" class="headerlink" title="sample label"></a>sample label</h2><p>different executable files for differnt ECUs.</p>
 <p>References:</p>
 <ol>
@@ -750,7 +763,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="WU Chenxu">
             
@@ -1194,7 +1207,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">239k</span>
+    <span title="站点总字数">240k</span>
   
 
   
@@ -1205,12 +1218,12 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:37</span>
+    <span title="站点阅读时长">3:38</span>
   
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 

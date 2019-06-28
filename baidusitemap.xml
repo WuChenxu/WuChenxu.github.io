@@ -1,223 +1,223 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.wuchenxu.com/2015/11/04/Static-Blog-hexo-github-1-Start/</loc>
+    <lastmod>2019-06-28</lastmod>
+  </url>  <url>
     <loc>https://www.wuchenxu.com/2019/05/02/reading-notes-4-Head-First-Design-Pattern/</loc>
-    <lastmod>2019-06-10T14:07:54.706Z</lastmod>
+    <lastmod>2019-06-10</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/06/28/MathJax-1-introduction/</loc>
-    <lastmod>2019-05-05T13:21:46.501Z</lastmod>
+    <lastmod>2019-05-05</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/09/08/MathJax-2-using-in-hexo-markdown/</loc>
-    <lastmod>2019-05-05T13:14:53.550Z</lastmod>
+    <lastmod>2019-05-05</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2017/01/16/software-design-1-state-machine/</loc>
-    <lastmod>2019-05-05T12:45:19.289Z</lastmod>
+    <lastmod>2019-05-05</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2018/12/27/Knowledge-model/</loc>
-    <lastmod>2019-04-07T13:45:01.605Z</lastmod>
+    <lastmod>2019-04-07</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2018/12/31/Unix-Linux-cmd-1-find-grep/</loc>
-    <lastmod>2019-01-01T14:46:51.995Z</lastmod>
+    <lastmod>2019-01-01</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2015/11/19/markdown-usage/</loc>
-    <lastmod>2019-01-01T14:44:29.383Z</lastmod>
+    <lastmod>2019-01-01</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2017/02/15/TeX-2-MacTex/</loc>
-    <lastmod>2019-01-01T14:43:21.833Z</lastmod>
+    <lastmod>2019-01-01</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2015/12/30/Markdown-html-compare/</loc>
-    <lastmod>2019-01-01T14:42:39.819Z</lastmod>
+    <lastmod>2019-01-01</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2018/04/15/integrate-files-with-same-name-same-function-in-C/</loc>
-    <lastmod>2019-01-01T14:40:02.539Z</lastmod>
+    <lastmod>2019-01-01</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/01/27/Markdown-inline-css-compare/</loc>
-    <lastmod>2019-01-01T14:37:55.776Z</lastmod>
+    <lastmod>2019-01-01</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/04/01/windows-cmd-17-multiple-thread/</loc>
-    <lastmod>2018-12-31T12:26:09.929Z</lastmod>
+    <lastmod>2018-12-31</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/04/28/Static-Blog-hexo-github-8-binding-domain/</loc>
-    <lastmod>2018-12-31T12:25:26.698Z</lastmod>
+    <lastmod>2018-12-31</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/04/01/windows-cmd-12-for/</loc>
-    <lastmod>2018-12-31T12:24:56.963Z</lastmod>
+    <lastmod>2018-12-31</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/03/08/jenkins-auto-deploy-hexo/</loc>
-    <lastmod>2018-12-31T12:24:12.483Z</lastmod>
+    <lastmod>2018-12-31</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/03/28/windows-cmd-7-ren-replace/</loc>
-    <lastmod>2018-12-31T12:23:47.495Z</lastmod>
+    <lastmod>2018-12-31</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2015/12/08/Static-Blog-hexo-github-6-tag-plugins/</loc>
-    <lastmod>2018-12-31T12:23:17.856Z</lastmod>
+    <lastmod>2018-12-31</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/05/12/hamming-distance/</loc>
-    <lastmod>2018-12-31T12:22:24.853Z</lastmod>
+    <lastmod>2018-12-31</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2015/11/23/Static-Blog-hexo-github-5-hexo-usage-trick/</loc>
-    <lastmod>2018-12-31T11:58:33.685Z</lastmod>
+    <lastmod>2018-12-31</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/09/13/Rust-lang-2-Cargo/</loc>
-    <lastmod>2018-12-31T11:55:22.871Z</lastmod>
+    <lastmod>2018-12-31</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/03/01/code-coverage-in-unit-test/</loc>
-    <lastmod>2018-12-31T11:43:38.004Z</lastmod>
+    <lastmod>2018-12-31</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/01/21/character-encodings-introduce/</loc>
-    <lastmod>2018-12-31T11:39:32.209Z</lastmod>
+    <lastmod>2018-12-31</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/01/14/charset-of-website/</loc>
-    <lastmod>2018-12-31T11:38:53.418Z</lastmod>
+    <lastmod>2018-12-31</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/01/07/Automative-lead-acid-battery-charging-voltage/</loc>
-    <lastmod>2018-12-31T11:38:01.883Z</lastmod>
+    <lastmod>2018-12-31</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2015/12/13/Static-Blog-hexo-github-7-display-updated-date/</loc>
-    <lastmod>2018-12-31T11:22:22.740Z</lastmod>
+    <lastmod>2018-12-31</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2015/11/09/Static-Blog-hexo-github-4-advanced/</loc>
-    <lastmod>2018-12-29T12:10:46.003Z</lastmod>
+    <lastmod>2018-12-29</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2015/12/07/CRC8-calculate/</loc>
-    <lastmod>2018-12-27T11:54:40.072Z</lastmod>
+    <lastmod>2018-12-27</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2015/11/05/Static-Blog-hexo-github-2-config-hexo/</loc>
-    <lastmod>2018-12-23T09:56:17.872Z</lastmod>
+    <lastmod>2018-12-23</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2015/11/09/Static-Blog-hexo-github-3-config-theme/</loc>
-    <lastmod>2018-12-23T09:55:41.490Z</lastmod>
-  </url>  <url>
-    <loc>https://www.wuchenxu.com/2015/11/04/Static-Blog-hexo-github-1-Start/</loc>
-    <lastmod>2018-12-23T06:26:43.319Z</lastmod>
+    <lastmod>2018-12-23</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2017/09/21/hype-cycle/</loc>
-    <lastmod>2018-12-08T09:21:33.742Z</lastmod>
+    <lastmod>2018-12-08</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2018/05/11/safety-and-security/</loc>
-    <lastmod>2018-05-11T15:23:04.237Z</lastmod>
+    <lastmod>2018-05-11</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2018/02/04/machine_learning_notes/</loc>
-    <lastmod>2018-02-25T14:56:46.597Z</lastmod>
+    <lastmod>2018-02-25</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2017/12/31/ABZ-Plan/</loc>
-    <lastmod>2017-12-31T15:45:43.893Z</lastmod>
+    <lastmod>2017-12-31</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/07/01/matplotlib-1-introduction/</loc>
-    <lastmod>2017-08-31T14:26:04.000Z</lastmod>
+    <lastmod>2017-08-31</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2017/05/05/reading-notes-2-practice-guide-for-frontline-architects/</loc>
-    <lastmod>2017-07-16T13:18:06.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2017/02/27/software-design-2-variant-handling/</loc>
-    <lastmod>2017-07-16T13:17:58.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2017/03/19/Rust-lang-4-std-fmt/</loc>
-    <lastmod>2017-07-16T13:17:56.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2017/02/15/Static-Blog-hexo-github-9-local-search/</loc>
-    <lastmod>2017-07-16T13:17:48.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/03/02/IP-code-degree-of-protection-by-enclosure/</loc>
-    <lastmod>2017-07-16T13:17:42.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2017/01/30/reading-notes-1-history-of-humankind/</loc>
-    <lastmod>2017-07-16T13:17:38.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2017/01/25/Rust-lang-3-crate/</loc>
-    <lastmod>2017-07-16T13:17:36.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2017/01/11/how-to-develop-a-product/</loc>
-    <lastmod>2017-07-16T13:17:02.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2015/11/29/byte-bit-endian/</loc>
-    <lastmod>2017-07-16T13:16:59.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/11/20/Conways-law/</loc>
-    <lastmod>2017-07-16T13:16:57.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/07/12/software-filtering-algorithm-and-frequency-response/</loc>
-    <lastmod>2017-07-16T13:16:54.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/09/28/TeX-1-introduction/</loc>
-    <lastmod>2017-07-16T13:16:51.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/09/17/windows-cmd-18-tree/</loc>
-    <lastmod>2017-07-16T13:16:48.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/09/12/Rust-lang-1-hello-world/</loc>
-    <lastmod>2017-07-16T13:16:46.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/12/18/windows-cmd-20-date-time/</loc>
-    <lastmod>2017-07-16T13:16:40.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/12/07/windows-cmd-19-color/</loc>
-    <lastmod>2017-07-16T13:16:38.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2015/12/03/CAN-byte-order/</loc>
-    <lastmod>2017-07-16T13:15:41.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/03/30/windows-cmd-9-find-findstr/</loc>
-    <lastmod>2017-07-16T13:15:29.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/06/01/humidity/</loc>
-    <lastmod>2017-07-16T13:15:17.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/04/26/python-srcipt-embedded-in-bat/</loc>
-    <lastmod>2017-07-16T13:15:05.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/04/01/windows-cmd-16-compound-command/</loc>
-    <lastmod>2017-07-16T13:14:44.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/04/01/windows-cmd-15-shift/</loc>
-    <lastmod>2017-07-16T13:14:41.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/04/01/windows-cmd-14-set-setlocal-endlocal/</loc>
-    <lastmod>2017-07-16T13:14:38.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/04/01/windows-cmd-13-goto/</loc>
-    <lastmod>2017-07-16T13:14:35.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/04/01/windows-cmd-10-sort/</loc>
-    <lastmod>2017-07-16T13:14:31.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/04/01/windows-cmd-11-if-else/</loc>
-    <lastmod>2017-07-16T13:14:28.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/03/30/windows-cmd-8-move/</loc>
-    <lastmod>2017-07-16T13:13:58.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/03/28/jpeg-rar/</loc>
-    <lastmod>2017-07-16T13:13:35.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/03/09/windows-cmd-1-copy-xcopy-robocopy/</loc>
-    <lastmod>2017-07-16T13:13:31.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/03/26/windows-cmd-6-attrib/</loc>
-    <lastmod>2017-07-16T13:13:27.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/03/23/windows-cmd-4-echo/</loc>
-    <lastmod>2017-07-16T13:13:22.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/03/15/windows-cmd-3-dir-mkdir-rmdir-chdir/</loc>
-    <lastmod>2017-07-16T13:13:18.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/03/15/windows-cmd-2-del-erase/</loc>
-    <lastmod>2017-07-16T13:13:12.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2016/03/25/windows-cmd-5-type/</loc>
-    <lastmod>2017-07-16T13:13:07.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2017/05/12/reading-notes-3-Facts-and-fallacies-of-software-engineering/</loc>
-    <lastmod>2017-07-16T13:09:51.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2017/05/30/where-program-execute-in/</loc>
-    <lastmod>2017-07-16T12:05:41.000Z</lastmod>
+    <lastmod>2017-07-16</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2015/11/18/BCD-CODE/</loc>
-    <lastmod>2015-11-25T12:21:20.000Z</lastmod>
+    <lastmod>2015-11-25</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2015/11/11/Tmall-Box-Install-other-video-app/</loc>
-    <lastmod>2015-11-18T12:12:32.000Z</lastmod>
+    <lastmod>2015-11-18</lastmod>
   </url>
 </urlset>

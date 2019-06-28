@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -153,13 +153,13 @@
 
 
 
-  <meta name="description" content="南方二重唱-细说往事  软件开发中有一种称为”持续集成(Continuous Integration)”的方法，其宗旨是团队开发成员可以经常集成软件，进行测试，从而达到小步快进的效果。而持续集成每次都需要构建（包括编译，发布，自动化测试等），如果手动构建会增加很多工作量，于是乎自动化构建应运而生。Jenkins是常用的一种自动化构建工具。我们以部署hexo来说明Jenkins的基本使用方法。">
+  <meta name="description" content="南方二重唱-细说往事 * * * 软件开发中有一种称为&quot;持续集成(Continuous Integration)&quot;的方法，其宗旨是团队开发成员可以经常集成软件，进行测试，从而达到小步快进的效果。而持续集成每次都需要构建（包括编译，发布，自动化测试等），如果手动构建会增加很多工作量，于是乎自动化构建应运而生。 Jenkins是常用的一种自动化构建工具。我们以部署hexo来说明Jenkins的基本使">
 <meta name="keywords" content="CI,Jenkins">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Jenkins自动部署hexo到github">
 <meta property="og:url" content="https://www.wuchenxu.com/2016/03/08/jenkins-auto-deploy-hexo/index.html">
 <meta property="og:site_name" content="玉汝于成，功不唐捐">
-<meta property="og:description" content="南方二重唱-细说往事  软件开发中有一种称为”持续集成(Continuous Integration)”的方法，其宗旨是团队开发成员可以经常集成软件，进行测试，从而达到小步快进的效果。而持续集成每次都需要构建（包括编译，发布，自动化测试等），如果手动构建会增加很多工作量，于是乎自动化构建应运而生。Jenkins是常用的一种自动化构建工具。我们以部署hexo来说明Jenkins的基本使用方法。">
+<meta property="og:description" content="南方二重唱-细说往事 * * * 软件开发中有一种称为&quot;持续集成(Continuous Integration)&quot;的方法，其宗旨是团队开发成员可以经常集成软件，进行测试，从而达到小步快进的效果。而持续集成每次都需要构建（包括编译，发布，自动化测试等），如果手动构建会增加很多工作量，于是乎自动化构建应运而生。 Jenkins是常用的一种自动化构建工具。我们以部署hexo来说明Jenkins的基本使">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://www.wuchenxu.com/2016/03/08/jenkins-auto-deploy-hexo/jenkins_create_item.png">
 <meta property="og:image" content="https://www.wuchenxu.com/2016/03/08/jenkins-auto-deploy-hexo/jenkins_configure_item1.png">
@@ -168,7 +168,7 @@
 <meta property="og:updated_time" content="2018-12-31T12:24:12.483Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jenkins自动部署hexo到github">
-<meta name="twitter:description" content="南方二重唱-细说往事  软件开发中有一种称为”持续集成(Continuous Integration)”的方法，其宗旨是团队开发成员可以经常集成软件，进行测试，从而达到小步快进的效果。而持续集成每次都需要构建（包括编译，发布，自动化测试等），如果手动构建会增加很多工作量，于是乎自动化构建应运而生。Jenkins是常用的一种自动化构建工具。我们以部署hexo来说明Jenkins的基本使用方法。">
+<meta name="twitter:description" content="南方二重唱-细说往事 * * * 软件开发中有一种称为&quot;持续集成(Continuous Integration)&quot;的方法，其宗旨是团队开发成员可以经常集成软件，进行测试，从而达到小步快进的效果。而持续集成每次都需要构建（包括编译，发布，自动化测试等），如果手动构建会增加很多工作量，于是乎自动化构建应运而生。 Jenkins是常用的一种自动化构建工具。我们以部署hexo来说明Jenkins的基本使">
 <meta name="twitter:image" content="https://www.wuchenxu.com/2016/03/08/jenkins-auto-deploy-hexo/jenkins_create_item.png">
 
 
@@ -230,7 +230,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -240,7 +240,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta custom-logo">
     
@@ -447,20 +447,20 @@
     <div class="reading-progress-bar"></div>
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2016/03/08/jenkins-auto-deploy-hexo/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WU Chenxu">
       <meta itemprop="description" content="一切都会成为过去">
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="玉汝于成，功不唐捐">
     </span>
 
@@ -529,14 +529,14 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/CI/" itemprop="url" rel="index"><span itemprop="name">CI</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CI/" itemprop="url" rel="index"><span itemprop="name">CI</span></a></span>
 
                 
                 
                   ，
                 
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/CI/Jenkins/" itemprop="url" rel="index"><span itemprop="name">Jenkins</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CI/Jenkins/" itemprop="url" rel="index"><span itemprop="name">Jenkins</span></a></span>
 
                 
                 
@@ -623,9 +623,14 @@
       
 
       
-        <p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=369252&auto=0&height=66"></iframe><br>南方二重唱-细说往事</p>
-<hr>
-<p>软件开发中有一种称为”持续集成(Continuous Integration)”的方法，其宗旨是团队开发成员可以经常集成软件，进行测试，从而达到小步快进的效果。而持续集成每次都需要构建（包括编译，发布，自动化测试等），如果手动构建会增加很多工作量，于是乎自动化构建应运而生。<br>Jenkins是常用的一种自动化构建工具。我们以部署hexo来说明Jenkins的基本使用方法。<br><a id="more"></a></p>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=369252&auto=0&height=66"></iframe>
+南方二重唱-细说往事
+* * *
+软件开发中有一种称为"持续集成(Continuous Integration)"的方法，其宗旨是团队开发成员可以经常集成软件，进行测试，从而达到小步快进的效果。而持续集成每次都需要构建（包括编译，发布，自动化测试等），如果手动构建会增加很多工作量，于是乎自动化构建应运而生。
+Jenkins是常用的一种自动化构建工具。我们以部署hexo来说明Jenkins的基本使用方法。
+<a id="more"></a>
+
+
 <ol>
 <li><p>install <a href="www.jenkins-ci.com">Jenkins</a></p>
 </li>
@@ -637,19 +642,25 @@
 </li>
 </ol>
 <img src="/2016/03/08/jenkins-auto-deploy-hexo/jenkins_create_item.png">
+
 <ol start="5">
 <li>configure the item.<br>参数化构建，用不同的参数来实现不同目的的构建。<img src="/2016/03/08/jenkins-auto-deploy-hexo/jenkins_configure_item1.png">
+
 </li>
 </ol>
 <img src="/2016/03/08/jenkins-auto-deploy-hexo/jenkins_configure_item2.png">
+
 <ol start="6">
 <li>write script</li>
 </ol>
 <figure class="highlight python"><figcaption><span> jenkins_deploy_hexo</span><a href="/downloads/code/jenkins_hexo/jenkins_deploy_hexo.py">view raw</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">""</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">"########################################################################################################"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">""</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">"deploy hexo using Jenkins"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">"author:Wu Chenxu"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">"version:v2.0"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">""</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">"############################################## PARAMETERS  ##############################################"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">""</span></span><br><span class="line">hexo_dir = <span class="string">'D:\快盘\hexo'</span></span><br><span class="line"></span><br><span class="line">par_deploy_type =  os.environ.get(<span class="string">'Deploy_type'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">"Deploy_type:"</span>+par_deploy_type</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">"############################################ hexo generate ##############################################"</span></span><br><span class="line">subprocess.call(<span class="string">'hexo clean'</span>, shell=<span class="keyword">True</span>)</span><br><span class="line">subprocess.call(<span class="string">'hexo g'</span>, shell=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> par_deploy_type == <span class="string">'local'</span>:</span><br><span class="line">	<span class="keyword">print</span> <span class="string">"start local server ...."</span></span><br><span class="line">	p=subprocess.Popen([<span class="string">"start"</span>, <span class="string">"hexo"</span>, <span class="string">"server"</span>], cwd = unicode(hexo_dir, <span class="string">'utf8'</span>).encode(<span class="string">'mbcs'</span>),shell=<span class="keyword">True</span>)</span><br><span class="line">	<span class="keyword">print</span> <span class="string">"start chrome web browser..."</span></span><br><span class="line">	subprocess.Popen([<span class="string">"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"</span>, <span class="string">"http://localhost:4000"</span>], shell=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	<span class="keyword">print</span> <span class="string">"start to deploy in github ..."</span></span><br><span class="line">	subprocess.Popen([<span class="string">'start'</span>, <span class="string">'hexo'</span>, <span class="string">'deploy'</span>], cwd = unicode(hexo_dir, <span class="string">'utf8'</span>).encode(<span class="string">'mbcs'</span>), shell=<span class="keyword">True</span>)</span><br></pre></td></tr></table></figure>
+
 <ol start="7">
 <li>build</li>
 </ol>
 <img src="/2016/03/08/jenkins-auto-deploy-hexo/jenkins_build_item.png">
+
+
 <p>Reference:</p>
 <ol>
 <li><a href="http://jenkins-ci.org/" target="_blank" rel="noopener">Jenkins</a></li>
@@ -758,7 +769,7 @@
 
       <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="WU Chenxu">
             
@@ -1185,7 +1196,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">239k</span>
+    <span title="站点总字数">240k</span>
   
 
   
@@ -1196,12 +1207,12 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:37</span>
+    <span title="站点阅读时长">3:38</span>
   
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 

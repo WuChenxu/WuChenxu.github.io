@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -228,7 +228,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -238,7 +238,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta custom-logo">
     
@@ -445,20 +445,20 @@
     <div class="reading-progress-bar"></div>
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2015/11/29/byte-bit-endian/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WU Chenxu">
       <meta itemprop="description" content="一切都会成为过去">
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="玉汝于成，功不唐捐">
     </span>
 
@@ -527,7 +527,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/encoding/" itemprop="url" rel="index"><span itemprop="name">encoding</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/encoding/" itemprop="url" rel="index"><span itemprop="name">encoding</span></a></span>
 
                 
                 
@@ -629,106 +629,105 @@
 </blockquote>
 <p>如果我们认为日常书写数字是从低地址开始写的，那么可以说，我们的书写规则是遵从大端规则的。</p>
 <h1 id="表示方法"><a href="#表示方法" class="headerlink" title="表示方法"></a>表示方法</h1><img src="/2015/11/29/byte-bit-endian/endian_in_computer.gif">
-<p>我们用大端和小端两种形式来表示同一个数<code>0x0A0B0C0D</code>.<br>大端系统：</p>
+<p>我们用大端和小端两种形式来表示同一个数<code>0x0A0B0C0D</code>.
+大端系统：</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">byte addr</th>
-<th style="text-align:center">0</th>
-<th style="text-align:center">1</th>
-<th style="text-align:center">2</th>
-<th style="text-align:center">3</th>
+<th align="center">byte addr</th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">bit offset</td>
-<td style="text-align:center">01234567</td>
-<td style="text-align:center">01234567</td>
-<td style="text-align:center">01234567</td>
-<td style="text-align:center">01234567</td>
+<tbody><tr>
+<td align="center">bit offset</td>
+<td align="center">01234567</td>
+<td align="center">01234567</td>
+<td align="center">01234567</td>
+<td align="center">01234567</td>
 </tr>
 <tr>
-<td style="text-align:center">binary</td>
-<td style="text-align:center">00001010</td>
-<td style="text-align:center">00001011</td>
-<td style="text-align:center">00001100</td>
-<td style="text-align:center">00001101</td>
+<td align="center">binary</td>
+<td align="center">00001010</td>
+<td align="center">00001011</td>
+<td align="center">00001100</td>
+<td align="center">00001101</td>
 </tr>
 <tr>
-<td style="text-align:center">hex</td>
-<td style="text-align:center">0A</td>
-<td style="text-align:center">0B</td>
-<td style="text-align:center">0C</td>
-<td style="text-align:center">0D</td>
+<td align="center">hex</td>
+<td align="center">0A</td>
+<td align="center">0B</td>
+<td align="center">0C</td>
+<td align="center">0D</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>小端系统：</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">byte addr</th>
-<th style="text-align:center">3</th>
-<th style="text-align:center">2</th>
-<th style="text-align:center">1</th>
-<th style="text-align:center">0</th>
+<th align="center">byte addr</th>
+<th align="center">3</th>
+<th align="center">2</th>
+<th align="center">1</th>
+<th align="center">0</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">bit offset</td>
-<td style="text-align:center">76543210</td>
-<td style="text-align:center">76543210</td>
-<td style="text-align:center">76543210</td>
-<td style="text-align:center">76543210</td>
+<tbody><tr>
+<td align="center">bit offset</td>
+<td align="center">76543210</td>
+<td align="center">76543210</td>
+<td align="center">76543210</td>
+<td align="center">76543210</td>
 </tr>
 <tr>
-<td style="text-align:center">binary</td>
-<td style="text-align:center">00001010</td>
-<td style="text-align:center">00001011</td>
-<td style="text-align:center">00001100</td>
-<td style="text-align:center">00001101</td>
+<td align="center">binary</td>
+<td align="center">00001010</td>
+<td align="center">00001011</td>
+<td align="center">00001100</td>
+<td align="center">00001101</td>
 </tr>
 <tr>
-<td style="text-align:center">hex</td>
-<td style="text-align:center">0A</td>
-<td style="text-align:center">0B</td>
-<td style="text-align:center">0C</td>
-<td style="text-align:center">0D</td>
+<td align="center">hex</td>
+<td align="center">0A</td>
+<td align="center">0B</td>
+<td align="center">0C</td>
+<td align="center">0D</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>以上两种表示方法，我们都可以一目了然看出0x0A0B0C0D。<br>如果我们保持byte address和bit offset不变，小端系统也可以表示成：</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">byte addr</th>
-<th style="text-align:center">0</th>
-<th style="text-align:center">1</th>
-<th style="text-align:center">2</th>
-<th style="text-align:center">3</th>
+<th align="center">byte addr</th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">bit offset</td>
-<td style="text-align:center">01234567</td>
-<td style="text-align:center">01234567</td>
-<td style="text-align:center">01234567</td>
-<td style="text-align:center">01234567</td>
+<tbody><tr>
+<td align="center">bit offset</td>
+<td align="center">01234567</td>
+<td align="center">01234567</td>
+<td align="center">01234567</td>
+<td align="center">01234567</td>
 </tr>
 <tr>
-<td style="text-align:center">binary</td>
-<td style="text-align:center">10110000</td>
-<td style="text-align:center">00110000</td>
-<td style="text-align:center">11010000</td>
-<td style="text-align:center">01010000</td>
+<td align="center">binary</td>
+<td align="center">10110000</td>
+<td align="center">00110000</td>
+<td align="center">11010000</td>
+<td align="center">01010000</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>这样不去计算，不能一眼看出表示的数是0x0A0B0C0D.</p>
-<h1 id="CPU的大小端"><a href="#CPU的大小端" class="headerlink" title="CPU的大小端"></a>CPU的大小端</h1><p>CPU的大小端一般指寄存器，总线，cache及内存等的字节序和位序。<br>小端CPU包括Intel(x86等)和DEC，小端格式也称为<code>Intel格式</code>。<br>大端CPU包括Motorola，Sun Spark以及IBM(PowerPC)，大端格式也称为<code>Motorola格式</code>。<br>MIPS和ARM可以配置成任意一种。<br>CPU的大小端影响到CPU的指令集，不同的字节序CPU需要不一样的GNU工具链编译器。如，mipse-linux-gcc是支持大端mips架构的编译器，mipsl-linux-gcc是支持小端架构的编译器。<br>CPU的大小端会影响到软件访问多字节数据，虽然大多数时候对CPU大小端对软件是透明的。<br>如下代码，在不同字节序的CPU上运行会得到不同的结果。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">union</span> &#123;</span><br><span class="line">    <span class="keyword">uint32_t</span> my_int;</span><br><span class="line">    <span class="keyword">uint8_t</span>  my_bytes[<span class="number">4</span>];</span><br><span class="line">&#125; endian_tester;</span><br><span class="line">endian_tester et;</span><br><span class="line">et.my_int = <span class="number">0x0a0b0c0d</span>;</span><br><span class="line"><span class="keyword">if</span>(et.my_bytes[<span class="number">0</span>] == <span class="number">0x0a</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>( <span class="string">"I'm on a big-endian system\n"</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>( <span class="string">"I'm on a little-endian system\n"</span> );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="CPU的大小端"><a href="#CPU的大小端" class="headerlink" title="CPU的大小端"></a>CPU的大小端</h1><p>CPU的大小端一般指寄存器，总线，cache及内存等的字节序和位序。<br>小端CPU包括Intel(x86等)和DEC，小端格式也称为<code>Intel格式</code>。
+大端CPU包括Motorola，Sun Spark以及IBM(PowerPC)，大端格式也称为<code>Motorola格式</code>。
+MIPS和ARM可以配置成任意一种。<br>CPU的大小端影响到CPU的指令集，不同的字节序CPU需要不一样的GNU工具链编译器。如，mipse-linux-gcc是支持大端mips架构的编译器，mipsl-linux-gcc是支持小端架构的编译器。<br>CPU的大小端会影响到软件访问多字节数据，虽然大多数时候对CPU大小端对软件是透明的。<br>如下代码，在不同字节序的CPU上运行会得到不同的结果。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">union</span> &#123;</span><br><span class="line">    <span class="keyword">uint32_t</span> my_int;</span><br><span class="line">    <span class="keyword">uint8_t</span>  my_bytes[<span class="number">4</span>];</span><br><span class="line">&#125; endian_tester;</span><br><span class="line">endian_tester et;</span><br><span class="line">et.my_int = <span class="number">0x0a0b0c0d</span>;</span><br><span class="line"><span class="keyword">if</span>(et.my_bytes[<span class="number">0</span>] == <span class="number">0x0a</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>( <span class="string">"I'm on a big-endian system\n"</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>( <span class="string">"I'm on a little-endian system\n"</span> );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h1 id="总线的大小端"><a href="#总线的大小端" class="headerlink" title="总线的大小端"></a>总线的大小端</h1><p>这里的总线不包括CPU内部的地址总线和数据总线等，专指外部总线，指器件之间的通讯总线。<br>对于并行总线(如PCI)，如果是小端，则在32位的地址/数据总线AD[31:0],MSB连接到AD31，LSB连接到AD0。<br>对于串行总线，只存在协议上的大小端，不存在总线的大小端。</p>
 <h1 id="Device的大小端"><a href="#Device的大小端" class="headerlink" title="Device的大小端"></a>Device的大小端</h1><blockquote>
 <p>Kevin’s Theory #1: When a multi-byte data unit travels across the boundary of two reverse endian systems, the conversion is made such that memory contiguousness to the unit is preserved.</p>
@@ -740,208 +739,204 @@
 <table>
 <thead>
 <tr>
-<th style="text-align:center">byte addr</th>
-<th style="text-align:center">0</th>
-<th style="text-align:center">1</th>
-<th style="text-align:center">2</th>
-<th style="text-align:center">3</th>
-<th style="text-align:center">4</th>
-<th style="text-align:center">5</th>
-<th style="text-align:center">6</th>
-<th style="text-align:center">7</th>
+<th align="center">byte addr</th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+<th align="center">7</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">bit offset</td>
-<td style="text-align:center">01234567</td>
-<td style="text-align:center">01234567</td>
-<td style="text-align:center">01234567</td>
-<td style="text-align:center">01234567</td>
-<td style="text-align:center">01234567</td>
-<td style="text-align:center">01234567</td>
-<td style="text-align:center">01234567</td>
-<td style="text-align:center">01234567</td>
+<tbody><tr>
+<td align="center">bit offset</td>
+<td align="center">01234567</td>
+<td align="center">01234567</td>
+<td align="center">01234567</td>
+<td align="center">01234567</td>
+<td align="center">01234567</td>
+<td align="center">01234567</td>
+<td align="center">01234567</td>
+<td align="center">01234567</td>
 </tr>
 <tr>
-<td style="text-align:center">binary</td>
-<td style="text-align:center">10101010</td>
-<td style="text-align:center">10 010111</td>
-<td style="text-align:center">10101011</td>
-<td style="text-align:center">11001101</td>
-<td style="text-align:center">11101111</td>
-<td style="text-align:center">00000000</td>
-<td style="text-align:center">00000000</td>
-<td style="text-align:center">00000000</td>
+<td align="center">binary</td>
+<td align="center">10101010</td>
+<td align="center">10 010111</td>
+<td align="center">10101011</td>
+<td align="center">11001101</td>
+<td align="center">11101111</td>
+<td align="center">00000000</td>
+<td align="center">00000000</td>
+<td align="center">00000000</td>
 </tr>
 <tr>
-<td style="text-align:center">hex</td>
-<td style="text-align:center">aa</td>
-<td style="text-align:center">97</td>
-<td style="text-align:center">ab</td>
-<td style="text-align:center">cd</td>
-<td style="text-align:center">ef</td>
-<td style="text-align:center">00</td>
-<td style="text-align:center">00</td>
-<td style="text-align:center">00</td>
+<td align="center">hex</td>
+<td align="center">aa</td>
+<td align="center">97</td>
+<td align="center">ab</td>
+<td align="center">cd</td>
+<td align="center">ef</td>
+<td align="center">00</td>
+<td align="center">00</td>
+<td align="center">00</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>tag[0:9]=bit[0:9]=0x2aa,rx[0:5]=bit[10:15]=0x17,vlan[0:15]=bit[16:23]=0xabcdef.<br>如果按照字长一致原则转换到小端系统中，字长位32bit：</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">byte addr</th>
-<th style="text-align:center">7</th>
-<th style="text-align:center">6</th>
-<th style="text-align:center">5</th>
-<th style="text-align:center">4</th>
-<th style="text-align:center">3</th>
-<th style="text-align:center">2</th>
-<th style="text-align:center">1</th>
-<th style="text-align:center">0</th>
+<th align="center">byte addr</th>
+<th align="center">7</th>
+<th align="center">6</th>
+<th align="center">5</th>
+<th align="center">4</th>
+<th align="center">3</th>
+<th align="center">2</th>
+<th align="center">1</th>
+<th align="center">0</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">bit offset</td>
-<td style="text-align:center">76543210</td>
-<td style="text-align:center">76543210</td>
-<td style="text-align:center">76543210</td>
-<td style="text-align:center">76543210</td>
-<td style="text-align:center">76543210</td>
-<td style="text-align:center">76543210</td>
-<td style="text-align:center">76543210</td>
-<td style="text-align:center">76543210</td>
+<tbody><tr>
+<td align="center">bit offset</td>
+<td align="center">76543210</td>
+<td align="center">76543210</td>
+<td align="center">76543210</td>
+<td align="center">76543210</td>
+<td align="center">76543210</td>
+<td align="center">76543210</td>
+<td align="center">76543210</td>
+<td align="center">76543210</td>
 </tr>
 <tr>
-<td style="text-align:center">binary</td>
-<td style="text-align:center">11101111</td>
-<td style="text-align:center">00000000</td>
-<td style="text-align:center">00000000</td>
-<td style="text-align:center">00000000</td>
-<td style="text-align:center">10101010</td>
-<td style="text-align:center">10 010111</td>
-<td style="text-align:center">10101011</td>
-<td style="text-align:center">11001101</td>
+<td align="center">binary</td>
+<td align="center">11101111</td>
+<td align="center">00000000</td>
+<td align="center">00000000</td>
+<td align="center">00000000</td>
+<td align="center">10101010</td>
+<td align="center">10 010111</td>
+<td align="center">10101011</td>
+<td align="center">11001101</td>
 </tr>
 <tr>
-<td style="text-align:center">hex</td>
-<td style="text-align:center">ef</td>
-<td style="text-align:center">00</td>
-<td style="text-align:center">00</td>
-<td style="text-align:center">00</td>
-<td style="text-align:center">aa</td>
-<td style="text-align:center">97</td>
-<td style="text-align:center">ab</td>
-<td style="text-align:center">cd</td>
+<td align="center">hex</td>
+<td align="center">ef</td>
+<td align="center">00</td>
+<td align="center">00</td>
+<td align="center">00</td>
+<td align="center">aa</td>
+<td align="center">97</td>
+<td align="center">ab</td>
+<td align="center">cd</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>字长转换造成存储地址不连续问题。<br>按照字节一致原则转换到小端系统中：</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">byte addr</th>
-<th style="text-align:center">7</th>
-<th style="text-align:center">6</th>
-<th style="text-align:center">5</th>
-<th style="text-align:center">4</th>
-<th style="text-align:center">3</th>
-<th style="text-align:center">2</th>
-<th style="text-align:center">1</th>
-<th style="text-align:center">0</th>
+<th align="center">byte addr</th>
+<th align="center">7</th>
+<th align="center">6</th>
+<th align="center">5</th>
+<th align="center">4</th>
+<th align="center">3</th>
+<th align="center">2</th>
+<th align="center">1</th>
+<th align="center">0</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">bit offset</td>
-<td style="text-align:center">76543210</td>
-<td style="text-align:center">76543210</td>
-<td style="text-align:center">76543210</td>
-<td style="text-align:center">76543210</td>
-<td style="text-align:center">76543210</td>
-<td style="text-align:center">76543210</td>
-<td style="text-align:center">76543210</td>
-<td style="text-align:center">76543210</td>
+<tbody><tr>
+<td align="center">bit offset</td>
+<td align="center">76543210</td>
+<td align="center">76543210</td>
+<td align="center">76543210</td>
+<td align="center">76543210</td>
+<td align="center">76543210</td>
+<td align="center">76543210</td>
+<td align="center">76543210</td>
+<td align="center">76543210</td>
 </tr>
 <tr>
-<td style="text-align:center">binary</td>
-<td style="text-align:center">00000000</td>
-<td style="text-align:center">00000000</td>
-<td style="text-align:center">00000000</td>
-<td style="text-align:center">11101111</td>
-<td style="text-align:center">11001101</td>
-<td style="text-align:center">10101011</td>
-<td style="text-align:center">10010111</td>
-<td style="text-align:center">10 101010</td>
+<td align="center">binary</td>
+<td align="center">00000000</td>
+<td align="center">00000000</td>
+<td align="center">00000000</td>
+<td align="center">11101111</td>
+<td align="center">11001101</td>
+<td align="center">10101011</td>
+<td align="center">10010111</td>
+<td align="center">10 101010</td>
 </tr>
 <tr>
-<td style="text-align:center">hex</td>
-<td style="text-align:center">00</td>
-<td style="text-align:center">00</td>
-<td style="text-align:center">00</td>
-<td style="text-align:center">ef</td>
-<td style="text-align:center">cd</td>
-<td style="text-align:center">ab</td>
-<td style="text-align:center">97</td>
-<td style="text-align:center">aa</td>
+<td align="center">hex</td>
+<td align="center">00</td>
+<td align="center">00</td>
+<td align="center">00</td>
+<td align="center">ef</td>
+<td align="center">cd</td>
+<td align="center">ab</td>
+<td align="center">97</td>
+<td align="center">aa</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>为得到与大端系统中一致的数据位，还需要软件再做一个字节交换(byte swap)：</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">byte addr</th>
-<th style="text-align:center">7</th>
-<th style="text-align:center">6</th>
-<th style="text-align:center">5</th>
-<th style="text-align:center">4</th>
-<th style="text-align:center">3</th>
-<th style="text-align:center">2</th>
-<th style="text-align:center">1</th>
-<th style="text-align:center">0</th>
+<th align="center">byte addr</th>
+<th align="center">7</th>
+<th align="center">6</th>
+<th align="center">5</th>
+<th align="center">4</th>
+<th align="center">3</th>
+<th align="center">2</th>
+<th align="center">1</th>
+<th align="center">0</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">bit offset</td>
-<td style="text-align:center">76543210</td>
-<td style="text-align:center">76543210</td>
-<td style="text-align:center">76543210</td>
-<td style="text-align:center">76543210</td>
-<td style="text-align:center">76543210</td>
-<td style="text-align:center">76543210</td>
-<td style="text-align:center">76543210</td>
-<td style="text-align:center">76543210</td>
+<tbody><tr>
+<td align="center">bit offset</td>
+<td align="center">76543210</td>
+<td align="center">76543210</td>
+<td align="center">76543210</td>
+<td align="center">76543210</td>
+<td align="center">76543210</td>
+<td align="center">76543210</td>
+<td align="center">76543210</td>
+<td align="center">76543210</td>
 </tr>
 <tr>
-<td style="text-align:center">binary</td>
-<td style="text-align:center">00000000</td>
-<td style="text-align:center">00000000</td>
-<td style="text-align:center">00000000</td>
-<td style="text-align:center">10 101010</td>
-<td style="text-align:center">10010111</td>
-<td style="text-align:center">10101011</td>
-<td style="text-align:center">11001101</td>
-<td style="text-align:center">11101111</td>
+<td align="center">binary</td>
+<td align="center">00000000</td>
+<td align="center">00000000</td>
+<td align="center">00000000</td>
+<td align="center">10 101010</td>
+<td align="center">10010111</td>
+<td align="center">10101011</td>
+<td align="center">11001101</td>
+<td align="center">11101111</td>
 </tr>
 <tr>
-<td style="text-align:center">hex</td>
-<td style="text-align:center">00</td>
-<td style="text-align:center">00</td>
-<td style="text-align:center">00</td>
-<td style="text-align:center">aa</td>
-<td style="text-align:center">97</td>
-<td style="text-align:center">ab</td>
-<td style="text-align:center">cd</td>
-<td style="text-align:center">ef</td>
+<td align="center">hex</td>
+<td align="center">00</td>
+<td align="center">00</td>
+<td align="center">00</td>
+<td align="center">aa</td>
+<td align="center">97</td>
+<td align="center">ab</td>
+<td align="center">cd</td>
+<td align="center">ef</td>
 </tr>
-</tbody>
-</table>
-<p>根据Kevin’s Theory #2，我们可以定义C结构体来访问小端模式的NIC的标识符：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">nic_tag_reg</span> &#123;</span></span><br><span class="line">    <span class="keyword">uint64_t</span> vlan:<span class="number">24</span> __attribute__((packed));</span><br><span class="line">    <span class="keyword">uint64_t</span> rx  :<span class="number">6</span>  __attribute__((packed));</span><br><span class="line">    <span class="keyword">uint64_t</span> tag :<span class="number">10</span> __attribute__((packed));</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>大端模式下：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">nic_tag_reg</span> &#123;</span></span><br><span class="line">	<span class="keyword">uint64_t</span> tag :<span class="number">10</span> __attribute__((packed));</span><br><span class="line">	<span class="keyword">uint64_t</span> rx  :<span class="number">6</span>  __attribute__((packed));</span><br><span class="line">    <span class="keyword">uint64_t</span> vlan:<span class="number">24</span> __attribute__((packed));</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+</tbody></table>
+<p>根据Kevin’s Theory #2，我们可以定义C结构体来访问小端模式的NIC的标识符：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">nic_tag_reg</span> &#123;</span></span><br><span class="line">    <span class="keyword">uint64_t</span> vlan:<span class="number">24</span> __attribute__((packed));</span><br><span class="line">    <span class="keyword">uint64_t</span> rx  :<span class="number">6</span>  __attribute__((packed));</span><br><span class="line">    <span class="keyword">uint64_t</span> tag :<span class="number">10</span> __attribute__((packed));</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>大端模式下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">nic_tag_reg</span> &#123;</span></span><br><span class="line">	<span class="keyword">uint64_t</span> tag :<span class="number">10</span> __attribute__((packed));</span><br><span class="line">	<span class="keyword">uint64_t</span> rx  :<span class="number">6</span>  __attribute__((packed));</span><br><span class="line">    <span class="keyword">uint64_t</span> vlan:<span class="number">24</span> __attribute__((packed));</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 <h1 id="协议的大小端"><a href="#协议的大小端" class="headerlink" title="协议的大小端"></a>协议的大小端</h1><p>对于硬线上发送接收的位顺序，通常有规范来定义，不一定与上层的协议字节序一致，硬件会做相应的转换工作。<br>我们通常所说的网络字节序值网络传输协议的字节序，如IP协议数据按照大端字节序发送接收。<br>网络(network)字节序与本机(host)字节序不一致时，需要进行转换。如 htons/ntohs/ntohl/htonl等函数。</p>
 <h1 id="词源"><a href="#词源" class="headerlink" title="词源"></a>词源</h1><blockquote>
 <p>据Jargon File记载，endian这个词来源于Jonathan Swift在1726年写的讽刺小说 “Gulliver’s Travels”（《格利佛游记》）。该小说在描述Gulliver畅游小人国时碰到了如下的一个场景。在小人国里的小人因为非常小（身高6英寸）所以总是碰到一些意想不到的问题。有一次因为对水煮蛋该从大的一端（Big-End）剥开还是小的一端（Little-End）剥开的争论而引发了一场战争，并形成了两支截然对立的队伍：支持从大的一端剥开的人Swift就称作Big-Endians，而支持从小的一端剥开的人就称作Little-Endians……（后缀ian表明的就是支持某种观点的人）。<br>1980年，Danny Cohen在其著名的论文”On Holy Wars and a Plea for Peace”中为了平息一场关于在消息中字节该以什么样的顺序进行传送的争论而引用了该词。该文中，Cohen非常形象贴切地把支持从一个消息序列的最高位开始传送的那伙人叫做Big-Endians，支持从最低位开始传送的相对应地叫做Little-Endians。此后Endian这个词便随着这篇论文而被广为采用。</p>
@@ -1077,7 +1072,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="WU Chenxu">
             
@@ -1521,7 +1516,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">239k</span>
+    <span title="站点总字数">240k</span>
   
 
   
@@ -1532,12 +1527,12 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:37</span>
+    <span title="站点阅读时长">3:38</span>
   
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 

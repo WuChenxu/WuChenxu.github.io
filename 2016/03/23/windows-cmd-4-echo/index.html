@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -227,7 +227,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -237,7 +237,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta custom-logo">
     
@@ -444,20 +444,20 @@
     <div class="reading-progress-bar"></div>
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2016/03/23/windows-cmd-4-echo/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WU Chenxu">
       <meta itemprop="description" content="一切都会成为过去">
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="玉汝于成，功不唐捐">
     </span>
 
@@ -526,7 +526,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/windows-cmd/" itemprop="url" rel="index"><span itemprop="name">windows cmd</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/windows-cmd/" itemprop="url" rel="index"><span itemprop="name">windows cmd</span></a></span>
 
                 
                 
@@ -616,19 +616,29 @@
         <img src="/2016/03/23/windows-cmd-4-echo/echo.png">
 <p>ECHO命令是最常用的命令之一，用来回显命令到屏幕。</p>
 <a id="more"></a>
-<h1 id="ECHO-ON-OFF"><a href="#ECHO-ON-OFF" class="headerlink" title="ECHO [ON|OFF]"></a>ECHO [ON|OFF]</h1><p>打开或关闭命令的回显,不加参数则显示当前的ECHO状态。<br><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">Users</span>\<span class="title">idea</span>&gt;<span class="title">echo</span></span></span><br><span class="line"><span class="function"><span class="title">ECHO</span> 处于打开状态。</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">C</span>:\<span class="title">Users</span>\<span class="title">idea</span>&gt;<span class="title">echo</span> <span class="title">off</span></span></span><br><span class="line"><span class="function"><span class="title">cd</span></span></span><br><span class="line"><span class="function"><span class="title">C</span>:\<span class="title">Users</span>\<span class="title">idea</span></span></span><br><span class="line"><span class="function"><span class="title">echo</span> <span class="title">hello</span></span></span><br><span class="line"><span class="function"><span class="title">hello</span></span></span><br><span class="line"><span class="function"><span class="title">echo</span> <span class="title">on</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">C</span>:\<span class="title">Users</span>\<span class="title">idea</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="ECHO-ON-OFF"><a href="#ECHO-ON-OFF" class="headerlink" title="ECHO [ON|OFF]"></a>ECHO [ON|OFF]</h1><p>打开或关闭命令的回显,不加参数则显示当前的ECHO状态。</p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">Users</span>\<span class="title">idea</span>&gt;<span class="title">echo</span></span></span><br><span class="line"><span class="function"><span class="title">ECHO</span> 处于打开状态。</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">C</span>:\<span class="title">Users</span>\<span class="title">idea</span>&gt;<span class="title">echo</span> <span class="title">off</span></span></span><br><span class="line"><span class="function"><span class="title">cd</span></span></span><br><span class="line"><span class="function"><span class="title">C</span>:\<span class="title">Users</span>\<span class="title">idea</span></span></span><br><span class="line"><span class="function"><span class="title">echo</span> <span class="title">hello</span></span></span><br><span class="line"><span class="function"><span class="title">hello</span></span></span><br><span class="line"><span class="function"><span class="title">echo</span> <span class="title">on</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">C</span>:\<span class="title">Users</span>\<span class="title">idea</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <h1 id="ECHO-message"><a href="#ECHO-message" class="headerlink" title="ECHO [message]"></a>ECHO [message]</h1><figure class="highlight bat"><figcaption><span>output string "quote is not necessary"</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">Users</span>\<span class="title">idea</span>&gt;<span class="title">echo</span> <span class="title">hello</span> <span class="title">world</span></span></span><br><span class="line"><span class="function"><span class="title">hello</span> <span class="title">world</span></span></span><br></pre></td></tr></table></figure>
+
 <figure class="highlight bat"><figcaption><span>output a newline</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span>.</span><br></pre></td></tr></table></figure>
+
 <p>echo与<code>.</code>之间没有空格，<code>.</code>可以由`, : / \ + =’代替。</p>
 <figure class="highlight bat"><figcaption><span>variable</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="variable">%path%</span> </span><br><span class="line"><span class="built_in">echo</span> <span class="variable">%date%</span></span><br></pre></td></tr></table></figure>
-<h1 id=""><a href="#" class="headerlink" title="@"></a>@</h1><p>@字符放在命令前将关闭该命令回显，无论此时echo是否为打开状态。<br>在脚本中，如果<code>echo off</code>这条命令本身也不回显，在语句之前加<code>@</code>，写成<code>@echo off</code>.</p>
+
+<h1 id><a href="#" class="headerlink" title="@"></a>@</h1><p>@字符放在命令前将关闭该命令回显，无论此时echo是否为打开状态。<br>在脚本中，如果<code>echo off</code>这条命令本身也不回显，在语句之前加<code>@</code>，写成<code>@echo off</code>.</p>
 <h1 id="create-a-new-file-or-append-a-file"><a href="#create-a-new-file-or-append-a-file" class="headerlink" title="create a new file or append a file"></a>create a new file or append a file</h1><p>ECHO [new content] &gt; filename<br>ECHO [append content] &gt;&gt; filename</p>
 <figure class="highlight bat"><figcaption><span>file edit</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:\<span class="title">test</span>&gt;<span class="title">echo</span> @<span class="title">echo</span> <span class="title">off</span> &gt; <span class="title">batfile.bat</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">D</span>:\<span class="title">test</span>&gt;<span class="title">echo</span> <span class="title">echo</span> <span class="title">hello</span> <span class="title">world</span> &gt;&gt;<span class="title">batfile.bat</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">D</span>:\<span class="title">test</span>&gt;<span class="title">type</span> <span class="title">batfile.bat</span></span></span><br><span class="line"><span class="function">@<span class="title">echo</span> <span class="title">off</span></span></span><br><span class="line"><span class="function"><span class="title">echo</span> <span class="title">hello</span> <span class="title">world</span></span></span><br></pre></td></tr></table></figure>
+
 <h1 id="auto-answer-qustions-in-cmd"><a href="#auto-answer-qustions-in-cmd" class="headerlink" title="auto answer qustions in cmd"></a>auto answer qustions in cmd</h1><p>ECHO [Y|N]| cmd</p>
 <figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:\<span class="title">test</span>&gt;<span class="title">rd</span> <span class="title">test</span> /<span class="title">S</span></span></span><br><span class="line"><span class="function"><span class="title">test</span>, 是否确认(<span class="title">Y</span>/<span class="title">N</span>)?</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">D</span>:\<span class="title">test</span>&gt;<span class="title">echo</span> <span class="title">Y</span>|<span class="title">rd</span> <span class="title">test</span> /<span class="title">S</span></span></span><br><span class="line"><span class="function"><span class="title">test</span>, 是否确认(<span class="title">Y</span>/<span class="title">N</span>)? <span class="title">Y</span></span></span><br></pre></td></tr></table></figure>
+
 <h1 id="buzzer-ring"><a href="#buzzer-ring" class="headerlink" title="buzzer ring"></a>buzzer ring</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> ^G</span><br></pre></td></tr></table></figure>
+
 <p><code>^G</code>是键盘输入<code>Ctrl</code>+<code>G</code>或者<code>Alt</code>+007。</p>
-<p>Reference:<br><figure class="highlight plain"><figcaption><span>help ECHO</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">显示信息，或启用或关闭命令回显。</span><br><span class="line"></span><br><span class="line">  ECHO [ON | OFF]</span><br><span class="line">  ECHO [message]</span><br><span class="line"></span><br><span class="line">要显示当前回显设置，键入不带参数的 ECHO。</span><br></pre></td></tr></table></figure></p>
+<p>Reference:</p>
+<figure class="highlight plain"><figcaption><span>help ECHO</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">显示信息，或启用或关闭命令回显。</span><br><span class="line"></span><br><span class="line">  ECHO [ON | OFF]</span><br><span class="line">  ECHO [message]</span><br><span class="line"></span><br><span class="line">要显示当前回显设置，键入不带参数的 ECHO。</span><br></pre></td></tr></table></figure>
+
 <p><a href="https://www.douban.com/note/311537668/" target="_blank" rel="noopener">你不知道的CMD命令之Echo</a></p>
 
       
@@ -743,7 +753,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="WU Chenxu">
             
@@ -1145,7 +1155,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ECHO-ON-OFF"><span class="nav-number">1.</span> <span class="nav-text">ECHO [ON|OFF]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ECHO-message"><span class="nav-number">2.</span> <span class="nav-text">ECHO [message]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-number">3.</span> <span class="nav-text">@</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#create-a-new-file-or-append-a-file"><span class="nav-number">4.</span> <span class="nav-text">create a new file or append a file</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#auto-answer-qustions-in-cmd"><span class="nav-number">5.</span> <span class="nav-text">auto answer qustions in cmd</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#buzzer-ring"><span class="nav-number">6.</span> <span class="nav-text">buzzer ring</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ECHO-ON-OFF"><span class="nav-number">1.</span> <span class="nav-text">ECHO [ON|OFF]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ECHO-message"><span class="nav-number">2.</span> <span class="nav-text">ECHO [message]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">3.</span> <span class="nav-text">@</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#create-a-new-file-or-append-a-file"><span class="nav-number">4.</span> <span class="nav-text">create a new file or append a file</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#auto-answer-qustions-in-cmd"><span class="nav-number">5.</span> <span class="nav-text">auto answer qustions in cmd</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#buzzer-ring"><span class="nav-number">6.</span> <span class="nav-text">buzzer ring</span></a></li></ol></div>
             
 
           </div>
@@ -1187,7 +1197,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">239k</span>
+    <span title="站点总字数">240k</span>
   
 
   
@@ -1198,12 +1208,12 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:37</span>
+    <span title="站点阅读时长">3:38</span>
   
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 

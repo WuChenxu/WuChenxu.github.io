@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -270,7 +270,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -280,7 +280,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta custom-logo">
     
@@ -487,20 +487,20 @@
     <div class="reading-progress-bar"></div>
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2018/02/04/machine_learning_notes/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WU Chenxu">
       <meta itemprop="description" content="一切都会成为过去">
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="玉汝于成，功不唐捐">
     </span>
 
@@ -569,7 +569,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/AI/" itemprop="url" rel="index"><span itemprop="name">AI</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/AI/" itemprop="url" rel="index"><span itemprop="name">AI</span></a></span>
 
                 
                 
@@ -658,6 +658,7 @@
       
         <p>学习吴恩达的machine learning课程笔记。</p>
 <a id="more"></a>
+
 <h1 id="resources"><a href="#resources" class="headerlink" title="resources"></a>resources</h1><h2 id="website"><a href="#website" class="headerlink" title="website"></a>website</h2><p><a href="http://cs229.stanford.edu/" target="_blank" rel="noopener">http://cs229.stanford.edu/</a><br><a href="https://see.stanford.edu/Course/CS229" target="_blank" rel="noopener">https://see.stanford.edu/Course/CS229</a></p>
 <h2 id="tool"><a href="#tool" class="headerlink" title="tool"></a>tool</h2><p>商业软件<a href="https://www.mathworks.com/" target="_blank" rel="noopener">Matlab</a> or 免费开源软件<a href="http://www.gnu.org/software/octave/" target="_blank" rel="noopener">Octave</a></p>
 <h1 id="动机与应用"><a href="#动机与应用" class="headerlink" title="动机与应用"></a>动机与应用</h1><h2 id="why？"><a href="#why？" class="headerlink" title="why？"></a>why？</h2><p>很多程序是无法手动编写出来的，eg. 手写文字识别，自动飞行器，自然语言处理NLP</p>
@@ -680,6 +681,8 @@
 </li>
 <li><p>classification problem（分类问题）<br>预测的值是离散（discreet）的,eg. SVM(supported vector machine)</p>
 <img src="/2018/02/04/machine_learning_notes/classification_problem_discreet.png" title="classification problem">
+
+
 </li>
 </ol>
 <h3 id="Learning-Theory"><a href="#Learning-Theory" class="headerlink" title="Learning Theory"></a>Learning Theory</h3><p>learning algorith 为什么是有效的；可以证明什么时候（eg.多大的数据量）可以保证算法有效（eg.&gt;99.9%的正确率)。</p>
@@ -689,18 +692,26 @@
 </li>
 <li><p><a href="https://en.wikipedia.org/wiki/Independent_component_analysis" target="_blank" rel="noopener">ICA(Independent Component Analysis) Algorithm</a><br>Cocktail party problem<br>在嘈杂的鸡尾酒会区分不同人的语音</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[W,s,v] = svd((<span class="built_in">repmat</span>(sum(x.*x,<span class="number">1</span>),<span class="built_in">size</span>(x,<span class="number">1</span>),<span class="number">1</span>).*x)*x');</span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
 <h3 id="Reinforcement-Learning（增强学习）"><a href="#Reinforcement-Learning（增强学习）" class="headerlink" title="Reinforcement Learning（增强学习）"></a>Reinforcement Learning（增强学习）</h3><p>reward function（回报函数）</p>
 <h1 id="Supervised-Learning"><a href="#Supervised-Learning" class="headerlink" title="Supervised Learning"></a>Supervised Learning</h1><h2 id="Linear-regression"><a href="#Linear-regression" class="headerlink" title="Linear regression"></a>Linear regression</h2><img src="/2018/02/04/machine_learning_notes/supervised_learning_notation_1.png">
 <img src="/2018/02/04/machine_learning_notes/supervised_learning_notation_2.png">
 <img src="/2018/02/04/machine_learning_notes/supervised_learning_notation_3.png">
+
 <h3 id="Gradient-descent"><a href="#Gradient-descent" class="headerlink" title="Gradient descent"></a><a href="https://en.wikipedia.org/wiki/Gradient_descent" target="_blank" rel="noopener">Gradient descent</a></h3><img src="/2018/02/04/machine_learning_notes/gradient_descent.png">
 <p>随机选择一个点（特征参数），通过梯度算法找到下降最陡的方向，一步一步迭代，直到找到一个局部最优解（cost函数取最小值）。<br>如果初始化的值不一样，得到的局部最优解可能会不一样。<br>适用于：局部最优解等于全局最优解的情况，想象一个碗形的代价函数。</p>
-<h4 id="Batch-gradient-descent"><a href="#Batch-gradient-descent" class="headerlink" title="Batch gradient descent"></a>Batch gradient descent</h4><p>每次迭代都要遍历所有的训练数据，适用于数据量小的训练集合。<br><img src="/2018/02/04/machine_learning_notes/batch_gradient_descent.png"><br>这种迭代规则，称为LMS(Least Mean Squares) update rule.</p>
-<h4 id="Stochastic-gradient-descent-Incremental-gradient-descent"><a href="#Stochastic-gradient-descent-Incremental-gradient-descent" class="headerlink" title="Stochastic gradient descent(Incremental gradient descent)"></a>Stochastic gradient descent(Incremental gradient descent)</h4><p>只需要遍历一次训练数据，适用于数据量很大的训练集合。<br><img src="/2018/02/04/machine_learning_notes/stochastic_gradient_descent.png"></p>
+<h4 id="Batch-gradient-descent"><a href="#Batch-gradient-descent" class="headerlink" title="Batch gradient descent"></a>Batch gradient descent</h4><p>每次迭代都要遍历所有的训练数据，适用于数据量小的训练集合。</p>
+<img src="/2018/02/04/machine_learning_notes/batch_gradient_descent.png">
+<p>这种迭代规则，称为LMS(Least Mean Squares) update rule.</p>
+<h4 id="Stochastic-gradient-descent-Incremental-gradient-descent"><a href="#Stochastic-gradient-descent-Incremental-gradient-descent" class="headerlink" title="Stochastic gradient descent(Incremental gradient descent)"></a>Stochastic gradient descent(Incremental gradient descent)</h4><p>只需要遍历一次训练数据，适用于数据量很大的训练集合。</p>
+<img src="/2018/02/04/machine_learning_notes/stochastic_gradient_descent.png">
+
 <p>$ \alpha $表示学习速率，训练的步进，可以随着梯度的下降，减小该值。</p>
-<h3 id="Normal-equations"><a href="#Normal-equations" class="headerlink" title="Normal equations"></a>Normal equations</h3><p>通过矩阵（matrix）的方法推导出的一种不需要迭代，直接可以计算出特征向量的方法。<br><img src="/2018/02/04/machine_learning_notes/normal_equation.png"><br>$(X^TX)$不可逆的可能原因：</p>
+<h3 id="Normal-equations"><a href="#Normal-equations" class="headerlink" title="Normal equations"></a>Normal equations</h3><p>通过矩阵（matrix）的方法推导出的一种不需要迭代，直接可以计算出特征向量的方法。</p>
+<img src="/2018/02/04/machine_learning_notes/normal_equation.png">
+<p>$(X^TX)$不可逆的可能原因：</p>
 <ul>
 <li>存在冗余特征（$\theta $中存在重复）</li>
 <li>特征数量n过多，训练样本数m太少</li>
@@ -711,6 +722,7 @@
 <li><p>Non-parameterical learning algorithm 的参数数量n是随着样本数m的增加而增加的，每次输出结果都需要重新评估训练样本。<br>LWR(Locally weighted linear regressioin)是一种无参数的算法</p>
 <img src="/2018/02/04/machine_learning_notes/LWR_1.png">
 <img src="/2018/02/04/machine_learning_notes/LWR_2.png">
+
 </li>
 </ul>
 <h3 id="Probabilistic-interpretatioin"><a href="#Probabilistic-interpretatioin" class="headerlink" title="Probabilistic interpretatioin"></a>Probabilistic interpretatioin</h3><p>最小二乘法的概率学解释：假设误差服从正态分布（高斯分布），最小二乘法求得的特征参数，可以使代价函数最小。</p>
@@ -720,27 +732,54 @@
 <img src="/2018/02/04/machine_learning_notes/logistic_regression_3.png">
 <h4 id="Newton’s-method"><a href="#Newton’s-method" class="headerlink" title="Newton’s method"></a>Newton’s method</h4><img src="/2018/02/04/machine_learning_notes/Newtons_method_1.png">
 <img src="/2018/02/04/machine_learning_notes/Newtons_method_2.png">
+
+
 <h3 id="Perceptron-learning-algorithm"><a href="#Perceptron-learning-algorithm" class="headerlink" title="Perceptron learning algorithm"></a>Perceptron learning algorithm</h3><img src="/2018/02/04/machine_learning_notes/perceptron_learning_algorithm.png">
-<h2 id="GLM-Generalized-Linear-Models"><a href="#GLM-Generalized-Linear-Models" class="headerlink" title="GLM(Generalized Linear Models)"></a>GLM(Generalized Linear Models)</h2><h3 id="Exponential-family"><a href="#Exponential-family" class="headerlink" title="Exponential family"></a>Exponential family</h3><p>之前的例子中，线性回归算法（最小二乘法）服从高斯分布，逻辑回归算法（sigmoid函数）服从伯努利分布。而这些都是GLM的一些特例。<br><img src="/2018/02/04/machine_learning_notes/exponential_family.png"></p>
+
+
+<h2 id="GLM-Generalized-Linear-Models"><a href="#GLM-Generalized-Linear-Models" class="headerlink" title="GLM(Generalized Linear Models)"></a>GLM(Generalized Linear Models)</h2><h3 id="Exponential-family"><a href="#Exponential-family" class="headerlink" title="Exponential family"></a>Exponential family</h3><p>之前的例子中，线性回归算法（最小二乘法）服从高斯分布，逻辑回归算法（sigmoid函数）服从伯努利分布。而这些都是GLM的一些特例。</p>
+<img src="/2018/02/04/machine_learning_notes/exponential_family.png">
+
 <p>以下分布都属于指数家族：<br>高斯分布（Gaussian）：结果是连续的<br>伯努利分布（Bernoulli）：结果是离散的，只有两种结果<br>多项式分布（multinomial）：结果是离散的，有k种结果<br>泊松分布（Poisson）：计数问题，eg.网站访客量，放射性衰变数目。<br>伽马分布（gamma）：时间间隔，eg.等公交车的时间<br>指数分布<br>beta分布<br>Dirichlet分布</p>
-<h3 id="Constructing-GLMs"><a href="#Constructing-GLMs" class="headerlink" title="Constructing GLMs"></a>Constructing GLMs</h3><p>一个重要的设计决策是：<br><img src="/2018/02/04/machine_learning_notes/GLM_design_decision.png"></p>
-<h4 id="Ordinary-Least-Squares"><a href="#Ordinary-Least-Squares" class="headerlink" title="Ordinary Least Squares"></a>Ordinary Least Squares</h4><p>高斯分布在指数家族的表示如下：<br><img src="/2018/02/04/machine_learning_notes/Gaussian_in_exponential_family.png"></p>
-<p>可以推导出，最小二乘法是GLM的一个特例：<br><img src="/2018/02/04/machine_learning_notes/ordianary_least_squares_in_GLM.png"></p>
-<h4 id="Logistic-regression-1"><a href="#Logistic-regression-1" class="headerlink" title="Logistic regression"></a>Logistic regression</h4><p>伯努利分布在指数家族表示如下：<br><img src="/2018/02/04/machine_learning_notes/Bernoulli_in_exponential_family.png"></p>
-<p>可以推导出，逻辑回归是GLM的一个特例：<br><img src="/2018/02/04/machine_learning_notes/logistic_regression_in_GLM.png"></p>
-<h4 id="Softmax-regression"><a href="#Softmax-regression" class="headerlink" title="Softmax regression"></a>Softmax regression</h4><p>多项式分布在指数家族表示如下：<br><img src="/2018/02/04/machine_learning_notes/multinomial_in_exponential_family.png"><br>softmax函数：<br><img src="/2018/02/04/machine_learning_notes/softmax_functin.png"><br>可以推导出，softmax回归是GLM的一个特例：<br><img src="/2018/02/04/machine_learning_notes/softmax_regression_in_GLM.png"></p>
+<h3 id="Constructing-GLMs"><a href="#Constructing-GLMs" class="headerlink" title="Constructing GLMs"></a>Constructing GLMs</h3><p>一个重要的设计决策是：</p>
+<img src="/2018/02/04/machine_learning_notes/GLM_design_decision.png">
+
+
+<h4 id="Ordinary-Least-Squares"><a href="#Ordinary-Least-Squares" class="headerlink" title="Ordinary Least Squares"></a>Ordinary Least Squares</h4><p>高斯分布在指数家族的表示如下：</p>
+<img src="/2018/02/04/machine_learning_notes/Gaussian_in_exponential_family.png">
+
+<p>可以推导出，最小二乘法是GLM的一个特例：</p>
+<img src="/2018/02/04/machine_learning_notes/ordianary_least_squares_in_GLM.png">
+
+<h4 id="Logistic-regression-1"><a href="#Logistic-regression-1" class="headerlink" title="Logistic regression"></a>Logistic regression</h4><p>伯努利分布在指数家族表示如下：</p>
+<img src="/2018/02/04/machine_learning_notes/Bernoulli_in_exponential_family.png">
+
+<p>可以推导出，逻辑回归是GLM的一个特例：</p>
+<img src="/2018/02/04/machine_learning_notes/logistic_regression_in_GLM.png">
+
+<h4 id="Softmax-regression"><a href="#Softmax-regression" class="headerlink" title="Softmax regression"></a>Softmax regression</h4><p>多项式分布在指数家族表示如下：</p>
+<img src="/2018/02/04/machine_learning_notes/multinomial_in_exponential_family.png">
+<p>softmax函数：</p>
+<img src="/2018/02/04/machine_learning_notes/softmax_functin.png">
+<p>可以推导出，softmax回归是GLM的一个特例：</p>
+<img src="/2018/02/04/machine_learning_notes/softmax_regression_in_GLM.png">
+
 <p>logistic回归是softmax回归在k=2时的特例。</p>
 <h2 id="Generative-learning-algorithms"><a href="#Generative-learning-algorithms" class="headerlink" title="Generative learning algorithms"></a>Generative learning algorithms</h2><ul>
 <li>判别（discriminative）学习算法<br>如逻辑回归，直接学习p(y|x)；或者如感知器算法（perceptron），直接尝试学习从输入到输出的映射（mapping）。</li>
 <li>生成（generative）学习算法<br>对每种类别分别建模,然后通过贝叶斯公式计算出在给定x条件下y的后验分布。<img src="/2018/02/04/machine_learning_notes/generative_learning_algorithm_1.png">
 <img src="/2018/02/04/machine_learning_notes/generative_learning_algorithm_2.png">
+
 </li>
 </ul>
 <h3 id="GDA（Gaussian-Discriminant-Analysis）"><a href="#GDA（Gaussian-Discriminant-Analysis）" class="headerlink" title="GDA（Gaussian Discriminant Analysis）"></a>GDA（Gaussian Discriminant Analysis）</h3><p>GDA假设p(x|y)服从多元正态分布（multivariate normal distribution）。</p>
 <h4 id="多元正态分布"><a href="#多元正态分布" class="headerlink" title="多元正态分布"></a>多元正态分布</h4><img src="/2018/02/04/machine_learning_notes/multivariant_normal_distribution_1.png">
 <img src="/2018/02/04/machine_learning_notes/multivariant_normal_distribution_2.png">
+
 <h4 id="高斯判定分析模型"><a href="#高斯判定分析模型" class="headerlink" title="高斯判定分析模型"></a>高斯判定分析模型</h4><img src="/2018/02/04/machine_learning_notes/GDA_1.png">
-<p>通过计算最大化的似然函数，可以得到参数$\phi \mu_0 \mu_1 \Sigma$的值。<br><img src="/2018/02/04/machine_learning_notes/GDA_2.png"></p>
+<p>通过计算最大化的似然函数，可以得到参数$\phi \mu_0 \mu_1 \Sigma$的值。</p>
+<img src="/2018/02/04/machine_learning_notes/GDA_2.png">
+
 <h4 id="GDA与逻辑回归"><a href="#GDA与逻辑回归" class="headerlink" title="GDA与逻辑回归"></a>GDA与逻辑回归</h4><p>如果我们将$p(y=1|x;\phi, \mu_0, \mu_1, \Sigma)$视为$x$的函数，那么我们发现可以有如下表示形式：<br>$$ p(y=1|x;\phi, \mu_0, \mu_1, \Sigma)={1 \over {1+exp(-\theta^T x)}}$$<br>这就是逻辑回归—一种判定算法—用来给$p(y=1|x)$建模的形式。</p>
 <p>也就是说，如果数据服从多元高斯分布，那后验分布是逻辑函数；反之，不成立。</p>
 <p>如果$x|y=0 ~ Poisson(\lamda_0), x|y=1 ~Poisson(\lamda_1$,那么$p(y|x)$也是逻辑的（logistic）。<br>也就是说，如果数据服从泊松分布，那后验分布也是逻辑函数；反之，不成立。</p>
@@ -752,19 +791,44 @@
 </ul>
 <img src="/2018/02/04/machine_learning_notes/NB_feature_vector_1.png">
 <img src="/2018/02/04/machine_learning_notes/NB_feature_vector_2.png">
-<p>朴素贝叶斯算法假设：<br><img src="/2018/02/04/machine_learning_notes/NB_assumption.png"></p>
+
+<p>朴素贝叶斯算法假设：</p>
+<img src="/2018/02/04/machine_learning_notes/NB_assumption.png">
+
 <p>朴素贝叶斯算法的参数：</p>
 <img src="/2018/02/04/machine_learning_notes/NB_1.png">
 <img src="/2018/02/04/machine_learning_notes/NB_2.png">
 <img src="/2018/02/04/machine_learning_notes/NB_3.png">
 <img src="/2018/02/04/machine_learning_notes/NB_4.png">
+
+
 <h4 id="Laplace-smoothing"><a href="#Laplace-smoothing" class="headerlink" title="Laplace smoothing"></a>Laplace smoothing</h4><p>设想如下场景：<br>一个从来没有在训练邮件中出现过的单词，但是这个单词在字典里，如果有一天收到一封邮件里包含这类单词。<br>会导致$\phi_{i|y=1}=0$,且$\phi_{i|y=0}=0$<br>从而<br>$$ p(y=1|x) = {0 \over 0}$$<br>这是一个未定义的值，无法作出估计。</p>
 <img src="/2018/02/04/machine_learning_notes/Laplace_smoothing.png">
+
 <p>计算明天太阳升起来的概率(假设太阳已经连续n天升起来了)<br>明天太阳不会升起来的概率：<br>$$ \phi_0 = {1 \over n+2}$$<br>明天太阳还会升起来的概率：<br>$$ \phi_1 = {n+1 \over n+2}$$</p>
 <h4 id="Event-models-for-text-classification"><a href="#Event-models-for-text-classification" class="headerlink" title="Event models for text classification"></a>Event models for text classification</h4><img src="/2018/02/04/machine_learning_notes/multinomial_event_model_1.png">
 <img src="/2018/02/04/machine_learning_notes/multinomial_event_model_2.png">
 <img src="/2018/02/04/machine_learning_notes/multinomial_event_model_3.png">
 <img src="/2018/02/04/machine_learning_notes/multinomial_event_model_4.png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p>References:</p>
 <ol>
 <li><a href="http://blog.csdn.net/artprog/article/details/51172025" target="_blank" rel="noopener">机器学习笔记03：Normal equation与梯度下降的比较</a></li>
@@ -882,7 +946,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="WU Chenxu">
             
@@ -1326,7 +1390,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">239k</span>
+    <span title="站点总字数">240k</span>
   
 
   
@@ -1337,12 +1401,12 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:37</span>
+    <span title="站点阅读时长">3:38</span>
   
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 

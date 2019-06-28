@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -225,7 +225,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -235,7 +235,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta custom-logo">
     
@@ -442,20 +442,20 @@
     <div class="reading-progress-bar"></div>
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2016/12/18/windows-cmd-20-date-time/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WU Chenxu">
       <meta itemprop="description" content="一切都会成为过去">
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="玉汝于成，功不唐捐">
     </span>
 
@@ -524,7 +524,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/windows-cmd/" itemprop="url" rel="index"><span itemprop="name">windows cmd</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/windows-cmd/" itemprop="url" rel="index"><span itemprop="name">windows cmd</span></a></span>
 
                 
                 
@@ -613,26 +613,41 @@
       
         <p><code>data</code>命令用来显示日期；<code>time</code>命令用来显示时间。</p>
 <a id="more"></a>
+
 <h1 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h1><figure class="highlight bat"><figcaption><span>date</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="built_in">echo</span> <span class="variable">%date%</span></span><br><span class="line">Sun <span class="number">12</span>/<span class="number">18</span>/<span class="number">2016</span></span><br></pre></td></tr></table></figure>
+
 <figure class="highlight bat"><figcaption><span>time</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="built_in">echo</span> <span class="variable">%time%</span></span><br><span class="line"><span class="number">17</span>:<span class="number">00</span>:<span class="number">35</span>.<span class="number">87</span></span><br></pre></td></tr></table></figure>
+
 <p>note:</p>
 <ol>
 <li><code>%</code>可以替换为<code>!</code>，效果一样。</li>
 <li>注册表里<code>HKCU\Control Panel\International</code>下的一些键值：<br> <code>sShortDate</code>键值为<code>M/d/yyyy</code><br> <code>sTimeFormat</code>键值为<code>h:mm:ss tt</code><br> 以上键值不同则输出的格式会有不同。</li>
 </ol>
 <h1 id="format-output"><a href="#format-output" class="headerlink" title="format output"></a>format output</h1><h2 id="截取字符串"><a href="#截取字符串" class="headerlink" title=":截取字符串"></a><code>:</code>截取字符串</h2><figure class="highlight bat"><figcaption><span>date year</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="built_in">echo</span> <span class="variable">%date：~10,4%</span></span><br><span class="line"><span class="number">2016</span></span><br></pre></td></tr></table></figure>
+
 <p><code>date</code>后的<code>:</code>表示对变量作处理，<code>~10</code>表示从第10个字符开始取内容（从0开始计数），<code>,4</code>表示去4个字符。</p>
 <figure class="highlight bat"><figcaption><span>date month</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="built_in">echo</span> <span class="variable">%date：~4,2%</span></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+
 <figure class="highlight bat"><figcaption><span>date day</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="built_in">echo</span> <span class="variable">%date：~7,2%</span></span><br><span class="line"><span class="number">18</span></span><br></pre></td></tr></table></figure>
+
 <figure class="highlight bat"><figcaption><span>time hour</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="built_in">echo</span> <span class="variable">!time:~,2!</span></span><br><span class="line"><span class="number">19</span></span><br></pre></td></tr></table></figure>
+
 <figure class="highlight bat"><figcaption><span>time minute</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="built_in">echo</span> <span class="variable">!time:~3,2!</span></span><br><span class="line"><span class="number">58</span></span><br></pre></td></tr></table></figure>
+
 <figure class="highlight bat"><figcaption><span>time second</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="built_in">echo</span> <span class="variable">!time:~6,2!</span></span><br><span class="line"><span class="number">20</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="for语句"><a href="#for语句" class="headerlink" title="for语句"></a><code>for</code>语句</h2><figure class="highlight bat"><figcaption><span>for-date</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="keyword">for</span> /F "tokens=<span class="number">1</span>-<span class="number">4</span> delims=/ " %i <span class="keyword">in</span> ("<span class="variable">%date%</span>") <span class="keyword">do</span> @<span class="built_in">echo</span> <span class="variable">%i-%</span>j-<span class="variable">%k-%</span>l</span><br><span class="line">Sun-<span class="number">12</span>-<span class="number">18</span>-<span class="number">2016</span></span><br><span class="line">&gt;<span class="keyword">for</span> /F "tokens=<span class="number">1</span>-<span class="number">4</span> delims=/ " %i <span class="keyword">in</span> ("<span class="variable">%date%</span>") <span class="keyword">do</span> @<span class="built_in">echo</span> <span class="variable">%l-%</span>j-%k</span><br><span class="line"><span class="number">2016</span>-<span class="number">12</span>-<span class="number">18</span></span><br></pre></td></tr></table></figure>
+
 <figure class="highlight bat"><figcaption><span>for-time</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="keyword">for</span> /F "tokens=<span class="number">1</span>-<span class="number">4</span> delims=:." %i <span class="keyword">in</span> ("<span class="variable">%time%</span>") <span class="keyword">do</span> @<span class="built_in">echo</span> <span class="variable">%i-%</span>j-<span class="variable">%k-%</span>l</span><br><span class="line"><span class="number">20</span>-<span class="number">29</span>-<span class="number">30</span>-<span class="number">71</span></span><br><span class="line">&gt;<span class="keyword">for</span> /F "tokens=<span class="number">1</span>-<span class="number">4</span> delims=:." %i <span class="keyword">in</span> ("<span class="variable">%time%</span>") <span class="keyword">do</span> @<span class="built_in">echo</span> <span class="variable">%i%</span>j</span><br><span class="line"><span class="number">2029</span></span><br></pre></td></tr></table></figure>
-<h1 id="unified-output-format-in-different-operation-settings"><a href="#unified-output-format-in-different-operation-settings" class="headerlink" title="unified output format in different operation settings"></a>unified output format in different operation settings</h1><p>由于Windows语言和日期格式设置不同，可能的输出也不同：<br><figure class="highlight plain"><figcaption><span>date format</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">星期日 2016-12-18</span><br><span class="line">2016-12-18 星期日</span><br><span class="line">12/18/2016 Sun</span><br><span class="line">Sun 12/18/2016</span><br></pre></td></tr></table></figure></p>
+
+<h1 id="unified-output-format-in-different-operation-settings"><a href="#unified-output-format-in-different-operation-settings" class="headerlink" title="unified output format in different operation settings"></a>unified output format in different operation settings</h1><p>由于Windows语言和日期格式设置不同，可能的输出也不同：</p>
+<figure class="highlight plain"><figcaption><span>date format</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">星期日 2016-12-18</span><br><span class="line">2016-12-18 星期日</span><br><span class="line">12/18/2016 Sun</span><br><span class="line">Sun 12/18/2016</span><br></pre></td></tr></table></figure>
+
 <p>不同的格式用<a href="#format-output">上一节</a>所述方法，在不同设置的操作系统上，会得到不同的结果，有可能是错误的结果；<br>通过修改注册表中的<code>sShortDate</code>键值来保证不同的操作系统设置都能输出正确的格式。</p>
 <figure class="highlight bat"><figcaption><span>date.bat</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">for</span> /f "delims=" <span class="variable">%%a</span> <span class="keyword">in</span> ('reg query "HKEY_CURRENT_USER\Control Panel\International" /v sShortDate') <span class="keyword">do</span> (</span><br><span class="line">  <span class="built_in">set</span> "RegDateOld=<span class="variable">%%a</span>"</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> RegDateOld=<span class="variable">%RegDateOld:~-8%</span></span><br><span class="line"></span><br><span class="line">reg add "HKEY_CURRENT_USER\Control Panel\International" /v sShortDate /t REG_SZ /d yyyy-M-d /f&gt;<span class="built_in">nul</span></span><br><span class="line"><span class="built_in">set</span> Today=%<span class="built_in">date</span>: =%</span><br><span class="line"></span><br><span class="line">reg add "HKEY_CURRENT_USER\Control Panel\International" /v sShortDate /t REG_SZ /d <span class="variable">%RegDateOld%</span> /f&gt;<span class="built_in">nul</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> "<span class="variable">%Today:~0,1%</span>" <span class="keyword">gtr</span> "<span class="number">9</span>" (</span><br><span class="line">  <span class="built_in">set</span> Today=<span class="variable">%Today:~-10%</span></span><br><span class="line">) <span class="keyword">else</span> (</span><br><span class="line">  <span class="built_in">set</span> Today=<span class="variable">%Today:~0,10%</span></span><br><span class="line">)</span><br><span class="line"><span class="built_in">echo</span>,<span class="variable">%Today%</span></span><br></pre></td></tr></table></figure>
+
 <figure class="highlight bat"><figcaption><span>execute date.bat</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;.\<span class="built_in">date</span>.bat</span><br><span class="line"><span class="number">2016</span>-<span class="number">12</span>-<span class="number">18</span></span><br></pre></td></tr></table></figure>
+
 <p>References:</p>
 <ol>
 <li><a href="http://www.jb51.net/article/44361.htm" target="_blank" rel="noopener">再谈DOS批处理下格式化日期字符串的三种方法(详解)</a></li>
@@ -753,7 +768,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="WU Chenxu">
             
@@ -1197,7 +1212,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">239k</span>
+    <span title="站点总字数">240k</span>
   
 
   
@@ -1208,12 +1223,12 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:37</span>
+    <span title="站点阅读时长">3:38</span>
   
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 

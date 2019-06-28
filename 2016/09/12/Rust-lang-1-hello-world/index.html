@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -227,7 +227,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -237,7 +237,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta custom-logo">
     
@@ -444,20 +444,20 @@
     <div class="reading-progress-bar"></div>
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2016/09/12/Rust-lang-1-hello-world/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WU Chenxu">
       <meta itemprop="description" content="一切都会成为过去">
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="玉汝于成，功不唐捐">
     </span>
 
@@ -526,7 +526,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Rust/" itemprop="url" rel="index"><span itemprop="name">Rust</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Rust/" itemprop="url" rel="index"><span itemprop="name">Rust</span></a></span>
 
                 
                 
@@ -614,6 +614,7 @@
 
       
         <img src="/2016/09/12/Rust-lang-1-hello-world/rust-logo-blk.svg">
+
 <p>本文介绍了Rust语言在Windows下的环境安装，编译，执行。</p>
 <a id="more"></a>
 <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>Rust是静态强类型的编译型语言，非动态解释型语言，无垃圾回收。</p>
@@ -633,8 +634,11 @@
 </blockquote>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>进入<a href="www.rust-lang.org">Rust官网</a>,首页会根据当前操作系统推荐下载安装包。<br>支持Windows(GUN ABI 与 MSVC ABI)、Linux以及Mac。<br>安装完成后，在命令行输入<code>rustc</code>，如果有输出说明安装成功。</p>
 <h1 id="编写代码"><a href="#编写代码" class="headerlink" title="编写代码"></a>编写代码</h1><figure class="highlight rust"><figcaption><span>hello.rs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"Hello, world!"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h1 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">rustc</span> <span class="selector-tag">hello</span><span class="selector-class">.rs</span></span><br></pre></td></tr></table></figure>
+
 <h1 id="执行"><a href="#执行" class="headerlink" title="执行"></a>执行</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;hello.exe</span><br><span class="line">Hello, world!</span><br></pre></td></tr></table></figure>
+
 <h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p><a href="https://github.com/WuChenxu/Rust/tree/master/01_HelloWorld" target="_blank" rel="noopener">Code</a></p>
 <p>References:</p>
 <ol>
@@ -751,7 +755,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="WU Chenxu">
             
@@ -1195,7 +1199,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">239k</span>
+    <span title="站点总字数">240k</span>
   
 
   
@@ -1206,12 +1210,12 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:37</span>
+    <span title="站点阅读时长">3:38</span>
   
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 

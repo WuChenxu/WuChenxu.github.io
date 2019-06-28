@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -225,7 +225,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -235,7 +235,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta custom-logo">
     
@@ -442,20 +442,20 @@
     <div class="reading-progress-bar"></div>
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2018/12/31/Unix-Linux-cmd-1-find-grep/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WU Chenxu">
       <meta itemprop="description" content="一切都会成为过去">
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="玉汝于成，功不唐捐">
     </span>
 
@@ -524,7 +524,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Linux-cmd/" itemprop="url" rel="index"><span itemprop="name">Linux cmd</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux-cmd/" itemprop="url" rel="index"><span itemprop="name">Linux cmd</span></a></span>
 
                 
                 
@@ -614,16 +614,27 @@
         <p>find - search for files in a directory hierarchy<br>grep, egrep, fgrep, zgrep, zegrep, zfgrep - print lines that match patterns</p>
 <a id="more"></a>
 <p>此文与<a href="https://wuchenxu.com/2016/03/30/windows-cmd-9-find-findstr/" target="_blank" rel="noopener">windows command(9):FIND FINDSTR</a>对照。</p>
-<h1 id="查找字符串"><a href="#查找字符串" class="headerlink" title="查找字符串"></a>查找字符串</h1><p>windows中的<code>find/findstr</code>更改为<code>grep</code>即可，实现在单个文件中查找某个字符串。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$grep</span> <span class="string">"hello there"</span> hi.txt</span><br><span class="line">hello there</span><br></pre></td></tr></table></figure></p>
-<h1 id="查找的字符串中有-quot"><a href="#查找的字符串中有-quot" class="headerlink" title="查找的字符串中有&quot;"></a>查找的字符串中有<code>&quot;</code></h1><p>由于<code>grep</code>的pattern是支持正则表达式regex的，所有只要用<code>\&quot;</code>转义<code>&quot;</code>即可。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$grep</span> <span class="string">"\"hello"</span> hi.txt</span><br><span class="line">h<span class="string">"hello"</span>h</span><br></pre></td></tr></table></figure></p>
+<h1 id="查找字符串"><a href="#查找字符串" class="headerlink" title="查找字符串"></a>查找字符串</h1><p>windows中的<code>find/findstr</code>更改为<code>grep</code>即可，实现在单个文件中查找某个字符串。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$grep</span> <span class="string">"hello there"</span> hi.txt</span><br><span class="line">hello there</span><br></pre></td></tr></table></figure>
+
+<h1 id="查找的字符串中有-quot"><a href="#查找的字符串中有-quot" class="headerlink" title="查找的字符串中有&quot;"></a>查找的字符串中有<code>&quot;</code></h1><p>由于<code>grep</code>的pattern是支持正则表达式regex的，所有只要用<code>\&quot;</code>转义<code>&quot;</code>即可。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$grep</span> <span class="string">"\"hello"</span> hi.txt</span><br><span class="line">h<span class="string">"hello"</span>h</span><br></pre></td></tr></table></figure>
+
 <h1 id="多文件查找"><a href="#多文件查找" class="headerlink" title="多文件查找"></a>多文件查找</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep <span class="string">"hello"</span> *.txt</span><br></pre></td></tr></table></figure>
+
 <h1 id="查找目录"><a href="#查找目录" class="headerlink" title="查找目录"></a>查找目录</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">grep -nir <span class="string">"music.163"</span> ./ <span class="comment"># 查找当前文件夹及其子目录下包含`music.163`字符串的文件，并打印行号</span></span><br><span class="line"></span><br><span class="line">find . -name <span class="string">"file_name"</span> | xargs grep -nir <span class="string">"search_string"</span> <span class="comment"># 过滤文件之后，对每个文件查找</span></span><br></pre></td></tr></table></figure>
+
 <h1 id="显示行号"><a href="#显示行号" class="headerlink" title="显示行号"></a>显示行号</h1><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$grep</span> -n <span class="string">"hello"</span> hi.txt</span><br><span class="line"><span class="number">1</span><span class="symbol">:hello</span></span><br><span class="line"><span class="number">2</span><span class="symbol">:h<span class="string">"hello"</span>h</span></span><br><span class="line"><span class="number">3</span><span class="symbol">:hello</span> there</span><br></pre></td></tr></table></figure>
+
 <h1 id="通配符查找"><a href="#通配符查找" class="headerlink" title="通配符查找"></a>通配符查找</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$grep</span>  <span class="string">'.*llo'</span> hi.txt</span><br><span class="line">hello</span><br><span class="line">h<span class="string">"hello"</span>h</span><br><span class="line">hello there</span><br></pre></td></tr></table></figure>
-<h1 id="find"><a href="#find" class="headerlink" title="find"></a>find</h1><p>常用option：<br><code>-name</code>: name matching, can use regex.<br><code>-iname</code>: like<code>-name</code>, but case insensitive.<br><code>-regex</code>: regex匹配文件名（包含路径），eg<code>find ./ -regex &quot;.*/*hexo.py&quot;</code>.<br><code>-type</code>: file type.<code>d</code> is directory, <code>f</code> is file.</p>
+
+<h1 id="find"><a href="#find" class="headerlink" title="find"></a>find</h1><p>常用option：<br><code>-name</code>: name matching, can use regex.<br><code>-iname</code>: like<code>-name</code>, but case insensitive.<br><code>-regex</code>: regex匹配文件名（包含路径），eg<code>find ./ -regex &quot;.*/*hexo.py&quot;</code>.
+<code>-type</code>: file type.<code>d</code> is directory, <code>f</code> is file.</p>
 <figure class="highlight bash"><figcaption><span>find-examples</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">find / \! -name <span class="string">"*.c"</span> -<span class="built_in">print</span></span><br><span class="line">     Print out a list of all the files whose names <span class="keyword">do</span> not end <span class="keyword">in</span> .c.</span><br><span class="line"></span><br><span class="line">find / -newer ttt -user wnj -<span class="built_in">print</span></span><br><span class="line">     Print out a list of all the files owned by user ``wnj<span class="string">''</span> that are</span><br><span class="line">     newer than the file ttt.</span><br><span class="line"></span><br><span class="line">find / \! \( -newer ttt -user wnj \) -<span class="built_in">print</span></span><br><span class="line">     Print out a list of all the files <span class="built_in">which</span> are not both newer than</span><br><span class="line">     ttt and owned by ``wnj<span class="string">''</span>.</span><br><span class="line"></span><br><span class="line">find / \( -newer ttt -or -user wnj \) -<span class="built_in">print</span></span><br><span class="line">     Print out a list of all the files that are either owned by</span><br><span class="line">     ``wnj<span class="string">''</span> or that are newer than ttt.</span><br><span class="line"></span><br><span class="line">find / -newerct <span class="string">'1 minute ago'</span> -<span class="built_in">print</span></span><br><span class="line">     Print out a list of all the files whose inode change time is more</span><br><span class="line">     recent than the current time minus one minute.</span><br><span class="line"></span><br><span class="line">find / -<span class="built_in">type</span> f -<span class="built_in">exec</span> <span class="built_in">echo</span> &#123;&#125; \;</span><br><span class="line">      Use the <span class="built_in">echo</span>(1) <span class="built_in">command</span> to <span class="built_in">print</span> out a list of all the files.</span><br><span class="line"></span><br><span class="line">find -L /usr/ports/packages -<span class="built_in">type</span> l -<span class="built_in">exec</span> rm -- &#123;&#125; +</span><br><span class="line">     Delete all broken symbolic links <span class="keyword">in</span> /usr/ports/packages.</span><br><span class="line"></span><br><span class="line">find /usr/src -name CVS -prune -o -depth +6 -<span class="built_in">print</span></span><br><span class="line">     Find files and directories that are at least seven levels deep <span class="keyword">in</span></span><br><span class="line">     the working directory /usr/src.</span><br><span class="line"></span><br><span class="line">find /usr/src -name CVS -prune -o -mindepth 7 -<span class="built_in">print</span></span><br><span class="line">     Is not equivalent to the previous example, since -prune is not</span><br><span class="line">     evaluated below level seven.</span><br></pre></td></tr></table></figure>
+
 <h1 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h1><p>常用option:<br><code>-i（--ignore-case）</code>: 忽略大小写<br><code>-r (--recursive）</code>: 递归查找子目录<br><code>-n (--line-number)</code>: 打印行号<br><code>-l (--files-with-match)</code>: 只打印匹配的文件名</p>
 <figure class="highlight bash"><figcaption><span>grep-examples</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># To find all occurrences of the word `patricia' in a file:</span></span><br><span class="line"></span><br><span class="line">$ grep <span class="string">'patricia'</span> myfile</span><br><span class="line"></span><br><span class="line"><span class="comment"># To find all occurrences of the pattern `.Pp' at the beginning of a line:</span></span><br><span class="line"></span><br><span class="line">$ grep <span class="string">'^\.Pp'</span> myfile</span><br><span class="line"></span><br><span class="line"><span class="comment"># The apostrophes ensure the entire expression is evaluated by grep instead</span></span><br><span class="line"><span class="comment"># of by the user's shell.  The caret `^' matches the null string at the</span></span><br><span class="line"><span class="comment"># beginning of a line, and the `\' escapes the `.', which would otherwise</span></span><br><span class="line"><span class="comment"># match any character.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># To find all lines in a file which do not contain the words `foo' or</span></span><br><span class="line"><span class="comment"># `bar':</span></span><br><span class="line"></span><br><span class="line">$ grep -v -e <span class="string">'foo'</span> -e <span class="string">'bar'</span> myfile</span><br><span class="line"></span><br><span class="line"><span class="comment"># A simple example of an extended regular expression:</span></span><br><span class="line">$ egrep <span class="string">'19|20|25'</span> calendar</span><br><span class="line"><span class="comment"># Peruses the file `calendar' looking for either 19, 20, or 25.</span></span><br></pre></td></tr></table></figure>
+
 <p>References:</p>
 <ol>
 <li><code>man find</code> 与 <code>man grep</code></li>
@@ -744,7 +755,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="WU Chenxu">
             
@@ -1188,7 +1199,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">239k</span>
+    <span title="站点总字数">240k</span>
   
 
   
@@ -1199,12 +1210,12 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:37</span>
+    <span title="站点阅读时长">3:38</span>
   
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 

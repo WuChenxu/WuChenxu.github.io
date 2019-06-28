@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -228,7 +228,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -238,7 +238,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta custom-logo">
     
@@ -445,20 +445,20 @@
     <div class="reading-progress-bar"></div>
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2015/12/03/CAN-byte-order/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WU Chenxu">
       <meta itemprop="description" content="一切都会成为过去">
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="玉汝于成，功不唐捐">
     </span>
 
@@ -527,14 +527,14 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/encoding/" itemprop="url" rel="index"><span itemprop="name">encoding</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/encoding/" itemprop="url" rel="index"><span itemprop="name">encoding</span></a></span>
 
                 
                 
                   ，
                 
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/encoding/CAN/" itemprop="url" rel="index"><span itemprop="name">CAN</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/encoding/CAN/" itemprop="url" rel="index"><span itemprop="name">CAN</span></a></span>
 
                 
                 
@@ -622,6 +622,7 @@
 
       
         <h1 id="CAN总线格式"><a href="#CAN总线格式" class="headerlink" title="CAN总线格式"></a>CAN总线格式</h1><img src="/2015/12/03/CAN-byte-order/CAN-Frame_mit_Pegeln_mit_Stuffbits.svg.png">
+
 <a id="more"></a>
 <blockquote>
 <p>IDENTIFIER<br>The IDENTIFIER’s length is 11 bits. These bits are transmitted in the order from ID-10 to<br>ID-0. The least significant bit is ID-0.<br>DATA FIELD<br>The DATA FIELD consists of the data to be transferred within a DATA FRAME. It can<br>contain from 0 to 8 bytes, which each contain 8 bits which are transferred MSB first.</p>
@@ -630,108 +631,83 @@
 <table>
 <thead>
 <tr>
-<th style="text-align:center">msb</th>
-<th style="text-align:center">…</th>
-<th style="text-align:center">…</th>
-<th style="text-align:center">…</th>
-<th style="text-align:center">…</th>
-<th style="text-align:center">…</th>
-<th style="text-align:center">…</th>
-<th style="text-align:center">lsb</th>
+<th align="center">msb</th>
+<th align="center">…</th>
+<th align="center">…</th>
+<th align="center">…</th>
+<th align="center">…</th>
+<th align="center">…</th>
+<th align="center">…</th>
+<th align="center">lsb</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center"></td>
-</tr>
-</tbody>
 </table>
 <p>但是总线没有规定DATA FIELD的字节序，这是上层协议的范畴。</p>
 <h1 id="Motorola格式与Intel格式"><a href="#Motorola格式与Intel格式" class="headerlink" title="Motorola格式与Intel格式"></a>Motorola格式与Intel格式</h1><p>在进行CAN总线通信设计时，对CAN总线信号有两种编码格式：Motorola与Intel格式。<br>两者并无优劣之分，只是设计者的习惯选择。<br>一般情况下，主机厂在定义CAN总线信号时，会明确定义字节的发送顺序，LSB(byte)先发,还是MSB先发。</p>
 <h2 id="Motolora格式-big-endian"><a href="#Motolora格式-big-endian" class="headerlink" title="Motolora格式(big endian)"></a>Motolora格式(big endian)</h2><table>
 <thead>
 <tr>
-<th style="text-align:center">MSB</th>
-<th style="text-align:center">…</th>
-<th style="text-align:center">…</th>
-<th style="text-align:center">LSB</th>
+<th align="center">MSB</th>
+<th align="center">…</th>
+<th align="center">…</th>
+<th align="center">LSB</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center"></td>
-</tr>
-</tbody>
 </table>
 <h2 id="Intel格式-little-endian"><a href="#Intel格式-little-endian" class="headerlink" title="Intel格式(little endian)"></a>Intel格式(little endian)</h2><table>
 <thead>
 <tr>
-<th style="text-align:center">LSB</th>
-<th style="text-align:center">…</th>
-<th style="text-align:center">…</th>
-<th style="text-align:center">MSB</th>
+<th align="center">LSB</th>
+<th align="center">…</th>
+<th align="center">…</th>
+<th align="center">MSB</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center"></td>
-</tr>
-</tbody>
 </table>
 <h2 id="位计数的方法"><a href="#位计数的方法" class="headerlink" title="位计数的方法"></a>位计数的方法</h2><h3 id="锯齿-Sawtooth-法"><a href="#锯齿-Sawtooth-法" class="headerlink" title="锯齿(Sawtooth)法"></a>锯齿(Sawtooth)法</h3><table>
 <thead>
 <tr>
-<th style="text-align:center">7</th>
-<th style="text-align:center">6</th>
-<th style="text-align:center">5</th>
-<th style="text-align:center">4</th>
-<th style="text-align:center">3</th>
-<th style="text-align:center">2</th>
-<th style="text-align:center">1</th>
-<th style="text-align:center">0</th>
-<th style="text-align:center">15</th>
-<th style="text-align:center">14</th>
-<th style="text-align:center">13</th>
-<th style="text-align:center">12</th>
-<th style="text-align:center">11</th>
-<th style="text-align:center">10</th>
-<th style="text-align:center">9</th>
-<th style="text-align:center">8</th>
+<th align="center">7</th>
+<th align="center">6</th>
+<th align="center">5</th>
+<th align="center">4</th>
+<th align="center">3</th>
+<th align="center">2</th>
+<th align="center">1</th>
+<th align="center">0</th>
+<th align="center">15</th>
+<th align="center">14</th>
+<th align="center">13</th>
+<th align="center">12</th>
+<th align="center">11</th>
+<th align="center">10</th>
+<th align="center">9</th>
+<th align="center">8</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center"></td>
-</tr>
-</tbody>
 </table>
 <p>发送一个8字节的数据到总线上，bit7（msb of Byte0）最先发送，接着是bit6，bit56（lsb of Byte7）最后发送。</p>
 <h3 id="顺序-Sequential-法"><a href="#顺序-Sequential-法" class="headerlink" title="顺序(Sequential)法"></a>顺序(Sequential)法</h3><table>
 <thead>
 <tr>
-<th style="text-align:center">0</th>
-<th style="text-align:center">1</th>
-<th style="text-align:center">2</th>
-<th style="text-align:center">3</th>
-<th style="text-align:center">4</th>
-<th style="text-align:center">5</th>
-<th style="text-align:center">6</th>
-<th style="text-align:center">7</th>
-<th style="text-align:center">8</th>
-<th style="text-align:center">9</th>
-<th style="text-align:center">10</th>
-<th style="text-align:center">11</th>
-<th style="text-align:center">12</th>
-<th style="text-align:center">13</th>
-<th style="text-align:center">14</th>
-<th style="text-align:center">15</th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+<th align="center">7</th>
+<th align="center">8</th>
+<th align="center">9</th>
+<th align="center">10</th>
+<th align="center">11</th>
+<th align="center">12</th>
+<th align="center">13</th>
+<th align="center">14</th>
+<th align="center">15</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center"></td>
-</tr>
-</tbody>
 </table>
 <p>发送一个8字节的数据到总线上，bit0（msb of Byte0）最先发送，接着是bit2，bit63（lsb of Byte7）最后发送。</p>
 <p>CANoe中一般用锯齿法。<br>而对于跨字节的数据，CANoe表示格式（这两种格式只针对字节序，位序总是msb first的）：</p>
@@ -741,6 +717,7 @@
 </ul>
 <p>实际总线传输按照msb first，从Byte0的bit7开始，bit6, …, 到Byte1的bit15，bit14, … , 到Byte7的bit63, … , bit62, …, bit56.</p>
 <img src="/2015/12/03/CAN-byte-order/Intel_Motorola_format_in_CANoe.png">
+
 <p>start bit总是指lsb的位置，然后向左排布，需要跨字节时：Intel格式从Byte0向Byte7的方向排布，Motorola格式从Byte7向Byte0的方向排布。</p>
 <h1 id="缩写"><a href="#缩写" class="headerlink" title="缩写:"></a>缩写:</h1><p>msb:most significant bit<br>lsb:most significant bit<br>MSB:Most Significant Byte<br>LSB:Least Significant Byte</p>
 <p>Reference:</p>
@@ -873,7 +850,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="WU Chenxu">
             
@@ -1317,7 +1294,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">239k</span>
+    <span title="站点总字数">240k</span>
   
 
   
@@ -1328,12 +1305,12 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:37</span>
+    <span title="站点阅读时长">3:38</span>
   
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 

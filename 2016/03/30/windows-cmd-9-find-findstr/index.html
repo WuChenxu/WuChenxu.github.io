@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -225,7 +225,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -235,7 +235,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta custom-logo">
     
@@ -442,20 +442,20 @@
     <div class="reading-progress-bar"></div>
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2016/03/30/windows-cmd-9-find-findstr/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WU Chenxu">
       <meta itemprop="description" content="一切都会成为过去">
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="玉汝于成，功不唐捐">
     </span>
 
@@ -524,7 +524,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/windows-cmd/" itemprop="url" rel="index"><span itemprop="name">windows cmd</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/windows-cmd/" itemprop="url" rel="index"><span itemprop="name">windows cmd</span></a></span>
 
                 
                 
@@ -613,18 +613,37 @@
       
         <p>FIND和FINDSTR都是用来查找文件中的字符串的命令。FINDSTR支持通配符，是FIND的加强版本。</p>
 <a id="more"></a>
-<h1 id="查找字符串"><a href="#查找字符串" class="headerlink" title="查找字符串"></a>查找字符串</h1><p>用空格隔开待查找的字符串<code>&quot;str1 str2&quot;</code>，在find中表示查找<code>str1 str1</code>整个字符串，比较符合直觉，<br>而在findstr中表示查找<code>str</code>或<code>str2</code>。findstr的待查字符串写成<code>/C:&quot;str1 str2&quot;</code>表示查找整个字符串.<br><figure class="highlight bat"><figcaption><span>find</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">find</span> "<span class="title">hello</span> <span class="title">there</span>" <span class="title">hi.txt</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">---------- <span class="title">HI.TXT</span></span></span><br><span class="line"><span class="function"><span class="title">hello</span> <span class="title">there</span></span></span><br></pre></td></tr></table></figure></p>
+<h1 id="查找字符串"><a href="#查找字符串" class="headerlink" title="查找字符串"></a>查找字符串</h1><p>用空格隔开待查找的字符串<code>&quot;str1 str2&quot;</code>，在find中表示查找<code>str1 str1</code>整个字符串，比较符合直觉，<br>而在findstr中表示查找<code>str</code>或<code>str2</code>。findstr的待查字符串写成<code>/C:&quot;str1 str2&quot;</code>表示查找整个字符串.</p>
+<figure class="highlight bat"><figcaption><span>find</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">find</span> "<span class="title">hello</span> <span class="title">there</span>" <span class="title">hi.txt</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">---------- <span class="title">HI.TXT</span></span></span><br><span class="line"><span class="function"><span class="title">hello</span> <span class="title">there</span></span></span><br></pre></td></tr></table></figure>
+
 <figure class="highlight bat"><figcaption><span>findstr</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">findstr</span> "<span class="title">hello</span> <span class="title">there</span>" <span class="title">hi.txt</span></span></span><br><span class="line"><span class="function"><span class="title">hello</span></span></span><br><span class="line"><span class="function"><span class="title">h</span>"<span class="title">hello</span>"<span class="title">h</span></span></span><br><span class="line"><span class="function"><span class="title">hello</span> <span class="title">there</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">D</span>:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">findstr</span> /<span class="title">C</span>:"<span class="title">hello</span> <span class="title">there</span>" <span class="title">hi.txt</span></span></span><br><span class="line"><span class="function"><span class="title">hello</span> <span class="title">there</span></span></span><br></pre></td></tr></table></figure>
-<h1 id="查找的字符串中有-quot"><a href="#查找的字符串中有-quot" class="headerlink" title="查找的字符串中有&quot;"></a>查找的字符串中有<code>&quot;</code></h1><p>在要查找的字符串里<code>&quot;&quot;</code>转义成一个<code>&quot;</code>.<br><figure class="highlight bat"><figcaption><span>find</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">find</span> /<span class="title">N</span> "<span class="title">h</span>""<span class="title">hello</span>""<span class="title">h</span>" <span class="title">hi.txt</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">---------- <span class="title">HI.TXT</span></span></span><br><span class="line"><span class="function">[6]<span class="title">h</span>"<span class="title">hello</span>"<span class="title">h</span></span></span><br></pre></td></tr></table></figure></p>
+
+<h1 id="查找的字符串中有-quot"><a href="#查找的字符串中有-quot" class="headerlink" title="查找的字符串中有&quot;"></a>查找的字符串中有<code>&quot;</code></h1><p>在要查找的字符串里<code>&quot;&quot;</code>转义成一个<code>&quot;</code>.</p>
+<figure class="highlight bat"><figcaption><span>find</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">find</span> /<span class="title">N</span> "<span class="title">h</span>""<span class="title">hello</span>""<span class="title">h</span>" <span class="title">hi.txt</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">---------- <span class="title">HI.TXT</span></span></span><br><span class="line"><span class="function">[6]<span class="title">h</span>"<span class="title">hello</span>"<span class="title">h</span></span></span><br></pre></td></tr></table></figure>
+
 <figure class="highlight bat"><figcaption><span>findstr</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">findstr</span> /<span class="title">N</span> """<span class="title">hello</span>"""  <span class="title">hi.txt</span></span></span><br><span class="line"><span class="function">6:<span class="title">h</span>"<span class="title">hello</span>"<span class="title">h</span></span></span><br></pre></td></tr></table></figure>
-<h1 id="多文件查找"><a href="#多文件查找" class="headerlink" title="多文件查找"></a>多文件查找</h1><p>当前文件夹和所有子目录查找所有含有<code>Windows</code>的文件，忽略大小写。<br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">findstr <span class="string">/s</span> <span class="string">/i</span> Windows *.*</span><br></pre></td></tr></table></figure></p>
+
+<h1 id="多文件查找"><a href="#多文件查找" class="headerlink" title="多文件查找"></a>多文件查找</h1><p>当前文件夹和所有子目录查找所有含有<code>Windows</code>的文件，忽略大小写。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">findstr <span class="string">/s</span> <span class="string">/i</span> Windows *.*</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight bat"><figcaption><span>search the current directory for files that have the extension .bat and that contain the string "PROMPT," type </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> <span class="variable">%%f</span> <span class="keyword">in</span> (*.bat) <span class="keyword">do</span> <span class="built_in">find</span> "PROMPT" <span class="variable">%%f</span></span><br></pre></td></tr></table></figure>
-<h1 id="查找目录"><a href="#查找目录" class="headerlink" title="查找目录"></a>查找目录</h1><p>用管道。<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">D:</span>\test&gt;dir <span class="regexp">/b /</span>s |find /i <span class="string">"HI"</span></span><br><span class="line"><span class="string">D:</span>\test\hi.txt</span><br></pre></td></tr></table></figure></p>
-<h1 id="显示文件内容并添加行号"><a href="#显示文件内容并添加行号" class="headerlink" title="显示文件内容并添加行号"></a>显示文件内容并添加行号</h1><p>type命令只能显示文件内容，在不使用for语句的条件下，简洁地实现打印行号的功能。<br><figure class="highlight bat"><figcaption><span>display line number</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">find</span> /V /N "" filename</span><br><span class="line"><span class="built_in">findstr</span> /V /N "\n"  hi.txt</span><br></pre></td></tr></table></figure></p>
-<h1 id="通配符查找"><a href="#通配符查找" class="headerlink" title="通配符查找"></a>通配符查找</h1><p>查找包含以任意个空格后是字符串<code>FOR</code>的字符串，打印行号(/n),<br><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">findstr</span> /b /n /c:" *<span class="keyword">FOR</span>" *.bas</span><br></pre></td></tr></table></figure></p>
+
+<h1 id="查找目录"><a href="#查找目录" class="headerlink" title="查找目录"></a>查找目录</h1><p>用管道。</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">D:</span>\test&gt;dir <span class="regexp">/b /</span>s |find /i <span class="string">"HI"</span></span><br><span class="line"><span class="string">D:</span>\test\hi.txt</span><br></pre></td></tr></table></figure>
+
+<h1 id="显示文件内容并添加行号"><a href="#显示文件内容并添加行号" class="headerlink" title="显示文件内容并添加行号"></a>显示文件内容并添加行号</h1><p>type命令只能显示文件内容，在不使用for语句的条件下，简洁地实现打印行号的功能。</p>
+<figure class="highlight bat"><figcaption><span>display line number</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">find</span> /V /N "" filename</span><br><span class="line"><span class="built_in">findstr</span> /V /N "\n"  hi.txt</span><br></pre></td></tr></table></figure>
+
+<h1 id="通配符查找"><a href="#通配符查找" class="headerlink" title="通配符查找"></a>通配符查找</h1><p>查找包含以任意个空格后是字符串<code>FOR</code>的字符串，打印行号(/n),</p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">findstr</span> /b /n /c:" *<span class="keyword">FOR</span>" *.bas</span><br></pre></td></tr></table></figure>
+
 <h1 id="待查字符串从文件中读取"><a href="#待查字符串从文件中读取" class="headerlink" title="待查字符串从文件中读取"></a>待查字符串从文件中读取</h1><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">findstr</span> /g:finddata.txt /f:filelist.txt &gt; results.out</span><br></pre></td></tr></table></figure>
-<p>Reference:<br><figure class="highlight plain"><figcaption><span>help FIND</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">在文件中搜索字符串。</span><br><span class="line"></span><br><span class="line">FIND [/V] [/C] [/N] [/I] [/OFF[LINE]] &quot;string&quot; [[drive:][path]filename[ ...]]</span><br><span class="line"></span><br><span class="line">  /V         显示所有未包含指定字符串的行。</span><br><span class="line">  /C         仅显示包含字符串的行数。</span><br><span class="line">  /N         显示行号。</span><br><span class="line">  /I         搜索字符串时忽略大小写。</span><br><span class="line">  /OFF[LINE] 不要跳过具有脱机属性集的文件。</span><br><span class="line">  &quot;string&quot; 指定要搜索的文本字符串。</span><br><span class="line">  [drive:][path]filename</span><br><span class="line">             指定要搜索的文件。</span><br><span class="line"></span><br><span class="line">如果没有指定路径，FIND 将搜索在提示符处键入</span><br><span class="line">的文本或者由另一命令产生的文本。</span><br></pre></td></tr></table></figure></p>
+
+<p>Reference:</p>
+<figure class="highlight plain"><figcaption><span>help FIND</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">在文件中搜索字符串。</span><br><span class="line"></span><br><span class="line">FIND [/V] [/C] [/N] [/I] [/OFF[LINE]] &quot;string&quot; [[drive:][path]filename[ ...]]</span><br><span class="line"></span><br><span class="line">  /V         显示所有未包含指定字符串的行。</span><br><span class="line">  /C         仅显示包含字符串的行数。</span><br><span class="line">  /N         显示行号。</span><br><span class="line">  /I         搜索字符串时忽略大小写。</span><br><span class="line">  /OFF[LINE] 不要跳过具有脱机属性集的文件。</span><br><span class="line">  &quot;string&quot; 指定要搜索的文本字符串。</span><br><span class="line">  [drive:][path]filename</span><br><span class="line">             指定要搜索的文件。</span><br><span class="line"></span><br><span class="line">如果没有指定路径，FIND 将搜索在提示符处键入</span><br><span class="line">的文本或者由另一命令产生的文本。</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight plain"><figcaption><span>help FINDSTR</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">在文件中寻找字符串。</span><br><span class="line"></span><br><span class="line">FINDSTR [/B] [/E] [/L] [/R] [/S] [/I] [/X] [/V] [/N] [/M] [/O] [/P] [/F:file]</span><br><span class="line">        [/C:string] [/G:file] [/D:dir list] [/A:color attributes] [/OFF[LINE]]</span><br><span class="line">        strings [[drive:][path]filename[ ...]]</span><br><span class="line"></span><br><span class="line">  /B         在一行的开始配对模式。</span><br><span class="line">  /E         在一行的结尾配对模式。</span><br><span class="line">  /L         按字使用搜索字符串。</span><br><span class="line">  /R         将搜索字符串作为一般表达式使用。</span><br><span class="line">  /S         在当前目录和所有子目录中搜索匹配文件。</span><br><span class="line">  /I         指定搜索不分大小写。</span><br><span class="line">  /X         打印完全匹配的行。</span><br><span class="line">  /V         只打印不包含匹配的行。</span><br><span class="line">  /N         在匹配的每行前打印行数。</span><br><span class="line">  /M         如果文件含有匹配项，只打印其文件名。</span><br><span class="line">  /O         在每个匹配行前打印字符偏移量。</span><br><span class="line">  /P         忽略有不可打印字符的文件。</span><br><span class="line">  /OFF[LINE] 不跳过带有脱机属性集的文件。</span><br><span class="line">  /A:attr    指定有十六进位数字的颜色属性。请见 &quot;color /?&quot;</span><br><span class="line">  /F:file    从指定文件读文件列表 (/ 代表控制台)。</span><br><span class="line">  /C:string  使用指定字符串作为文字搜索字符串。</span><br><span class="line">  /G:file    从指定的文件获得搜索字符串。 (/ 代表控制台)。</span><br><span class="line">  /D:dir     查找以分号为分隔符的目录列表</span><br><span class="line">  strings    要查找的文字。</span><br><span class="line">  [drive:][path]filename</span><br><span class="line">             指定要查找的文件。</span><br><span class="line"></span><br><span class="line">除非参数有 /C 前缀，请使用空格隔开搜索字符串。</span><br><span class="line">例如: &apos;FINDSTR &quot;hello there&quot; x.y&apos; 在文件 x.y 中寻找 &quot;hello&quot; 或</span><br><span class="line">&quot;there&quot;。&apos;FINDSTR /C:&quot;hello there&quot; x.y&apos; 文件 x.y  寻找</span><br><span class="line">&quot;hello there&quot;。</span><br><span class="line"></span><br><span class="line">一般表达式的快速参考:</span><br><span class="line">  .        通配符: 任何字符</span><br><span class="line">  *        重复: 以前字符或类出现零或零以上次数</span><br><span class="line">  ^        行位置: 行的开始</span><br><span class="line">  $        行位置: 行的终点</span><br><span class="line">  [class]  字符类: 任何在字符集中的字符</span><br><span class="line">  [^class] 补字符类: 任何不在字符集中的字符</span><br><span class="line">  [x-y]    范围: 在指定范围内的任何字符</span><br><span class="line">  \x       Escape: 元字符 x 的文字用法</span><br><span class="line">  \&lt;xyz    字位置: 字的开始</span><br><span class="line">  xyz\&gt;    字位置: 字的结束</span><br></pre></td></tr></table></figure>
+
 <p><a href="https://technet.microsoft.com/en-us/library/bb490906.aspx" target="_blank" rel="noopener">find in M$ website</a><br><a href="https://technet.microsoft.com/en-us/library/bb490907.aspx" target="_blank" rel="noopener">findstr in M$ website</a></p>
 
       
@@ -739,7 +758,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="WU Chenxu">
             
@@ -1183,7 +1202,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">239k</span>
+    <span title="站点总字数">240k</span>
   
 
   
@@ -1194,12 +1213,12 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:37</span>
+    <span title="站点阅读时长">3:38</span>
   
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 

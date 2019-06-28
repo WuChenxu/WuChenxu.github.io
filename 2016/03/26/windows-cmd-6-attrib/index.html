@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -225,7 +225,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -235,7 +235,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta custom-logo">
     
@@ -442,20 +442,20 @@
     <div class="reading-progress-bar"></div>
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2016/03/26/windows-cmd-6-attrib/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WU Chenxu">
       <meta itemprop="description" content="一切都会成为过去">
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="玉汝于成，功不唐捐">
     </span>
 
@@ -524,7 +524,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/windows-cmd/" itemprop="url" rel="index"><span itemprop="name">windows cmd</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/windows-cmd/" itemprop="url" rel="index"><span itemprop="name">windows cmd</span></a></span>
 
                 
                 
@@ -612,7 +612,8 @@
 
       
         
-<p>ATTRIB用来显示或修改文件或者文件夹属性。<br><a id="more"></a></p>
+<p>ATTRIB用来显示或修改文件或者文件夹属性。</p>
+<a id="more"></a>
 <h1 id="Windows的文件属性"><a href="#Windows的文件属性" class="headerlink" title="Windows的文件属性"></a>Windows的文件属性</h1><p>Windows OS文件夹或者文件属性主要有：</p>
 <ul>
 <li>只读(Read Only)-表示该文件不能被修改 </li>
@@ -621,10 +622,13 @@
 <li>存档(Archive)- 表示该文件在上次备份前已经修改过了，一些备份软件在备份系统后会把这些文件默认的设为存档属性。<br>存档属性在一般文件管理中意义不大，但是对于频繁的文件批量管理很有帮助。</li>
 </ul>
 <h1 id="显示属性-attrib-filename"><a href="#显示属性-attrib-filename" class="headerlink" title="显示属性 attrib filename"></a>显示属性 attrib filename</h1><figure class="highlight bat"><figcaption><span>show attrib</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:\<span class="title">test</span>&gt;<span class="title">attrib</span> .<span class="title">hello</span></span></span><br><span class="line"><span class="function">   <span class="title">SHR</span>       <span class="title">D</span>:\<span class="title">test</span>\.<span class="title">hello</span></span></span><br></pre></td></tr></table></figure>
-<h1 id="增加属性-attrib-R-A-S-H-I-filename"><a href="#增加属性-attrib-R-A-S-H-I-filename" class="headerlink" title="增加属性 attrib +[R|A|S|H|I] filename"></a>增加属性 attrib +[R|A|S|H|I] filename</h1><figure class="highlight bat"><figcaption><span>add attrib</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:\<span class="title">test</span>&gt;<span class="title">attrib</span> <span class="title">test</span></span></span><br><span class="line"><span class="function">             <span class="title">D</span>:\<span class="title">test</span>\<span class="title">test</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">D</span>:\<span class="title">test</span>&gt;<span class="title">attrib</span> +<span class="title">R</span> <span class="title">test</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">D</span>:\<span class="title">test</span>&gt;<span class="title">attrib</span> <span class="title">test</span></span></span><br><span class="line"><span class="function">     <span class="title">R</span>       <span class="title">D</span>:\<span class="title">test</span>\<span class="title">test</span></span></span><br></pre></td></tr></table></figure>
-<h1 id="去除属性-attrib-R-A-S-H-I-filename"><a href="#去除属性-attrib-R-A-S-H-I-filename" class="headerlink" title="去除属性 attrib -[R|A|S|H|I] filename"></a>去除属性 attrib -[R|A|S|H|I] filename</h1><figure class="highlight bat"><figcaption><span>恢复被病毒隐藏的文件 </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">attrib</span> -r -s -h /s /d</span><br></pre></td></tr></table></figure>
-<p>Reference:<br><figure class="highlight plain"><figcaption><span>help ATTRIB</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">显示或更改文件属性。</span><br><span class="line"></span><br><span class="line">ATTRIB [+R | -R] [+A | -A ] [+S | -S] [+H | -H] [+I | -I]</span><br><span class="line">       [drive:][path][filename] [/S [/D] [/L]]</span><br><span class="line"></span><br><span class="line">  +   设置属性。</span><br><span class="line">  -   清除属性。</span><br><span class="line">  R   只读文件属性。</span><br><span class="line">  A   存档文件属性。</span><br><span class="line">  S   系统文件属性。</span><br><span class="line">  H   隐藏文件属性。</span><br><span class="line">  I   无内容索引文件属性。</span><br><span class="line">  X   无清理文件属性。</span><br><span class="line">  V   完整性属性。</span><br><span class="line">  [drive:][path][filename]</span><br><span class="line">      指定 attrib 要处理的文件。</span><br><span class="line">  /S  处理当前文件夹</span><br><span class="line">      及其所有子文件夹中的匹配文件。</span><br><span class="line">  /D  也处理文件夹。</span><br><span class="line">  /L  处理符号链接和</span><br><span class="line">      符号链接目标的属性</span><br></pre></td></tr></table></figure></p>
 
+<h1 id="增加属性-attrib-R-A-S-H-I-filename"><a href="#增加属性-attrib-R-A-S-H-I-filename" class="headerlink" title="增加属性 attrib +[R|A|S|H|I] filename"></a>增加属性 attrib +[R|A|S|H|I] filename</h1><figure class="highlight bat"><figcaption><span>add attrib</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:\<span class="title">test</span>&gt;<span class="title">attrib</span> <span class="title">test</span></span></span><br><span class="line"><span class="function">             <span class="title">D</span>:\<span class="title">test</span>\<span class="title">test</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">D</span>:\<span class="title">test</span>&gt;<span class="title">attrib</span> +<span class="title">R</span> <span class="title">test</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">D</span>:\<span class="title">test</span>&gt;<span class="title">attrib</span> <span class="title">test</span></span></span><br><span class="line"><span class="function">     <span class="title">R</span>       <span class="title">D</span>:\<span class="title">test</span>\<span class="title">test</span></span></span><br></pre></td></tr></table></figure>
+
+<h1 id="去除属性-attrib-R-A-S-H-I-filename"><a href="#去除属性-attrib-R-A-S-H-I-filename" class="headerlink" title="去除属性 attrib -[R|A|S|H|I] filename"></a>去除属性 attrib -[R|A|S|H|I] filename</h1><figure class="highlight bat"><figcaption><span>恢复被病毒隐藏的文件 </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">attrib</span> -r -s -h /s /d</span><br></pre></td></tr></table></figure>
+
+<p>Reference:</p>
+<figure class="highlight plain"><figcaption><span>help ATTRIB</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">显示或更改文件属性。</span><br><span class="line"></span><br><span class="line">ATTRIB [+R | -R] [+A | -A ] [+S | -S] [+H | -H] [+I | -I]</span><br><span class="line">       [drive:][path][filename] [/S [/D] [/L]]</span><br><span class="line"></span><br><span class="line">  +   设置属性。</span><br><span class="line">  -   清除属性。</span><br><span class="line">  R   只读文件属性。</span><br><span class="line">  A   存档文件属性。</span><br><span class="line">  S   系统文件属性。</span><br><span class="line">  H   隐藏文件属性。</span><br><span class="line">  I   无内容索引文件属性。</span><br><span class="line">  X   无清理文件属性。</span><br><span class="line">  V   完整性属性。</span><br><span class="line">  [drive:][path][filename]</span><br><span class="line">      指定 attrib 要处理的文件。</span><br><span class="line">  /S  处理当前文件夹</span><br><span class="line">      及其所有子文件夹中的匹配文件。</span><br><span class="line">  /D  也处理文件夹。</span><br><span class="line">  /L  处理符号链接和</span><br><span class="line">      符号链接目标的属性</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -737,7 +741,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="WU Chenxu">
             
@@ -1181,7 +1185,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">239k</span>
+    <span title="站点总字数">240k</span>
   
 
   
@@ -1192,12 +1196,12 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:37</span>
+    <span title="站点阅读时长">3:38</span>
   
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 

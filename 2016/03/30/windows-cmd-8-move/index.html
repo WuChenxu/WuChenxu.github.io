@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -225,7 +225,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -235,7 +235,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta custom-logo">
     
@@ -442,20 +442,20 @@
     <div class="reading-progress-bar"></div>
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2016/03/30/windows-cmd-8-move/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WU Chenxu">
       <meta itemprop="description" content="一切都会成为过去">
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="玉汝于成，功不唐捐">
     </span>
 
@@ -524,7 +524,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/windows-cmd/" itemprop="url" rel="index"><span itemprop="name">windows cmd</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/windows-cmd/" itemprop="url" rel="index"><span itemprop="name">windows cmd</span></a></span>
 
                 
                 
@@ -613,10 +613,16 @@
       
         <p>MOVE命令除了用来移动文件，还可以用来重命名文件或目录。</p>
 <a id="more"></a>
-<h1 id="批量移动文件"><a href="#批量移动文件" class="headerlink" title="批量移动文件"></a>批量移动文件</h1><p>移动所有的xls文件<br><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">move</span> \data\*.xls \second_q\reports\</span><br></pre></td></tr></table></figure></p>
+<h1 id="批量移动文件"><a href="#批量移动文件" class="headerlink" title="批量移动文件"></a>批量移动文件</h1><p>移动所有的xls文件</p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">move</span> \data\*.xls \second_q\reports\</span><br></pre></td></tr></table></figure>
+
 <h1 id="重命名文件"><a href="#重命名文件" class="headerlink" title="重命名文件"></a>重命名文件</h1><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">move</span> src_dir dest_dir</span><br></pre></td></tr></table></figure>
+
 <h1 id="重命名文件-1"><a href="#重命名文件-1" class="headerlink" title="重命名文件"></a>重命名文件</h1><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">move</span> file1 file2</span><br></pre></td></tr></table></figure>
-<p>Reference:<br><figure class="highlight plain"><figcaption><span>help MOVE</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">移动文件并重命名文件和目录。</span><br><span class="line"></span><br><span class="line">要移动至少一个文件:</span><br><span class="line">MOVE [/Y | /-Y] [drive:][path]filename1[,...] destination</span><br><span class="line"></span><br><span class="line">要重命名一个目录:</span><br><span class="line">MOVE [/Y | /-Y] [drive:][path]dirname1 dirname2</span><br><span class="line"></span><br><span class="line">  [drive:][path]filename1 指定你想移动的文件位置和名称。</span><br><span class="line">  destination             指定文件的新位置。目标可包含一个驱动器号</span><br><span class="line">                          和冒号、一个目录名或组合。如果只移动一个文件</span><br><span class="line">                          并在移动时将其重命名，你还可以包括文件名。</span><br><span class="line">  [drive:][path]dirname1  指定要重命名的目录。</span><br><span class="line">  dirname2                指定目录的新名称。</span><br><span class="line"></span><br><span class="line">  /Y                      取消确认覆盖一个现有目标文件的提示。</span><br><span class="line">  /-Y                     对确认覆盖一个现有目标文件发出提示。</span><br><span class="line"></span><br><span class="line">命令行开关 /Y 可以出现在 COPYCMD 环境变量中。这可以用命令行上</span><br><span class="line">的 /-Y 替代。默认值是，除非 MOVE 命令是从一个批脚本内</span><br><span class="line">执行的，覆盖时都发出提示。</span><br></pre></td></tr></table></figure></p>
+
+<p>Reference:</p>
+<figure class="highlight plain"><figcaption><span>help MOVE</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">移动文件并重命名文件和目录。</span><br><span class="line"></span><br><span class="line">要移动至少一个文件:</span><br><span class="line">MOVE [/Y | /-Y] [drive:][path]filename1[,...] destination</span><br><span class="line"></span><br><span class="line">要重命名一个目录:</span><br><span class="line">MOVE [/Y | /-Y] [drive:][path]dirname1 dirname2</span><br><span class="line"></span><br><span class="line">  [drive:][path]filename1 指定你想移动的文件位置和名称。</span><br><span class="line">  destination             指定文件的新位置。目标可包含一个驱动器号</span><br><span class="line">                          和冒号、一个目录名或组合。如果只移动一个文件</span><br><span class="line">                          并在移动时将其重命名，你还可以包括文件名。</span><br><span class="line">  [drive:][path]dirname1  指定要重命名的目录。</span><br><span class="line">  dirname2                指定目录的新名称。</span><br><span class="line"></span><br><span class="line">  /Y                      取消确认覆盖一个现有目标文件的提示。</span><br><span class="line">  /-Y                     对确认覆盖一个现有目标文件发出提示。</span><br><span class="line"></span><br><span class="line">命令行开关 /Y 可以出现在 COPYCMD 环境变量中。这可以用命令行上</span><br><span class="line">的 /-Y 替代。默认值是，除非 MOVE 命令是从一个批脚本内</span><br><span class="line">执行的，覆盖时都发出提示。</span><br></pre></td></tr></table></figure>
+
 <p><a href="https://technet.microsoft.com/en-us/library/bb490935.aspx" target="_blank" rel="noopener">Move in M$ website</a></p>
 
       
@@ -731,7 +737,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="WU Chenxu">
             
@@ -1175,7 +1181,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">239k</span>
+    <span title="站点总字数">240k</span>
   
 
   
@@ -1186,12 +1192,12 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:37</span>
+    <span title="站点阅读时长">3:38</span>
   
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 

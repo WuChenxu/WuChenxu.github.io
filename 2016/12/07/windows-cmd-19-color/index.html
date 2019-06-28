@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -230,7 +230,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -240,7 +240,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta custom-logo">
     
@@ -447,20 +447,20 @@
     <div class="reading-progress-bar"></div>
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2016/12/07/windows-cmd-19-color/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WU Chenxu">
       <meta itemprop="description" content="一切都会成为过去">
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="玉汝于成，功不唐捐">
     </span>
 
@@ -529,7 +529,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/windows-cmd/" itemprop="url" rel="index"><span itemprop="name">windows cmd</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/windows-cmd/" itemprop="url" rel="index"><span itemprop="name">windows cmd</span></a></span>
 
                 
                 
@@ -618,11 +618,16 @@
       
         <p>color命令用来设置console的前景色或者背景色。</p>
 <a id="more"></a>
+
 <h1 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h1><p>用法很简单，<code>color [fb]</code>，其中<code>f</code>表示前景色，<code>b</code>表示背景色，取值范围为<code>0</code>-<code>F</code>，也就是十六进制数的一位。<br>color definition:<br><span style="background-color:gray;color:black">0 = Black </span><br><span style="background-color:black;color:blue"> 1 = Blue  </span><br><span style="background-color:black;color:green">2 = Green  </span><br><span style="background-color:black;color:aqua"> 3 = Aqua  </span><br><span style="background-color:black;color:red">  4 = Red  </span><br><span style="background-color:black;color:purple"> 5 = Purple  </span><br><span style="background-color:black;color:yellow"> 6 = Yellow  </span><br><span style="background-color:black;color:white"> 7 = White  </span><br><span style="background-color:black;color:gray"> 8 = Gray  </span><br><span style="background-color:black;color:#ADD8E6"> 9 = Light Blue  </span><br><span style="background-color:black;color:#90ee90"> A = Light Green  </span><br><span style="background-color:black;color:#93FFE8"> B = Light Aqua  </span><br><span style="background-color:black;color:#CD5C5C"> C = Light Red  </span><br><span style="background-color:black;color:#9370D8"> D = Light Purple  </span><br><span style="background-color:black;color:#FFFFE0"> E = Light Yellow  </span><br><span style="background-color:black;color:#FEFCFF"> F = Bright White  </span></p>
 <h1 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h1><h2 id="foreground"><a href="#foreground" class="headerlink" title="foreground"></a>foreground</h2><img src="/2016/12/07/windows-cmd-19-color/cmd_color_02.png" class="image">
 <h2 id="background"><a href="#background" class="headerlink" title="background"></a>background</h2><img src="/2016/12/07/windows-cmd-19-color/cmd_color_20.png" class="image">
-<h2 id="same-color"><a href="#same-color" class="headerlink" title="same color"></a>same color</h2><p>如果前景色与背景色设置为一样，如<code>color 00</code>，设置不会生效，结果是保持当前的前景色和背景色不变。<br><img src="/2016/12/07/windows-cmd-19-color/cmd_color_same_color_error.png"></p>
-<h2 id="start-new-console"><a href="#start-new-console" class="headerlink" title="start new console"></a>start new console</h2><p>在改变console颜色之后，再通过<code>start</code>来创建一个新的console，新的控制台颜色还是保持<br><img src="/2016/12/07/windows-cmd-19-color/change_color_start_console.png"></p>
+
+<h2 id="same-color"><a href="#same-color" class="headerlink" title="same color"></a>same color</h2><p>如果前景色与背景色设置为一样，如<code>color 00</code>，设置不会生效，结果是保持当前的前景色和背景色不变。</p>
+<img src="/2016/12/07/windows-cmd-19-color/cmd_color_same_color_error.png">
+<h2 id="start-new-console"><a href="#start-new-console" class="headerlink" title="start new console"></a>start new console</h2><p>在改变console颜色之后，再通过<code>start</code>来创建一个新的console，新的控制台颜色还是保持</p>
+<img src="/2016/12/07/windows-cmd-19-color/change_color_start_console.png">
+
 <h1 id="Advanced"><a href="#Advanced" class="headerlink" title="Advanced"></a>Advanced</h1><p>修改注册表<code>HKEY_CURRENT_USER\Software\Microsoft\Command Processor\DefaultColor</code>的键值，可以修改通过<code>cmd.exe</code>或者<code>start</code>启动的窗口的颜色。</p>
 <figure class="highlight plain"><figcaption><span>help COLOR</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">Sets the default console foreground and background colors.</span><br><span class="line"></span><br><span class="line">COLOR [attr]</span><br><span class="line"></span><br><span class="line">  attr        Specifies color attribute of console output</span><br><span class="line"></span><br><span class="line">Color attributes are specified by TWO hex digits -- the first</span><br><span class="line">corresponds to the background; the second the foreground.  Each digit</span><br><span class="line">can be any of the following values:</span><br><span class="line"></span><br><span class="line">    0 = Black       8 = Gray</span><br><span class="line">    1 = Blue        9 = Light Blue</span><br><span class="line">    2 = Green       A = Light Green</span><br><span class="line">    3 = Aqua        B = Light Aqua</span><br><span class="line">    4 = Red         C = Light Red</span><br><span class="line">    5 = Purple      D = Light Purple</span><br><span class="line">    6 = Yellow      E = Light Yellow</span><br><span class="line">    7 = White       F = Bright White</span><br><span class="line"></span><br><span class="line">If no argument is given, this command restores the color to what it was</span><br><span class="line">when CMD.EXE started.  This value either comes from the current console</span><br><span class="line">window, the /T command line switch or from the DefaultColor registry</span><br><span class="line">value.</span><br><span class="line"></span><br><span class="line">The COLOR command sets ERRORLEVEL to 1 if an attempt is made to execute</span><br><span class="line">the COLOR command with a foreground and background color that are the</span><br><span class="line">same.</span><br><span class="line"></span><br><span class="line">Example: &quot;COLOR fc&quot; produces light red on bright white</span><br></pre></td></tr></table></figure>
       
@@ -737,7 +742,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="WU Chenxu">
             
@@ -1181,7 +1186,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">239k</span>
+    <span title="站点总字数">240k</span>
   
 
   
@@ -1192,12 +1197,12 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:37</span>
+    <span title="站点阅读时长">3:38</span>
   
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 

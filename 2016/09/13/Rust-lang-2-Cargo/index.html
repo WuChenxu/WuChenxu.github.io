@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -153,18 +153,18 @@
 
 
 
-  <meta name="description" content="陈粒-奇妙能力歌 本文介绍了Rust自带的编译和包管理工具Cargo.">
+  <meta name="description" content="陈粒-奇妙能力歌  本文介绍了Rust自带的编译和包管理工具Cargo.">
 <meta name="keywords" content="Rust,Cargo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Rust语言(2):Cargo">
 <meta property="og:url" content="https://www.wuchenxu.com/2016/09/13/Rust-lang-2-Cargo/index.html">
 <meta property="og:site_name" content="玉汝于成，功不唐捐">
-<meta property="og:description" content="陈粒-奇妙能力歌 本文介绍了Rust自带的编译和包管理工具Cargo.">
+<meta property="og:description" content="陈粒-奇妙能力歌  本文介绍了Rust自带的编译和包管理工具Cargo.">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-12-31T11:55:22.871Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Rust语言(2):Cargo">
-<meta name="twitter:description" content="陈粒-奇妙能力歌 本文介绍了Rust自带的编译和包管理工具Cargo.">
+<meta name="twitter:description" content="陈粒-奇妙能力歌  本文介绍了Rust自带的编译和包管理工具Cargo.">
 
 
 
@@ -225,7 +225,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -235,7 +235,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta custom-logo">
     
@@ -442,20 +442,20 @@
     <div class="reading-progress-bar"></div>
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2016/09/13/Rust-lang-2-Cargo/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WU Chenxu">
       <meta itemprop="description" content="一切都会成为过去">
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="玉汝于成，功不唐捐">
     </span>
 
@@ -524,7 +524,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Rust/" itemprop="url" rel="index"><span itemprop="name">Rust</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Rust/" itemprop="url" rel="index"><span itemprop="name">Rust</span></a></span>
 
                 
                 
@@ -611,7 +611,9 @@
       
 
       
-        <p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=29431066&auto=0&height=66"></iframe><br>陈粒-奇妙能力歌</p>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=29431066&auto=0&height=66"></iframe>
+陈粒-奇妙能力歌
+
 <p>本文介绍了Rust自带的编译和包管理工具Cargo.</p>
 <a id="more"></a>
 <h1 id="Carog的存在意义"><a href="#Carog的存在意义" class="headerlink" title="Carog的存在意义"></a>Carog的存在意义</h1><blockquote>
@@ -626,12 +628,21 @@
 <li>Introduces conventions to make working with Rust projects easier.</li>
 </ul>
 </blockquote>
-<h1 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h1><p>执行命令<code>cargo new hello_world --bin</code>可以生成一个可用cargo来编译运行的目录结构。<br><code>--bin</code>表示生成可执行文件。<br><figure class="highlight plain"><figcaption><span>Cargo目录结构</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">│  Cargo.toml</span><br><span class="line">│</span><br><span class="line">├─src</span><br><span class="line">│      main.rs</span><br></pre></td></tr></table></figure></p>
-<p>Cargo.toml是TOML(Tom’s Obvious, Minimal Language)格式的配置文件：<br><figure class="highlight toml"><figcaption><span>Cargo.toml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[package]</span></span><br><span class="line"></span><br><span class="line"><span class="attr">name</span> = <span class="string">"hello_world"</span></span><br><span class="line"><span class="attr">version</span> = <span class="string">"0.0.1"</span></span><br><span class="line"><span class="attr">authors</span> = [ <span class="string">"Your name &lt;you@example.com&gt;"</span> ]</span><br></pre></td></tr></table></figure></p>
-<p>main.rs存放Rust文件:<br><figure class="highlight rust"><figcaption><span>hello_world.rs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"Hello, world!"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h1><p>执行命令<code>cargo new hello_world --bin</code>可以生成一个可用cargo来编译运行的目录结构。<br><code>--bin</code>表示生成可执行文件。</p>
+<figure class="highlight plain"><figcaption><span>Cargo目录结构</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">│  Cargo.toml</span><br><span class="line">│</span><br><span class="line">├─src</span><br><span class="line">│      main.rs</span><br></pre></td></tr></table></figure>
+
+<p>Cargo.toml是TOML(Tom’s Obvious, Minimal Language)格式的配置文件：</p>
+<figure class="highlight toml"><figcaption><span>Cargo.toml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[package]</span></span><br><span class="line"></span><br><span class="line"><span class="attr">name</span> = <span class="string">"hello_world"</span></span><br><span class="line"><span class="attr">version</span> = <span class="string">"0.0.1"</span></span><br><span class="line"><span class="attr">authors</span> = [ <span class="string">"Your name &lt;you@example.com&gt;"</span> ]</span><br></pre></td></tr></table></figure>
+
+<p>main.rs存放Rust文件:</p>
+<figure class="highlight rust"><figcaption><span>hello_world.rs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"Hello, world!"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h1 id="编译运行"><a href="#编译运行" class="headerlink" title="编译运行"></a>编译运行</h1><p><code>cargo build</code>编译。<br><code>cargo run</code>文件未改动则直接运行，文件改动则重新编译并运行。<br><code>cargo build --release</code>编译release版本，带优化功能。</p>
-<h1 id="包管理"><a href="#包管理" class="headerlink" title="包管理"></a>包管理</h1><h2 id="从crates-io增加依赖库"><a href="#从crates-io增加依赖库" class="headerlink" title="从crates.io增加依赖库"></a>从crates.io增加依赖库</h2><p>在Cargo.toml增加<br><figure class="highlight toml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[dependencies]</span></span><br><span class="line"><span class="attr">time</span> = <span class="string">"0.1.12"</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="包管理"><a href="#包管理" class="headerlink" title="包管理"></a>包管理</h1><h2 id="从crates-io增加依赖库"><a href="#从crates-io增加依赖库" class="headerlink" title="从crates.io增加依赖库"></a>从crates.io增加依赖库</h2><p>在Cargo.toml增加</p>
+<figure class="highlight toml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[dependencies]</span></span><br><span class="line"><span class="attr">time</span> = <span class="string">"0.1.12"</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="从github增加依赖库"><a href="#从github增加依赖库" class="headerlink" title="从github增加依赖库"></a>从github增加依赖库</h2><figure class="highlight toml"><figcaption><span>Cargo.toml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[dependencies]</span></span><br><span class="line"><span class="attr">rand</span> = &#123; git = <span class="string">"https://github.com/rust-lang-nursery/rand.git"</span> &#125;</span><br></pre></td></tr></table></figure>
+
 <p>References:</p>
 <ol>
 <li><a href="http://doc.crates.io/guide.html" target="_blank" rel="noopener">Cargo official website</a></li>
@@ -749,7 +760,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="WU Chenxu">
             
@@ -1193,7 +1204,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">239k</span>
+    <span title="站点总字数">240k</span>
   
 
   
@@ -1204,12 +1215,12 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:37</span>
+    <span title="站点阅读时长">3:38</span>
   
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 

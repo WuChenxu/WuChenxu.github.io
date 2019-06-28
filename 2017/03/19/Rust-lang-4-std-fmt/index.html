@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -225,7 +225,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -235,7 +235,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta custom-logo">
     
@@ -442,20 +442,20 @@
     <div class="reading-progress-bar"></div>
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2017/03/19/Rust-lang-4-std-fmt/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WU Chenxu">
       <meta itemprop="description" content="一切都会成为过去">
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="玉汝于成，功不唐捐">
     </span>
 
@@ -524,14 +524,14 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Rust/" itemprop="url" rel="index"><span itemprop="name">Rust</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Rust/" itemprop="url" rel="index"><span itemprop="name">Rust</span></a></span>
 
                 
                 
                   ，
                 
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Rust/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Rust/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
 
                 
                 
@@ -620,7 +620,8 @@
       
         <p>本文对比Rust与Python语言的格式化输出。</p>
 <a id="more"></a>
-<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>本文所用Rust版本为<code>1.14.0</code>，Python为<code>2.7.12</code>。<br>可以使用在线编译调试工具来测试本文所举示例代码。<br><a href="https://play.rust-lang.org/" target="_blank" rel="noopener">Rust playground</a><br><a href="http://ideone.com/" target="_blank" rel="noopener">Python playground</a></p>
+<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>本文所用Rust版本为<code>1.14.0</code>，Python为<code>2.7.12</code>。
+可以使用在线编译调试工具来测试本文所举示例代码。<br><a href="https://play.rust-lang.org/" target="_blank" rel="noopener">Rust playground</a><br><a href="http://ideone.com/" target="_blank" rel="noopener">Python playground</a></p>
 <h1 id="basic-usage"><a href="#basic-usage" class="headerlink" title="basic usage"></a>basic usage</h1><p>Rust与Python都可以用<code>{}</code>来表示将要被替换变量的占位符。</p>
 <h2 id="Rust"><a href="#Rust" class="headerlink" title="Rust"></a>Rust</h2><ul>
 <li><code>print!</code>将格式化文本输出到控制台，不带换行符。</li>
@@ -628,181 +629,186 @@
 <li><code>format!</code>将格式化文本输出到字符串。</li>
 </ul>
 <figure class="highlight rust"><figcaption><span>Rust</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print!</span>(<span class="string">"&#123;&#125;.print is output to console w/o newline."</span>, <span class="number">1</span>);</span><br><span class="line"><span class="built_in">print!</span>(<span class="string">"Continue..."</span>);</span><br><span class="line"><span class="built_in">print!</span>(<span class="string">"\n"</span>);</span><br><span class="line"><span class="built_in">println!</span>(<span class="string">"&#123;&#125;.println is string to console w/ newline."</span>, <span class="number">2</span>);</span><br><span class="line"><span class="keyword">let</span> <span class="built_in">str</span> = <span class="built_in">format!</span>(<span class="string">"&#123;&#125;.format is output to a string."</span>, <span class="number">3</span>);</span><br><span class="line"><span class="built_in">assert_eq!</span>(<span class="built_in">str</span>, <span class="string">"3.format is output to a string."</span>);</span><br><span class="line"><span class="built_in">println!</span>(<span class="string">"&#123;&#125;"</span>, <span class="built_in">str</span>);</span><br></pre></td></tr></table></figure>
+
 <h2 id="Python2-7"><a href="#Python2-7" class="headerlink" title="Python2.7"></a>Python2.7</h2><ul>
 <li><code>print</code>来打印文本到控制台，末尾加一个换行符。</li>
 <li><code>str.format()</code>将格式化文本输出到字符串。</li>
 </ul>
 <figure class="highlight python"><figcaption><span>Python2.7</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"&#123;&#125; world"</span>.format(<span class="string">"Hello"</span>))</span><br></pre></td></tr></table></figure>
+
 <h1 id="with-arguments"><a href="#with-arguments" class="headerlink" title="with arguments"></a>with arguments</h1><ul>
 <li>more arguments</li>
 <li>positional arguments</li>
 <li>named arguments</li>
 </ul>
 <figure class="highlight rust"><figcaption><span>Rust</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">println!</span>(<span class="string">"&#123;&#125;, &#123;&#125;"</span>, <span class="string">"Hello"</span>, <span class="string">"world"</span>);</span><br><span class="line"><span class="built_in">println!</span>(<span class="string">"&#123;0&#125;, this is &#123;1&#125;. &#123;1&#125;, this is &#123;0&#125;."</span>, <span class="string">"Hellen"</span>, <span class="string">"Tom"</span>);</span><br><span class="line"><span class="built_in">println!</span>(<span class="string">"&#123;subject&#125; &#123;verb&#125; &#123;object&#125;"</span>, object=<span class="string">"the lazy dog"</span>, subject=<span class="string">"the quick brwon fox"</span>, verb=<span class="string">"jumps over"</span>);</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight python"><figcaption><span>Python2.7</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"&#123;&#125;,&#123;&#125;"</span>.format(<span class="string">"hello"</span>, <span class="string">"world"</span>))</span><br><span class="line">print(<span class="string">"&#123;0&#125;, this is &#123;1&#125;. &#123;1&#125;, this is &#123;0&#125;."</span>.format(<span class="string">"Hellen"</span>, <span class="string">"Tom"</span>))</span><br><span class="line">print(<span class="string">"&#123;subject&#125; &#123;verb&#125; &#123;object&#125;"</span>.format(object=<span class="string">"the lazy dog"</span>, subject=<span class="string">"the quick brown fox"</span>, verb=<span class="string">"jumps over"</span>))</span><br></pre></td></tr></table></figure>
+
 <h1 id="special-format"><a href="#special-format" class="headerlink" title="special format"></a>special format</h1><table>
 <thead>
 <tr>
-<th style="text-align:center"><em>      数字    </em></th>
-<th style="text-align:center"><em> Rust格式     </em></th>
-<th style="text-align:center"><em> Python格式      </em></th>
-<th style="text-align:center"><em>          输出      </em></th>
-<th style="text-align:center"><em>            描述          </em></th>
+<th align="center">*      数字    *</th>
+<th align="center">* Rust格式     *</th>
+<th align="center">* Python格式      *</th>
+<th align="center">*          输出      *</th>
+<th align="center">*            描述          *</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">3.1415926</td>
-<td style="text-align:center">{:.2}</td>
-<td style="text-align:center">{:.2f}</td>
-<td style="text-align:center">3.14</td>
-<td style="text-align:center">保留小数点后两位</td>
+<tbody><tr>
+<td align="center">3.1415926</td>
+<td align="center">{:.2}</td>
+<td align="center">{:.2f}</td>
+<td align="center">3.14</td>
+<td align="center">保留小数点后两位</td>
 </tr>
 <tr>
-<td style="text-align:center">3.1415926</td>
-<td style="text-align:center">{:+.2}</td>
-<td style="text-align:center">{:+.2f}</td>
-<td style="text-align:center">+3.14</td>
-<td style="text-align:center">带符号保留小数点后两位</td>
+<td align="center">3.1415926</td>
+<td align="center">{:+.2}</td>
+<td align="center">{:+.2f}</td>
+<td align="center">+3.14</td>
+<td align="center">带符号保留小数点后两位</td>
 </tr>
 <tr>
-<td style="text-align:center">-1</td>
-<td style="text-align:center">{:+.2}</td>
-<td style="text-align:center">{:+.2f}</td>
-<td style="text-align:center">-1(R)/-1.00(P)</td>
-<td style="text-align:center">带符号保留小数点后两位</td>
+<td align="center">-1</td>
+<td align="center">{:+.2}</td>
+<td align="center">{:+.2f}</td>
+<td align="center">-1(R)/-1.00(P)</td>
+<td align="center">带符号保留小数点后两位</td>
 </tr>
 <tr>
-<td style="text-align:center">-1.0</td>
-<td style="text-align:center">{:+.2}</td>
-<td style="text-align:center">{:+.2f}</td>
-<td style="text-align:center">-1.00</td>
-<td style="text-align:center">带符号保留小数点后两位</td>
+<td align="center">-1.0</td>
+<td align="center">{:+.2}</td>
+<td align="center">{:+.2f}</td>
+<td align="center">-1.00</td>
+<td align="center">带符号保留小数点后两位</td>
 </tr>
 <tr>
-<td style="text-align:center">2.71828</td>
-<td style="text-align:center">{:.0}}</td>
-<td style="text-align:center">{:.0f}</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">不带小数</td>
+<td align="center">2.71828</td>
+<td align="center">{:.0}}</td>
+<td align="center">{:.0f}</td>
+<td align="center">3</td>
+<td align="center">不带小数</td>
 </tr>
 <tr>
-<td style="text-align:center">5</td>
-<td style="text-align:center">{:0&gt;2}/{:02}</td>
-<td style="text-align:center">{:0&gt;2d}/{:02d}</td>
-<td style="text-align:center">05</td>
-<td style="text-align:center">数字补0 (填充左边, 宽度为2)</td>
+<td align="center">5</td>
+<td align="center">{:0&gt;2}/{:02}</td>
+<td align="center">{:0&gt;2d}/{:02d}</td>
+<td align="center">05</td>
+<td align="center">数字补0 (填充左边, 宽度为2)</td>
 </tr>
 <tr>
-<td style="text-align:center">5</td>
-<td style="text-align:center">{:x^10}</td>
-<td style="text-align:center">{:x^10d}</td>
-<td style="text-align:center">xxxx5xxxxx</td>
-<td style="text-align:center">居中对齐</td>
+<td align="center">5</td>
+<td align="center">{:x^10}</td>
+<td align="center">{:x^10d}</td>
+<td align="center">xxxx5xxxxx</td>
+<td align="center">居中对齐</td>
 </tr>
 <tr>
-<td style="text-align:center">5</td>
-<td style="text-align:center">{:x&lt;4}</td>
-<td style="text-align:center">{:x&lt;4d}</td>
-<td style="text-align:center">5xxx</td>
-<td style="text-align:center">数字补x (填充右边, 宽度为4)</td>
+<td align="center">5</td>
+<td align="center">{:x&lt;4}</td>
+<td align="center">{:x&lt;4d}</td>
+<td align="center">5xxx</td>
+<td align="center">数字补x (填充右边, 宽度为4)</td>
 </tr>
 <tr>
-<td style="text-align:center">1000000</td>
-<td style="text-align:center">NA.</td>
-<td style="text-align:center">{:,}</td>
-<td style="text-align:center">1,000,000</td>
-<td style="text-align:center">以逗号分隔的数字格式</td>
+<td align="center">1000000</td>
+<td align="center">NA.</td>
+<td align="center">{:,}</td>
+<td align="center">1,000,000</td>
+<td align="center">以逗号分隔的数字格式</td>
 </tr>
 <tr>
-<td style="text-align:center">0.25</td>
-<td style="text-align:center">NA.</td>
-<td style="text-align:center">{:.2%}</td>
-<td style="text-align:center">25.00%</td>
-<td style="text-align:center">百分比格式</td>
+<td align="center">0.25</td>
+<td align="center">NA.</td>
+<td align="center">{:.2%}</td>
+<td align="center">25.00%</td>
+<td align="center">百分比格式</td>
 </tr>
 <tr>
-<td style="text-align:center">1000000000</td>
-<td style="text-align:center">NA.</td>
-<td style="text-align:center">{:.2e}</td>
-<td style="text-align:center">1.00e+09</td>
-<td style="text-align:center">指数记法</td>
+<td align="center">1000000000</td>
+<td align="center">NA.</td>
+<td align="center">{:.2e}</td>
+<td align="center">1.00e+09</td>
+<td align="center">指数记法</td>
 </tr>
 <tr>
-<td style="text-align:center">1000000000.0</td>
-<td style="text-align:center">{:2e}</td>
-<td style="text-align:center">{:.2e}</td>
-<td style="text-align:center">1e9(R)/1.00e+09(P)</td>
-<td style="text-align:center">指数记法</td>
+<td align="center">1000000000.0</td>
+<td align="center">{:2e}</td>
+<td align="center">{:.2e}</td>
+<td align="center">1e9(R)/1.00e+09(P)</td>
+<td align="center">指数记法</td>
 </tr>
 <tr>
-<td style="text-align:center">1000000000.0</td>
-<td style="text-align:center">{:2E}</td>
-<td style="text-align:center">{:.2E}</td>
-<td style="text-align:center">1E9(R)/1.00E+09(P)</td>
-<td style="text-align:center">指数记法</td>
+<td align="center">1000000000.0</td>
+<td align="center">{:2E}</td>
+<td align="center">{:.2E}</td>
+<td align="center">1E9(R)/1.00E+09(P)</td>
+<td align="center">指数记法</td>
 </tr>
 <tr>
-<td style="text-align:center">42</td>
-<td style="text-align:center">{:b}</td>
-<td style="text-align:center">{:b}</td>
-<td style="text-align:center">101010</td>
-<td style="text-align:center">二进制</td>
+<td align="center">42</td>
+<td align="center">{:b}</td>
+<td align="center">{:b}</td>
+<td align="center">101010</td>
+<td align="center">二进制</td>
 </tr>
 <tr>
-<td style="text-align:center">42</td>
-<td style="text-align:center">{:o}</td>
-<td style="text-align:center">{:o}</td>
-<td style="text-align:center">52</td>
-<td style="text-align:center">八进制</td>
+<td align="center">42</td>
+<td align="center">{:o}</td>
+<td align="center">{:o}</td>
+<td align="center">52</td>
+<td align="center">八进制</td>
 </tr>
 <tr>
-<td style="text-align:center">42</td>
-<td style="text-align:center">{:x}</td>
-<td style="text-align:center">{:x}</td>
-<td style="text-align:center">2a</td>
-<td style="text-align:center">十六进制</td>
+<td align="center">42</td>
+<td align="center">{:x}</td>
+<td align="center">{:x}</td>
+<td align="center">2a</td>
+<td align="center">十六进制</td>
 </tr>
 <tr>
-<td style="text-align:center">42</td>
-<td style="text-align:center">{:X}</td>
-<td style="text-align:center">{:X}</td>
-<td style="text-align:center">2A</td>
-<td style="text-align:center">十六进制</td>
+<td align="center">42</td>
+<td align="center">{:X}</td>
+<td align="center">{:X}</td>
+<td align="center">2A</td>
+<td align="center">十六进制</td>
 </tr>
 <tr>
-<td style="text-align:center">42</td>
-<td style="text-align:center">{:#b}</td>
-<td style="text-align:center">{:#b}</td>
-<td style="text-align:center">0b101010</td>
-<td style="text-align:center">带前缀的二进制</td>
+<td align="center">42</td>
+<td align="center">{:#b}</td>
+<td align="center">{:#b}</td>
+<td align="center">0b101010</td>
+<td align="center">带前缀的二进制</td>
 </tr>
 <tr>
-<td style="text-align:center">42</td>
-<td style="text-align:center">{:#o}</td>
-<td style="text-align:center">{:#o}</td>
-<td style="text-align:center">0o52</td>
-<td style="text-align:center">带前缀的八进制</td>
+<td align="center">42</td>
+<td align="center">{:#o}</td>
+<td align="center">{:#o}</td>
+<td align="center">0o52</td>
+<td align="center">带前缀的八进制</td>
 </tr>
 <tr>
-<td style="text-align:center">42</td>
-<td style="text-align:center">{:#x}</td>
-<td style="text-align:center">{:#x}</td>
-<td style="text-align:center">0x2a</td>
-<td style="text-align:center">带前缀的十六进制</td>
+<td align="center">42</td>
+<td align="center">{:#x}</td>
+<td align="center">{:#x}</td>
+<td align="center">0x2a</td>
+<td align="center">带前缀的十六进制</td>
 </tr>
 <tr>
-<td style="text-align:center">42</td>
-<td style="text-align:center">{:#X}</td>
-<td style="text-align:center">{:#X}</td>
-<td style="text-align:center">0x2A(R)/0X2A(P)</td>
-<td style="text-align:center">带前缀的十六进制</td>
+<td align="center">42</td>
+<td align="center">{:#X}</td>
+<td align="center">{:#X}</td>
+<td align="center">0x2A(R)/0X2A(P)</td>
+<td align="center">带前缀的十六进制</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <figure class="highlight rust"><figcaption><span>Rust precision specified in arg</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//第一个参数是小数点后的位数</span></span><br><span class="line"><span class="built_in">println!</span>(<span class="string">"Pi is &#123;:+.*&#125;"</span>, <span class="number">2</span>, <span class="number">3.1415926</span>);</span><br></pre></td></tr></table></figure>
+
 <h1 id="escape"><a href="#escape" class="headerlink" title="escape {}"></a>escape <code>{}</code></h1><figure class="highlight rust"><figcaption><span>Rust escape&#123;&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">println!</span>(<span class="string">"&#123;&#123; &#123;t&#125; &#125;&#125;"</span>, t=<span class="string">"escape"</span>);</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight python"><figcaption><span>Python escape&#123;&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">" The &#123;&#125; set is often represented as &#123; &#123;0&#125; &#125; "</span>.format(<span class="string">"empty"</span>))</span><br></pre></td></tr></table></figure>
+
 <p>References：</p>
 <ol>
 <li><a href="https://rustwiki.org/rust-by-example/hello/print.html" target="_blank" rel="noopener">Rust print</a></li>
@@ -925,7 +931,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="WU Chenxu">
             
@@ -1369,7 +1375,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">239k</span>
+    <span title="站点总字数">240k</span>
   
 
   
@@ -1380,12 +1386,12 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:37</span>
+    <span title="站点阅读时长">3:38</span>
   
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 

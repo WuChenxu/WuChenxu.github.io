@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -227,7 +227,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -237,7 +237,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta custom-logo">
     
@@ -444,20 +444,20 @@
     <div class="reading-progress-bar"></div>
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2016/04/01/windows-cmd-15-shift/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WU Chenxu">
       <meta itemprop="description" content="一切都会成为过去">
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="玉汝于成，功不唐捐">
     </span>
 
@@ -526,7 +526,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/windows-cmd/" itemprop="url" rel="index"><span itemprop="name">windows cmd</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/windows-cmd/" itemprop="url" rel="index"><span itemprop="name">windows cmd</span></a></span>
 
                 
                 
@@ -616,97 +616,107 @@
         <img src="/2016/04/01/windows-cmd-15-shift/shift.png">
 <p>本文介绍了bat脚本支持的参数，SHIFT命令替换bat脚本参数位置。</p>
 <a id="more"></a>
-<h1 id="batch脚本支持的参数"><a href="#batch脚本支持的参数" class="headerlink" title="batch脚本支持的参数"></a>batch脚本支持的参数</h1><p>支持%1~%9，9个参数，%0表示命令本身。如果写成%10，则是表示%1之后跟一个<code>0</code>.<br><figure class="highlight bat"><figcaption><span>parameters.bat</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">echo</span> <span class="number">0</span>: %<span class="number">0</span> </span><br><span class="line"><span class="built_in">echo</span> <span class="number">1</span>: %<span class="number">1</span> </span><br><span class="line"><span class="built_in">echo</span> <span class="number">2</span>: %<span class="number">2</span> </span><br><span class="line"><span class="built_in">echo</span> <span class="number">3</span>: %<span class="number">3</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">4</span>: %<span class="number">4</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">5</span>: %<span class="number">5</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">6</span>: %<span class="number">6</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">7</span>: %<span class="number">7</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">8</span>: %<span class="number">8</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">9</span>: %<span class="number">9</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">10</span>: %<span class="number">10</span></span><br></pre></td></tr></table></figure></p>
-<p>运行结果:<br><figure class="highlight bat"><figcaption><span>result</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">paramters.bat</span> <span class="title">hello</span> 1 2 3 4 5 6 7 8 9</span></span><br><span class="line"><span class="function">0: <span class="title">paramters.bat</span></span></span><br><span class="line"><span class="function">1: <span class="title">hello</span></span></span><br><span class="line"><span class="function">2: 1</span></span><br><span class="line"><span class="function">3: 2</span></span><br><span class="line"><span class="function">4: 3</span></span><br><span class="line"><span class="function">5: 4</span></span><br><span class="line"><span class="function">6: 5</span></span><br><span class="line"><span class="function">7: 6</span></span><br><span class="line"><span class="function">8: 7</span></span><br><span class="line"><span class="function">9: 8</span></span><br><span class="line"><span class="function">10: <span class="title">hello0</span></span></span><br></pre></td></tr></table></figure></p>
-<h1 id="参数编辑"><a href="#参数编辑" class="headerlink" title="参数编辑"></a>参数编辑</h1><p>可以在批处理参数中使用编辑符。编辑符使用当前的驱动器和目录信息将批处理参数作为部分或完整的文件或目录名进行扩展。要使用编辑符，请键入百分号 (%) 字符，后面是波形符号 (~) 字符，然后键入合适的编辑符（即 %~modifier）。<br>下表列出了可在扩展中使用的编辑符。</p>
+<h1 id="batch脚本支持的参数"><a href="#batch脚本支持的参数" class="headerlink" title="batch脚本支持的参数"></a>batch脚本支持的参数</h1><p>支持%1~%9，9个参数，%0表示命令本身。如果写成%10，则是表示%1之后跟一个<code>0</code>.</p>
+<figure class="highlight bat"><figcaption><span>parameters.bat</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">echo</span> <span class="number">0</span>: %<span class="number">0</span> </span><br><span class="line"><span class="built_in">echo</span> <span class="number">1</span>: %<span class="number">1</span> </span><br><span class="line"><span class="built_in">echo</span> <span class="number">2</span>: %<span class="number">2</span> </span><br><span class="line"><span class="built_in">echo</span> <span class="number">3</span>: %<span class="number">3</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">4</span>: %<span class="number">4</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">5</span>: %<span class="number">5</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">6</span>: %<span class="number">6</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">7</span>: %<span class="number">7</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">8</span>: %<span class="number">8</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">9</span>: %<span class="number">9</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">10</span>: %<span class="number">10</span></span><br></pre></td></tr></table></figure>
+
+<p>运行结果:</p>
+<figure class="highlight bat"><figcaption><span>result</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:\<span class="title">test</span>\<span class="title">test</span>&gt;<span class="title">paramters.bat</span> <span class="title">hello</span> 1 2 3 4 5 6 7 8 9</span></span><br><span class="line"><span class="function">0: <span class="title">paramters.bat</span></span></span><br><span class="line"><span class="function">1: <span class="title">hello</span></span></span><br><span class="line"><span class="function">2: 1</span></span><br><span class="line"><span class="function">3: 2</span></span><br><span class="line"><span class="function">4: 3</span></span><br><span class="line"><span class="function">5: 4</span></span><br><span class="line"><span class="function">6: 5</span></span><br><span class="line"><span class="function">7: 6</span></span><br><span class="line"><span class="function">8: 7</span></span><br><span class="line"><span class="function">9: 8</span></span><br><span class="line"><span class="function">10: <span class="title">hello0</span></span></span><br></pre></td></tr></table></figure>
+
+<h1 id="参数编辑"><a href="#参数编辑" class="headerlink" title="参数编辑"></a>参数编辑</h1><p>可以在批处理参数中使用编辑符。编辑符使用当前的驱动器和目录信息将批处理参数作为部分或完整的文件或目录名进行扩展。要使用编辑符，请键入百分号 (%) 字符，后面是波形符号 (<del>) 字符，然后键入合适的编辑符（即 %</del>modifier）。<br>下表列出了可在扩展中使用的编辑符。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">modifier</th>
-<th style="text-align:center">Description</th>
+<th align="center">modifier</th>
+<th align="center">Description</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">%~1</td>
-<td style="text-align:center">扩展 %1 并删除任何外围引号 (“”)</td>
+<tbody><tr>
+<td align="center">%~1</td>
+<td align="center">扩展 %1 并删除任何外围引号 (“”)</td>
 </tr>
 <tr>
-<td style="text-align:center">%~f1</td>
-<td style="text-align:center">将 %1 扩展到完全合格的路径名</td>
+<td align="center">%~f1</td>
+<td align="center">将 %1 扩展到完全合格的路径名</td>
 </tr>
 <tr>
-<td style="text-align:center">%~d1</td>
-<td style="text-align:center">将 %1 扩展到驱动器盘符</td>
+<td align="center">%~d1</td>
+<td align="center">将 %1 扩展到驱动器盘符</td>
 </tr>
 <tr>
-<td style="text-align:center">%~p1</td>
-<td style="text-align:center">将 %1 扩展到路径</td>
+<td align="center">%~p1</td>
+<td align="center">将 %1 扩展到路径</td>
 </tr>
 <tr>
-<td style="text-align:center">%~n1</td>
-<td style="text-align:center">将 %1 扩展到文件名</td>
+<td align="center">%~n1</td>
+<td align="center">将 %1 扩展到文件名</td>
 </tr>
 <tr>
-<td style="text-align:center">%~x1</td>
-<td style="text-align:center">将 %1 扩展到文件扩展名</td>
+<td align="center">%~x1</td>
+<td align="center">将 %1 扩展到文件扩展名</td>
 </tr>
 <tr>
-<td style="text-align:center">%~s1</td>
-<td style="text-align:center">扩展的路径仅包含短名称</td>
+<td align="center">%~s1</td>
+<td align="center">扩展的路径仅包含短名称</td>
 </tr>
 <tr>
-<td style="text-align:center">%~a1</td>
-<td style="text-align:center">将 %1 扩展到文件属性</td>
+<td align="center">%~a1</td>
+<td align="center">将 %1 扩展到文件属性</td>
 </tr>
 <tr>
-<td style="text-align:center">%~t1</td>
-<td style="text-align:center">将 %1 扩展到文件日期/时间</td>
+<td align="center">%~t1</td>
+<td align="center">将 %1 扩展到文件日期/时间</td>
 </tr>
 <tr>
-<td style="text-align:center">%~z1</td>
-<td style="text-align:center">将 %1 扩展到文件大小</td>
+<td align="center">%~z1</td>
+<td align="center">将 %1 扩展到文件大小</td>
 </tr>
 <tr>
-<td style="text-align:center">%~$PATH:1</td>
-<td style="text-align:center">搜索 PATH 环境变量中列出的目录，并将 %1 扩展到第一个找到的目录的完全合格名称。如果没有定义环境变量名称，或没有找到文件，则此编辑符扩展成空字符串</td>
+<td align="center">%~$PATH:1</td>
+<td align="center">搜索 PATH 环境变量中列出的目录，并将 %1 扩展到第一个找到的目录的完全合格名称。如果没有定义环境变量名称，或没有找到文件，则此编辑符扩展成空字符串</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>以上编辑符可以组合使用：</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">modifier</th>
-<th style="text-align:center">Description</th>
+<th align="center">modifier</th>
+<th align="center">Description</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">%~dp1</td>
-<td style="text-align:center">将 %1 扩展到驱动器盘符和路径</td>
+<tbody><tr>
+<td align="center">%~dp1</td>
+<td align="center">将 %1 扩展到驱动器盘符和路径</td>
 </tr>
 <tr>
-<td style="text-align:center">%~nx1</td>
-<td style="text-align:center">将 %1 扩展到文件名和扩展名</td>
+<td align="center">%~nx1</td>
+<td align="center">将 %1 扩展到文件名和扩展名</td>
 </tr>
 <tr>
-<td style="text-align:center">%~ftza1</td>
-<td style="text-align:center">将 %1 扩展到类似 dir 的输出行</td>
+<td align="center">%~ftza1</td>
+<td align="center">将 %1 扩展到类似 dir 的输出行</td>
 </tr>
 <tr>
-<td style="text-align:center">%~dp$PATH:1</td>
-<td style="text-align:center">在 PATH 环境变量列出的目录中搜索 %1，并扩展到第一个找到的目录的驱动器盘符和路径</td>
+<td align="center">%~dp$PATH:1</td>
+<td align="center">在 PATH 环境变量列出的目录中搜索 %1，并扩展到第一个找到的目录的驱动器盘符和路径</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <figure class="highlight bat"><figcaption><span>parameters.bat</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">echo</span> ~<span class="number">0</span> : %~<span class="number">0</span></span><br><span class="line"><span class="built_in">echo</span> ~f0: %~f0</span><br><span class="line"><span class="built_in">echo</span> ~d0: %~d0</span><br><span class="line"><span class="built_in">echo</span> ~p0: %~p0</span><br><span class="line"><span class="built_in">echo</span> ~n0: %~n0</span><br><span class="line"><span class="built_in">echo</span> ~x0: %~x0</span><br><span class="line"><span class="built_in">echo</span> ~s0: %~s0</span><br><span class="line"><span class="built_in">echo</span> ~a0: %~a0</span><br><span class="line"><span class="built_in">echo</span> ~t0: %~t0</span><br><span class="line"><span class="built_in">echo</span> ~z0: %~z0</span><br><span class="line"><span class="built_in">echo</span> ~PATH0: %~$<span class="built_in">PATH</span>:<span class="number">0</span></span><br><span class="line"><span class="built_in">echo</span> ~dp0: %~dp0</span><br><span class="line"><span class="built_in">echo</span> ~nx0: %~nx0</span><br><span class="line"><span class="built_in">echo</span> ~ftza0: %~ftza0</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight plain"><figcaption><span>result</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">~0 : paramters.bat</span><br><span class="line">~f0: D:\test\test\paramters.bat</span><br><span class="line">~d0: D:</span><br><span class="line">~p0: \test\test\</span><br><span class="line">~n0: paramters</span><br><span class="line">~x0: .bat</span><br><span class="line">~s0: D:\test\test\paramters.bat</span><br><span class="line">~a0: --a--------</span><br><span class="line">~t0: 2016/04/03 21:37</span><br><span class="line">~z0: 536</span><br><span class="line">~PATH0:</span><br><span class="line">~dp0: D:\test\test\</span><br><span class="line">~nx0: paramters.bat</span><br><span class="line">~ftza0: --a-------- 2016/04/03 21:37 536 D:\test\test\paramters.bat</span><br></pre></td></tr></table></figure>
-<h1 id="支持超过9个参数"><a href="#支持超过9个参数" class="headerlink" title="支持超过9个参数"></a>支持超过9个参数</h1><p>SHIFT命令可以支持超过9个参数输入。<br><figure class="highlight bat"><figcaption><span>parameters_shift.bat</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">echo</span> <span class="number">0</span>: %<span class="number">0</span> </span><br><span class="line"><span class="built_in">echo</span> <span class="number">1</span>: %<span class="number">1</span> </span><br><span class="line"><span class="built_in">echo</span> <span class="number">2</span>: %<span class="number">2</span> </span><br><span class="line"><span class="built_in">echo</span> <span class="number">3</span>: %<span class="number">3</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">4</span>: %<span class="number">4</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">5</span>: %<span class="number">5</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">6</span>: %<span class="number">6</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">7</span>: %<span class="number">7</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">8</span>: %<span class="number">8</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">9</span>: %<span class="number">9</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">10</span>: %<span class="number">10</span></span><br><span class="line"><span class="built_in">shift</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">0</span>: %<span class="number">0</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">1</span>: %<span class="number">1</span> </span><br><span class="line"><span class="built_in">echo</span> <span class="number">2</span>: %<span class="number">2</span> </span><br><span class="line"><span class="built_in">echo</span> <span class="number">3</span>: %<span class="number">3</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">4</span>: %<span class="number">4</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">5</span>: %<span class="number">5</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">6</span>: %<span class="number">6</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">7</span>: %<span class="number">7</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">8</span>: %<span class="number">8</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">9</span>: %<span class="number">9</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">10</span>: %<span class="number">10</span></span><br></pre></td></tr></table></figure></p>
-<p>运行结果:<br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">D:\test\test&gt;parameters_shift.bat hello 1 2 3 4 5 6 7 8 9</span></span><br><span class="line"><span class="section">0: parameters_shift.bat</span></span><br><span class="line"><span class="section">1: hello</span></span><br><span class="line"><span class="section">2: 1</span></span><br><span class="line"><span class="section">3: 2</span></span><br><span class="line"><span class="section">4: 3</span></span><br><span class="line"><span class="section">5: 4</span></span><br><span class="line"><span class="section">6: 5</span></span><br><span class="line"><span class="section">7: 6</span></span><br><span class="line"><span class="section">8: 7</span></span><br><span class="line"><span class="section">9: 8</span></span><br><span class="line"><span class="section">10: hello0</span></span><br><span class="line"><span class="section">0: hello</span></span><br><span class="line"><span class="section">1: 1</span></span><br><span class="line"><span class="section">2: 2</span></span><br><span class="line"><span class="section">3: 3</span></span><br><span class="line"><span class="section">4: 4</span></span><br><span class="line"><span class="section">5: 5</span></span><br><span class="line"><span class="section">6: 6</span></span><br><span class="line"><span class="section">7: 7</span></span><br><span class="line"><span class="section">8: 8</span></span><br><span class="line"><span class="section">9: 9</span></span><br><span class="line"><span class="section">10: 10</span></span><br></pre></td></tr></table></figure></p>
+
+<h1 id="支持超过9个参数"><a href="#支持超过9个参数" class="headerlink" title="支持超过9个参数"></a>支持超过9个参数</h1><p>SHIFT命令可以支持超过9个参数输入。</p>
+<figure class="highlight bat"><figcaption><span>parameters_shift.bat</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">echo</span> <span class="number">0</span>: %<span class="number">0</span> </span><br><span class="line"><span class="built_in">echo</span> <span class="number">1</span>: %<span class="number">1</span> </span><br><span class="line"><span class="built_in">echo</span> <span class="number">2</span>: %<span class="number">2</span> </span><br><span class="line"><span class="built_in">echo</span> <span class="number">3</span>: %<span class="number">3</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">4</span>: %<span class="number">4</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">5</span>: %<span class="number">5</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">6</span>: %<span class="number">6</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">7</span>: %<span class="number">7</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">8</span>: %<span class="number">8</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">9</span>: %<span class="number">9</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">10</span>: %<span class="number">10</span></span><br><span class="line"><span class="built_in">shift</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">0</span>: %<span class="number">0</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">1</span>: %<span class="number">1</span> </span><br><span class="line"><span class="built_in">echo</span> <span class="number">2</span>: %<span class="number">2</span> </span><br><span class="line"><span class="built_in">echo</span> <span class="number">3</span>: %<span class="number">3</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">4</span>: %<span class="number">4</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">5</span>: %<span class="number">5</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">6</span>: %<span class="number">6</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">7</span>: %<span class="number">7</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">8</span>: %<span class="number">8</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">9</span>: %<span class="number">9</span></span><br><span class="line"><span class="built_in">echo</span> <span class="number">10</span>: %<span class="number">10</span></span><br></pre></td></tr></table></figure>
+
+<p>运行结果:</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">D:\test\test&gt;parameters_shift.bat hello 1 2 3 4 5 6 7 8 9</span></span><br><span class="line"><span class="section">0: parameters_shift.bat</span></span><br><span class="line"><span class="section">1: hello</span></span><br><span class="line"><span class="section">2: 1</span></span><br><span class="line"><span class="section">3: 2</span></span><br><span class="line"><span class="section">4: 3</span></span><br><span class="line"><span class="section">5: 4</span></span><br><span class="line"><span class="section">6: 5</span></span><br><span class="line"><span class="section">7: 6</span></span><br><span class="line"><span class="section">8: 7</span></span><br><span class="line"><span class="section">9: 8</span></span><br><span class="line"><span class="section">10: hello0</span></span><br><span class="line"><span class="section">0: hello</span></span><br><span class="line"><span class="section">1: 1</span></span><br><span class="line"><span class="section">2: 2</span></span><br><span class="line"><span class="section">3: 3</span></span><br><span class="line"><span class="section">4: 4</span></span><br><span class="line"><span class="section">5: 5</span></span><br><span class="line"><span class="section">6: 6</span></span><br><span class="line"><span class="section">7: 7</span></span><br><span class="line"><span class="section">8: 8</span></span><br><span class="line"><span class="section">9: 9</span></span><br><span class="line"><span class="section">10: 10</span></span><br></pre></td></tr></table></figure>
+
 <h1 id="选择性替换"><a href="#选择性替换" class="headerlink" title="选择性替换"></a>选择性替换</h1><p>如果命令扩展被启用，SHIFT 命令支持/n 命令行开关；该命令行开关告诉<br>命令从第 n 个参数开始移位；n 介于零和八之间。例如:<br>SHIFT /2<br>会将 %3 移位到 %2，将 %4 移位到 %3，等等；并且不影响 %0 和 %1。</p>
-<h1 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h1><p>拷贝任意个文件到指定文件夹<br><figure class="highlight bat"><figcaption><span>mycopy.bat</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off </span><br><span class="line"><span class="comment">rem MYCOPY.BAT copies any number of files</span></span><br><span class="line"><span class="comment">rem to a directory.</span></span><br><span class="line"><span class="comment">rem The command uses the following syntax:</span></span><br><span class="line"><span class="comment">rem mycopy dir file1 file2 ... </span></span><br><span class="line"><span class="built_in">set</span> todir=%<span class="number">1</span></span><br><span class="line">:getfile</span><br><span class="line"><span class="built_in">shift</span></span><br><span class="line"><span class="keyword">if</span> "%<span class="number">1</span>"=="" <span class="keyword">goto</span> end</span><br><span class="line"><span class="built_in">copy</span> %<span class="number">1</span> <span class="variable">%todir%</span></span><br><span class="line"><span class="keyword">goto</span> getfile</span><br><span class="line">:end</span><br><span class="line"><span class="built_in">set</span> todir=</span><br><span class="line"><span class="built_in">echo</span> All done</span><br></pre></td></tr></table></figure></p>
-<p>Reference:<br><figure class="highlight plain"><figcaption><span>help SHIFT</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">更改批处理文件中可替换参数的位置。</span><br><span class="line"></span><br><span class="line">SHIFT [/n]</span><br><span class="line"></span><br><span class="line">如果命令扩展被启用，SHIFT 命令支持/n 命令行开关；该命令行开关告诉</span><br><span class="line">命令从第 n 个参数开始移位；n 介于零和八之间。例如:</span><br><span class="line"></span><br><span class="line">    SHIFT /2</span><br><span class="line"></span><br><span class="line">会将 %3 移位到 %2，将 %4 移位到 %3，等等；并且不影响 %0 和 %1。</span><br></pre></td></tr></table></figure></p>
+<h1 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h1><p>拷贝任意个文件到指定文件夹</p>
+<figure class="highlight bat"><figcaption><span>mycopy.bat</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off </span><br><span class="line"><span class="comment">rem MYCOPY.BAT copies any number of files</span></span><br><span class="line"><span class="comment">rem to a directory.</span></span><br><span class="line"><span class="comment">rem The command uses the following syntax:</span></span><br><span class="line"><span class="comment">rem mycopy dir file1 file2 ... </span></span><br><span class="line"><span class="built_in">set</span> todir=%<span class="number">1</span></span><br><span class="line">:getfile</span><br><span class="line"><span class="built_in">shift</span></span><br><span class="line"><span class="keyword">if</span> "%<span class="number">1</span>"=="" <span class="keyword">goto</span> end</span><br><span class="line"><span class="built_in">copy</span> %<span class="number">1</span> <span class="variable">%todir%</span></span><br><span class="line"><span class="keyword">goto</span> getfile</span><br><span class="line">:end</span><br><span class="line"><span class="built_in">set</span> todir=</span><br><span class="line"><span class="built_in">echo</span> All done</span><br></pre></td></tr></table></figure>
+
+<p>Reference:</p>
+<figure class="highlight plain"><figcaption><span>help SHIFT</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">更改批处理文件中可替换参数的位置。</span><br><span class="line"></span><br><span class="line">SHIFT [/n]</span><br><span class="line"></span><br><span class="line">如果命令扩展被启用，SHIFT 命令支持/n 命令行开关；该命令行开关告诉</span><br><span class="line">命令从第 n 个参数开始移位；n 介于零和八之间。例如:</span><br><span class="line"></span><br><span class="line">    SHIFT /2</span><br><span class="line"></span><br><span class="line">会将 %3 移位到 %2，将 %4 移位到 %3，等等；并且不影响 %0 和 %1。</span><br></pre></td></tr></table></figure>
+
 <p><a href="http://www.cnblogs.com/top5/archive/2011/06/24/2089183.html" target="_blank" rel="noopener">cmd批处理参数</a></p>
 
       
@@ -823,7 +833,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="WU Chenxu">
             
@@ -1267,7 +1277,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">239k</span>
+    <span title="站点总字数">240k</span>
   
 
   
@@ -1278,12 +1288,12 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:37</span>
+    <span title="站点阅读时长">3:38</span>
   
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 

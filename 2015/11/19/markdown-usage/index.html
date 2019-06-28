@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -231,7 +231,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -241,7 +241,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta custom-logo">
     
@@ -448,20 +448,20 @@
     <div class="reading-progress-bar"></div>
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2015/11/19/markdown-usage/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WU Chenxu">
       <meta itemprop="description" content="一切都会成为过去">
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="玉汝于成，功不唐捐">
     </span>
 
@@ -530,7 +530,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Markdown/" itemprop="url" rel="index"><span itemprop="name">Markdown</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Markdown/" itemprop="url" rel="index"><span itemprop="name">Markdown</span></a></span>
 
                 
                 
@@ -624,8 +624,12 @@
 <a id="more"></a>
 <p>可以体验一下在线的Markdown编辑器，如<a href="http://mahua.jser.me/" target="_blank" rel="noopener">mahua在线Markdown</a>。</p>
 <h1 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h1><p>基础语法指官方版本Markdown支持的语法，GFM(Github Flavored Markdown)是github对Markdown语法的一些扩展。</p>
-<h2 id="1-标题"><a href="#1-标题" class="headerlink" title="1. 标题"></a>1. 标题</h2><p>开头的最后一个<code>#</code>与标题之间必须有空格。<br><img src="/2015/11/19/markdown-usage/header.png"></p>
-<h2 id="文字格式"><a href="#文字格式" class="headerlink" title="文字格式"></a>文字格式</h2><p>符号与文字之间不能有空格。<br>引用’&gt;’后的空格不能少, 引用行之后要空一行，否则之后的行都算是引用了。<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">*This <span class="built_in">text</span> will be italic*</span><br><span class="line">_This will also be italic_</span><br><span class="line"></span><br><span class="line">**This <span class="built_in">text</span> will be bold**</span><br><span class="line">__This will also be bold__</span><br><span class="line"></span><br><span class="line">_You **can** combine them_</span><br><span class="line"></span><br><span class="line">&gt; This <span class="keyword">is</span> <span class="literal">quote</span></span><br><span class="line"> &gt;&gt; This <span class="keyword">is</span> <span class="literal">quote</span>'s <span class="literal">quote</span></span><br><span class="line"></span><br><span class="line">~~This <span class="keyword">is</span> strikethrough,only <span class="keyword">for</span> GFM.~~</span><br></pre></td></tr></table></figure></p>
+<h2 id="1-标题"><a href="#1-标题" class="headerlink" title="1. 标题"></a>1. 标题</h2><p>开头的最后一个<code>#</code>与标题之间必须有空格。</p>
+<img src="/2015/11/19/markdown-usage/header.png">
+
+<h2 id="文字格式"><a href="#文字格式" class="headerlink" title="文字格式"></a>文字格式</h2><p>符号与文字之间不能有空格。<br>引用’&gt;’后的空格不能少, 引用行之后要空一行，否则之后的行都算是引用了。</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">*This <span class="built_in">text</span> will be italic*</span><br><span class="line">_This will also be italic_</span><br><span class="line"></span><br><span class="line">**This <span class="built_in">text</span> will be bold**</span><br><span class="line">__This will also be bold__</span><br><span class="line"></span><br><span class="line">_You **can** combine them_</span><br><span class="line"></span><br><span class="line">&gt; This <span class="keyword">is</span> <span class="literal">quote</span></span><br><span class="line"> &gt;&gt; This <span class="keyword">is</span> <span class="literal">quote</span>'s <span class="literal">quote</span></span><br><span class="line"></span><br><span class="line">~~This <span class="keyword">is</span> strikethrough,only <span class="keyword">for</span> GFM.~~</span><br></pre></td></tr></table></figure>
+
 <p>效果：<br><em>This text will be italic</em><br><em>This will also be italic</em></p>
 <p><strong>This text will be bold</strong><br><strong>This will also be bold</strong></p>
 <p><em>You <strong>can</strong> combine them</em></p>
@@ -636,7 +640,9 @@
 </blockquote>
 </blockquote>
 <p><del>This is strikethrough,only for GFM.</del></p>
-<h2 id="列表-List"><a href="#列表-List" class="headerlink" title="列表 List"></a>列表 List</h2><h3 id="1-无序列表-Unordered-List"><a href="#1-无序列表-Unordered-List" class="headerlink" title="1. 无序列表 Unordered List"></a>1. 无序列表 Unordered List</h3><p><code>*</code> <code>+</code> <code>-</code>之后的空格不能少。<br>对嵌套列表，符号之后和之前的空格都不能少。<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">* One</span></span><br><span class="line">+ <span class="keyword">Two</span></span><br><span class="line">  - <span class="keyword">Two</span> Point <span class="keyword">One</span></span><br><span class="line"><span class="comment">  * Two Point Two</span></span><br><span class="line">- Three</span><br></pre></td></tr></table></figure></p>
+<h2 id="列表-List"><a href="#列表-List" class="headerlink" title="列表 List"></a>列表 List</h2><h3 id="1-无序列表-Unordered-List"><a href="#1-无序列表-Unordered-List" class="headerlink" title="1. 无序列表 Unordered List"></a>1. 无序列表 Unordered List</h3><p><code>*</code> <code>+</code> <code>-</code>之后的空格不能少。<br>对嵌套列表，符号之后和之前的空格都不能少。</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">* One</span></span><br><span class="line">+ <span class="keyword">Two</span></span><br><span class="line">  - <span class="keyword">Two</span> Point <span class="keyword">One</span></span><br><span class="line"><span class="comment">  * Two Point Two</span></span><br><span class="line">- Three</span><br></pre></td></tr></table></figure>
+
 <p>效果:</p>
 <ul>
 <li>One</li>
@@ -663,15 +669,25 @@
 </li>
 <li>Three</li>
 </ol>
-<h2 id="链接-Link"><a href="#链接-Link" class="headerlink" title="链接 Link"></a>链接 Link</h2><h3 id="文字链接"><a href="#文字链接" class="headerlink" title="文字链接"></a>文字链接</h3><p><code>&quot; &quot;</code>里的内容可省略。<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://wuchenxu.com -automatic!</span><br><span class="line">[<span class="string">blog</span>](<span class="link">https://wuchenxu.com "chenxu's blog"</span>)</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://wuchenxu.com" target="_blank" rel="noopener">https://wuchenxu.com</a> -automatic!<br><a href="https://wuchenxu.com" title="chenxu&#39;s blog" target="_blank" rel="noopener">blog</a></p>
-<h3 id="图片链接"><a href="#图片链接" class="headerlink" title="图片链接"></a>图片链接</h3><p>设置大小对齐，需要使用HTML, <code>&quot; &quot;</code>可以省略。<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">Image of Yaktocat</span>](<span class="link">https://octodex.github.com/images/yaktocat.png "Yaktocat"</span>)</span><br></pre></td></tr></table></figure></p>
+<h2 id="链接-Link"><a href="#链接-Link" class="headerlink" title="链接 Link"></a>链接 Link</h2><h3 id="文字链接"><a href="#文字链接" class="headerlink" title="文字链接"></a>文字链接</h3><p><code>&quot; &quot;</code>里的内容可省略。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://wuchenxu.com -automatic!</span><br><span class="line">[<span class="string">blog</span>](<span class="link">https://wuchenxu.com "chenxu's blog"</span>)</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://wuchenxu.com" target="_blank" rel="noopener">https://wuchenxu.com</a> -automatic!
+<a href="https://wuchenxu.com" title="chenxu&#39;s blog" target="_blank" rel="noopener">blog</a></p>
+<h3 id="图片链接"><a href="#图片链接" class="headerlink" title="图片链接"></a>图片链接</h3><p>设置大小对齐，需要使用HTML, <code>&quot; &quot;</code>可以省略。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">Image of Yaktocat</span>](<span class="link">https://octodex.github.com/images/yaktocat.png "Yaktocat"</span>)</span><br></pre></td></tr></table></figure>
+
 <p><img src="https://octodex.github.com/images/yaktocat.png" alt="Image of Yaktocat" title="Yaktocat"></p>
 <h3 id="图片嵌入超链接"><a href="#图片嵌入超链接" class="headerlink" title="图片嵌入超链接"></a>图片嵌入超链接</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">![</span>](<span class="link">http://github.global.ssl.fastly.net/images/modules/logos_page/GitHub-Mark.png</span>)](<span class="link">http://www.github.com "link to github"</span>)</span><br></pre></td></tr></table></figure>
-<p><a href="http://www.github.com" title="link to github" target="_blank" rel="noopener"><img src="http://github.global.ssl.fastly.net/images/modules/logos_page/GitHub-Mark.png" alt=""></a></p>
-<h3 id="索引链接"><a href="#索引链接" class="headerlink" title="索引链接"></a>索引链接</h3><p><code>^1</code> <code>^2</code>可以是任意字符。<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">blog</span>][<span class="symbol">^1</span>]</span><br><span class="line">![<span class="string">GitHub Octocat</span>][<span class="symbol">^2</span>]</span><br><span class="line"></span><br><span class="line">[<span class="symbol">^1</span>]: <span class="link">https://wuchenxu.com</span></span><br><span class="line">[<span class="symbol">^2</span>]: <span class="link">http://github.global.ssl.fastly.net/images/modules/logos_page/Octocat.png</span></span><br></pre></td></tr></table></figure></p>
+
+<p><a href="http://www.github.com" title="link to github" target="_blank" rel="noopener"><img src="http://github.global.ssl.fastly.net/images/modules/logos_page/GitHub-Mark.png" alt></a></p>
+<h3 id="索引链接"><a href="#索引链接" class="headerlink" title="索引链接"></a>索引链接</h3><p><code>^1</code> <code>^2</code>可以是任意字符。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">blog</span>][<span class="symbol">^1</span>]</span><br><span class="line">![<span class="string">GitHub Octocat</span>][<span class="symbol">^2</span>]</span><br><span class="line"></span><br><span class="line">[<span class="symbol">^1</span>]: <span class="link">https://wuchenxu.com</span></span><br><span class="line">[<span class="symbol">^2</span>]: <span class="link">http://github.global.ssl.fastly.net/images/modules/logos_page/Octocat.png</span></span><br></pre></td></tr></table></figure>
+
 <p><a href="https://wuchenxu.com" target="_blank" rel="noopener">blog</a><br><img src="http://github.global.ssl.fastly.net/images/modules/logos_page/Octocat.png" alt="GitHub Octocat"></p>
-<h3 id="脚标"><a href="#脚标" class="headerlink" title="脚标"></a>脚标</h3><p><code>^ref</code>可以是任意字符。<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Ref[^ref]</span><br><span class="line">[<span class="symbol">^ref</span>]: <span class="link">your-link</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="脚标"><a href="#脚标" class="headerlink" title="脚标"></a>脚标</h3><p><code>^ref</code>可以是任意字符。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Ref[^ref]</span><br><span class="line">[<span class="symbol">^ref</span>]: <span class="link">your-link</span></span><br></pre></td></tr></table></figure>
+
 <p>Ref[^ref]<br>[^ref]: your-link</p>
 <h2 id="代码-Code"><a href="#代码-Code" class="headerlink" title="代码 Code"></a>代码 Code</h2><blockquote>
 <p>`code`</p>
@@ -681,56 +697,65 @@
 <p>```<br> if (isOK)<br> {<br>     return true;<br> }<br>```</p>
 </blockquote>
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (isOK)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="页内链接Anchor"><a href="#页内链接Anchor" class="headerlink" title="页内链接Anchor"></a>页内链接Anchor</h3><h4 id="markdown目录"><a href="#markdown目录" class="headerlink" title="markdown目录"></a>markdown目录</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.标题 </span><br><span class="line"><span class="section"># format output</span></span><br><span class="line">2.引用标题 </span><br><span class="line">[<span class="string">上一节</span>](<span class="link">#format-output</span>)</span><br></pre></td></tr></table></figure>
+
 <h4 id="html标签"><a href="#html标签" class="headerlink" title="html标签"></a>html标签</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1. </span>先定义一个锚(id)</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"jump"</span>&gt;</span></span>Hello World<span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="bullet">2. </span>然后使用markdown的语法</span><br><span class="line">[<span class="string">XXXX</span>](<span class="link">#jump</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>三个或者更过的<code>-</code>或者<code>*</code>,必须单独成行，可以有空格<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">- </span>- -</span><br><span class="line">hello</span><br><span class="line"><span class="bullet">* </span><span class="bullet">* *</span></span><br></pre></td></tr></table></figure></p>
+
+<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>三个或者更过的<code>-</code>或者<code>*</code>,必须单独成行，可以有空格</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">- </span>- -</span><br><span class="line">hello</span><br><span class="line"><span class="bullet">* </span><span class="bullet">* *</span></span><br></pre></td></tr></table></figure>
+
 <hr>
 <p>hello</p>
 <hr>
 <h1 id="GFM语法"><a href="#GFM语法" class="headerlink" title="GFM语法"></a>GFM语法</h1><p>GFM(Github Flavored Markdown)是github对Markdown语法的一些扩展,官方版本的Markdown不支持以下语法。</p>
 <h2 id="表格-Table"><a href="#表格-Table" class="headerlink" title="表格 Table"></a>表格 Table</h2><p>官方版本的Markdown语法是不支持表格的，由于兼容HTML，可以使用<code>&lt;table&gt;</code>标签来表示table。但是，有一些Markdown的语法扩展支持简单的表格(Simple Table)。<br>如<a href="http://markdown-here.com/" target="_blank" rel="noopener">Markdown Here</a>,Github支持简单表格,推荐使用<a href="http://www.tablesgenerator.com/markdown_tables" target="_blank" rel="noopener">table generator</a>来生成表格。<br>GFM的语法很简单，不支持行或者列的合并，不支持一个单元格的多行文字。<br>第一行是标题，第二行是固定的<code>-</code>，冒号<code>:</code>是来表示对齐方式。<br><code>表格前或后必须有空行</code>.</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="params">| Tables   |</span>      Are      <span class="params">|  Cool |</span></span><br><span class="line"><span class="params">|----------|</span><span class="symbol">:-------------</span><span class="symbol">:|------</span><span class="symbol">:|</span></span><br><span class="line"><span class="params">| col 1 is |</span>  left-aligned <span class="params">| $1600 |</span></span><br><span class="line"><span class="params">| col 2 is |</span>    centered   <span class="params">|   $12 |</span></span><br><span class="line"><span class="params">| col 3 is |</span> right-aligned <span class="params">|    $1 |</span></span><br></pre></td></tr></table></figure>
+
 <p>效果：</p>
 <table>
 <thead>
 <tr>
 <th>Tables</th>
-<th style="text-align:center">Are</th>
-<th style="text-align:right">Cool</th>
+<th align="center">Are</th>
+<th align="right">Cool</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>col 1 is</td>
-<td style="text-align:center">left-aligned</td>
-<td style="text-align:right">$1600</td>
+<td align="center">left-aligned</td>
+<td align="right">$1600</td>
 </tr>
 <tr>
 <td>col 2 is</td>
-<td style="text-align:center">centered</td>
-<td style="text-align:right">$12</td>
+<td align="center">centered</td>
+<td align="right">$12</td>
 </tr>
 <tr>
 <td>col 3 is</td>
-<td style="text-align:center">right-aligned</td>
-<td style="text-align:right">$1</td>
+<td align="center">right-aligned</td>
+<td align="right">$1</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h2 id="语法高亮-Syntax-Highlighting"><a href="#语法高亮-Syntax-Highlighting" class="headerlink" title="语法高亮 Syntax Highlighting"></a>语法高亮 Syntax Highlighting</h2><blockquote>
-<p>```javascript<br>function fancyAlert(arg) {<br>  if(arg) {<br>    $.facebox({div:’#foo’})<br>  }<br>}<br>```</p>
+<p>```javascript<br>function fancyAlert(arg) {<br>  if(arg) {<br>    $.facebox({div:’#foo’})<br>  }<br>}
+```</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fancyAlert</span>(<span class="params">arg</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(arg) &#123;</span><br><span class="line">    $.facebox(&#123;<span class="attr">div</span>:<span class="string">'#foo'</span>&#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="任务列表-Task-List"><a href="#任务列表-Task-List" class="headerlink" title="任务列表 Task List"></a>任务列表 Task List</h2><figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- <span class="comment">[x]</span> This <span class="keyword">is</span> a complete item</span><br><span class="line"> - <span class="comment">[x]</span> task 1</span><br><span class="line"> - <span class="comment">[x]</span> task 2</span><br><span class="line">- <span class="comment">[ ]</span> This <span class="keyword">is</span> an incomplete item</span><br></pre></td></tr></table></figure>
+
 <ul>
-<li style="list-style: none"><input type="checkbox" checked> This is a complete item<ul>
-<li style="list-style: none"><input type="checkbox" checked> task 1</li>
-<li style="list-style: none"><input type="checkbox" checked> task 2</li>
+<li><input checked disabled type="checkbox"> This is a complete item<ul>
+<li><input checked disabled type="checkbox"> task 1</li>
+<li><input checked disabled type="checkbox"> task 2</li>
 </ul>
 </li>
-<li style="list-style: none"><input type="checkbox"> This is an incomplete item</li>
+<li><input disabled type="checkbox"> This is an incomplete item</li>
 </ul>
-<h2 id="表情-Emoji"><a href="#表情-Emoji" class="headerlink" title="表情 Emoji"></a>表情 Emoji</h2><p>体验一下<a href="http://www.emoji-cheat-sheet.com/" target="_blank" rel="noopener">2015牛津年度英语单词</a> 笑cry<br><figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">:joy:</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="表情-Emoji"><a href="#表情-Emoji" class="headerlink" title="表情 Emoji"></a>表情 Emoji</h2><p>体验一下<a href="http://www.emoji-cheat-sheet.com/" target="_blank" rel="noopener">2015牛津年度英语单词</a> 笑cry</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">:joy:</span></span><br></pre></td></tr></table></figure>
+
 <p>:joy:</p>
 <h1 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h1><p><a href="http://www.jianshu.com/p/PpDNMG" target="_blank" rel="noopener">科技写作用Markdown+R</a> 可以生成各种公式图片图表。</p>
 <p>Reference:</p>
@@ -854,7 +879,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="WU Chenxu">
             
@@ -1298,7 +1323,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">239k</span>
+    <span title="站点总字数">240k</span>
   
 
   
@@ -1309,12 +1334,12 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:37</span>
+    <span title="站点阅读时长">3:38</span>
   
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 

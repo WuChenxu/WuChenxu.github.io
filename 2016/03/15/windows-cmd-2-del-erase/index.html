@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -227,7 +227,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -237,7 +237,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta custom-logo">
     
@@ -444,20 +444,20 @@
     <div class="reading-progress-bar"></div>
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2016/03/15/windows-cmd-2-del-erase/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WU Chenxu">
       <meta itemprop="description" content="一切都会成为过去">
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="玉汝于成，功不唐捐">
     </span>
 
@@ -526,7 +526,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/windows-cmd/" itemprop="url" rel="index"><span itemprop="name">windows cmd</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/windows-cmd/" itemprop="url" rel="index"><span itemprop="name">windows cmd</span></a></span>
 
                 
                 
@@ -614,14 +614,21 @@
 
       
         <img src="/2016/03/15/windows-cmd-2-del-erase/del.png">
-<p>删除命令，用来删除一个或多个文件，不能删除目录(RD/RMDIR用来删除目录)。DEL和ERASE相当于互为别名，功能没有区别。<br><a id="more"></a><br>举例：</p>
+<p>删除命令，用来删除一个或多个文件，不能删除目录(RD/RMDIR用来删除目录)。DEL和ERASE相当于互为别名，功能没有区别。</p>
+<a id="more"></a>
+<p>举例：</p>
 <h1 id="删除单个文件"><a href="#删除单个文件" class="headerlink" title="删除单个文件"></a>删除单个文件</h1><figure class="highlight bat"><figcaption><span>single file</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:\<span class="title">doc</span>&gt;<span class="title">dir</span> /<span class="title">B</span></span></span><br><span class="line"><span class="function"><span class="title">a.txt</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">D</span>:\<span class="title">doc</span>&gt;<span class="title">DEL</span> <span class="title">a.txt</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">D</span>:\<span class="title">doc</span>&gt;<span class="title">dir</span> /<span class="title">B</span></span></span><br></pre></td></tr></table></figure>
-<h2 id="如果文件不存在"><a href="#如果文件不存在" class="headerlink" title="如果文件不存在"></a>如果文件不存在</h2><figure class="highlight bat"><figcaption><span>not exist</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:\<span class="title">doc</span>&gt;<span class="title">del</span> <span class="title">b.txt</span></span></span><br><span class="line"><span class="function">找不到 <span class="title">D</span>:\<span class="title">doc</span>\<span class="title">b.txt</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">D</span>:\<span class="title">doc</span>&gt;<span class="title">echo</span> %<span class="title">ERRORLEVEL</span>%</span></span><br><span class="line"><span class="function">0</span></span><br></pre></td></tr></table></figure>
-<h2 id="如果文件只读"><a href="#如果文件只读" class="headerlink" title="如果文件只读"></a>如果文件只读</h2><figure class="highlight bat"><figcaption><span>readonly</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:\<span class="title">doc</span>&gt;<span class="title">del</span> <span class="title">a.txt</span></span></span><br><span class="line"><span class="function"><span class="title">D</span>:\<span class="title">doc</span>\<span class="title">a.txt</span></span></span><br><span class="line"><span class="function">拒绝访问。</span></span><br><span class="line"><span class="function"><span class="title">D</span>:\<span class="title">doc</span>&gt;<span class="title">echo</span> %<span class="title">ERRORLEVEL</span>%</span></span><br><span class="line"><span class="function">0</span></span><br></pre></td></tr></table></figure>
-<h1 id="删除只读文件"><a href="#删除只读文件" class="headerlink" title="删除只读文件"></a>删除只读文件</h1><figure class="highlight bat"><figcaption><span>force del</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">del</span> a.txt /F</span><br><span class="line"><span class="built_in">del</span> a.txt /A:R</span><br></pre></td></tr></table></figure>
-<h1 id="删除文件夹内所有文件和子目录"><a href="#删除文件夹内所有文件和子目录" class="headerlink" title="删除文件夹内所有文件和子目录"></a>删除文件夹内所有文件和子目录</h1><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">del</span> D:\doc  /F /S /Q</span><br></pre></td></tr></table></figure>
-<p>Reference:<br><figure class="highlight plain"><figcaption><span>help DEL</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">删除一个或数个文件。</span><br><span class="line"></span><br><span class="line">DEL [/P] [/F] [/S] [/Q] [/A[[:]attributes]] names</span><br><span class="line">ERASE [/P] [/F] [/S] [/Q] [/A[[:]attributes]] names</span><br><span class="line"></span><br><span class="line">  names         指定一个或多个文件或者目录列表。</span><br><span class="line">                通配符可用来删除多个文件。</span><br><span class="line">                如果指定了一个目录，该目录中的所</span><br><span class="line">                有文件都会被删除。</span><br><span class="line"></span><br><span class="line">  /P            删除每一个文件之前提示确认。</span><br><span class="line">  /F            强制删除只读文件。</span><br><span class="line">  /S            删除所有子目录中的指定的文件。</span><br><span class="line">  /Q            安静模式。删除全局通配符时，不要求确认</span><br><span class="line">  /A            根据属性选择要删除的文件</span><br><span class="line">  属性          R  只读文件                     S  系统文件</span><br><span class="line">                H  隐藏文件                     A  存档文件</span><br><span class="line">                I  无内容索引文件               L  重分析点</span><br><span class="line">                -  表示“否”的前缀</span><br><span class="line"></span><br><span class="line">如果命令扩展被启用，DEL 和 ERASE 更改如下:</span><br><span class="line"></span><br><span class="line">/S 开关的显示句法会颠倒，即只显示已经</span><br><span class="line">删除的文件，而不显示找不到的文件。</span><br></pre></td></tr></table></figure></p>
 
+<h2 id="如果文件不存在"><a href="#如果文件不存在" class="headerlink" title="如果文件不存在"></a>如果文件不存在</h2><figure class="highlight bat"><figcaption><span>not exist</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:\<span class="title">doc</span>&gt;<span class="title">del</span> <span class="title">b.txt</span></span></span><br><span class="line"><span class="function">找不到 <span class="title">D</span>:\<span class="title">doc</span>\<span class="title">b.txt</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">D</span>:\<span class="title">doc</span>&gt;<span class="title">echo</span> %<span class="title">ERRORLEVEL</span>%</span></span><br><span class="line"><span class="function">0</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="如果文件只读"><a href="#如果文件只读" class="headerlink" title="如果文件只读"></a>如果文件只读</h2><figure class="highlight bat"><figcaption><span>readonly</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:\<span class="title">doc</span>&gt;<span class="title">del</span> <span class="title">a.txt</span></span></span><br><span class="line"><span class="function"><span class="title">D</span>:\<span class="title">doc</span>\<span class="title">a.txt</span></span></span><br><span class="line"><span class="function">拒绝访问。</span></span><br><span class="line"><span class="function"><span class="title">D</span>:\<span class="title">doc</span>&gt;<span class="title">echo</span> %<span class="title">ERRORLEVEL</span>%</span></span><br><span class="line"><span class="function">0</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="删除只读文件"><a href="#删除只读文件" class="headerlink" title="删除只读文件"></a>删除只读文件</h1><figure class="highlight bat"><figcaption><span>force del</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">del</span> a.txt /F</span><br><span class="line"><span class="built_in">del</span> a.txt /A:R</span><br></pre></td></tr></table></figure>
+
+<h1 id="删除文件夹内所有文件和子目录"><a href="#删除文件夹内所有文件和子目录" class="headerlink" title="删除文件夹内所有文件和子目录"></a>删除文件夹内所有文件和子目录</h1><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">del</span> D:\doc  /F /S /Q</span><br></pre></td></tr></table></figure>
+
+<p>Reference:</p>
+<figure class="highlight plain"><figcaption><span>help DEL</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">删除一个或数个文件。</span><br><span class="line"></span><br><span class="line">DEL [/P] [/F] [/S] [/Q] [/A[[:]attributes]] names</span><br><span class="line">ERASE [/P] [/F] [/S] [/Q] [/A[[:]attributes]] names</span><br><span class="line"></span><br><span class="line">  names         指定一个或多个文件或者目录列表。</span><br><span class="line">                通配符可用来删除多个文件。</span><br><span class="line">                如果指定了一个目录，该目录中的所</span><br><span class="line">                有文件都会被删除。</span><br><span class="line"></span><br><span class="line">  /P            删除每一个文件之前提示确认。</span><br><span class="line">  /F            强制删除只读文件。</span><br><span class="line">  /S            删除所有子目录中的指定的文件。</span><br><span class="line">  /Q            安静模式。删除全局通配符时，不要求确认</span><br><span class="line">  /A            根据属性选择要删除的文件</span><br><span class="line">  属性          R  只读文件                     S  系统文件</span><br><span class="line">                H  隐藏文件                     A  存档文件</span><br><span class="line">                I  无内容索引文件               L  重分析点</span><br><span class="line">                -  表示“否”的前缀</span><br><span class="line"></span><br><span class="line">如果命令扩展被启用，DEL 和 ERASE 更改如下:</span><br><span class="line"></span><br><span class="line">/S 开关的显示句法会颠倒，即只显示已经</span><br><span class="line">删除的文件，而不显示找不到的文件。</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -734,7 +741,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="WU Chenxu">
             
@@ -1178,7 +1185,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">239k</span>
+    <span title="站点总字数">240k</span>
   
 
   
@@ -1189,12 +1196,12 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:37</span>
+    <span title="站点阅读时长">3:38</span>
   
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 

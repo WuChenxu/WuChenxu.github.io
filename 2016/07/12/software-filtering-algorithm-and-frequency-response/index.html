@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -227,7 +227,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -237,7 +237,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta custom-logo">
     
@@ -444,20 +444,20 @@
     <div class="reading-progress-bar"></div>
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2016/07/12/software-filtering-algorithm-and-frequency-response/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WU Chenxu">
       <meta itemprop="description" content="一切都会成为过去">
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="玉汝于成，功不唐捐">
     </span>
 
@@ -526,7 +526,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/filter/" itemprop="url" rel="index"><span itemprop="name">filter</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/filter/" itemprop="url" rel="index"><span itemprop="name">filter</span></a></span>
 
                 
                 
@@ -615,12 +615,15 @@
       
         <p>本文从一种软件滤波算法切入，深入理解了滤波算法的频率响应。</p>
 <a id="more"></a>
+
 <h1 id="引子"><a href="#引子" class="headerlink" title="引子"></a>引子</h1><p>单片机大多资源小，算法占用的资源越小越好，有一种占用很小资源的算法，具体公式如下：<br>$$  y[n] =y[n-1]- {y[n-1] \over m}+x[n]$$<br>其中：x[n]为采样值，y[n]为滤波后的值，y[n-1]为上一次滤波值，m是放电比例(最好选2的幂次数，可用单片机移位)初始化时如果是跟踪一段时间后使用，可以是任何值，否则可以用采样值乘m初始化。</p>
 <h1 id="推导"><a href="#推导" class="headerlink" title="推导"></a>推导</h1><p>如果写成这样<br>$$  y[n] = x[n] + (1- {1 \over m}) * y[n-1]$$  (1)<br>然后令 $y[n]=m * u[n]$,得<br>$$  n * u[n] = x[n] + (1- {1 \over m}) * m * u[n-1]$$<br>两边同时除m，得<br>$$  u[n] = {1 \over m} * x[n] + (1- {1 \over m})  * u[n-1]$$<br>令 $ \alpha = {1 \over m}$，得<br>$$ u[n] = \alpha * x[n] + (1-\alpha) * u[n-1]$$<br>这是典型的无限脉冲滤波器(IIR),也是最简单的低通滤波器。</p>
 <p>如果直接由式(1)推导z变换<br>$$ Y(z) = X(z) + (1 - {1 \over m}) * z^{-1}Y(z)$$<br>$$ H(z) = {Y(z) \over {X(z)}} = {1 \over {1-(1-{1 \over m}})z^{-1}}$$<br>令$a={1-{1\over m}}$,<br>$$ H(z)={1\over{1-az^{-1}} }$$</p>
 <h1 id="IIR-vs-FIR"><a href="#IIR-vs-FIR" class="headerlink" title="IIR vs FIR"></a>IIR vs FIR</h1><p>IIR(Infinit Impulse Response)滤波器的<a href="https://en.wikipedia.org/wiki/Impulse_response" target="_blank" rel="noopener">单位脉冲响应</a>是无限长的，如例子中$H(z)={1\over{1-az^{-1}} }$时间域的序列是<br>$$ y[n] = x[n] + ay[n-1]$$<br>根据单位脉冲响应的定义，即$x[n]= \delta[n]=\begin{cases} {1, n=0}\\{0, n \ne 0}\end{cases}$时的y[n]:<br>$$ y[0] = x[0] + ay[-1] = 1, if n&lt;0 let y[0] = 0$$<br>$$ y[1] = x[1] + ay[0] = 0 + a = a $$<br>$$ y[2] = x[2] + ay[1] = 0 + a * a = a^2 $$<br>…<br>$$ y[n] = x[n] + ay[n-1] = a^n $$<br>所以其单位脉冲响应为$h[n]=a^n u[n]$,其中$u[n]=\begin{cases} {1, n \ge 0 }\\{0, n&lt;0}\end{cases}$,可以看到$n\ge 0$时，h[n]每一项都不为0,也就是无限脉冲响应的含义.IIR滤波器时间域的输出，由输入和之前的输出共同决定，是有反馈的。</p>
 <p>FIR(Finit Impulse Response)滤波器的单位脉冲响应是有限长的，其时间域的输出只有输入决定，是无反馈的。如，<a href="https://en.wikipedia.org/wiki/Moving_average" target="_blank" rel="noopener">滑动平均滤波器</a>,时间域$y[n]={1 \over  3}x[n]+{1 \over  3}x[n-1]+{1 \over  3}x[n-2]$，z变换为$H(z)={1\over3}+{1\over3}z^{-1}+{1\over3}z^{-2}$,单位脉冲响应为$h[n]={1\over3}\delta[n]+{1\over3}\delta[n-1]+{1\over3}\delta[n-2]$,其中$\delta[n]=\begin{cases} {1, n=0}\\{0, n \ne 0}\end{cases}$。</p>
-<h1 id="频率响应"><a href="#频率响应" class="headerlink" title="频率响应"></a>频率响应</h1><h1 id="时间常数"><a href="#时间常数" class="headerlink" title="时间常数"></a>时间常数</h1><p>如果将$y[n]=\alpha x[n]+(1-\alpha)y[n-1]$视作<a href="https://en.wikipedia.org/wiki/Low-pass_filter" target="_blank" rel="noopener">RC低通滤波器</a><br><img src="/2016/07/12/software-filtering-algorithm-and-frequency-response/250px-1st_Order_Lowpass_Filter_RC.svg.png"><br>$$v_{in}(t)-v_{out}(t)=RC{dv_{out} \over dt}$$</p>
+<h1 id="频率响应"><a href="#频率响应" class="headerlink" title="频率响应"></a>频率响应</h1><h1 id="时间常数"><a href="#时间常数" class="headerlink" title="时间常数"></a>时间常数</h1><p>如果将$y[n]=\alpha x[n]+(1-\alpha)y[n-1]$视作<a href="https://en.wikipedia.org/wiki/Low-pass_filter" target="_blank" rel="noopener">RC低通滤波器</a></p>
+<img src="/2016/07/12/software-filtering-algorithm-and-frequency-response/250px-1st_Order_Lowpass_Filter_RC.svg.png">
+<p>$$v_{in}(t)-v_{out}(t)=RC{dv_{out} \over dt}$$</p>
 <p>设$v_{in}$序列为($x_{1}, x_{2}, …, x_{n}$), $v_{out}$序列为($y_{1}, y_{2}, …, y_{n}$).上面的公式近似于<br>$$x_{i} - y_{i} = RC {y_{i}-y_{i-1}}\over{\Delta T}$$</p>
 <p>$$ y_{i} = x_{i}({\Delta T}\over {RC+\Delta T}) + y_{i-1}({RC}\over{RC+\Delta T})$$</p>
 <p>令 $\alpha = \frac{\Delta T}{RC+\Delta T}$,<br>$$ y_{i} = {\alpha x_{i} + (1-\alpha) y_{i-1}}$$<br>其中, $\alpha = \frac{\Delta T}{RC+\Delta T}$<br>可以得出时间常数$RC={\Delta T}\frac{1-\alpha} {\alpha}$.<br>考虑到$f_c= {1 \over{2\pi RC}}$，<br>$$\alpha = \frac{2 \pi \Delta T f_c}{2\pi \Delta T f_c+1}$$<br>$$f_c=\frac{\alpha} {(1-\alpha)2\pi\Delta T}$$</p>
@@ -744,7 +747,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="WU Chenxu">
             
@@ -1188,7 +1191,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">239k</span>
+    <span title="站点总字数">240k</span>
   
 
   
@@ -1199,12 +1202,12 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:37</span>
+    <span title="站点阅读时长">3:38</span>
   
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 

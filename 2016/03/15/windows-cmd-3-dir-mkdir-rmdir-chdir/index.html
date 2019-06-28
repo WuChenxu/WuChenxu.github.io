@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -227,7 +227,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -237,7 +237,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta custom-logo">
     
@@ -444,20 +444,20 @@
     <div class="reading-progress-bar"></div>
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2016/03/15/windows-cmd-3-dir-mkdir-rmdir-chdir/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WU Chenxu">
       <meta itemprop="description" content="一切都会成为过去">
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="玉汝于成，功不唐捐">
     </span>
 
@@ -526,7 +526,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/windows-cmd/" itemprop="url" rel="index"><span itemprop="name">windows cmd</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/windows-cmd/" itemprop="url" rel="index"><span itemprop="name">windows cmd</span></a></span>
 
                 
                 
@@ -616,21 +616,38 @@
         <img src="/2016/03/15/windows-cmd-3-dir-mkdir-rmdir-chdir/dir.png">
 <p>DIR相当于bash里的ls，列出目录或文件。<br>MKDIR(MD)创建目录。<br>RMDIR(RD)删除目录。<br>CHDIR(CD)显示当前目录名(CD不跟参数时，兼有bash pwd命令功能)或者改变当前目录。</p>
 <a id="more"></a>
+
 <h1 id="DIR"><a href="#DIR" class="headerlink" title="DIR"></a>DIR</h1><figure class="highlight bat"><figcaption><span>list all non-dir files</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dir</span> /A:-D</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight bat"><figcaption><span>order by reverse alphabet</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dir</span> /O:-N</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight bat"><figcaption><span>order by date(latest at first)</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dir</span> /O:-D</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight bat"><figcaption><span>list all txt files in current dir</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dir</span> *.txt</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight bat"><figcaption><span>clean style</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dir</span> /B</span><br></pre></td></tr></table></figure>
+
 <h1 id="MKDIR-MD"><a href="#MKDIR-MD" class="headerlink" title="MKDIR(MD)"></a>MKDIR(MD)</h1><figure class="highlight bat"><figcaption><span>create dir A and the sub-dir B</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> A\B</span><br></pre></td></tr></table></figure>
+
 <h1 id="RMDIR-RD"><a href="#RMDIR-RD" class="headerlink" title="RMDIR(RD)"></a>RMDIR(RD)</h1><figure class="highlight bat"><figcaption><span>remove all sub-dir and files</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rmdir</span> A /S /Q</span><br></pre></td></tr></table></figure>
+
 <h1 id="CHDIR-CD"><a href="#CHDIR-CD" class="headerlink" title="CHDIR(CD)"></a>CHDIR(CD)</h1><figure class="highlight bat"><figcaption><span>show current dir</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:\<span class="title">TOOLS</span>\<span class="title">FreeMind</span>\<span class="title">browser</span>&gt;<span class="title">cd</span></span></span><br><span class="line"><span class="function"><span class="title">D</span>:\<span class="title">TOOLS</span>\<span class="title">FreeMind</span>\<span class="title">browser</span></span></span><br></pre></td></tr></table></figure>
+
 <figure class="highlight bat"><figcaption><span>go to upper level dir</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ..</span><br></pre></td></tr></table></figure>
-<p>CHDIR 命令不把空格当作分隔符，因此有可能将目录名改为一个<br>带有空格但不带有引号的子目录名。例如:<br><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd <span class="symbol">\w</span>innt<span class="symbol">\p</span>rofiles<span class="symbol">\u</span>sername<span class="symbol">\p</span>rograms<span class="symbol">\s</span>tart menu</span><br></pre></td></tr></table></figure></p>
-<p>与下列相同:<br><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd "<span class="symbol">\w</span>innt<span class="symbol">\p</span>rofiles<span class="symbol">\u</span>sername<span class="symbol">\p</span>rograms<span class="symbol">\s</span>tart menu"</span><br></pre></td></tr></table></figure></p>
+
+<p>CHDIR 命令不把空格当作分隔符，因此有可能将目录名改为一个<br>带有空格但不带有引号的子目录名。例如:</p>
+<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd <span class="symbol">\w</span>innt<span class="symbol">\p</span>rofiles<span class="symbol">\u</span>sername<span class="symbol">\p</span>rograms<span class="symbol">\s</span>tart menu</span><br></pre></td></tr></table></figure>
+
+<p>与下列相同:</p>
+<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd "<span class="symbol">\w</span>innt<span class="symbol">\p</span>rofiles<span class="symbol">\u</span>sername<span class="symbol">\p</span>rograms<span class="symbol">\s</span>tart menu"</span><br></pre></td></tr></table></figure>
+
 <p>Reference:</p>
 <figure class="highlight plain"><figcaption><span>help DIR</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">显示目录中的文件和子目录列表。</span><br><span class="line"></span><br><span class="line">DIR [drive:][path][filename] [/A[[:]attributes]] [/B] [/C] [/D] [/L] [/N]</span><br><span class="line">  [/O[[:]sortorder]] [/P] [/Q] [/R] [/S] [/T[[:]timefield]] [/W] [/X] [/4]</span><br><span class="line"></span><br><span class="line">  [drive:][path][filename]</span><br><span class="line">              指定要列出的驱动器、目录和/或文件。</span><br><span class="line"></span><br><span class="line">  /A          显示具有指定属性的文件。</span><br><span class="line">  属性         D  目录                R  只读文件</span><br><span class="line">               H  隐藏文件            A  准备存档的文件</span><br><span class="line">               S  系统文件            I  无内容索引文件</span><br><span class="line">               L  解析点             -  表示“否”的前缀</span><br><span class="line">  /B          使用空格式(没有标题信息或摘要)。</span><br><span class="line">  /C          在文件大小中显示千位数分隔符。这是默认值。用 /-C 来</span><br><span class="line">              禁用分隔符显示。</span><br><span class="line">  /D          跟宽式相同，但文件是按栏分类列出的。</span><br><span class="line">  /L          用小写。</span><br><span class="line">  /N          新的长列表格式，其中文件名在最右边。</span><br><span class="line">  /O          用分类顺序列出文件。</span><br><span class="line">  排列顺序     N  按名称(字母顺序)     S  按大小(从小到大)</span><br><span class="line">               E  按扩展名(字母顺序)   D  按日期/时间(从先到后)</span><br><span class="line">               G  组目录优先           -  反转顺序的前缀</span><br><span class="line">  /P          在每个信息屏幕后暂停。</span><br><span class="line">  /Q          显示文件所有者。</span><br><span class="line">  /R          显示文件的备用数据流。</span><br><span class="line">  /S          显示指定目录和所有子目录中的文件。</span><br><span class="line">  /T          控制显示或用来分类的时间字符域。</span><br><span class="line">  时间段      C  创建时间</span><br><span class="line">              A  上次访问时间</span><br><span class="line">              W  上次写入的时间</span><br><span class="line">  /W          用宽列表格式。</span><br><span class="line">  /X          显示为非 8.3 文件名产生的短名称。格式是 /N 的格式，</span><br><span class="line">              短名称插在长名称前面。如果没有短名称，在其位置则</span><br><span class="line">              显示空白。</span><br><span class="line">  /4          用四位数字显示年</span><br><span class="line"></span><br><span class="line">可以在 DIRCMD 环境变量中预先设定开关。通过添加前缀 - (破折号)</span><br><span class="line">来替代预先设定的开关。例如，/-W。</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight plain"><figcaption><span>help MKDIR</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">创建目录。</span><br><span class="line"></span><br><span class="line">MKDIR [drive:]path</span><br><span class="line">MD [drive:]path</span><br><span class="line"></span><br><span class="line">如果命令扩展被启用，MKDIR 会如下改变:</span><br><span class="line"></span><br><span class="line">如果需要，MKDIR 会在路径中创建中级目录。例如: 假设 \a 不</span><br><span class="line">存在，那么:</span><br><span class="line"></span><br><span class="line">    mkdir \a\b\c\d</span><br><span class="line"></span><br><span class="line">与:</span><br><span class="line"></span><br><span class="line">    mkdir \a</span><br><span class="line">    chdir \a</span><br><span class="line">    mkdir b</span><br><span class="line">    chdir b</span><br><span class="line">    mkdir c</span><br><span class="line">    chdir c</span><br><span class="line">    mkdir d</span><br><span class="line"></span><br><span class="line">相同。如果扩展被停用，则需要键入 mkdir \a\b\c\d。</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight plain"><figcaption><span>help RMDIR</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">删除一个目录。</span><br><span class="line"></span><br><span class="line">RMDIR [/S] [/Q] [drive:]path</span><br><span class="line">RD [/S] [/Q] [drive:]path</span><br><span class="line"></span><br><span class="line">    /S      除目录本身外，还将删除指定目录下的所有子目录和</span><br><span class="line">            文件。用于删除目录树。</span><br><span class="line"></span><br><span class="line">    /Q      安静模式，带 /S 删除目录树时不要求确认</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight plain"><figcaption><span>help CHDIR</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">显示当前目录名或改变当前目录。</span><br><span class="line"></span><br><span class="line">CHDIR [/D] [drive:][path]</span><br><span class="line">CHDIR [..]</span><br><span class="line">CD [/D] [drive:][path]</span><br><span class="line">CD [..]</span><br><span class="line"></span><br><span class="line">  ..   指定要改成父目录。</span><br><span class="line"></span><br><span class="line">键入 CD drive: 显示指定驱动器中的当前目录。</span><br><span class="line">不带参数只键入 CD，则显示当前驱动器和目录。</span><br><span class="line"></span><br><span class="line">使用 /D 开关，除了改变驱动器的当前目录之外，</span><br><span class="line">还可改变当前驱动器。</span><br><span class="line"></span><br><span class="line">如果命令扩展被启用，CHDIR 会如下改变:</span><br><span class="line"></span><br><span class="line">当前的目录字符串会被转换成使用磁盘名上的大小写。所以，</span><br><span class="line">如果磁盘上的大小写如此，CD C:\TEMP 会将当前目录设为</span><br><span class="line">C:\Temp。</span><br><span class="line"></span><br><span class="line">CHDIR 命令不把空格当作分隔符，因此有可能将目录名改为一个</span><br><span class="line">带有空格但不带有引号的子目录名。例如:</span><br><span class="line"></span><br><span class="line">     cd \winnt\profiles\username\programs\start menu</span><br><span class="line"></span><br><span class="line">与下列相同:</span><br><span class="line"></span><br><span class="line">     cd &quot;\winnt\profiles\username\programs\start menu&quot;</span><br><span class="line"></span><br><span class="line">在扩展停用的情况下，你必须键入以上命令。</span><br></pre></td></tr></table></figure>
       
     </div>
@@ -744,7 +761,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="WU Chenxu">
             
@@ -1188,7 +1205,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">239k</span>
+    <span title="站点总字数">240k</span>
   
 
   
@@ -1199,12 +1216,12 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:37</span>
+    <span title="站点阅读时长">3:38</span>
   
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 
