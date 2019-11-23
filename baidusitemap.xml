@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.wuchenxu.com/2017/09/21/hype-cycle/</loc>
+    <lastmod>2019-11-23</lastmod>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2019/10/07/reading-notes-5-The-Clean-Coder/</loc>
+    <lastmod>2019-10-07</lastmod>
+  </url>  <url>
     <loc>https://www.wuchenxu.com/2019/05/02/reading-notes-4-Head-First-Design-Pattern/</loc>
-    <lastmod>2019-08-03</lastmod>
+    <lastmod>2019-08-04</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2015/11/04/Static-Blog-hexo-github-1-Start/</loc>
     <lastmod>2019-06-28</lastmod>
@@ -90,9 +96,6 @@
   </url>  <url>
     <loc>https://www.wuchenxu.com/2015/11/09/Static-Blog-hexo-github-3-config-theme/</loc>
     <lastmod>2018-12-23</lastmod>
-  </url>  <url>
-    <loc>https://www.wuchenxu.com/2017/09/21/hype-cycle/</loc>
-    <lastmod>2018-12-08</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2018/05/11/safety-and-security/</loc>
     <lastmod>2018-05-11</lastmod>
