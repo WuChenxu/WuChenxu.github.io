@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.wuchenxu.com/2015/12/07/CRC8-calculate/</loc>
+    
+    <lastmod>2019-12-21T15:31:26.700Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.wuchenxu.com/2018/12/27/Knowledge-model/</loc>
+    
+    <lastmod>2019-11-24T12:56:00.555Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.wuchenxu.com/about/index.html</loc>
     
     <lastmod>2019-11-24T12:07:00.000Z</lastmod>
@@ -54,13 +68,6 @@
     <loc>https://www.wuchenxu.com/2017/01/16/software-design-1-state-machine/</loc>
     
     <lastmod>2019-05-05T12:45:19.289Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.wuchenxu.com/2018/12/27/Knowledge-model/</loc>
-    
-    <lastmod>2019-04-07T13:45:01.605Z</lastmod>
     
   </url>
   
@@ -212,21 +219,14 @@
   </url>
   
   <url>
-    <loc>https://www.wuchenxu.com/2015/12/07/CRC8-calculate/</loc>
-    
-    <lastmod>2018-12-27T11:54:40.072Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.wuchenxu.com/404.html</loc>
+    <loc>https://www.wuchenxu.com/downloads/code/404.html</loc>
     
     <lastmod>2018-12-24T14:22:16.053Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.wuchenxu.com/downloads/code/404.html</loc>
+    <loc>https://www.wuchenxu.com/404.html</loc>
     
     <lastmod>2018-12-24T14:22:16.053Z</lastmod>
     

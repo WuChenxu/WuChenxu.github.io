@@ -1,4 +1,9 @@
+#!/user/bin/python3
 # coding=utf-8
+__author__ = "wu_chenxu@126.com"
+__version__ = "1.1"
+__date__ = "2019-12-21"
+
 import os
 Polynomial=0x1D
 InitialValue = 0xFF
@@ -21,16 +26,16 @@ def generate_crc_table():
 		
 def print_crc8table():
 	#print as C array	
-	print "uint8 g_crc8_table[256] = {"
+	print("uint8 g_crc8_table[256] = {")
 	for i in range(0,256):
 		if (i % 8 == 0):
-			print "/*", i, ":*/",
-		print hex(crc8_table[i]), 
+			print("/*", i, ":*/", end='')
+		print(hex(crc8_table[i]), end='')
 		if (i <255):
-			print ", ",
+			print(", ", end='')
 		if ((i+1) % 8 == 0):
-			print
-	print "}"
+			print()
+	print("}")
 	
 def crc_byte(data):
 	crcTemp = InitialValue 
@@ -40,16 +45,16 @@ def crc_byte(data):
 	return (XorValue^crcTemp)
 	
 if __name__ == '__main__':
-	print "Polynomial=",hex(Polynomial)
-	print "InitialValue=", hex(InitialValue)
-	print "XorValue=", hex(XorValue)
+	print("Polynomial=",hex(Polynomial))
+	print("InitialValue=", hex(InitialValue))
+	print("XorValue=", hex(XorValue))
 	generate_crc_table()
 	print_crc8table()
 	while True:
-		string_input = raw_input("please input data:")
+		string_input = input("please input data:")
 		input_list = string_input.split()
-		print input_list
+		print(input_list)
 		input_list = [eval(a) for a in input_list]
-		print "CRC value:", hex(crc_byte(input_list))
+		print("CRC value:", hex(crc_byte(input_list)))
 	os.system('pause')
 

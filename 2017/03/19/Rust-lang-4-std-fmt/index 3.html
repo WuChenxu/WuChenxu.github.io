@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="alternate" href="/atom.xml" title="玉汝于成，功不唐捐" type="application/atom+xml">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Source Han Sans:300,300italic,400,400italic,700,700italic|Source Han Serif:300,300italic,400,400italic,700,700italic|PT Menlo:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://www.wuchenxu.com').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="本文对比Rust与Python语言的格式化输出。">
+<meta name="keywords" content="Rust,Python,fmt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Rust语言(4):格式化输出">
+<meta property="og:url" content="https://www.wuchenxu.com/2017/03/19/Rust-lang-4-std-fmt/index.html">
+<meta property="og:site_name" content="玉汝于成，功不唐捐">
+<meta property="og:description" content="本文对比Rust与Python语言的格式化输出。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-07-16T13:17:56.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Rust语言(4):格式化输出">
+<meta name="twitter:description" content="本文对比Rust与Python语言的格式化输出。">
+
+<link rel="canonical" href="https://www.wuchenxu.com/2017/03/19/Rust-lang-4-std-fmt/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Rust语言(4):格式化输出 | 玉汝于成，功不唐捐</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">玉汝于成，功不唐捐</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">92</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">45</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">74</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/WuChenxu" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2017/03/19/Rust-lang-4-std-fmt/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="WU Chenxu">
+      <meta itemprop="description" content="一切都会成为过去">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="玉汝于成，功不唐捐">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Rust语言(4):格式化输出
+        </h1>
+
+        <div class="post-meta">
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2017-07-16 21:17:56" itemprop="dateModified" datetime="2017-07-16T21:17:56+08:00">2017-07-16</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Rust/" itemprop="url" rel="index">
+                    <span itemprop="name">Rust</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Rust/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2017/03/19/Rust-lang-4-std-fmt/" class="post-meta-item leancloud_visitors" data-flag-title="Rust语言(4):格式化输出" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2017/03/19/Rust-lang-4-std-fmt/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2017/03/19/Rust-lang-4-std-fmt/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              <span>0</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>本文对比Rust与Python语言的格式化输出。</p>
+<a id="more"></a>
+<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>本文所用Rust版本为<code>1.14.0</code>，Python为<code>2.7.12</code>。
+可以使用在线编译调试工具来测试本文所举示例代码。<br><a href="https://play.rust-lang.org/" target="_blank" rel="noopener">Rust playground</a><br><a href="http://ideone.com/" target="_blank" rel="noopener">Python playground</a></p>
+<h1 id="basic-usage"><a href="#basic-usage" class="headerlink" title="basic usage"></a>basic usage</h1><p>Rust与Python都可以用<code>{}</code>来表示将要被替换变量的占位符。</p>
+<h2 id="Rust"><a href="#Rust" class="headerlink" title="Rust"></a>Rust</h2><ul>
+<li><code>print!</code>将格式化文本输出到控制台，不带换行符。</li>
+<li><code>println!</code>将格式化文本输出到控制到，末尾加一个换行符。</li>
+<li><code>format!</code>将格式化文本输出到字符串。</li>
+</ul>
+<figure class="highlight rust"><figcaption><span>Rust</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print!</span>(<span class="string">"&#123;&#125;.print is output to console w/o newline."</span>, <span class="number">1</span>);</span><br><span class="line"><span class="built_in">print!</span>(<span class="string">"Continue..."</span>);</span><br><span class="line"><span class="built_in">print!</span>(<span class="string">"\n"</span>);</span><br><span class="line"><span class="built_in">println!</span>(<span class="string">"&#123;&#125;.println is string to console w/ newline."</span>, <span class="number">2</span>);</span><br><span class="line"><span class="keyword">let</span> <span class="built_in">str</span> = <span class="built_in">format!</span>(<span class="string">"&#123;&#125;.format is output to a string."</span>, <span class="number">3</span>);</span><br><span class="line"><span class="built_in">assert_eq!</span>(<span class="built_in">str</span>, <span class="string">"3.format is output to a string."</span>);</span><br><span class="line"><span class="built_in">println!</span>(<span class="string">"&#123;&#125;"</span>, <span class="built_in">str</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="Python2-7"><a href="#Python2-7" class="headerlink" title="Python2.7"></a>Python2.7</h2><ul>
+<li><code>print</code>来打印文本到控制台，末尾加一个换行符。</li>
+<li><code>str.format()</code>将格式化文本输出到字符串。</li>
+</ul>
+<figure class="highlight python"><figcaption><span>Python2.7</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"&#123;&#125; world"</span>.format(<span class="string">"Hello"</span>))</span><br></pre></td></tr></table></figure>
+
+<h1 id="with-arguments"><a href="#with-arguments" class="headerlink" title="with arguments"></a>with arguments</h1><ul>
+<li>more arguments</li>
+<li>positional arguments</li>
+<li>named arguments</li>
+</ul>
+<figure class="highlight rust"><figcaption><span>Rust</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">println!</span>(<span class="string">"&#123;&#125;, &#123;&#125;"</span>, <span class="string">"Hello"</span>, <span class="string">"world"</span>);</span><br><span class="line"><span class="built_in">println!</span>(<span class="string">"&#123;0&#125;, this is &#123;1&#125;. &#123;1&#125;, this is &#123;0&#125;."</span>, <span class="string">"Hellen"</span>, <span class="string">"Tom"</span>);</span><br><span class="line"><span class="built_in">println!</span>(<span class="string">"&#123;subject&#125; &#123;verb&#125; &#123;object&#125;"</span>, object=<span class="string">"the lazy dog"</span>, subject=<span class="string">"the quick brwon fox"</span>, verb=<span class="string">"jumps over"</span>);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><figcaption><span>Python2.7</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"&#123;&#125;,&#123;&#125;"</span>.format(<span class="string">"hello"</span>, <span class="string">"world"</span>))</span><br><span class="line">print(<span class="string">"&#123;0&#125;, this is &#123;1&#125;. &#123;1&#125;, this is &#123;0&#125;."</span>.format(<span class="string">"Hellen"</span>, <span class="string">"Tom"</span>))</span><br><span class="line">print(<span class="string">"&#123;subject&#125; &#123;verb&#125; &#123;object&#125;"</span>.format(object=<span class="string">"the lazy dog"</span>, subject=<span class="string">"the quick brown fox"</span>, verb=<span class="string">"jumps over"</span>))</span><br></pre></td></tr></table></figure>
+
+<h1 id="special-format"><a href="#special-format" class="headerlink" title="special format"></a>special format</h1><table>
+<thead>
+<tr>
+<th align="center">*      数字    *</th>
+<th align="center">* Rust格式     *</th>
+<th align="center">* Python格式      *</th>
+<th align="center">*          输出      *</th>
+<th align="center">*            描述          *</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">3.1415926</td>
+<td align="center">{:.2}</td>
+<td align="center">{:.2f}</td>
+<td align="center">3.14</td>
+<td align="center">保留小数点后两位</td>
+</tr>
+<tr>
+<td align="center">3.1415926</td>
+<td align="center">{:+.2}</td>
+<td align="center">{:+.2f}</td>
+<td align="center">+3.14</td>
+<td align="center">带符号保留小数点后两位</td>
+</tr>
+<tr>
+<td align="center">-1</td>
+<td align="center">{:+.2}</td>
+<td align="center">{:+.2f}</td>
+<td align="center">-1(R)/-1.00(P)</td>
+<td align="center">带符号保留小数点后两位</td>
+</tr>
+<tr>
+<td align="center">-1.0</td>
+<td align="center">{:+.2}</td>
+<td align="center">{:+.2f}</td>
+<td align="center">-1.00</td>
+<td align="center">带符号保留小数点后两位</td>
+</tr>
+<tr>
+<td align="center">2.71828</td>
+<td align="center">{:.0}}</td>
+<td align="center">{:.0f}</td>
+<td align="center">3</td>
+<td align="center">不带小数</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">{:0&gt;2}/{:02}</td>
+<td align="center">{:0&gt;2d}/{:02d}</td>
+<td align="center">05</td>
+<td align="center">数字补0 (填充左边, 宽度为2)</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">{:x^10}</td>
+<td align="center">{:x^10d}</td>
+<td align="center">xxxx5xxxxx</td>
+<td align="center">居中对齐</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">{:x&lt;4}</td>
+<td align="center">{:x&lt;4d}</td>
+<td align="center">5xxx</td>
+<td align="center">数字补x (填充右边, 宽度为4)</td>
+</tr>
+<tr>
+<td align="center">1000000</td>
+<td align="center">NA.</td>
+<td align="center">{:,}</td>
+<td align="center">1,000,000</td>
+<td align="center">以逗号分隔的数字格式</td>
+</tr>
+<tr>
+<td align="center">0.25</td>
+<td align="center">NA.</td>
+<td align="center">{:.2%}</td>
+<td align="center">25.00%</td>
+<td align="center">百分比格式</td>
+</tr>
+<tr>
+<td align="center">1000000000</td>
+<td align="center">NA.</td>
+<td align="center">{:.2e}</td>
+<td align="center">1.00e+09</td>
+<td align="center">指数记法</td>
+</tr>
+<tr>
+<td align="center">1000000000.0</td>
+<td align="center">{:2e}</td>
+<td align="center">{:.2e}</td>
+<td align="center">1e9(R)/1.00e+09(P)</td>
+<td align="center">指数记法</td>
+</tr>
+<tr>
+<td align="center">1000000000.0</td>
+<td align="center">{:2E}</td>
+<td align="center">{:.2E}</td>
+<td align="center">1E9(R)/1.00E+09(P)</td>
+<td align="center">指数记法</td>
+</tr>
+<tr>
+<td align="center">42</td>
+<td align="center">{:b}</td>
+<td align="center">{:b}</td>
+<td align="center">101010</td>
+<td align="center">二进制</td>
+</tr>
+<tr>
+<td align="center">42</td>
+<td align="center">{:o}</td>
+<td align="center">{:o}</td>
+<td align="center">52</td>
+<td align="center">八进制</td>
+</tr>
+<tr>
+<td align="center">42</td>
+<td align="center">{:x}</td>
+<td align="center">{:x}</td>
+<td align="center">2a</td>
+<td align="center">十六进制</td>
+</tr>
+<tr>
+<td align="center">42</td>
+<td align="center">{:X}</td>
+<td align="center">{:X}</td>
+<td align="center">2A</td>
+<td align="center">十六进制</td>
+</tr>
+<tr>
+<td align="center">42</td>
+<td align="center">{:#b}</td>
+<td align="center">{:#b}</td>
+<td align="center">0b101010</td>
+<td align="center">带前缀的二进制</td>
+</tr>
+<tr>
+<td align="center">42</td>
+<td align="center">{:#o}</td>
+<td align="center">{:#o}</td>
+<td align="center">0o52</td>
+<td align="center">带前缀的八进制</td>
+</tr>
+<tr>
+<td align="center">42</td>
+<td align="center">{:#x}</td>
+<td align="center">{:#x}</td>
+<td align="center">0x2a</td>
+<td align="center">带前缀的十六进制</td>
+</tr>
+<tr>
+<td align="center">42</td>
+<td align="center">{:#X}</td>
+<td align="center">{:#X}</td>
+<td align="center">0x2A(R)/0X2A(P)</td>
+<td align="center">带前缀的十六进制</td>
+</tr>
+</tbody></table>
+<figure class="highlight rust"><figcaption><span>Rust precision specified in arg</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//第一个参数是小数点后的位数</span></span><br><span class="line"><span class="built_in">println!</span>(<span class="string">"Pi is &#123;:+.*&#125;"</span>, <span class="number">2</span>, <span class="number">3.1415926</span>);</span><br></pre></td></tr></table></figure>
+
+<h1 id="escape"><a href="#escape" class="headerlink" title="escape {}"></a>escape <code>{}</code></h1><figure class="highlight rust"><figcaption><span>Rust escape&#123;&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">println!</span>(<span class="string">"&#123;&#123; &#123;t&#125; &#125;&#125;"</span>, t=<span class="string">"escape"</span>);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><figcaption><span>Python escape&#123;&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">" The &#123;&#125; set is often represented as &#123; &#123;0&#125; &#125; "</span>.format(<span class="string">"empty"</span>))</span><br></pre></td></tr></table></figure>
+
+<p>References：</p>
+<ol>
+<li><a href="https://rustwiki.org/rust-by-example/hello/print.html" target="_blank" rel="noopener">Rust print</a></li>
+<li><a href="https://doc.rust-lang.org/std/fmt/index.html" target="_blank" rel="noopener">Module std::fmt</a></li>
+<li><a href="http://blog.xiayf.cn/2013/01/26/python-string-format/" target="_blank" rel="noopener">Python格式字符串（译）</a></li>
+<li><a href="http://stackoverflow.com/questions/493386/how-to-print-without-newline-or-space" target="_blank" rel="noopener">how-to-print-without-newline-or-space</a></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Rust/" rel="tag"><i class="fa fa-tag"></i> Rust</a>
+              <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+              <a href="/tags/fmt/" rel="tag"><i class="fa fa-tag"></i> fmt</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2017/02/27/software-design-2-variant-handling/" rel="prev" title="software development(2):variant handling">
+      <i class="fa fa-chevron-left"></i> software development(2):variant handling
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2017/05/05/reading-notes-2-practice-guide-for-frontline-architects/" rel="next" title="一线架构师实践指南 by 温昱">
+      一线架构师实践指南 by 温昱 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="comments"></div>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#basic-usage"><span class="nav-number">2.</span> <span class="nav-text">basic usage</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Rust"><span class="nav-number">2.1.</span> <span class="nav-text">Rust</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python2-7"><span class="nav-number">2.2.</span> <span class="nav-text">Python2.7</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#with-arguments"><span class="nav-number">3.</span> <span class="nav-text">with arguments</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#special-format"><span class="nav-number">4.</span> <span class="nav-text">special format</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#escape"><span class="nav-number">5.</span> <span class="nav-text">escape {}</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="WU Chenxu"
+      src="/uploads/avatar.jpg">
+  <p class="site-author-name" itemprop="name">WU Chenxu</p>
+  <div class="site-description" itemprop="description">一切都会成为过去</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">74</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">92</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/WuChenxu" title="GitHub → https://github.com/WuChenxu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:wu_chenxu@126.com" title="E-Mail → mailto:wu_chenxu@126.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">WU Chenxu</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">242k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">3:40</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.5.0
+  </div>
+  <div class="footer-custom">Hosted by <a href="https://pages.coding.me" class="theme-link" rel="noopener" target="_blank">Coding Pages</a></div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout: 3000,
+        priority: true,
+        ignores: [uri => uri.includes('#'),uri => uri == 'https://www.wuchenxu.com/2017/03/19/Rust-lang-4-std-fmt/',]
+      });
+      });
+  </script>
+
+
+<script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: 'cUCWv4VRYjKGSICWV819XA6C-gzGzoHsz',
+    appKey: 'wwuXS4PSgyQdr8sHb2OVteKd',
+    placeholder: "Just go go",
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true,
+    lang: '' || 'zh-cn',
+    path: location.pathname,
+    recordIP: false,
+    serverURLs: ''
+  });
+}, window.Valine);
+</script>
+
+</body>
+</html>

@@ -492,8 +492,8 @@ References:
 理想的知识结构模型应该是T字形，横表示广度，竖表示深度。缺一不可。
 [木桶理论](https://wiki.mbalib.com/wiki/%E6%9C%A8%E6%A1%B6%E5%8E%9F%E7%90%86)过分强调不要短板，广度优先，处处平衡; 
 [长板理论](https://baike.sogou.com/v62597640.htm?fromTitle=%E9%95%BF%E6%9D%BF%E7%90%86%E8%AE%BA)过分强调深度，深度优先，精耕细作。
-考虑到多个领域，可以是多个T的叠加，最终的结果就是类似于上图所示的图形，有点像二师兄的九齿钉耙。 :)
-如果考虑到知识随着时间的迭代，那么我们最终会看到三个维度：
+考虑到多个领域，可以是多个T的叠加（有些地方称为π型结构, π type talent），最终的结果就是类似于上图所示的图形，有点像二师兄的九齿钉耙。 :)
+如果考虑到知识随着时间的迭代（动态性），那么我们最终会看到三个维度：
 - 广度：博
 - 深度：专
 - 时间：新
@@ -526,7 +526,8 @@ References:
 Reference:
 1. [T型知识结构](https://blog.csdn.net/u014805066/article/details/64437617)
 2. [20 hours to learn something new](https://ideas.ted.com/dont-have-10000-hours-to-learn-something-new-thats-fine-all-you-need-is-20-hours/)
-3. [哪些网站适合用于充电、学习新知识？](https://www.zhihu.com/question/19933005)]]></content>
+3. [哪些网站适合用于充电、学习新知识？](https://www.zhihu.com/question/19933005)
+4. [实现从T型知识结构到π型知识结构的转变](https://www.jianshu.com/p/d625356dc3c5)]]></content>
       <categories>
         <category>knowledge</category>
       </categories>
@@ -6703,8 +6704,8 @@ Reference:
         <category>CSS</category>
       </categories>
       <tags>
-        <tag>CSS</tag>
         <tag>Markdown</tag>
+        <tag>CSS</tag>
       </tags>
   </entry>
   <entry>
@@ -7642,6 +7643,11 @@ binary: 11110010 00000001 10000011 00000000  <- 先在校验码位置补8个0
     ---------------------------------------- 
                                    11000110   ->CRC:C6h
 
+需要注意的是：在实际的算法中，会增加刚算法开始时初始化的值以及最后结果的异或值作为参数。
+
+下面时AUTOSAR中对8位CRC算法J1850多项式1D的描述：
+{% asset_img Autosar_CRC_J1850.png %} 
+
 # CRC计算代码
 
 ## 根据算法描述计算CRC
@@ -7653,7 +7659,7 @@ binary: 11110010 00000001 10000011 00000000  <- 先在校验码位置补8个0
 
 Reference:
 1. [CRC wiki](https://en.wikipedia.org/wiki/Cyclic_redundancy_check)
-2. [AUTOSAR_SWS_CRCLibrary](http://www.autosar.org/fileadmin/files/releases/4-2/software-architecture/safety-and-security/standard/AUTOSAR_SWS_CRCLibrary.pdf)
+2. [AUTOSAR_SWS_CRCLibrary](https://www.autosar.org/fileadmin/user_upload/standards/classic/19-11/AUTOSAR_SWS_CRCLibrary.pdf)
 3. [CRC online](http://depa.usst.edu.cn/chenjq/www2/software/crc/CRC_Javascript/CRCcalculation.htm)
 4. [CRC_32分段快速查表算法在某遥测系统中的实现](http://www.doc88.com/p-194328195149.html)]]></content>
       <categories>
@@ -7741,9 +7747,9 @@ Reference:
       </categories>
       <tags>
         <tag>encoding</tag>
-        <tag>software</tag>
         <tag>byte order</tag>
         <tag>bit order</tag>
+        <tag>software</tag>
         <tag>Motorola</tag>
         <tag>Intel</tag>
         <tag>MSB</tag>
@@ -7905,9 +7911,9 @@ Reference:
       </categories>
       <tags>
         <tag>encoding</tag>
-        <tag>software</tag>
         <tag>byte order</tag>
         <tag>bit order</tag>
+        <tag>software</tag>
         <tag>Motorola</tag>
         <tag>Intel</tag>
         <tag>MSB</tag>

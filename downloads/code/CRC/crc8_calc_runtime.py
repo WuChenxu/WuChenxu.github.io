@@ -1,4 +1,8 @@
+#!/user/bin/env python3
 # coding=utf-8
+__author__ = "wu_chenxu@126.com"
+__version__ = "1.1"
+__date__ = "2019-12-21"
 import os
 Polynomial=0x1D
 InitialValue = 0xFF
@@ -19,14 +23,14 @@ def crc_byte(data):
 		crcTemp = (crc_1byte(crcTemp^byte))
 	return XorValue^crcTemp
 if __name__ == '__main__':
-	print "Polynomial=",hex(Polynomial)
-	print "InitialValue=", hex(InitialValue)
-	print "XorValue=", hex(XorValue)
+	print("Polynomial=",hex(Polynomial))
+	print("InitialValue=", hex(InitialValue))
+	print("XorValue=", hex(XorValue))
 	while True:
-		string_input = raw_input("please input data:")
+		string_input = input("please input data:")
 		input_list = string_input.split()
-		print input_list
+		print(input_list)
 		input_list = [eval(a) for a in input_list]
-		print "CRC value:", hex(crc_byte(input_list))
+		print("CRC value:", hex(crc_byte(input_list)))
 	os.system('pause')
 

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.wuchenxu.com/2015/12/07/CRC8-calculate/</loc>
+    <lastmod>2019-12-21</lastmod>
+  </url>  <url>
+    <loc>https://www.wuchenxu.com/2018/12/27/Knowledge-model/</loc>
+    <lastmod>2019-11-24</lastmod>
+  </url>  <url>
     <loc>https://www.wuchenxu.com/2017/09/21/hype-cycle/</loc>
     <lastmod>2019-11-23</lastmod>
   </url>  <url>
@@ -21,9 +27,6 @@
   </url>  <url>
     <loc>https://www.wuchenxu.com/2017/01/16/software-design-1-state-machine/</loc>
     <lastmod>2019-05-05</lastmod>
-  </url>  <url>
-    <loc>https://www.wuchenxu.com/2018/12/27/Knowledge-model/</loc>
-    <lastmod>2019-04-07</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2018/12/31/Unix-Linux-cmd-1-find-grep/</loc>
     <lastmod>2019-01-01</lastmod>
@@ -87,9 +90,6 @@
   </url>  <url>
     <loc>https://www.wuchenxu.com/2015/11/09/Static-Blog-hexo-github-4-advanced/</loc>
     <lastmod>2018-12-29</lastmod>
-  </url>  <url>
-    <loc>https://www.wuchenxu.com/2015/12/07/CRC8-calculate/</loc>
-    <lastmod>2018-12-27</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2015/11/05/Static-Blog-hexo-github-2-config-hexo/</loc>
     <lastmod>2018-12-23</lastmod>
