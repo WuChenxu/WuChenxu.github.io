@@ -38,6 +38,9 @@ def print_crc8table():
 	print("}")
 	
 def crc_byte(data):
+	if len(crc8_table) != 256:
+		generate_crc_table()
+
 	crcTemp = InitialValue 
 	for byte in data:
 		crcTemp ^= byte
