@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 4.1.1">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -50,17 +50,19 @@
 </script>
 
   <meta name="description" content="标签插件(tag plugins)是hexo用于在文章中快速插入特定内容的插件。hexo的很多插件类似octopress，有些插件的使用方法官方文档没有octopress的文档详细。有些tag，markdown的语法就能实现类似的效果就使用更通用的markdown，按照我的使用先后来记录，慢慢补齐。我使用的hexo版本是3.8.0">
-<meta name="keywords" content="hexo,github,blog">
 <meta property="og:type" content="article">
 <meta property="og:title" content="个人博客搭建hexo+github(6):标签插件">
 <meta property="og:url" content="https://www.wuchenxu.com/2015/12/08/Static-Blog-hexo-github-6-tag-plugins/index.html">
 <meta property="og:site_name" content="玉汝于成，功不唐捐">
 <meta property="og:description" content="标签插件(tag plugins)是hexo用于在文章中快速插入特定内容的插件。hexo的很多插件类似octopress，有些插件的使用方法官方文档没有octopress的文档详细。有些tag，markdown的语法就能实现类似的效果就使用更通用的markdown，按照我的使用先后来记录，慢慢补齐。我使用的hexo版本是3.8.0">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-31T12:23:17.856Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2015-12-08T13:56:39.000Z">
+<meta property="article:modified_time" content="2018-12-31T12:23:17.856Z">
+<meta property="article:author" content="WU Chenxu">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="github">
+<meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="个人博客搭建hexo+github(6):标签插件">
-<meta name="twitter:description" content="标签插件(tag plugins)是hexo用于在文章中快速插入特定内容的插件。hexo的很多插件类似octopress，有些插件的使用方法官方文档没有octopress的文档详细。有些tag，markdown的语法就能实现类似的效果就使用更通用的markdown，按照我的使用先后来记录，慢慢补齐。我使用的hexo版本是3.8.0">
 
 <link rel="canonical" href="https://www.wuchenxu.com/2015/12/08/Static-Blog-hexo-github-6-tag-plugins/">
 
@@ -151,12 +153,12 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">92</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">90</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">45</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">43</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
@@ -299,16 +301,13 @@
 <h1 id="Include-Code"><a href="#Include-Code" class="headerlink" title="Include Code"></a>Include Code</h1><p>插入代码，这个是可以把整个文件作为代码插入，这样做的好处是作为可运行的代码后续如果修正了bug，重新<code>hexo g</code>一下文章中的代码就会自动更新；不需要每次从文件中拷贝粘贴代码到文章中。</p>
 <h2 id="配置code存放路径"><a href="#配置code存放路径" class="headerlink" title="配置code存放路径"></a>配置code存放路径</h2><p>在hexo的配置文件<code>hexo/_config.yml</code>中看到<code>code_dir: downloads/code</code>,说明所有的code文件都放到<code>source/downloads/code</code>文件夹下。</p>
 <h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% include_code [title] [<span class="keyword">lan</span><span class="variable">g:language</span>] path/<span class="keyword">to</span>/<span class="keyword">file</span> %&#125;</span><br></pre></td></tr></table></figure>
-
 <p><code>[title]</code>:可选，标题名，默认是文件名<br><code>[lang:language]</code>:可选设置语言后，根据不同的语言设置语法高亮</p>
 <h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p>代码文件存放在<code>source/downloads/code/hello_world.c</code>.</p>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% include_code lang:<span class="built_in">c</span> hello world <span class="keyword">in</span> <span class="built_in">c</span> lang hello_world.<span class="built_in">c</span> %&#125;</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight c"><figcaption><span> hello world in c lang</span><a href="/downloads/code/hello_world.c">view raw</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"hello world!"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 
 <h1 id="frame"><a href="#frame" class="headerlink" title="frame"></a>frame</h1><p>To embed an iframe:</p>
 <figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% iframe url [width] [height] %&#125;</span><br></pre></td></tr></table></figure>
-
 <p>当然也可以直接插入HTML格式的标签。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">marginheight</span>=<span class="string">"0"</span> <span class="attr">width</span>=<span class="string">330</span> <span class="attr">height</span>=<span class="string">86</span> <span class="attr">src</span>=<span class="string">"//music.163.com/outchain/player?type=2&amp;id=247745&amp;auto=0&amp;height=66"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -406,13 +405,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-count">43</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">92</span>
+        <span class="site-state-item-count">90</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -424,7 +423,7 @@
   </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/WuChenxu" title="GitHub → https://github.com/WuChenxu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+        <a href="https://github.com/WuChenxu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;WuChenxu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
         <a href="mailto:wu_chenxu@126.com" title="E-Mail → mailto:wu_chenxu@126.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
@@ -463,18 +462,18 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">242k</span>
+    <span title="站点总字数">215k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">3:40</span>
+    <span title="站点阅读时长">3:15</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.1.1
   </div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.5.0
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.5.0
   </div>
   <div class="footer-custom">Hosted by <a href="https://pages.coding.me" class="theme-link" rel="noopener" target="_blank">Coding Pages</a></div>
 
@@ -496,9 +495,17 @@
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -507,7 +514,9 @@
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 

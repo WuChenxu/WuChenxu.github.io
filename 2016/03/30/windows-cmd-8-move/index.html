@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 4.1.1">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -50,17 +50,18 @@
 </script>
 
   <meta name="description" content="MOVE命令除了用来移动文件，还可以用来重命名文件或目录。">
-<meta name="keywords" content="cmd,move">
 <meta property="og:type" content="article">
 <meta property="og:title" content="windows command(8):MOVE">
 <meta property="og:url" content="https://www.wuchenxu.com/2016/03/30/windows-cmd-8-move/index.html">
 <meta property="og:site_name" content="玉汝于成，功不唐捐">
 <meta property="og:description" content="MOVE命令除了用来移动文件，还可以用来重命名文件或目录。">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-07-16T13:13:58.000Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2016-03-30T11:50:41.000Z">
+<meta property="article:modified_time" content="2017-07-16T13:13:58.000Z">
+<meta property="article:author" content="WU Chenxu">
+<meta property="article:tag" content="cmd">
+<meta property="article:tag" content="move">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="windows command(8):MOVE">
-<meta name="twitter:description" content="MOVE命令除了用来移动文件，还可以用来重命名文件或目录。">
 
 <link rel="canonical" href="https://www.wuchenxu.com/2016/03/30/windows-cmd-8-move/">
 
@@ -151,12 +152,12 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">92</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">90</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">45</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">43</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
@@ -297,14 +298,11 @@
 <a id="more"></a>
 <h1 id="批量移动文件"><a href="#批量移动文件" class="headerlink" title="批量移动文件"></a>批量移动文件</h1><p>移动所有的xls文件</p>
 <figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">move</span> \data\*.xls \second_q\reports\</span><br></pre></td></tr></table></figure>
-
 <h1 id="重命名文件"><a href="#重命名文件" class="headerlink" title="重命名文件"></a>重命名文件</h1><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">move</span> src_dir dest_dir</span><br></pre></td></tr></table></figure>
-
 <h1 id="重命名文件-1"><a href="#重命名文件-1" class="headerlink" title="重命名文件"></a>重命名文件</h1><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">move</span> file1 file2</span><br></pre></td></tr></table></figure>
 
 <p>Reference:</p>
-<figure class="highlight plain"><figcaption><span>help MOVE</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">移动文件并重命名文件和目录。</span><br><span class="line"></span><br><span class="line">要移动至少一个文件:</span><br><span class="line">MOVE [/Y | /-Y] [drive:][path]filename1[,...] destination</span><br><span class="line"></span><br><span class="line">要重命名一个目录:</span><br><span class="line">MOVE [/Y | /-Y] [drive:][path]dirname1 dirname2</span><br><span class="line"></span><br><span class="line">  [drive:][path]filename1 指定你想移动的文件位置和名称。</span><br><span class="line">  destination             指定文件的新位置。目标可包含一个驱动器号</span><br><span class="line">                          和冒号、一个目录名或组合。如果只移动一个文件</span><br><span class="line">                          并在移动时将其重命名，你还可以包括文件名。</span><br><span class="line">  [drive:][path]dirname1  指定要重命名的目录。</span><br><span class="line">  dirname2                指定目录的新名称。</span><br><span class="line"></span><br><span class="line">  /Y                      取消确认覆盖一个现有目标文件的提示。</span><br><span class="line">  /-Y                     对确认覆盖一个现有目标文件发出提示。</span><br><span class="line"></span><br><span class="line">命令行开关 /Y 可以出现在 COPYCMD 环境变量中。这可以用命令行上</span><br><span class="line">的 /-Y 替代。默认值是，除非 MOVE 命令是从一个批脚本内</span><br><span class="line">执行的，覆盖时都发出提示。</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight plain"><figcaption><span>help MOVE</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">移动文件并重命名文件和目录。</span><br><span class="line"></span><br><span class="line">要移动至少一个文件:</span><br><span class="line">MOVE [&#x2F;Y | &#x2F;-Y] [drive:][path]filename1[,...] destination</span><br><span class="line"></span><br><span class="line">要重命名一个目录:</span><br><span class="line">MOVE [&#x2F;Y | &#x2F;-Y] [drive:][path]dirname1 dirname2</span><br><span class="line"></span><br><span class="line">  [drive:][path]filename1 指定你想移动的文件位置和名称。</span><br><span class="line">  destination             指定文件的新位置。目标可包含一个驱动器号</span><br><span class="line">                          和冒号、一个目录名或组合。如果只移动一个文件</span><br><span class="line">                          并在移动时将其重命名，你还可以包括文件名。</span><br><span class="line">  [drive:][path]dirname1  指定要重命名的目录。</span><br><span class="line">  dirname2                指定目录的新名称。</span><br><span class="line"></span><br><span class="line">  &#x2F;Y                      取消确认覆盖一个现有目标文件的提示。</span><br><span class="line">  &#x2F;-Y                     对确认覆盖一个现有目标文件发出提示。</span><br><span class="line"></span><br><span class="line">命令行开关 &#x2F;Y 可以出现在 COPYCMD 环境变量中。这可以用命令行上</span><br><span class="line">的 &#x2F;-Y 替代。默认值是，除非 MOVE 命令是从一个批脚本内</span><br><span class="line">执行的，覆盖时都发出提示。</span><br></pre></td></tr></table></figure>
 <p><a href="https://technet.microsoft.com/en-us/library/bb490935.aspx" target="_blank" rel="noopener">Move in M$ website</a></p>
 
     </div>
@@ -394,13 +392,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-count">43</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">92</span>
+        <span class="site-state-item-count">90</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -412,7 +410,7 @@
   </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/WuChenxu" title="GitHub → https://github.com/WuChenxu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+        <a href="https://github.com/WuChenxu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;WuChenxu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
         <a href="mailto:wu_chenxu@126.com" title="E-Mail → mailto:wu_chenxu@126.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
@@ -451,18 +449,18 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">242k</span>
+    <span title="站点总字数">215k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">3:40</span>
+    <span title="站点阅读时长">3:15</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.1.1
   </div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.5.0
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.5.0
   </div>
   <div class="footer-custom">Hosted by <a href="https://pages.coding.me" class="theme-link" rel="noopener" target="_blank">Coding Pages</a></div>
 
@@ -484,9 +482,17 @@
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -495,7 +501,9 @@
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 4.1.1">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -49,20 +49,23 @@
   };
 </script>
 
-  <meta name="description" content="概述标记方法:    十进制数: &amp;#39;1234&amp;#39;d中 个位数字4，十位数字3，百位数字2，千位数字1，都是十进制数的一位，称为十进制位。BCD(Binary Coded Decimal)码，是指用二进制数对十进制数进行的编码，每个十进制位由一个固定bit的二进制数表示。  非压缩BCD(unpacked BCD): 指一个字节(8 bits)表示一个十进制位。压缩BCD(pBCD(">
-<meta name="keywords" content="encoding,software,computing,electronic">
+  <meta name="description" content="概述标记方法:    十进制数: &#39;1234&#39;d中 个位数字4，十位数字3，百位数字2，千位数字1，都是十进制数的一位，称为十进制位。BCD(Binary Coded Decimal)码，是指用二进制数对十进制数进行的编码，每个十进制位由一个固定bit的二进制数表示。  非压缩BCD(unpacked BCD): 指一个字节(8 bits)表示一个十进制位。压缩BCD(pBCD(">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BCD码">
 <meta property="og:url" content="https://www.wuchenxu.com/2015/11/18/BCD-CODE/index.html">
 <meta property="og:site_name" content="玉汝于成，功不唐捐">
-<meta property="og:description" content="概述标记方法:    十进制数: &amp;#39;1234&amp;#39;d中 个位数字4，十位数字3，百位数字2，千位数字1，都是十进制数的一位，称为十进制位。BCD(Binary Coded Decimal)码，是指用二进制数对十进制数进行的编码，每个十进制位由一个固定bit的二进制数表示。  非压缩BCD(unpacked BCD): 指一个字节(8 bits)表示一个十进制位。压缩BCD(pBCD(">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:description" content="概述标记方法:    十进制数: &#39;1234&#39;d中 个位数字4，十位数字3，百位数字2，千位数字1，都是十进制数的一位，称为十进制位。BCD(Binary Coded Decimal)码，是指用二进制数对十进制数进行的编码，每个十进制位由一个固定bit的二进制数表示。  非压缩BCD(unpacked BCD): 指一个字节(8 bits)表示一个十进制位。压缩BCD(pBCD(">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www.wuchenxu.com/2015/11/18/BCD-CODE/500px-Binary_clock.svg.png">
 <meta property="og:image" content="https://www.wuchenxu.com/2015/11/18/BCD-CODE/M41T_rt_bcd_reg.png">
-<meta property="og:updated_time" content="2015-11-25T12:21:20.000Z">
+<meta property="article:published_time" content="2015-11-18T09:48:13.000Z">
+<meta property="article:modified_time" content="2015-11-25T12:21:20.000Z">
+<meta property="article:author" content="WU Chenxu">
+<meta property="article:tag" content="encoding">
+<meta property="article:tag" content="software">
+<meta property="article:tag" content="computing">
+<meta property="article:tag" content="electronic">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BCD码">
-<meta name="twitter:description" content="概述标记方法:    十进制数: &amp;#39;1234&amp;#39;d中 个位数字4，十位数字3，百位数字2，千位数字1，都是十进制数的一位，称为十进制位。BCD(Binary Coded Decimal)码，是指用二进制数对十进制数进行的编码，每个十进制位由一个固定bit的二进制数表示。  非压缩BCD(unpacked BCD): 指一个字节(8 bits)表示一个十进制位。压缩BCD(pBCD(">
 <meta name="twitter:image" content="https://www.wuchenxu.com/2015/11/18/BCD-CODE/500px-Binary_clock.svg.png">
 
 <link rel="canonical" href="https://www.wuchenxu.com/2015/11/18/BCD-CODE/">
@@ -154,12 +157,12 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">92</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">90</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">45</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">43</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
@@ -296,7 +299,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <img src="/2015/11/18/BCD-CODE/500px-Binary_clock.svg.png">
+        <img src="/2015/11/18/BCD-CODE/500px-Binary_clock.svg.png" class="">
 <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>标记方法:<br>    十进制数: <code>&#39;1234&#39;d</code>中 个位数字4，十位数字3，百位数字2，千位数字1，都是十进制数的一位，称为十进制位。<br>BCD(Binary Coded Decimal)码，是指用二进制数对十进制数进行的编码，每个十进制位由一个固定bit的二进制数表示。</p>
 <blockquote>
 <p>非压缩BCD(unpacked BCD): 指一个字节(8 bits)表示一个十进制位。<br>压缩BCD(pBCD(packed BCD)): 指半字节(nibble, 4 bits)表示一个十进制位。</p>
@@ -387,14 +390,11 @@
 </tbody></table>
 <p>非压缩BCD使用8个bit来表示1个十进制位：</p>
 <figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Decimal:    <span class="number">6</span>         <span class="number">2</span>         <span class="number">8</span></span><br><span class="line">Binary : <span class="number">00000110</span>  <span class="number">00000010</span>  <span class="number">00001000</span></span><br></pre></td></tr></table></figure>
-
 <p>在非压缩BCD中高4位全是0，可以记为<code>00008412码</code>;<br>压缩BCD利用了8421码只使用4为就可以表示0-9，所以只用4位表示一个十进制位，压缩了数据, 提高了压缩效率。</p>
 <figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Decimal:             <span class="number">6</span>        <span class="number">2</span>        <span class="number">8</span></span><br><span class="line">Binary :  <span class="number">0000</span>     <span class="number">0110</span>      <span class="number">0010</span>     <span class="number">1000</span></span><br></pre></td></tr></table></figure>
-
 <p>由于计算机中以字节为最小访问单位，压缩BCD中半字节需要补全为一个字节。如上例中628，其实是0628.</p>
 <h2 id="有符号数-Signed-Integer"><a href="#有符号数-Signed-Integer" class="headerlink" title="有符号数 Signed Integer"></a>有符号数 Signed Integer</h2><h3 id="非压缩BCD表示方法"><a href="#非压缩BCD表示方法" class="headerlink" title="非压缩BCD表示方法"></a>非压缩BCD表示方法</h3><p><code>S0008421BCD</code>的最高bit位是符号位，为0认为是正数，为1则为负数。</p>
 <figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Decimal:  <span class="number">-13</span></span><br><span class="line">Binary : <span class="number">10000001</span> <span class="number">00000011</span></span><br></pre></td></tr></table></figure>
-
 <h3 id="压缩BCD表示方法"><a href="#压缩BCD表示方法" class="headerlink" title="压缩BCD表示方法"></a>压缩BCD表示方法</h3><p>对于有符号数，需要用一个半字节来表示符号。</p>
 <table>
 <thead>
@@ -449,10 +449,9 @@
 </tr>
 </tbody></table>
 <figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">number: <span class="number">-1234</span></span><br><span class="line">Decimal:   <span class="number">1</span>   <span class="number">2</span>    <span class="number">3</span>    <span class="number">4</span>     -</span><br><span class="line">Binary : <span class="number">0001</span> <span class="number">0010</span> <span class="number">0011</span> <span class="number">0100</span>  <span class="number">1101</span></span><br></pre></td></tr></table></figure>
-
 <h2 id="浮点数-Float"><a href="#浮点数-Float" class="headerlink" title="浮点数 Float"></a>浮点数 Float</h2><p>浮点数可以使用约定俗成的方法来表示，如约定小数点后只有2位。<br>123C表示+1.23；100D表示+1.00</p>
 <h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>在一些时钟芯片的寄存器采用BCD码形式输出。0x12,0x34,0x56可以表示12:34:56.<br>如M41T0 real time clock的日期和时间格式都是以压缩BCD码表示。</p>
-<img src="/2015/11/18/BCD-CODE/M41T_rt_bcd_reg.png">
+<img src="/2015/11/18/BCD-CODE/M41T_rt_bcd_reg.png" class="">
 
 
 <p>Reference:</p>
@@ -549,13 +548,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-count">43</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">92</span>
+        <span class="site-state-item-count">90</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -567,7 +566,7 @@
   </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/WuChenxu" title="GitHub → https://github.com/WuChenxu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+        <a href="https://github.com/WuChenxu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;WuChenxu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
         <a href="mailto:wu_chenxu@126.com" title="E-Mail → mailto:wu_chenxu@126.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
@@ -606,18 +605,18 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">242k</span>
+    <span title="站点总字数">215k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">3:40</span>
+    <span title="站点阅读时长">3:15</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.1.1
   </div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.5.0
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.5.0
   </div>
   <div class="footer-custom">Hosted by <a href="https://pages.coding.me" class="theme-link" rel="noopener" target="_blank">Coding Pages</a></div>
 
@@ -639,9 +638,17 @@
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -650,7 +657,9 @@
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 

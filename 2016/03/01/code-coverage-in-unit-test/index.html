@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 4.1.1">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -49,19 +49,19 @@
   };
 </script>
 
-  <meta name="description" content="徐佳莹-不痛   What is code coverage代码覆盖率(code coverage,test coverage)是单元测试(unit test)中的一种度量方法，用来评估测试用例(test case)能够覆盖多少的代码，能够从一定程度上反应代码的质量。可以用公式来表示：Code Coverage=(Number of items excuted)/(Total Number of">
-<meta name="keywords" content="test">
+  <meta name="description" content="徐佳莹-不痛   What is code coverage代码覆盖率(code coverage,test coverage)是单元测试(unit test)中的一种度量方法，用来评估测试用例(test case)能够覆盖多少的代码，能够从一定程度上反应代码的质量。可以用公式来表示：Code Coverage&#x3D;(Number of items excuted)&#x2F;(Total Number of">
 <meta property="og:type" content="article">
 <meta property="og:title" content="单元测试中的代码覆盖率(Code Coverage in Unit Test)">
 <meta property="og:url" content="https://www.wuchenxu.com/2016/03/01/code-coverage-in-unit-test/index.html">
 <meta property="og:site_name" content="玉汝于成，功不唐捐">
-<meta property="og:description" content="徐佳莹-不痛   What is code coverage代码覆盖率(code coverage,test coverage)是单元测试(unit test)中的一种度量方法，用来评估测试用例(test case)能够覆盖多少的代码，能够从一定程度上反应代码的质量。可以用公式来表示：Code Coverage=(Number of items excuted)/(Total Number of">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:description" content="徐佳莹-不痛   What is code coverage代码覆盖率(code coverage,test coverage)是单元测试(unit test)中的一种度量方法，用来评估测试用例(test case)能够覆盖多少的代码，能够从一定程度上反应代码的质量。可以用公式来表示：Code Coverage&#x3D;(Number of items excuted)&#x2F;(Total Number of">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www.wuchenxu.com/2016/03/01/code-coverage-in-unit-test/Tessy_Coverage_viewer.jpg">
-<meta property="og:updated_time" content="2018-12-31T11:43:38.004Z">
+<meta property="article:published_time" content="2016-03-01T12:33:50.000Z">
+<meta property="article:modified_time" content="2018-12-31T11:43:38.004Z">
+<meta property="article:author" content="WU Chenxu">
+<meta property="article:tag" content="test">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="单元测试中的代码覆盖率(Code Coverage in Unit Test)">
-<meta name="twitter:description" content="徐佳莹-不痛   What is code coverage代码覆盖率(code coverage,test coverage)是单元测试(unit test)中的一种度量方法，用来评估测试用例(test case)能够覆盖多少的代码，能够从一定程度上反应代码的质量。可以用公式来表示：Code Coverage=(Number of items excuted)/(Total Number of">
 <meta name="twitter:image" content="https://www.wuchenxu.com/2016/03/01/code-coverage-in-unit-test/Tessy_Coverage_viewer.jpg">
 
 <link rel="canonical" href="https://www.wuchenxu.com/2016/03/01/code-coverage-in-unit-test/">
@@ -153,12 +153,12 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">92</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">90</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">45</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">43</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
@@ -301,24 +301,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=404746058&auto=0&height=66"></iframe>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=404746058&auto=0&height=66"></iframe>
 徐佳莹-不痛
-<img src="/2016/03/01/code-coverage-in-unit-test/Tessy_Coverage_viewer.jpg">
+<img src="/2016/03/01/code-coverage-in-unit-test/Tessy_Coverage_viewer.jpg" class="">
 
 <h1 id="What-is-code-coverage"><a href="#What-is-code-coverage" class="headerlink" title="What is code coverage"></a>What is code coverage</h1><p>代码覆盖率(code coverage,test coverage)是单元测试(unit test)中的一种度量方法，用来评估测试用例(test case)能够覆盖多少的代码，能够从一定程度上反应代码的质量。可以用公式来表示：<br>Code Coverage=(Number of items excuted)/(Total Number of Items)*100%</p>
 <a id="more"></a>
 <h1 id="how-many-types-of-code-coverage"><a href="#how-many-types-of-code-coverage" class="headerlink" title="how many types of code coverage"></a>how many types of code coverage</h1><h2 id="Function-Coverage"><a href="#Function-Coverage" class="headerlink" title="Function Coverage"></a>Function Coverage</h2><p>用来指示是否所有的函数都被调用过。</p>
 <h2 id="Statement-Coverage-SC-C0"><a href="#Statement-Coverage-SC-C0" class="headerlink" title="Statement Coverage(SC,C0)"></a>Statement Coverage(SC,C0)</h2><p>语句覆盖率(statement coverage，SC)，也称为行覆盖率(line coverage)，反映了语句（汇编级指令或C语言的语句）的执行率。通常记为：C0。</p>
 <figure class="highlight c"><figcaption><span>Code excerpt to illustrate the weakness of statement coverage</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">if</span> (decision)</span><br><span class="line">&#123;</span><br><span class="line">	a = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line">a = <span class="number">1</span> / a;</span><br></pre></td></tr></table></figure>
-
 <p>test case:decision = 1,则所有语句均会执行一次，覆盖率为100%，但是如果decision是’0’,那么执行这段代码出现<code>除0</code>错误。<br>所以，即使是100%的state coverage，也有可能会有严重的bug存在。<br>100%的SC仅仅意味着：所有语句在测试中至少被执行了一次，仅此而已。<br>SC可以用来指示dead code，这些code根本不能被执行；<br>SC可以说明需要增加test case。</p>
 <h2 id="Branch-Coverage-Decision-Coverage-DC-C1"><a href="#Branch-Coverage-Decision-Coverage-DC-C1" class="headerlink" title="Branch Coverage / Decision Coverage (DC,C1)"></a>Branch Coverage / Decision Coverage (DC,C1)</h2><p>定义：是否每个控制结构（如if，case语句）的所有branch都被执行过。<br>同样上一节的代码，decision为’1’的DC只有50%，因为if隐含的else没有被执行过；如果需要达到100%的DC，至少再增加decision为 ‘0’的测试用例。<br>DC包含SC，如果100%的DC则肯定是100%的SC。<br>但如果是50%的DC并不能说明是50%的SC。因为DC是计算decision的分支，如if语句只可能是0%，50%或100%三种覆盖率，无其他可能；而SC是计算语句执行的百分比。<br>有时候100%的Branch Coverage不可能达到。</p>
 <h2 id="Condition-Coverage-CC"><a href="#Condition-Coverage-CC" class="headerlink" title="Condition Coverage(CC)"></a>Condition Coverage(CC)</h2><p>定义：是否每个布尔<code>子表达式</code>都被估值过true和false。</p>
 <figure class="highlight c"><figcaption><span>A decision can be made up of conditions</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> ((A||B)&amp;&amp;(C||!D))</span><br></pre></td></tr></table></figure>
-
 <p><code>(A||B)&amp;&amp;(C||!D)</code>是一个decision，但是由A、B、C和D四个condition(atomic decision)组成。</p>
 <h3 id="Simple-CC"><a href="#Simple-CC" class="headerlink" title="Simple CC"></a>Simple CC</h3><figure class="highlight pascal"><figcaption><span>A code snippet in Pascal and the four possible test cases (complete evaluation)</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">IF</span> A <span class="keyword">AND</span> B <span class="keyword">THEN</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">ELSE</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-
 <table>
 <thead>
 <tr>
@@ -470,7 +467,6 @@
 <h3 id="Multiple-Condition-Coverage-MCC"><a href="#Multiple-Condition-Coverage-MCC" class="headerlink" title="Multiple Condition Coverage(MCC)"></a>Multiple Condition Coverage(MCC)</h3><p>MCC要求一个desicion里的所有condition的组合都要被测试到，也就是说test case由conditon的真值表确定。<br>如上一节的例子，需要1到8所有的case来达到100%的MCC。</p>
 <h2 id="Path-Coverage-C4"><a href="#Path-Coverage-C4" class="headerlink" title="Path Coverage(C4)"></a>Path Coverage(C4)</h2><p>路径覆盖率测量所有可能的执行路径中多少路径被执行了。</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (a) x <span class="keyword">else</span> y;</span><br><span class="line"><span class="keyword">if</span> (b) z;</span><br></pre></td></tr></table></figure>
-
 <p>需要4(=2<sup>2</sup>)个test case来达到100%的path coverage。</p>
 <table>
 <thead>
@@ -587,7 +583,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#What-is-code-coverage"><span class="nav-number">1.</span> <span class="nav-text">What is code coverage</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#how-many-types-of-code-coverage"><span class="nav-number">2.</span> <span class="nav-text">how many types of code coverage</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Function-Coverage"><span class="nav-number">2.1.</span> <span class="nav-text">Function Coverage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Statement-Coverage-SC-C0"><span class="nav-number">2.2.</span> <span class="nav-text">Statement Coverage(SC,C0)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Branch-Coverage-Decision-Coverage-DC-C1"><span class="nav-number">2.3.</span> <span class="nav-text">Branch Coverage / Decision Coverage (DC,C1)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Condition-Coverage-CC"><span class="nav-number">2.4.</span> <span class="nav-text">Condition Coverage(CC)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Simple-CC"><span class="nav-number">2.4.1.</span> <span class="nav-text">Simple CC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Modified-Condition-Decision-Coverage-MC-DC-MCDC"><span class="nav-number">2.4.2.</span> <span class="nav-text">Modified Condition / Decision Coverage(MC/DC,MCDC)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Multiple-Condition-Coverage-MCC"><span class="nav-number">2.4.3.</span> <span class="nav-text">Multiple Condition Coverage(MCC)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Path-Coverage-C4"><span class="nav-number">2.5.</span> <span class="nav-text">Path Coverage(C4)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用处"><span class="nav-number">3.</span> <span class="nav-text">用处</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#局限性"><span class="nav-number">4.</span> <span class="nav-text">局限性</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#What-is-code-coverage"><span class="nav-number">1.</span> <span class="nav-text">What is code coverage</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#how-many-types-of-code-coverage"><span class="nav-number">2.</span> <span class="nav-text">how many types of code coverage</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Function-Coverage"><span class="nav-number">2.1.</span> <span class="nav-text">Function Coverage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Statement-Coverage-SC-C0"><span class="nav-number">2.2.</span> <span class="nav-text">Statement Coverage(SC,C0)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Branch-Coverage-Decision-Coverage-DC-C1"><span class="nav-number">2.3.</span> <span class="nav-text">Branch Coverage &#x2F; Decision Coverage (DC,C1)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Condition-Coverage-CC"><span class="nav-number">2.4.</span> <span class="nav-text">Condition Coverage(CC)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Simple-CC"><span class="nav-number">2.4.1.</span> <span class="nav-text">Simple CC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Modified-Condition-Decision-Coverage-MC-DC-MCDC"><span class="nav-number">2.4.2.</span> <span class="nav-text">Modified Condition &#x2F; Decision Coverage(MC&#x2F;DC,MCDC)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Multiple-Condition-Coverage-MCC"><span class="nav-number">2.4.3.</span> <span class="nav-text">Multiple Condition Coverage(MCC)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Path-Coverage-C4"><span class="nav-number">2.5.</span> <span class="nav-text">Path Coverage(C4)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用处"><span class="nav-number">3.</span> <span class="nav-text">用处</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#局限性"><span class="nav-number">4.</span> <span class="nav-text">局限性</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -610,13 +606,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-count">43</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">92</span>
+        <span class="site-state-item-count">90</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -628,7 +624,7 @@
   </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/WuChenxu" title="GitHub → https://github.com/WuChenxu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+        <a href="https://github.com/WuChenxu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;WuChenxu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
         <a href="mailto:wu_chenxu@126.com" title="E-Mail → mailto:wu_chenxu@126.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
@@ -667,18 +663,18 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">242k</span>
+    <span title="站点总字数">215k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">3:40</span>
+    <span title="站点阅读时长">3:15</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.1.1
   </div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.5.0
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.5.0
   </div>
   <div class="footer-custom">Hosted by <a href="https://pages.coding.me" class="theme-link" rel="noopener" target="_blank">Coding Pages</a></div>
 
@@ -700,9 +696,17 @@
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -711,7 +715,9 @@
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 

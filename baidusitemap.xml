@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.wuchenxu.com/2015/12/30/Markdown-html-compare/</loc>
+    <lastmod>2019-12-22</lastmod>
+  </url>  <url>
     <loc>https://www.wuchenxu.com/2015/12/07/CRC8-calculate/</loc>
     <lastmod>2019-12-21</lastmod>
   </url>  <url>
@@ -35,9 +38,6 @@
     <lastmod>2019-01-01</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2017/02/15/TeX-2-MacTex/</loc>
-    <lastmod>2019-01-01</lastmod>
-  </url>  <url>
-    <loc>https://www.wuchenxu.com/2015/12/30/Markdown-html-compare/</loc>
     <lastmod>2019-01-01</lastmod>
   </url>  <url>
     <loc>https://www.wuchenxu.com/2018/04/15/integrate-files-with-same-name-same-function-in-C/</loc>

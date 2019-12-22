@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.wuchenxu.com/2015/12/30/Markdown-html-compare/</loc>
+    
+    <lastmod>2019-12-22T07:13:23.724Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.wuchenxu.com/2015/12/07/CRC8-calculate/</loc>
     
     <lastmod>2019-12-21T15:31:26.700Z</lastmod>
@@ -89,13 +96,6 @@
     <loc>https://www.wuchenxu.com/2017/02/15/TeX-2-MacTex/</loc>
     
     <lastmod>2019-01-01T14:43:21.833Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.wuchenxu.com/2015/12/30/Markdown-html-compare/</loc>
-    
-    <lastmod>2019-01-01T14:42:39.819Z</lastmod>
     
   </url>
   
@@ -219,14 +219,14 @@
   </url>
   
   <url>
-    <loc>https://www.wuchenxu.com/downloads/code/404.html</loc>
+    <loc>https://www.wuchenxu.com/404.html</loc>
     
     <lastmod>2018-12-24T14:22:16.053Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.wuchenxu.com/404.html</loc>
+    <loc>https://www.wuchenxu.com/downloads/code/404.html</loc>
     
     <lastmod>2018-12-24T14:22:16.053Z</lastmod>
     
