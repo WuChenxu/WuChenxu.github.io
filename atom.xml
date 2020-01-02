@@ -14,7 +14,7 @@
     
   </author>
   
-  <generator uri="http://hexo.io/">Hexo</generator>
+  <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
     <title>The Clean Coder by Robert C. Martin</title>
@@ -30,6 +30,7 @@
       &lt;img src=&quot;/2019/10/07/reading-notes-5-The-Clean-Coder/clean_coder_cover.jpg&quot; class=&quot;&quot;&gt;
     
     </summary>
+    
     
       <category term="reading-notes" scheme="https://www.wuchenxu.com/categories/reading-notes/"/>
     
@@ -54,6 +55,7 @@
       &lt;img src=&quot;/2019/05/02/reading-notes-4-Head-First-Design-Pattern/HFDP.jpg&quot; class=&quot;&quot;&gt;
     
     </summary>
+    
     
       <category term="reading-notes" scheme="https://www.wuchenxu.com/categories/reading-notes/"/>
     
@@ -81,6 +83,7 @@
     
     </summary>
     
+    
       <category term="Linux cmd" scheme="https://www.wuchenxu.com/categories/Linux-cmd/"/>
     
     
@@ -106,6 +109,7 @@
     
     </summary>
     
+    
       <category term="knowledge" scheme="https://www.wuchenxu.com/categories/knowledge/"/>
     
     
@@ -127,6 +131,7 @@
       &lt;p&gt;safety: 安全，侧重于防止系统的内部故障导致生命财产损失。&lt;br&gt;security： 安保/防护，侧重于防止外部侵入导致生命财产损失。&lt;br&gt;对应到汽车领域：functional safety(功能安全)与cyber security(网络安全)&lt;/p&gt;
     
     </summary>
+    
     
       <category term="safety" scheme="https://www.wuchenxu.com/categories/safety/"/>
     
@@ -153,6 +158,7 @@
       &lt;p&gt;本文介绍了一种在软件集成过程中，遇到重名文件 和/或 重名函数时的解决方案。&lt;/p&gt;
     
     </summary>
+    
     
       <category term="software" scheme="https://www.wuchenxu.com/categories/software/"/>
     
@@ -182,6 +188,7 @@
     
     </summary>
     
+    
       <category term="AI" scheme="https://www.wuchenxu.com/categories/AI/"/>
     
     
@@ -206,6 +213,7 @@
     
     </summary>
     
+    
       <category term="management" scheme="https://www.wuchenxu.com/categories/management/"/>
     
     
@@ -228,6 +236,7 @@
     
     </summary>
     
+    
       <category term="technical" scheme="https://www.wuchenxu.com/categories/technical/"/>
     
     
@@ -249,6 +258,7 @@
       &lt;p&gt;先上结论：计算机程序可以在ROM或者RAM里执行。&lt;/p&gt;
     
     </summary>
+    
     
       <category term="technical" scheme="https://www.wuchenxu.com/categories/technical/"/>
     
@@ -282,6 +292,7 @@
     
     </summary>
     
+    
       <category term="reading-notes" scheme="https://www.wuchenxu.com/categories/reading-notes/"/>
     
     
@@ -307,6 +318,7 @@
     
     </summary>
     
+    
       <category term="reading-notes" scheme="https://www.wuchenxu.com/categories/reading-notes/"/>
     
     
@@ -330,6 +342,7 @@
       &lt;p&gt;本文对比Rust与Python语言的格式化输出。&lt;/p&gt;
     
     </summary>
+    
     
       <category term="Rust" scheme="https://www.wuchenxu.com/categories/Rust/"/>
     
@@ -359,6 +372,7 @@
     
     </summary>
     
+    
       <category term="software" scheme="https://www.wuchenxu.com/categories/software/"/>
     
     
@@ -380,6 +394,7 @@
       &lt;p&gt;本地搜索，不需要依赖外部的搜索服务，简单易用。&lt;/p&gt;
     
     </summary>
+    
     
       <category term="hexo" scheme="https://www.wuchenxu.com/categories/hexo/"/>
     
@@ -407,6 +422,7 @@
     
     </summary>
     
+    
       <category term="TeX" scheme="https://www.wuchenxu.com/categories/TeX/"/>
     
     
@@ -428,6 +444,7 @@
       &lt;p&gt;在历史的路上，有三大重要革命：大约7万年前，“认知革命”（Cognitive Revolution）让历史正式启动。大约12000年前，“农业革命”（Agricultural Revolution）让历史加速发展。而到了大约不过是500年前，“科学革命”（Scientific Revolution）可以说是让历史画下句点而另创新局。这本书的内容，讲述的就是这三大革命如何改变了人类和其他生物。&lt;/p&gt;
     
     </summary>
+    
     
       <category term="reading-notes" scheme="https://www.wuchenxu.com/categories/reading-notes/"/>
     
@@ -456,6 +473,7 @@
     
     </summary>
     
+    
       <category term="Rust" scheme="https://www.wuchenxu.com/categories/Rust/"/>
     
     
@@ -480,6 +498,7 @@
     
     </summary>
     
+    
       <category term="software" scheme="https://www.wuchenxu.com/categories/software/"/>
     
     
@@ -503,6 +522,7 @@
       &lt;p&gt;个人的一点看法，欢迎讨论。谢绝转载。&lt;/p&gt;
     
     </summary>
+    
     
       <category term="product" scheme="https://www.wuchenxu.com/categories/product/"/>
     
