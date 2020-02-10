@@ -112,6 +112,8 @@
 
 * `IS-A`：继承 ； `HAS-A/Implements`：组合
 
+* 继承可以在垂直层次上共享代码，但是在水平层次上无能为力；而通过组合可以在水平层面上共享代码。
+
 ### 实现
 [strategy pattern in ruby](https://github.com/WuChenxu/Ruby/tree/master/HeadFirstDesignPattern/StrategyPattern)
 
@@ -152,6 +154,7 @@ GUI框架里的按键等组件，注册不同的观察者到组件的不同类�
 * 装饰者一般对组件的客户是透明的，除非客户程序依赖于组件的具体类型。
 * 装饰者会导致设计中出现许多小对象，如果过度使用，会让程序变得很复杂。
 * 装饰者将一个对象包装起来以增加新的行为和责任；[适配器](#适配器模式)将一个对象包装起来以改变其接口；[外观](#外观模式)将一群对象“包装”起来以简化接口。
+* Decorator `IS` a component, AND `HAS` a component.
 
 * 相关模式：[适配器](#适配器模式),[外观模式](#外观模式)
 
@@ -172,8 +175,14 @@ GUI框架里的按键等组件，注册不同的观察者到组件的不同类�
 
 
 ### 实现
+[factory method pattern in ruby](https://github.com/WuChenxu/Ruby/tree/master/HeadFirstDesignPattern/FactoryMethodPattern)
 
 ### UML
+{% asset_img factory_method_pattern.svg factory method pattern UML %}
+
+### 常见场景
+Game里在不同的级别创建地图
+插件plugin
 
 ## 抽象工厂模式
 
@@ -320,8 +329,11 @@ GUI框架里的按键等组件，注册不同的观察者到组件的不同类�
 排序算法（CompareTo接口），Swing窗口，Applet
 Reference:
 1. [strategy pattern in ruby](https://appliedstochastics.com/articles/hfdp_ruby_01.html)
-1. [单例模式的八种写法比较](http://www.cnblogs.com/zhaoyan001/p/6365064.html)
-1. [Evaluating Alternative Decorator Implementations In Ruby](https://thoughtbot.com/blog/evaluating-alternative-decorator-implementations-in)
+2. [单例模式的八种写法比较](http://www.cnblogs.com/zhaoyan001/p/6365064.html)
+3. [Evaluating Alternative Decorator Implementations In Ruby](https://thoughtbot.com/blog/evaluating-alternative-decorator-implementations-in)
+4. [bullMind](https://www.bullmind.com/)
+5. [Design Patterns in Object Oriented Programming](https://www.youtube.com/playlist?list=PLrhzvIcii6GNjpARdnO4ueTUAVR9eMBpc)
+
 
 ]]></content>
       <categories>
@@ -6704,8 +6716,8 @@ Reference:
         <category>CSS</category>
       </categories>
       <tags>
-        <tag>Markdown</tag>
         <tag>CSS</tag>
+        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.wuchenxu.com/2019/05/02/reading-notes-4-Head-First-Design-Pattern/</loc>
+    
+    <lastmod>2020-02-10T14:28:15.896Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.wuchenxu.com/2015/12/30/Markdown-html-compare/</loc>
     
     <lastmod>2019-12-22T07:14:30.036Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>https://www.wuchenxu.com/2019/10/07/reading-notes-5-The-Clean-Coder/</loc>
     
     <lastmod>2019-10-07T13:53:01.559Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.wuchenxu.com/2019/05/02/reading-notes-4-Head-First-Design-Pattern/</loc>
-    
-    <lastmod>2019-08-04T08:54:26.199Z</lastmod>
     
   </url>
   

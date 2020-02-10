@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="alternate" href="/atom.xml" title="玉汝于成，功不唐捐" type="application/atom+xml">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Source Han Sans:300,300italic,400,400italic,700,700italic|Source Han Serif:300,300italic,400,400italic,700,700italic|PT Menlo:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://www.wuchenxu.com').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="软件工程的55个事实和5+5个谬误。划重点：  软件过程和软件产品的复杂性决定了我们在该领域的许多认识和行为。复杂性不可避免，我们不应该与之对立，而应该学会适应它。 在软件领域，糟糕的估算和由此带来的时间表压力一直在迫害我们。 在软件管理者和技术人员之间有隔阂。 鼓吹和通用的观念影响了我们形成专注于有力的、明智的项目方案的能力。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软件工程的事实与谬误 by Robert L·Glass">
+<meta property="og:url" content="https://www.wuchenxu.com/2017/05/12/reading-notes-3-Facts-and-fallacies-of-software-engineering/index.html">
+<meta property="og:site_name" content="玉汝于成，功不唐捐">
+<meta property="og:description" content="软件工程的55个事实和5+5个谬误。划重点：  软件过程和软件产品的复杂性决定了我们在该领域的许多认识和行为。复杂性不可避免，我们不应该与之对立，而应该学会适应它。 在软件领域，糟糕的估算和由此带来的时间表压力一直在迫害我们。 在软件管理者和技术人员之间有隔阂。 鼓吹和通用的观念影响了我们形成专注于有力的、明智的项目方案的能力。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.wuchenxu.com/2017/05/12/reading-notes-3-Facts-and-fallacies-of-software-engineering/cover.jpg">
+<meta property="article:published_time" content="2017-05-12T15:54:00.000Z">
+<meta property="article:modified_time" content="2017-07-16T13:09:51.000Z">
+<meta property="article:author" content="WU Chenxu">
+<meta property="article:tag" content="technical">
+<meta property="article:tag" content="reading-notes">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.wuchenxu.com/2017/05/12/reading-notes-3-Facts-and-fallacies-of-software-engineering/cover.jpg">
+
+<link rel="canonical" href="https://www.wuchenxu.com/2017/05/12/reading-notes-3-Facts-and-fallacies-of-software-engineering/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>软件工程的事实与谬误 by Robert L·Glass | 玉汝于成，功不唐捐</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">玉汝于成，功不唐捐</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">90</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">43</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">74</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/WuChenxu" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2017/05/12/reading-notes-3-Facts-and-fallacies-of-software-engineering/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="WU Chenxu">
+      <meta itemprop="description" content="一切都会成为过去">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="玉汝于成，功不唐捐">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          软件工程的事实与谬误 by Robert L·Glass
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-05-12 23:54:00" itemprop="dateCreated datePublished" datetime="2017-05-12T23:54:00+08:00">2017-05-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2017-07-16 21:09:51" itemprop="dateModified" datetime="2017-07-16T21:09:51+08:00">2017-07-16</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/reading-notes/" itemprop="url" rel="index">
+                    <span itemprop="name">reading-notes</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2017/05/12/reading-notes-3-Facts-and-fallacies-of-software-engineering/" class="post-meta-item leancloud_visitors" data-flag-title="软件工程的事实与谬误 by Robert L·Glass" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2017/05/12/reading-notes-3-Facts-and-fallacies-of-software-engineering/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2017/05/12/reading-notes-3-Facts-and-fallacies-of-software-engineering/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <img src="/2017/05/12/reading-notes-3-Facts-and-fallacies-of-software-engineering/cover.jpg" class="">
+
+<p>软件工程的55个事实和5+5个谬误。<br>划重点：</p>
+<ul>
+<li>软件过程和软件产品的<code>复杂性</code>决定了我们在该领域的许多认识和行为。复杂性不可避免，我们不应该与之对立，而应该学会适应它。</li>
+<li>在软件领域，糟糕的<code>估算</code>和由此带来的<code>时间表压力</code>一直在迫害我们。</li>
+<li>在软件管理者和技术人员之间有<code>隔阂</code>。</li>
+<li><code>鼓吹</code>和<code>通用</code>的观念影响了我们形成专注于有力的、明智的项目方案的能力。</li>
+</ul>
+<a id="more"></a>
+<h1 id="管理"><a href="#管理" class="headerlink" title="管理"></a>管理</h1><p>处于管理最底层且专长于干活的人通常比其他任何人有更大的威力。</p>
+<h2 id="人员"><a href="#人员" class="headerlink" title="人员"></a>人员</h2><p>1.<code>在软件开发中，最重要的因素不是程序员采用的工具和技术，而是程序员自身的质量。</code></p>
+<p>CMM假设良好的过程会得到良好的软件。</p>
+<p>Q：假如你的生命依靠某一软件，那么，关于该软件你最想知道什么？ A：与其他事情相比，我最想知道写该软件的人，这人一定才华横溢，严谨认真，狂热追求软件完美并按照需求运作。其他对我来说都是次要的。</p>
+<p>2.<code>对“个体差异”的研究表明，最好的程序员要比最差的程序员强28倍之多，即使他们的报酬不同，优秀程序员也是软件业中最廉价的劳动力。</code></p>
+<p>3.<code>给延期的项目增加人手会使项目进一步延期。</code><br>    Brooks法则，出自《人月神话》</p>
+<p>4.<code>工作环境对工作效率和产品质量具有深刻影响。</code><br>    你必须找到优秀的人员并善待他们，特别是给她们提供舒适的环境。</p>
+<h2 id="工具和技术"><a href="#工具和技术" class="headerlink" title="工具和技术"></a>工具和技术</h2><p>5.<code>夸大宣传是软件的瘟疫，多数软件工具对于效率和质量的提高幅度仅为5%～35%，但总有人反复说提高幅度是“数量级”的。</code></p>
+<p>6.<code>在学习新工具或者新技术的初期，程序员的工作效率和产品质量都会下降。只有克服了学习曲线之后，才可能得到实质性的收益。只有满足下面两个条件，采用新工具或者新技术才有意义：（a）新东西确实有用；（b）要想获得真正的收益，必须耐心等待。</code></p>
+<p>7.<code>软件开发者对于工具说的多，评估的少，买的多，用的少。</code></p>
+<h2 id="估算"><a href="#估算" class="headerlink" title="估算"></a>估算</h2><p>8.<code>项目失控的两个最主要的原因之一是糟糕的估算（另一个原因见事实23）。</code></p>
+<p>估算是确定项目成本和开发时间表的过程。</p>
+<p>依靠专家—无论专家曾经做过什么项目，无论这些项目与当前项目何等相似，专家都不可能做出合理的推断（软件项目的重要特征之一是各个项目所解决的问题差异很大。）</p>
+<p>依靠估算算法（复杂算法，Line of Code，Function Point）—采用一个假想的项目，按照各种建议算法输入相关数据，得到的结果差异很大（2～8倍）。</p>
+<p>9.<code>许多估算是在软件生命周期开始时完成的。后来，我们才认识到在需求定义之前，即理解问题之前进行项目估算是不正确的；也就是说，估算时机是错误的。</code></p>
+<p>10.<code>许多软件项目都是由高层管理人员或者营销人员来估算，而不是由真正构建软件的人或者他们的主管来进行估算。因此，估算软件的人员是错误的。</code></p>
+<p>高级人员和营销人员搞“政治”预测；软件人员做“理性”预测。</p>
+<p>许多（70%）估算是由与“人事部门”相关的人员完成的，很少（4%）由项目团队进行估算。</p>
+<p>11.<code>软件估算很少根据项目进度进行调整。因此，这些估算通常是错误的人在错误的时间得出的错误结果。</code></p>
+<p>12.<code>因为估算的数据是如此糟糕，所以在软件项目不能达到估算目标时，不应该再考虑估算。但是无论如何，每个人都在考虑它。</code></p>
+<p>极限编程建议客户或者用户先确定成本、时间表、功能和质量这四个因素中的前三个，软件开发者再确定第四个。</p>
+<p>我要求参与者完成一个小任务。我有意增加他的工作量，使工作时间不足。我希望参与者尽力正确地完成整体工作，这样他们会因为时间不够而得出一个未完成的作品。事实并非如此，这些参与者按照不可能的时间表勉强完成了工作。他们的作品粗糙而虚假，看起来完整但根本不可用。这说明人们为了满足不可能的时间表，以至于愿意为此牺牲作品的完整性和质量。</p>
+<p>13.<code>在管理者和程序员之间存在隔阂。对于一个未满足估算目标的项目的调查表明：从管理者看来这是一个失败的项目，而在技术人员看来却是最成功的项目。</code></p>
+<p>根本就没有做过估计的项目进展速度最快，其次是技术人员做估计得项目，最糟糕的是由管理人员做估计。</p>
+<p>在工作效率和驾驭感之间有非常强的关联性。也就是说，如果程序员感觉到能驾驭自己的结局，那么他们的工作效率会高很多。换句话说，高度控制的管理并不一定会得到最好的或者效率最高的项目。</p>
+<p>14.<code>对于可行性调研的回答几乎总是“可行”。</code></p>
+<h2 id="复用"><a href="#复用" class="headerlink" title="复用"></a>复用</h2><p>15.<code>小规模的复用（子程序库）开始于50多年以前，这个问题已经得到很好的解决。</code></p>
+<p>16.<code>虽然每个人都认为大规模服用（组件）非常重要、非常急需，但是这个问题至今还没有基本解决。</code></p>
+<p>作者认为此问题无解，根源在于软件的多样性。</p>
+<p>17.<code>大规模复用最好适用于相关的系统，也就是依赖于具体应用领域，这样就限制了它的应用范围。</code></p>
+<p>在一个更小的特定应用领域中采用大规模复用的方法，成功的概率就比较大。而在跨项目和跨应用领域中采用大规模复用方法的成功概率很小。（McBreen 2002）。</p>
+<p>18.<code>有关复用问题，有两个“三倍法则”：（a）构建可复用的组件比使用组件难三倍；（b）在将组件收录到复用库并成为通用组件之前，应该在三个不同的应用中尝试使用该组件。</code></p>
+<p>19.<code>修改复用的代码特别容易引起错误。如果一个组件中超过20%～25%的代码需要修改，那么重新实现的效率会更高。</code></p>
+<p>20.<code>设计模式复用是解决代码复用中固有问题的一种方法。</code></p>
+<p>设计模式是对反复出现的问题以及该问题的解决方案的一种描述。</p>
+<p>设计模式源于实践，而不是源于理论。</p>
+<h2 id="复杂性"><a href="#复杂性" class="headerlink" title="复杂性"></a>复杂性</h2><p>21.<strong><code>问题的复杂性每增加25%，解决方案的复杂性就增加100%。这不是一个可改变的条件（即使人们都努力降低复杂性），而是客观存在的。</code></strong></p>
+<p>22.<code>80%的软件工作是智力活动。相当大的比例是创造性的活动。很少是文书性的工作。</code></p>
+<h1 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h1><p>生命周期（software life cycle）开始于<code>需求</code>的定义和开发，在这一阶段，定义和分析“什么”问题。接着是<code>设计</code>，在这一阶段确定如何解决问题。然后是<code>编码</code>，将设计转化为计算机上可运行的代码。随后，因为整个过程中极易出现错误，所以进行<code>错误消除</code>。最终，完成了全部测试之后，软件产品交付使用，便开始了<code>维护</code>.<br>不同的步骤形成了瀑布模型，螺旋模型等，这些模型只是将步骤的顺序调整，需求、设计、编码、错误消除和维护，这些步骤都需要完成。</p>
+<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>23.<code>导致项目失控的两个最常见原因之一是不稳定的需求（另一个见事实8所说的项目估算失误）。</code></p>
+<p>24.<code>在产品完成时修订需求错误的代价最大，在开发早期修订需求错误的代价最小。</code></p>
+<p>错误在软件的存留时间越长，修订的代价越大。</p>
+<p>怎么做？</p>
+<ul>
+<li>计算机学者会坚持采用格式化的规格说明书技术；</li>
+<li>开发者则将复审放在首位；</li>
+<li>测试和质量人员要求有可测试的需求，并建立早期测试用例；</li>
+<li>系统分析员可能会要求采用建模的方法；</li>
+<li>极限编程者提倡在开发团队中吸纳一个客户代表。</li>
+</ul>
+<p>25.<code>遗漏需求是最难修订的需求错误。</code></p>
+<p>最持久的软件错误是遗漏逻辑错误，它可以逃过软件测试过程，进入发布的产品中。遗漏需求会导致遗漏逻辑。</p>
+<h2 id="设计"><a href="#设计" class="headerlink" title="设计"></a>设计</h2><p>26.<strong><code>从需求转入设计时，因为制定方案过程的复杂性，会激增出大量的衍生需求（针对一种特定设计方案的需求）。设计需求时原始需求的50倍之多。</code></strong></p>
+<p>虽然大家都认为需求追溯很有必要，但是需求扩充在一定程度上影响了需求追溯。需求追溯是指在产品的各个阶段的制品中追溯原始需求。</p>
+<p>27.<code>对于一个软件问题，通常不存在唯一的最佳设计方案。</code></p>
+<blockquote>
+<p>在一个房间中坐满了顶级的软件设计人员，如果其中任意两个人达成一致，那就可以通过了。—Bill Curtis</p>
+</blockquote>
+<p>28.<code>设计是一个复杂的、迭代的过程。最初的设计方案可能是错误的，当然也不是最优的。</code></p>
+<p>“从难点开始”。</p>
+<p>设计方案可能是启发式的、试验性的。</p>
+<p>复杂的设计过程通常不能得出最佳的结果，但是我们必须尽力寻找一个“令人满意的”方案。找到最佳设计方案不可能或者代价太高，而“令人满意的”方案（而不是最佳方案）可以满足优秀设计标准，是值得（冒险）选择的解决问题的方法。</p>
+<h2 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h2><p>29.<code>从设计转到编码阶段时，设计者按照自己掌握的水平，已经将问题分解为“原语”。如果编程者和设计者不是同一个人，二者的“原语”不吻合，就会出问题。</code></p>
+<p>如果设计者的原语层次比编码者高，编码者无法将此设计作为起点。因此，编码者在真正编码之前需要花费时间完成额外的设计，填补中间的层次。</p>
+<p>不要轻易将设计工作和编码工作分开。</p>
+<p>30.<code>COBOL是一种糟糕的语言，但是其他的（用于商业数据处理的）语言也同样糟糕。</code></p>
+<p>31.<code>错误消除是软件生命周期中最耗时的阶段。</code></p>
+<p>对于许多软件产品而言，错误消除所用的时间比汇集需求、进行设计或编码都长，通常长一倍。</p>
+<p>“需求-分析-编码-错误消除”所占比例：20-20-20-40 或者 25-25-20-30。</p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>32.<code>普通程序员认为已经彻底测试过的软件其实只执行了55%～60%的逻辑路径。采用覆盖分析器等自动工具，可以将上述比例提高到85%～90，几乎不可能测试软件中100%的逻辑路径。</code></p>
+<ul>
+<li>需求驱动测试（测试是否满足了所有需求）</li>
+<li>结构驱动测试（测试已构建的软件的所有组成部分是否正确运行）</li>
+<li>统计驱动测试（随机测试确定软件执行的时间和结果）</li>
+<li>风险驱动测试（测试确定是否已经消除了最主要的风险）</li>
+</ul>
+<p>由于软件产品固有的复杂性，任何测试都不会是彻底的测试。因此，（a）测试工作实际上是一种折衷的活动，关键是作出适当的折衷选择；（b）许多重要软件的发行版中存在错误，这不足为奇（追求无瑕疵软件的想法是天真的）。</p>
+<p>33.<strong><code>即使测试覆盖有可能达到100%，这种测试也不够。大约35%的错误是源于逻辑路径的缺失，还有40%的错误源于执行特定的路径组合。不可能实现100%的覆盖。</code></strong></p>
+<p>为了构建成功的、可靠的软件，需要综合采用多种错误消除方法，通常是越多越好。对于这个问题，没有神奇魔法。</p>
+<p>34.<code>没有工具就无法做好错误消除工作。人们常用调试器，很少使用覆盖分析器等其他工具。</code></p>
+<p>35.<code>自动测试很少，也就是说有些测试可以也应该自动化，但是有许多测试任务不能自动完成。</code></p>
+<p>36.<code>程序员在程序中嵌入测试代码、目标代码中的编译参数等方法，都是测试工具的重要补充。</code></p>
+<h2 id="评审和检查"><a href="#评审和检查" class="headerlink" title="评审和检查"></a>评审和检查</h2><p>37.<code>在运行第一个测试用例之前进行严格审查可以消除软件产品中多大90%的错误。</code></p>
+<p>要找到同一个错误，审查的成本低于测试的成本。</p>
+<p>在软件生命周期各个阶段的产品都可以审查。</p>
+<p>决定检查成败的关键不是采用形式化的过程，而是团队成员在审查过程中的严格程度和注意力集中程度。</p>
+<p>38.<code>虽然严格审查有很多优点，但是不能也不应该代替测试。</code></p>
+<p>39.<code>通常认为，事后评审对于了解客户的满意程度和改进过程都很重要。但是很多软件公司不开展事后评审。</code></p>
+<p>软件业的智慧一直没有增长。</p>
+<p>我们在疯狂追求新东西时，往往抛弃了许多旧东西（例如极限编程和敏捷开发等最新的软件方法倾向于拒绝老方法中积累的智慧）。</p>
+<p>软件业一直忙于加速工作，以致于没有时间考虑如何做得更好，而不只是更快。</p>
+<p>40.<code>同行评审涉及技术和社会两方面问题，忽视任何一方面都会产生严重的灾难。</code></p>
+<p>在评审过程中，参与者应该尽力熟知当前软件中的每一个决定和细节。</p>
+<p>评审者必须从评审对象作者的角度来处理评审对象，而不是按照自己的方式，所以评审非常难。许多人穿上别人的鞋都寸步难行。</p>
+<p>大多数人在软件产品中投入大量的情感和智力，因此如果被别人评头论足将会非常敏感。</p>
+<p>禁止经理参加评审（他们倾向于评审开发者，而不是评审产品）；<br>禁止没有准备的人参加评审（他们会使有准备着失望，还会偏离主题）；<br>开发者不能作为评审主管（缩小可能涉及到开发者的自我因素）。</p>
+<h2 id="维护"><a href="#维护" class="headerlink" title="维护"></a>维护</h2><p>41.<strong><code>维护开支通常占软件成本的40%～80%（平均为60%）。因此，维护可能是软件生命周期中最重要的阶段。</code></strong></p>
+<p>软件维护就是在发现错误时进行修订，并在必要时做修改。</p>
+<blockquote>
+<p> 古老的硬件会被抛弃，古老的软件每天都在使用。</p>
+</blockquote>
+<p>42.<strong><code>增强功能大约占软件维护成本的60%，错误更正仅占17%。因此，软件维护的主体是在旧软件中加入新功能，而不是更正错误。</code></strong></p>
+<p>60%: 改进，增强功能<br>18%: 适应性维护，即在改变工作环境时保证软件正常运行，如再另一台计算机上运行、在另一种操作系统上运行、与新的软件包交互、引入新设备等。<br>17%: 错误更正<br>5%:  为了使软件更容易维护所作出的维护工作（预防性维护Preventive Maintenance，重构refactoring）</p>
+<p><strong>60/60规则：60%的软件成本用于软件维护，维护成本60%用于功能增强。因此，增强旧软件是个大问题。</strong></p>
+<p>43.<code>维护是解决方案，而不是问题。</code></p>
+<p>假设软件维护只是修正错误，那么软件维护才是个问题。</p>
+<p>只有维护才能解决在软件中独有的一个问题，即“我们已经构建了一个东西，但是现在需要一个稍微不同的东西。”</p>
+<p>44.<code>比较软件开发和软件维护中的工作，除了维护中“理解现有的产品”这项工作之外，其他工作都一样。这项工作占据了大约30%的维护时间，是主要的维护活动，因此可以说维护比开发更难。</code></p>
+<p>45.<strong><code>更好的软件工程开发导致更多而不是更少的维护。</code></strong></p>
+<p>与构建糟糕的系统相比，构建良好的系统更容易实现功能增强，这样人们对他们的修改更多，导致这些系统的维护时间更长。</p>
+<p>如果我们把维护活动视为一种方案，那么维护越多越好。假如我们执意认为维护是一个问题，那么就无法将维护活动的增加视为一件好事。</p>
+<h1 id="质量"><a href="#质量" class="headerlink" title="质量"></a>质量</h1><h2 id="质量-1"><a href="#质量-1" class="headerlink" title="质量"></a>质量</h2><p>46.<code>质量是一组属性的组合。</code></p>
+<ol>
+<li><strong>可移植性</strong>是指生成易于在不同平台之间移植的软件产品。</li>
+<li><strong>可靠性</strong>是指软件产品满足预期的要求，值得信赖。</li>
+<li><strong>效率</strong>是指软件产品在运行时间和空间消耗上的经济性。</li>
+<li><strong>人类工程学</strong>(又称为可用性)是指软件产品用起来既容易又舒服。</li>
+<li><strong>可测试性</strong>是指软件产品易于测试。</li>
+<li><strong>易理解性</strong>是指维护者易于理解软件产品。</li>
+<li><strong>可修改性</strong>是指维护者易于修改软件产品。</li>
+</ol>
+<p>47.<code>软件质量不是用户满意、满足需求、满足成本和时间表目标，或者可靠性。</code></p>
+<blockquote>
+<p>用户满意 = 满足需求 + 按时提交 + 适当的成本 + 产品质量</p>
+</blockquote>
+<h2 id="可靠性"><a href="#可靠性" class="headerlink" title="可靠性"></a>可靠性</h2><ol start="48">
+<li><code>绝大多数程序员都会犯某些错误。</code></li>
+</ol>
+<p>49.<code>错误通畅聚集在一起。</code></p>
+<blockquote>
+<p>半数的错误发现在15%的模块中。</p>
+</blockquote>
+<p>50.<code>没有唯一最好的消除软件错误的方法。</code></p>
+<p>51.<code>总会有残存的错误。我们的目标应该是消除严重错误，或者使之最少。</code></p>
+<p>一项2002年的研究：两个采用完全不同软件开发方法（一个团队使用传统方法，处于CMM4；另一个团队采用前卫的形式化方法）的团队都不能构建一个可靠性达到98%的简单产品。</p>
+<p>关于残存错误：</p>
+<ul>
+<li>有经验的个人实践可以使错误的发生减少75%</li>
+<li>大约40%～50%的用户程序包含着较显著的缺陷。</li>
+<li>你不会发现所有的bug<br>关于残存的严重错误：</li>
+<li>小于10%的错误导致90%故障的发生。</li>
+</ul>
+<h2 id="效率"><a href="#效率" class="headerlink" title="效率"></a>效率</h2><p>52.<code>效率主要来自于优秀的设计，而不是优秀的编码。</code></p>
+<p>数据结构是增加逻辑复杂性和改善数据访问效率之间的折衷。因此在设计阶段应认真选择正确的数据结构、文件结构或者数据库访问方法。</p>
+<p>在设计阶段对效率的细微考虑比漂亮的编码更有意义。</p>
+<p>53.<code>高级语言（High-order language，HOL）代码配合适当的编译器优化，大约可以达到汇编语言90%的效率。对于一些复杂的现代体系结构，效率更高。</code></p>
+<p>54.<code>在空间和时间之前存在折衷。通常，改进一方面会降低另一方面。</code></p>
+<p>三角函数：函数值列表，空间换时间。<br>Java: 编译后的字节码比机器码紧凑，但是时间效率很低；JIT（Just-In-Time）编译器可以将字节码编译为机器码。</p>
+<h1 id="研究"><a href="#研究" class="headerlink" title="研究"></a>研究</h1><p>55.<code>许多软件研究者不是做调查，而是鼓吹。因此，（a）有些概念比鼓吹的糟糕、更少；（b）缺少有助于确定这些概念真实价值的评估性研究。</code></p>
+<h1 id="谬误"><a href="#谬误" class="headerlink" title="谬误"></a>谬误</h1><p>1.<code>你不能管理自己无法度量的东西。</code></p>
+<p>优秀的知识管理者趋向于定性度量，而非定量度量。</p>
+<p>实际情况是度量对于软件管理非常重要，谬误存在于具体进行度量的手段和过程中。</p>
+<p>2.<code>可以管理软件产品的质量。</code></p>
+<p>所有的质量属性都有很深刻的技术内容，只有技术人员才能处理这些技术内容。</p>
+<p>3.<code>可以，也应该“忘我”地编程。</code></p>
+<p>我们不可能为了满足别人的需求来抑制自己的需求，我们也同样不太可能为了团队的利益而抑制自我。一个有效运行的系统必须承认人的个性，也必须在这些个性的范围内运作。</p>
+<p>4.<code>工具和技术是通用（one site fits all）的。</code></p>
+<p>5.<code>软件需要更多的方法论。</code></p>
+<p>6.<code>要估算成本和时间表，应首先估算代码行数。</code></p>
+<p>7.<code>随机测试输入是优化测试的好方法。</code></p>
+<p>8.<code>如果有了足够多的关注，所有的bug都显而易见。</code></p>
+<ul>
+<li>错误的深浅与查找错误的人数没有关系。</li>
+<li>有关审查的研究表明：增加审查人数，发现错误数量的增加幅度会迅速减少。</li>
+<li>没有数据表明这句话的正确性。</li>
+</ul>
+<p>9.<code>估计将来的维护成本和做出产品更新的决策需要参考过去的成本数据。</code></p>
+<p>10.<code>教别人编程的方法是教别人写程序。</code></p>
+<p>就像写作一样，要先读后写。</p>
+<ul>
+<li>要教授读代码，我们必须选择所读的范例。</li>
+<li>要教授读代码，需要指导性的教科书，但是却没有。都是关于如何写代码的。</li>
+<li>标准课程教授先写后读，形成了制度。</li>
+<li>我们在软件中需要读代码的唯一时机是维护。维护很不受欢迎，理由之一是读代码是一项非常难的活动。发挥你的创造力写新代码比读别人的老代码有意思得多。</li>
+</ul>
+<blockquote>
+<p>成为程序员最好的方法是写程序，研究别人所写的优秀的程序。。。我到计算机科学中心的垃圾桶里找到了他们操作系统的列表。 —Bill Gates</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/technical/" rel="tag"><i class="fa fa-tag"></i> technical</a>
+              <a href="/tags/reading-notes/" rel="tag"><i class="fa fa-tag"></i> reading-notes</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2017/05/05/reading-notes-2-practice-guide-for-frontline-architects/" rel="prev" title="一线架构师实践指南 by 温昱">
+      <i class="fa fa-chevron-left"></i> 一线架构师实践指南 by 温昱
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2017/05/30/where-program-execute-in/" rel="next" title="程序在哪里执行？">
+      程序在哪里执行？ <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="comments"></div>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#管理"><span class="nav-number">1.</span> <span class="nav-text">管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#人员"><span class="nav-number">1.1.</span> <span class="nav-text">人员</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工具和技术"><span class="nav-number">1.2.</span> <span class="nav-text">工具和技术</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#估算"><span class="nav-number">1.3.</span> <span class="nav-text">估算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复用"><span class="nav-number">1.4.</span> <span class="nav-text">复用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复杂性"><span class="nav-number">1.5.</span> <span class="nav-text">复杂性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#生命周期"><span class="nav-number">2.</span> <span class="nav-text">生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#需求"><span class="nav-number">2.1.</span> <span class="nav-text">需求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设计"><span class="nav-number">2.2.</span> <span class="nav-text">设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编码"><span class="nav-number">2.3.</span> <span class="nav-text">编码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试"><span class="nav-number">2.4.</span> <span class="nav-text">测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#评审和检查"><span class="nav-number">2.5.</span> <span class="nav-text">评审和检查</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#维护"><span class="nav-number">2.6.</span> <span class="nav-text">维护</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#质量"><span class="nav-number">3.</span> <span class="nav-text">质量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#质量-1"><span class="nav-number">3.1.</span> <span class="nav-text">质量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可靠性"><span class="nav-number">3.2.</span> <span class="nav-text">可靠性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#效率"><span class="nav-number">3.3.</span> <span class="nav-text">效率</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#研究"><span class="nav-number">4.</span> <span class="nav-text">研究</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#谬误"><span class="nav-number">5.</span> <span class="nav-text">谬误</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="WU Chenxu"
+      src="/uploads/avatar.jpg">
+  <p class="site-author-name" itemprop="name">WU Chenxu</p>
+  <div class="site-description" itemprop="description">一切都会成为过去</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">74</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">43</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">90</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/WuChenxu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;WuChenxu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:wu_chenxu@126.com" title="E-Mail → mailto:wu_chenxu@126.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">WU Chenxu</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">215k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">3:15</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.1.1
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.5.0
+  </div>
+  <div class="footer-custom">Hosted by <a href="https://pages.coding.me" class="theme-link" rel="noopener" target="_blank">Coding Pages</a></div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout: 3000,
+        priority: true,
+        ignores: [uri => uri.includes('#'),uri => uri == 'https://www.wuchenxu.com/2017/05/12/reading-notes-3-Facts-and-fallacies-of-software-engineering/',]
+      });
+      });
+  </script>
+
+
+<script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: 'cUCWv4VRYjKGSICWV819XA6C-gzGzoHsz',
+    appKey: 'wwuXS4PSgyQdr8sHb2OVteKd',
+    placeholder: "Just go go",
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true,
+    lang: '' || 'zh-cn',
+    path: location.pathname,
+    recordIP: false,
+    serverURLs: ''
+  });
+}, window.Valine);
+</script>
+
+</body>
+</html>
