@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="alternate" href="/atom.xml" title="玉汝于成，功不唐捐" type="application/atom+xml">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Source Han Sans:300,300italic,400,400italic,700,700italic|Source Han Serif:300,300italic,400,400italic,700,700italic|PT Menlo:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://www.wuchenxu.com').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="FLOPs（Floating Point Operations）FLOPS（Floating-point operations per second）TOPS（Tera&#x2F;Trillion Operations Per Second）MACS（ Multiply-Accumulate Instructions per Second）TOPS&#x2F;WResNet-50 inference throughp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算力指标">
+<meta property="og:url" content="https://www.wuchenxu.com/2021/10/02/computing-power-metrices/index.html">
+<meta property="og:site_name" content="玉汝于成，功不唐捐">
+<meta property="og:description" content="FLOPs（Floating Point Operations）FLOPS（Floating-point operations per second）TOPS（Tera&#x2F;Trillion Operations Per Second）MACS（ Multiply-Accumulate Instructions per Second）TOPS&#x2F;WResNet-50 inference throughp">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.wuchenxu.com/2021/10/02/computing-power-metrices/FLOPs.png">
+<meta property="og:image" content="https://www.wuchenxu.com/2021/10/02/computing-power-metrices/NV_A100_KPI.png">
+<meta property="og:image" content="https://www.wuchenxu.com/2021/10/02/computing-power-metrices/oneMACor2OPS.png">
+<meta property="og:image" content="https://www.wuchenxu.com/2021/10/02/computing-power-metrices/ResNet-50InferenceThroughput.png">
+<meta property="article:published_time" content="2021-10-02T15:03:12.000Z">
+<meta property="article:modified_time" content="2021-10-02T15:12:08.928Z">
+<meta property="article:author" content="WU Chenxu">
+<meta property="article:tag" content="TOPS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.wuchenxu.com/2021/10/02/computing-power-metrices/FLOPs.png">
+
+<link rel="canonical" href="https://www.wuchenxu.com/2021/10/02/computing-power-metrices/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>算力指标 | 玉汝于成，功不唐捐</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">玉汝于成，功不唐捐</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">98</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">53</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">82</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/WuChenxu" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.wuchenxu.com/2021/10/02/computing-power-metrices/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="WU Chenxu">
+      <meta itemprop="description" content="一切都会成为过去">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="玉汝于成，功不唐捐">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          算力指标
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-10-02 23:03:12 / 修改时间：23:12:08" itemprop="dateCreated datePublished" datetime="2021-10-02T23:03:12+08:00">2021-10-02</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/computer/" itemprop="url" rel="index">
+                    <span itemprop="name">computer</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2021/10/02/computing-power-metrices/" class="post-meta-item leancloud_visitors" data-flag-title="算力指标" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/10/02/computing-power-metrices/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/10/02/computing-power-metrices/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>FLOPs（Floating Point Operations）<br>FLOPS（Floating-point operations per second）<br>TOPS（Tera/Trillion Operations Per Second）<br>MACS（ Multiply-Accumulate Instructions per Second）<br>TOPS/W<br>ResNet-50 inference throughput（images/s）<br>ResNet-50 inference energy efficiency（images/s/W）<br>Throughput/TOPS<br>DMIPS（Dhrystone Million Instructions executed Per Second）</p>
+<a id="more"></a>
+
+
+<h2 id="FLOPs（Floating-Point-Operations）"><a href="#FLOPs（Floating-Point-Operations）" class="headerlink" title="FLOPs（Floating Point Operations）"></a>FLOPs（Floating Point Operations）</h2><p>注意s小写，是floating point operations的缩写（s表复数），意指浮点运算数，理解为计算量, 可以用来衡量算法/模型的复杂度。一般的，算法/模型复杂度OPs，可以理解成OPs/frame，再乘上帧率就可以得到大概需要的算力，算力一般用FLOPS（对浮点运算）/TOPS（对整数运算）。</p>
+<img src="/2021/10/02/computing-power-metrices/FLOPs.png" class="">
+
+<h2 id="FLOPS（Floating-point-operations-per-second）"><a href="#FLOPS（Floating-point-operations-per-second）" class="headerlink" title="FLOPS（Floating-point operations per second）"></a>FLOPS（Floating-point operations per second）</h2><p>每秒浮点运算次数, 是每秒所执行的浮点运算次数的简称，被用来评估电脑效能。1 MFLOPS表示每秒100万个数字运算（“浮点”的加法或乘法）。1 GFLOPS表示每秒10亿次的浮点运算，即1000 MFLOPS。1 TFLOPS表示每秒1万亿次浮点运算，或1000 GFLOPS，即100万MFLOPS或每秒10^12^次操作。通常还需指定运算精度，可选FP32，FP16，BF16，TF32等，如FP32: 10TFLOPS，或者10 TFLOPS（FP32）。</p>
+<h2 id="TOPS（Tera-Trillion-Operations-Per-Second）"><a href="#TOPS（Tera-Trillion-Operations-Per-Second）" class="headerlink" title="TOPS（Tera/Trillion Operations Per Second）"></a>TOPS（Tera/Trillion Operations Per Second）</h2><p>1 TOPS代表处理器每秒钟可进行一万亿次（10^12^）整数乘法或者加法操作，衡量计算性能。一般针对整数运算用OPS，浮点数用FLOPS，整数运算还需要指定运算精度，一般有INT4，INT8，INT16，INT32。如Nvdia <strong>AGX Orin</strong> 标称254 TOPS（INT8）或者INT8: 254TOPS。</p>
+<p>NVDLA（Deep Learning Accelerator）与GPU的区别：</p>
+<ol>
+<li>DLA是NVIDIA推出的用于专做视觉的部件，如Xavier上有两个DLA。</li>
+<li>DLA的定位是专做常用计算(Conv+激活函数+Pooling+Normalization+Reshape)，然后复杂的计算交给Volta GPU做。</li>
+<li>DLA功耗很低，性能更好。</li>
+</ol>
+<blockquote>
+<p> DLA has up to 5 TOPS INT8 or 2.5 TFLOPS FP16 performance with a power consumption of only 0.5-1.5W. The DLAs support accelerating CNN layers such as convolution, deconvolution, activation functions, min/max/mean pooling, local response normalization, and fully-connected layers.</p>
+</blockquote>
+<p>​        一般标称FLOPS/TOPS是一个峰值性能（peak value），条件比较理想，是针对特定时钟频率，特定功耗，特定kernel大小，的的性能，        可以作为参考，但是实际应用中不太可能达到峰值。最高TOPS还跟吞吐，带宽，并行处理，输入数据加载速度，功耗等相关。</p>
+<p>​        下面是一个Nvidia A100的datasheet，可以看到TFLOPS针对的是FP64/FP32/TF32，TOPS针对的是INT8/INT4。</p>
+<img src="/2021/10/02/computing-power-metrices/NV_A100_KPI.png" class="">
+
+<h2 id="MACS（-Multiply-Accumulate-Instructions-per-Second）"><a href="#MACS（-Multiply-Accumulate-Instructions-per-Second）" class="headerlink" title="MACS（ Multiply-Accumulate Instructions per Second）"></a>MACS（ Multiply-Accumulate Instructions per Second）</h2><p>MAC是乘法累加器，MAC与上面的OPS的关系：<strong>1MAC=2OPS</strong>，因为一个MAC包含乘法和加法两种运算。Nvdia 的叫法：HMMA (Half-Precision Matrix Multiply and Accumulate) and IMMA (Integer Matrix Multiply and Accumulate) 。</p>
+<img src="/2021/10/02/computing-power-metrices/oneMACor2OPS.png" class="">
+
+<h2 id="TOPS-W"><a href="#TOPS-W" class="headerlink" title="TOPS/W"></a>TOPS/W</h2><p>每瓦万亿次操作，衡量性能效率。</p>
+<h2 id="ResNet-50-inference-throughput（images-s）"><a href="#ResNet-50-inference-throughput（images-s）" class="headerlink" title="ResNet-50 inference throughput（images/s）"></a>ResNet-50 inference throughput（images/s）</h2><p>横坐标是不同的batch size，纵坐标是images/s。</p>
+<img src="/2021/10/02/computing-power-metrices/ResNet-50InferenceThroughput.png" class="">
+
+<h2 id="ResNet-50-inference-energy-efficiency（images-s-W）"><a href="#ResNet-50-inference-energy-efficiency（images-s-W）" class="headerlink" title="ResNet-50 inference energy efficiency（images/s/W）"></a>ResNet-50 inference energy efficiency（images/s/W）</h2><p>横坐标是不同的batch size，纵坐标是images/s/watt。</p>
+<p>上面两个指标也可以把ResNet-50换成AlexNet，GoogLeNet，VGG19等，只是ResNet-50是比较常用的。</p>
+<h2 id="Throughput-TOPS"><a href="#Throughput-TOPS" class="headerlink" title="Throughput/TOPS"></a>Throughput/TOPS</h2><p>每万亿次操作吞吐，是衡量效率（efficiency）的一个指标。</p>
+<h2 id="DMIPS（Dhrystone-Million-Instructions-executed-Per-Second）"><a href="#DMIPS（Dhrystone-Million-Instructions-executed-Per-Second）" class="headerlink" title="DMIPS（Dhrystone Million Instructions executed Per Second）"></a>DMIPS（Dhrystone Million Instructions executed Per Second）</h2><p>Dhrystone是测量处理器运算能力的最常见基准（benchmark）程序之一，常用于处理器的整型运算性能的测量。Dhrystone是一种整数和字符串运算测试程序。一般用来衡量CPU算力。</p>
+<p>由于CPU算力与主频相关，而主频是可以配置的，一般标称用：DMIPS/MHz</p>
+<p>如：A72:4.7DMIPS/MHz =&gt;. <a href="mailto:A72@1.6GHz">A72@1.6GHz</a> = 4.7*1600 = 7520 DMIPS = 6.52 KDMIPS</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a href="https://www.kdnuggets.com/2020/05/tops-just-hype-dark-ai-silicon-disguise.html" target="_blank" rel="noopener">Are Tera Operations Per Second (TOPS) Just hype? Or Dark AI Silicon in Disguise?</a></li>
+<li><a href="https://venturebeat.com/2020/09/30/as-ai-chips-improve-is-tops-the-best-way-to-measure-their-power/" target="_blank" rel="noopener">As AI chips improve, is TOPS the best way to measure their power?</a></li>
+<li><a href="https://semiengineering.com/lies-damn-lies-and-tops-watt/" target="_blank" rel="noopener">Lies, Damn Lies, And TOPS/Watt</a></li>
+<li><a href="https://analyticsindiamag.com/is-teslas-dojo-as-amazing-as-claimed/" target="_blank" rel="noopener">Is Tesla’s Dojo As Amazing As Claimed?</a></li>
+<li><a href="https://semiengineering.com/tops-memory-throughput-and-inference-efficiency/" target="_blank" rel="noopener">TOPS, Memory, Throughput And Inference Efficiency</a></li>
+<li><a href="https://semiengineering.com/ai-inference-memory-system-tradeoffs/" target="_blank" rel="noopener">AI Inference Memory System Tradeoffs</a></li>
+<li><a href="https://medium.com/analytics-vidhya/not-all-tops-are-created-equal-e1911ffb4a82" target="_blank" rel="noopener">Not all TOPs are created equal</a></li>
+<li><a href="https://www.rle.mit.edu/eems/wp-content/uploads/2020/09/2020_sscs_dnn.pdf" target="_blank" rel="noopener">How to Evaluate Deep Neural Network Processors</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nvidia_Drive" target="_blank" rel="noopener">Nvidia Drive</a></li>
+<li><a href="https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/a100/pdf/nvidia-a100-datasheet.pdf" target="_blank" rel="noopener">NVIDIA A100 TENSOR CORE GPU</a></li>
+<li><a href="https://blog.csdn.net/zh8706/article/details/112909866" target="_blank" rel="noopener">AI芯片算力比较</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/71984335" target="_blank" rel="noopener">NVIDIA Xavier 整理</a></li>
+<li><a href="http://info.nvidia.com/rs/156-OFN-742/images/Jetson_AGX_Xavier_New_Era_Autonomous_Machines.pdf" target="_blank" rel="noopener">JETSON AGX XAVIER AND THE NEW ERA OF AUTONOMOUS MACHINES</a></li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_ARM_microarchitectures" target="_blank" rel="noopener">List of ARM microarchitectures</a></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/TOPS/" rel="tag"><i class="fa fa-tag"></i> TOPS</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/07/24/reading-notes-7-%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E5%AD%A6%E4%B9%A0%E6%B3%95/" rel="prev" title="思维导图学习法">
+      <i class="fa fa-chevron-left"></i> 思维导图学习法
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="comments"></div>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#FLOPs（Floating-Point-Operations）"><span class="nav-number">1.</span> <span class="nav-text">FLOPs（Floating Point Operations）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FLOPS（Floating-point-operations-per-second）"><span class="nav-number">2.</span> <span class="nav-text">FLOPS（Floating-point operations per second）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TOPS（Tera-Trillion-Operations-Per-Second）"><span class="nav-number">3.</span> <span class="nav-text">TOPS（Tera&#x2F;Trillion Operations Per Second）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MACS（-Multiply-Accumulate-Instructions-per-Second）"><span class="nav-number">4.</span> <span class="nav-text">MACS（ Multiply-Accumulate Instructions per Second）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TOPS-W"><span class="nav-number">5.</span> <span class="nav-text">TOPS&#x2F;W</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ResNet-50-inference-throughput（images-s）"><span class="nav-number">6.</span> <span class="nav-text">ResNet-50 inference throughput（images&#x2F;s）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ResNet-50-inference-energy-efficiency（images-s-W）"><span class="nav-number">7.</span> <span class="nav-text">ResNet-50 inference energy efficiency（images&#x2F;s&#x2F;W）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Throughput-TOPS"><span class="nav-number">8.</span> <span class="nav-text">Throughput&#x2F;TOPS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DMIPS（Dhrystone-Million-Instructions-executed-Per-Second）"><span class="nav-number">9.</span> <span class="nav-text">DMIPS（Dhrystone Million Instructions executed Per Second）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">10.</span> <span class="nav-text">参考</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="WU Chenxu"
+      src="/uploads/avatar.jpg">
+  <p class="site-author-name" itemprop="name">WU Chenxu</p>
+  <div class="site-description" itemprop="description">一切都会成为过去</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">82</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">53</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">98</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/WuChenxu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;WuChenxu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:wu_chenxu@126.com" title="E-Mail → mailto:wu_chenxu@126.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">WU Chenxu</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">229k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">3:28</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.5.0
+  </div>
+  <div class="footer-custom">Hosted by <a href="https://pages.coding.me" class="theme-link" rel="noopener" target="_blank">Coding Pages</a></div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme: 'forest',
+      logLevel: 3,
+      flowchart: { curve: 'linear' },
+      gantt: { axisFormat: '%m/%d/%Y' },
+      sequence: { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+
+  
+
+  
+
+  
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout: 3000,
+        priority: true,
+        ignores: [uri => uri.includes('#'),uri => uri == 'https://www.wuchenxu.com/2021/10/02/computing-power-metrices/',]
+      });
+      });
+  </script>
+
+
+<script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: 'cUCWv4VRYjKGSICWV819XA6C-gzGzoHsz',
+    appKey: 'wwuXS4PSgyQdr8sHb2OVteKd',
+    placeholder: "Just go go",
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true,
+    lang: '' || 'zh-cn',
+    path: location.pathname,
+    recordIP: false,
+    serverURLs: ''
+  });
+}, window.Valine);
+</script>
+
+</body>
+</html>
